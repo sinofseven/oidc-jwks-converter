@@ -110,3 +110,7 @@ cargo clippy
 - `src/main.rs`: CLI entry point
 - `src/jwks.rs`: JWKS fetching logic
 - `src/converter.rs`: Key conversion logic
+
+## License
+
+This project is licensed under the [MIT License](LICENSE).

@@ -110,3 +110,7 @@ cargo clippy
 - `src/main.rs`: CLIエントリーポイント
 - `src/jwks.rs`: JWKS 取得ロジック
 - `src/converter.rs`: 鍵変換ロジック
+
+## ライセンス
+
+このプロジェクトは [MIT ライセンス](LICENSE) のもとで公開されています。
