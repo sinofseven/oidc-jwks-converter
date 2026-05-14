@@ -1,0 +1,755 @@
+﻿2026-05-14T08:48:03.4123975Z Current runner version: '2.334.0'
+2026-05-14T08:48:03.4147278Z ##[group]Runner Image Provisioner
+2026-05-14T08:48:03.4148086Z Hosted Compute Agent
+2026-05-14T08:48:03.4148529Z Version: 20260213.493
+2026-05-14T08:48:03.4149359Z Commit: 5c115507f6dd24b8de37d8bbe0bb4509d0cc0fa3
+2026-05-14T08:48:03.4150019Z Build Date: 2026-02-13T00:28:41Z
+2026-05-14T08:48:03.4150683Z Worker ID: {5aec6c09-5283-405f-a160-95b3228acffe}
+2026-05-14T08:48:03.4151254Z Azure Region: centralus
+2026-05-14T08:48:03.4151782Z ##[endgroup]
+2026-05-14T08:48:03.4153149Z ##[group]Operating System
+2026-05-14T08:48:03.4153675Z Ubuntu
+2026-05-14T08:48:03.4154521Z 22.04.5
+2026-05-14T08:48:03.4154935Z LTS
+2026-05-14T08:48:03.4155361Z ##[endgroup]
+2026-05-14T08:48:03.4155761Z ##[group]Runner Image
+2026-05-14T08:48:03.4156275Z Image: ubuntu-22.04
+2026-05-14T08:48:03.4156694Z Version: 20260513.139.2
+2026-05-14T08:48:03.4157803Z Included Software: https://github.com/actions/runner-images/blob/ubuntu22/20260513.139/images/ubuntu/Ubuntu2204-Readme.md
+2026-05-14T08:48:03.4159294Z Image Release: https://github.com/actions/runner-images/releases/tag/ubuntu22%2F20260513.139
+2026-05-14T08:48:03.4160079Z ##[endgroup]
+2026-05-14T08:48:03.4160985Z ##[group]GITHUB_TOKEN Permissions
+2026-05-14T08:48:03.4163094Z Contents: read
+2026-05-14T08:48:03.4163623Z Metadata: read
+2026-05-14T08:48:03.4164069Z Packages: read
+2026-05-14T08:48:03.4164492Z ##[endgroup]
+2026-05-14T08:48:03.4166504Z Secret source: Actions
+2026-05-14T08:48:03.4167320Z Prepare workflow directory
+2026-05-14T08:48:03.4533632Z Prepare all required actions
+2026-05-14T08:48:03.4573023Z Getting action download info
+2026-05-14T08:48:03.9133569Z Download action repository 'actions/checkout@v6' (SHA:de0fac2e4500dabe0009e67214ff5f5447ce83dd)
+2026-05-14T08:48:04.0204413Z Download action repository 'dtolnay/rust-toolchain@stable' (SHA:29eef336d9b2848a0b548edc03f92a220660cdb8)
+2026-05-14T08:48:04.1786847Z Download action repository 'actions/upload-artifact@v7' (SHA:043fb46d1a93c77aae656e7c1c64a875d1fc6a0a)
+2026-05-14T08:48:04.4530729Z Complete job name: build-linux-x86_64
+2026-05-14T08:48:04.5163901Z ##[group]Run actions/checkout@v6
+2026-05-14T08:48:04.5164823Z with:
+2026-05-14T08:48:04.5165324Z   repository: sinofseven/oidc-jwks-converter
+2026-05-14T08:48:04.5166267Z   token: ***
+2026-05-14T08:48:04.5166717Z   ssh-strict: true
+2026-05-14T08:48:04.5167214Z   ssh-user: git
+2026-05-14T08:48:04.5167727Z   persist-credentials: true
+2026-05-14T08:48:04.5168276Z   clean: true
+2026-05-14T08:48:04.5168902Z   sparse-checkout-cone-mode: true
+2026-05-14T08:48:04.5169499Z   fetch-depth: 1
+2026-05-14T08:48:04.5170001Z   fetch-tags: false
+2026-05-14T08:48:04.5170497Z   show-progress: true
+2026-05-14T08:48:04.5171017Z   lfs: false
+2026-05-14T08:48:04.5171450Z   submodules: false
+2026-05-14T08:48:04.5171965Z   set-safe-directory: true
+2026-05-14T08:48:04.5285115Z env:
+2026-05-14T08:48:04.5285958Z   BINARY_NAME: oidc-jwks-converter
+2026-05-14T08:48:04.5287020Z   THIRD_PARTY_LICENSE_OUTPUT: THIRD_PARTY_LICENSES.html
+2026-05-14T08:48:04.5288120Z   TARGET: x86_64-unknown-linux-musl
+2026-05-14T08:48:04.5289203Z ##[endgroup]
+2026-05-14T08:48:04.6285709Z Syncing repository: sinofseven/oidc-jwks-converter
+2026-05-14T08:48:04.6287568Z ##[group]Getting Git version info
+2026-05-14T08:48:04.6288440Z Working directory is '/home/runner/work/oidc-jwks-converter/oidc-jwks-converter'
+2026-05-14T08:48:04.6289815Z [command]/usr/bin/git version
+2026-05-14T08:48:04.6339066Z git version 2.54.0
+2026-05-14T08:48:04.6360217Z ##[endgroup]
+2026-05-14T08:48:04.6375069Z Temporarily overriding HOME='/home/runner/work/_temp/ff515366-9f18-4475-8ef7-f6073f39e627' before making global git config changes
+2026-05-14T08:48:04.6377751Z Adding repository directory to the temporary git global config as a safe directory
+2026-05-14T08:48:04.6381663Z [command]/usr/bin/git config --global --add safe.directory /home/runner/work/oidc-jwks-converter/oidc-jwks-converter
+2026-05-14T08:48:04.6416365Z Deleting the contents of '/home/runner/work/oidc-jwks-converter/oidc-jwks-converter'
+2026-05-14T08:48:04.6420738Z ##[group]Initializing the repository
+2026-05-14T08:48:04.6425596Z [command]/usr/bin/git init /home/runner/work/oidc-jwks-converter/oidc-jwks-converter
+2026-05-14T08:48:04.6526715Z hint: Using 'master' as the name for the initial branch. This default branch name
+2026-05-14T08:48:04.6528640Z hint: will change to "main" in Git 3.0. To configure the initial branch name
+2026-05-14T08:48:04.6530204Z hint: to use in all of your new repositories, which will suppress this warning,
+2026-05-14T08:48:04.6531499Z hint: call:
+2026-05-14T08:48:04.6532035Z hint:
+2026-05-14T08:48:04.6532835Z hint: 	git config --global init.defaultBranch <name>
+2026-05-14T08:48:04.6533734Z hint:
+2026-05-14T08:48:04.6534297Z hint: Names commonly chosen instead of 'master' are 'main', 'trunk' and
+2026-05-14T08:48:04.6535200Z hint: 'development'. The just-created branch can be renamed via this command:
+2026-05-14T08:48:04.6535899Z hint:
+2026-05-14T08:48:04.6536416Z hint: 	git branch -m <name>
+2026-05-14T08:48:04.6536950Z hint:
+2026-05-14T08:48:04.6538028Z hint: Disable this message with "git config set advice.defaultBranchName false"
+2026-05-14T08:48:04.6540287Z Initialized empty Git repository in /home/runner/work/oidc-jwks-converter/oidc-jwks-converter/.git/
+2026-05-14T08:48:04.6543442Z [command]/usr/bin/git remote add origin https://github.com/sinofseven/oidc-jwks-converter
+2026-05-14T08:48:04.6570679Z ##[endgroup]
+2026-05-14T08:48:04.6571424Z ##[group]Disabling automatic garbage collection
+2026-05-14T08:48:04.6574256Z [command]/usr/bin/git config --local gc.auto 0
+2026-05-14T08:48:04.6598574Z ##[endgroup]
+2026-05-14T08:48:04.6600009Z ##[group]Setting up auth
+2026-05-14T08:48:04.6600969Z Removing SSH command configuration
+2026-05-14T08:48:04.6606214Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+2026-05-14T08:48:04.6632628Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+2026-05-14T08:48:04.7018707Z Removing HTTP extra header
+2026-05-14T08:48:04.7027766Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+2026-05-14T08:48:04.7060387Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+2026-05-14T08:48:04.7231903Z Removing includeIf entries pointing to credentials config files
+2026-05-14T08:48:04.7237535Z [command]/usr/bin/git config --local --name-only --get-regexp ^includeIf\.gitdir:
+2026-05-14T08:48:04.7268438Z [command]/usr/bin/git submodule foreach --recursive git config --local --show-origin --name-only --get-regexp remote.origin.url
+2026-05-14T08:48:04.7449718Z [command]/usr/bin/git config --file /home/runner/work/_temp/git-credentials-3c0c9c6a-8040-4d46-a02a-8b4de00d14b5.config http.https://github.com/.extraheader AUTHORIZATION: basic ***
+2026-05-14T08:48:04.7482767Z [command]/usr/bin/git config --local includeIf.gitdir:/home/runner/work/oidc-jwks-converter/oidc-jwks-converter/.git.path /home/runner/work/_temp/git-credentials-3c0c9c6a-8040-4d46-a02a-8b4de00d14b5.config
+2026-05-14T08:48:04.7506925Z [command]/usr/bin/git config --local includeIf.gitdir:/home/runner/work/oidc-jwks-converter/oidc-jwks-converter/.git/worktrees/*.path /home/runner/work/_temp/git-credentials-3c0c9c6a-8040-4d46-a02a-8b4de00d14b5.config
+2026-05-14T08:48:04.7531153Z [command]/usr/bin/git config --local includeIf.gitdir:/github/workspace/.git.path /github/runner_temp/git-credentials-3c0c9c6a-8040-4d46-a02a-8b4de00d14b5.config
+2026-05-14T08:48:04.7556695Z [command]/usr/bin/git config --local includeIf.gitdir:/github/workspace/.git/worktrees/*.path /github/runner_temp/git-credentials-3c0c9c6a-8040-4d46-a02a-8b4de00d14b5.config
+2026-05-14T08:48:04.7580779Z ##[endgroup]
+2026-05-14T08:48:04.7581481Z ##[group]Fetching the repository
+2026-05-14T08:48:04.7587846Z [command]/usr/bin/git -c protocol.version=2 fetch --no-tags --prune --no-recurse-submodules --depth=1 origin +736be263b374206379a249c500b59d142cd04535:refs/remotes/origin/master
+2026-05-14T08:48:05.1087071Z From https://github.com/sinofseven/oidc-jwks-converter
+2026-05-14T08:48:05.1089351Z  * [new ref]         736be263b374206379a249c500b59d142cd04535 -> origin/master
+2026-05-14T08:48:05.1115042Z [command]/usr/bin/git branch --list --remote origin/master
+2026-05-14T08:48:05.1134389Z   origin/master
+2026-05-14T08:48:05.1141581Z [command]/usr/bin/git rev-parse refs/remotes/origin/master
+2026-05-14T08:48:05.1160293Z 736be263b374206379a249c500b59d142cd04535
+2026-05-14T08:48:05.1164731Z ##[endgroup]
+2026-05-14T08:48:05.1166769Z ##[group]Determining the checkout info
+2026-05-14T08:48:05.1169248Z ##[endgroup]
+2026-05-14T08:48:05.1170402Z [command]/usr/bin/git sparse-checkout disable
+2026-05-14T08:48:05.1207166Z [command]/usr/bin/git config --local --unset-all extensions.worktreeConfig
+2026-05-14T08:48:05.1228995Z ##[group]Checking out the ref
+2026-05-14T08:48:05.1231940Z [command]/usr/bin/git checkout --progress --force -B master refs/remotes/origin/master
+2026-05-14T08:48:05.1278251Z Reset branch 'master'
+2026-05-14T08:48:05.1280555Z branch 'master' set up to track 'origin/master'.
+2026-05-14T08:48:05.1285099Z ##[endgroup]
+2026-05-14T08:48:05.1313464Z [command]/usr/bin/git log -1 --format=%H
+2026-05-14T08:48:05.1332045Z 736be263b374206379a249c500b59d142cd04535
+2026-05-14T08:48:05.1856217Z ##[group]Run dtolnay/rust-toolchain@stable
+2026-05-14T08:48:05.1857811Z with:
+2026-05-14T08:48:05.1858869Z   target: x86_64-unknown-linux-musl
+2026-05-14T08:48:05.1859859Z   toolchain: stable
+2026-05-14T08:48:05.1860663Z env:
+2026-05-14T08:48:05.1861432Z   BINARY_NAME: oidc-jwks-converter
+2026-05-14T08:48:05.1862571Z   THIRD_PARTY_LICENSE_OUTPUT: THIRD_PARTY_LICENSES.html
+2026-05-14T08:48:05.1863766Z   TARGET: x86_64-unknown-linux-musl
+2026-05-14T08:48:05.1864732Z ##[endgroup]
+2026-05-14T08:48:05.2009054Z ##[group]Run : parse toolchain version
+2026-05-14T08:48:05.2010284Z [36;1m: parse toolchain version[0m
+2026-05-14T08:48:05.2011261Z [36;1mif [[ -z $toolchain ]]; then[0m
+2026-05-14T08:48:05.2012908Z [36;1m  # GitHub does not enforce `required: true` inputs itself. https://github.com/actions/runner/issues/1070[0m
+2026-05-14T08:48:05.2014686Z [36;1m  echo "'toolchain' is a required input" >&2[0m
+2026-05-14T08:48:05.2015703Z [36;1m  exit 1[0m
+2026-05-14T08:48:05.2016875Z [36;1melif [[ $toolchain =~ ^stable' '[0-9]+' '(year|month|week|day)s?' 'ago$ ]]; then[0m
+2026-05-14T08:48:05.2018228Z [36;1m  if [[ Linux == macOS ]]; then[0m
+2026-05-14T08:48:05.2020027Z [36;1m    echo "toolchain=1.$((($(date -v-$(sed 's/stable \([0-9]*\) \(.\).*/\1\2/' <<< $toolchain) +%s)/60/60/24-16569)/7/6))" >> $GITHUB_OUTPUT[0m
+2026-05-14T08:48:05.2021697Z [36;1m  else[0m
+2026-05-14T08:48:05.2023030Z [36;1m    echo "toolchain=1.$((($(date --date "${toolchain#stable }" +%s)/60/60/24-16569)/7/6))" >> $GITHUB_OUTPUT[0m
+2026-05-14T08:48:05.2024551Z [36;1m  fi[0m
+2026-05-14T08:48:05.2025567Z [36;1melif [[ $toolchain =~ ^stable' 'minus' '[0-9]+' 'releases?$ ]]; then[0m
+2026-05-14T08:48:05.2027306Z [36;1m  echo "toolchain=1.$((($(date +%s)/60/60/24-16569)/7/6-${toolchain//[^0-9]/}))" >> $GITHUB_OUTPUT[0m
+2026-05-14T08:48:05.2028900Z [36;1melif [[ $toolchain =~ ^1\.[0-9]+$ ]]; then[0m
+2026-05-14T08:48:05.2030653Z [36;1m  echo "toolchain=1.$((i=${toolchain#1.}, c=($(date +%s)/60/60/24-16569)/7/6, i+9*i*(10*i<=c)+90*i*(100*i<=c)))" >> $GITHUB_OUTPUT[0m
+2026-05-14T08:48:05.2032325Z [36;1melse[0m
+2026-05-14T08:48:05.2033184Z [36;1m  echo "toolchain=$toolchain" >> $GITHUB_OUTPUT[0m
+2026-05-14T08:48:05.2034212Z [36;1mfi[0m
+2026-05-14T08:48:05.2139118Z shell: /usr/bin/bash --noprofile --norc -e -o pipefail {0}
+2026-05-14T08:48:05.2140291Z env:
+2026-05-14T08:48:05.2140999Z   BINARY_NAME: oidc-jwks-converter
+2026-05-14T08:48:05.2142149Z   THIRD_PARTY_LICENSE_OUTPUT: THIRD_PARTY_LICENSES.html
+2026-05-14T08:48:05.2143363Z   TARGET: x86_64-unknown-linux-musl
+2026-05-14T08:48:05.2144509Z   toolchain: stable
+2026-05-14T08:48:05.2145282Z ##[endgroup]
+2026-05-14T08:48:05.2309693Z ##[group]Run : construct rustup command line
+2026-05-14T08:48:05.2310793Z [36;1m: construct rustup command line[0m
+2026-05-14T08:48:05.2312263Z [36;1mecho "targets=$(for t in ${targets//,/ }; do echo -n ' --target' $t; done)" >> $GITHUB_OUTPUT[0m
+2026-05-14T08:48:05.2314324Z [36;1mecho "components=$(for c in ${components//,/ }; do echo -n ' --component' $c; done)" >> $GITHUB_OUTPUT[0m
+2026-05-14T08:48:05.2315965Z [36;1mecho "downgrade=" >> $GITHUB_OUTPUT[0m
+2026-05-14T08:48:05.2343931Z shell: /usr/bin/bash --noprofile --norc -e -o pipefail {0}
+2026-05-14T08:48:05.2345047Z env:
+2026-05-14T08:48:05.2345726Z   BINARY_NAME: oidc-jwks-converter
+2026-05-14T08:48:05.2346763Z   THIRD_PARTY_LICENSE_OUTPUT: THIRD_PARTY_LICENSES.html
+2026-05-14T08:48:05.2347849Z   TARGET: x86_64-unknown-linux-musl
+2026-05-14T08:48:05.2348873Z   targets: x86_64-unknown-linux-musl
+2026-05-14T08:48:05.2349739Z   components: 
+2026-05-14T08:48:05.2350429Z ##[endgroup]
+2026-05-14T08:48:05.2455895Z ##[group]Run : set $CARGO_HOME
+2026-05-14T08:48:05.2456774Z [36;1m: set $CARGO_HOME[0m
+2026-05-14T08:48:05.2457864Z [36;1mecho CARGO_HOME=${CARGO_HOME:-"$HOME/.cargo"} >> $GITHUB_ENV[0m
+2026-05-14T08:48:05.2484133Z shell: /usr/bin/bash --noprofile --norc -e -o pipefail {0}
+2026-05-14T08:48:05.2485229Z env:
+2026-05-14T08:48:05.2486075Z   BINARY_NAME: oidc-jwks-converter
+2026-05-14T08:48:05.2487134Z   THIRD_PARTY_LICENSE_OUTPUT: THIRD_PARTY_LICENSES.html
+2026-05-14T08:48:05.2488225Z   TARGET: x86_64-unknown-linux-musl
+2026-05-14T08:48:05.2489265Z ##[endgroup]
+2026-05-14T08:48:05.2596199Z ##[group]Run : install rustup if needed
+2026-05-14T08:48:05.2597201Z [36;1m: install rustup if needed[0m
+2026-05-14T08:48:05.2598193Z [36;1mif ! command -v rustup &>/dev/null; then[0m
+2026-05-14T08:48:05.2600677Z [36;1m  curl --proto '=https' --tlsv1.2 --retry 10 --retry-connrefused --location --silent --show-error --fail https://sh.rustup.rs | sh -s -- --default-toolchain none -y[0m
+2026-05-14T08:48:05.2602995Z [36;1m  echo "$CARGO_HOME/bin" >> $GITHUB_PATH[0m
+2026-05-14T08:48:05.2603962Z [36;1mfi[0m
+2026-05-14T08:48:05.2629962Z shell: /usr/bin/bash --noprofile --norc -e -o pipefail {0}
+2026-05-14T08:48:05.2631060Z env:
+2026-05-14T08:48:05.2631736Z   BINARY_NAME: oidc-jwks-converter
+2026-05-14T08:48:05.2632788Z   THIRD_PARTY_LICENSE_OUTPUT: THIRD_PARTY_LICENSES.html
+2026-05-14T08:48:05.2633887Z   TARGET: x86_64-unknown-linux-musl
+2026-05-14T08:48:05.2634803Z   CARGO_HOME: /home/runner/.cargo
+2026-05-14T08:48:05.2635636Z ##[endgroup]
+2026-05-14T08:48:05.2745951Z ##[group]Run rustup toolchain install stable --target x86_64-unknown-linux-musl --profile minimal --no-self-update
+2026-05-14T08:48:05.2748385Z [36;1mrustup toolchain install stable --target x86_64-unknown-linux-musl --profile minimal --no-self-update[0m
+2026-05-14T08:48:05.2774976Z shell: /usr/bin/bash --noprofile --norc -e -o pipefail {0}
+2026-05-14T08:48:05.2776064Z env:
+2026-05-14T08:48:05.2776888Z   BINARY_NAME: oidc-jwks-converter
+2026-05-14T08:48:05.2777934Z   THIRD_PARTY_LICENSE_OUTPUT: THIRD_PARTY_LICENSES.html
+2026-05-14T08:48:05.2779210Z   TARGET: x86_64-unknown-linux-musl
+2026-05-14T08:48:05.2780115Z   CARGO_HOME: /home/runner/.cargo
+2026-05-14T08:48:05.2781001Z   RUSTUP_PERMIT_COPY_RENAME: 1
+2026-05-14T08:48:05.2781820Z ##[endgroup]
+2026-05-14T08:48:06.7378174Z info: syncing channel updates for stable-x86_64-unknown-linux-gnu
+2026-05-14T08:48:07.2720897Z info: latest update on 2026-04-16 for version 1.95.0 (59807616e 2026-04-14)
+2026-05-14T08:48:07.3278273Z info: downloading component rust-std
+2026-05-14T08:48:10.4993262Z 
+2026-05-14T08:48:10.5079787Z   stable-x86_64-unknown-linux-gnu updated - rustc 1.95.0 (59807616e 2026-04-14) (from rustc 1.95.0 (59807616e 2026-04-14))
+2026-05-14T08:48:10.5080359Z 
+2026-05-14T08:48:10.5135051Z ##[group]Run rustup default stable
+2026-05-14T08:48:10.5135388Z [36;1mrustup default stable[0m
+2026-05-14T08:48:10.5168171Z shell: /usr/bin/bash --noprofile --norc -e -o pipefail {0}
+2026-05-14T08:48:10.5168902Z env:
+2026-05-14T08:48:10.5169168Z   BINARY_NAME: oidc-jwks-converter
+2026-05-14T08:48:10.5169493Z   THIRD_PARTY_LICENSE_OUTPUT: THIRD_PARTY_LICENSES.html
+2026-05-14T08:48:10.5169810Z   TARGET: x86_64-unknown-linux-musl
+2026-05-14T08:48:10.5170090Z   CARGO_HOME: /home/runner/.cargo
+2026-05-14T08:48:10.5170355Z ##[endgroup]
+2026-05-14T08:48:10.5273367Z info: using existing install for stable-x86_64-unknown-linux-gnu
+2026-05-14T08:48:10.5280274Z info: default toolchain set to stable-x86_64-unknown-linux-gnu
+2026-05-14T08:48:10.5280563Z 
+2026-05-14T08:48:10.5368724Z   stable-x86_64-unknown-linux-gnu unchanged - rustc 1.95.0 (59807616e 2026-04-14)
+2026-05-14T08:48:10.5369284Z 
+2026-05-14T08:48:10.5406070Z ##[group]Run : create cachekey
+2026-05-14T08:48:10.5406381Z [36;1m: create cachekey[0m
+2026-05-14T08:48:10.5406895Z [36;1mDATE=$(rustc +stable --version --verbose | sed -ne 's/^commit-date: \(20[0-9][0-9]\)-\([01][0-9]\)-\([0-3][0-9]\)$/\1\2\3/p')[0m
+2026-05-14T08:48:10.5407550Z [36;1mHASH=$(rustc +stable --version --verbose | sed -ne 's/^commit-hash: //p')[0m
+2026-05-14T08:48:10.5408014Z [36;1mecho "cachekey=$(echo $DATE$HASH | head -c12)" >> $GITHUB_OUTPUT[0m
+2026-05-14T08:48:10.5441404Z shell: /usr/bin/bash --noprofile --norc -e -o pipefail {0}
+2026-05-14T08:48:10.5441782Z env:
+2026-05-14T08:48:10.5442003Z   BINARY_NAME: oidc-jwks-converter
+2026-05-14T08:48:10.5442487Z   THIRD_PARTY_LICENSE_OUTPUT: THIRD_PARTY_LICENSES.html
+2026-05-14T08:48:10.5442838Z   TARGET: x86_64-unknown-linux-musl
+2026-05-14T08:48:10.5443124Z   CARGO_HOME: /home/runner/.cargo
+2026-05-14T08:48:10.5443365Z ##[endgroup]
+2026-05-14T08:48:10.6357482Z ##[group]Run : disable incremental compilation
+2026-05-14T08:48:10.6357869Z [36;1m: disable incremental compilation[0m
+2026-05-14T08:48:10.6358237Z [36;1mif [ -z "${CARGO_INCREMENTAL+set}" ]; then[0m
+2026-05-14T08:48:10.6358560Z [36;1m  echo CARGO_INCREMENTAL=0 >> $GITHUB_ENV[0m
+2026-05-14T08:48:10.6359194Z [36;1mfi[0m
+2026-05-14T08:48:10.6393287Z shell: /usr/bin/bash --noprofile --norc -e -o pipefail {0}
+2026-05-14T08:48:10.6393644Z env:
+2026-05-14T08:48:10.6393865Z   BINARY_NAME: oidc-jwks-converter
+2026-05-14T08:48:10.6394176Z   THIRD_PARTY_LICENSE_OUTPUT: THIRD_PARTY_LICENSES.html
+2026-05-14T08:48:10.6394499Z   TARGET: x86_64-unknown-linux-musl
+2026-05-14T08:48:10.6394767Z   CARGO_HOME: /home/runner/.cargo
+2026-05-14T08:48:10.6395031Z ##[endgroup]
+2026-05-14T08:48:10.6476811Z ##[group]Run : enable colors in Cargo output
+2026-05-14T08:48:10.6477162Z [36;1m: enable colors in Cargo output[0m
+2026-05-14T08:48:10.6477482Z [36;1mif [ -z "${CARGO_TERM_COLOR+set}" ]; then[0m
+2026-05-14T08:48:10.6477810Z [36;1m  echo CARGO_TERM_COLOR=always >> $GITHUB_ENV[0m
+2026-05-14T08:48:10.6478105Z [36;1mfi[0m
+2026-05-14T08:48:10.6512869Z shell: /usr/bin/bash --noprofile --norc -e -o pipefail {0}
+2026-05-14T08:48:10.6513211Z env:
+2026-05-14T08:48:10.6513441Z   BINARY_NAME: oidc-jwks-converter
+2026-05-14T08:48:10.6513762Z   THIRD_PARTY_LICENSE_OUTPUT: THIRD_PARTY_LICENSES.html
+2026-05-14T08:48:10.6514113Z   TARGET: x86_64-unknown-linux-musl
+2026-05-14T08:48:10.6514374Z   CARGO_HOME: /home/runner/.cargo
+2026-05-14T08:48:10.6514662Z   CARGO_INCREMENTAL: 0
+2026-05-14T08:48:10.6514882Z ##[endgroup]
+2026-05-14T08:48:10.6598541Z ##[group]Run : enable Cargo sparse registry
+2026-05-14T08:48:10.6599122Z [36;1m: enable Cargo sparse registry[0m
+2026-05-14T08:48:10.6599533Z [36;1m# implemented in 1.66, stabilized in 1.68, made default in 1.70[0m
+2026-05-14T08:48:10.6600194Z [36;1mif [ -z "${CARGO_REGISTRIES_CRATES_IO_PROTOCOL+set}" -o -f "/home/runner/work/_temp"/.implicit_cargo_registries_crates_io_protocol ]; then[0m
+2026-05-14T08:48:10.6600871Z [36;1m  if rustc +stable --version --verbose | grep -q '^release: 1\.6[89]\.'; then[0m
+2026-05-14T08:48:10.6601413Z [36;1m    touch "/home/runner/work/_temp"/.implicit_cargo_registries_crates_io_protocol || true[0m
+2026-05-14T08:48:10.6601918Z [36;1m    echo CARGO_REGISTRIES_CRATES_IO_PROTOCOL=sparse >> $GITHUB_ENV[0m
+2026-05-14T08:48:10.6602560Z [36;1m  elif rustc +stable --version --verbose | grep -q '^release: 1\.6[67]\.'; then[0m
+2026-05-14T08:48:10.6603092Z [36;1m    touch "/home/runner/work/_temp"/.implicit_cargo_registries_crates_io_protocol || true[0m
+2026-05-14T08:48:10.6603589Z [36;1m    echo CARGO_REGISTRIES_CRATES_IO_PROTOCOL=git >> $GITHUB_ENV[0m
+2026-05-14T08:48:10.6603930Z [36;1m  fi[0m
+2026-05-14T08:48:10.6604138Z [36;1mfi[0m
+2026-05-14T08:48:10.6638042Z shell: /usr/bin/bash --noprofile --norc -e -o pipefail {0}
+2026-05-14T08:48:10.6638395Z env:
+2026-05-14T08:48:10.6638610Z   BINARY_NAME: oidc-jwks-converter
+2026-05-14T08:48:10.6639124Z   THIRD_PARTY_LICENSE_OUTPUT: THIRD_PARTY_LICENSES.html
+2026-05-14T08:48:10.6639612Z   TARGET: x86_64-unknown-linux-musl
+2026-05-14T08:48:10.6639898Z   CARGO_HOME: /home/runner/.cargo
+2026-05-14T08:48:10.6640147Z   CARGO_INCREMENTAL: 0
+2026-05-14T08:48:10.6640382Z   CARGO_TERM_COLOR: always
+2026-05-14T08:48:10.6640606Z ##[endgroup]
+2026-05-14T08:48:10.6999016Z ##[group]Run : work around spurious network errors in curl 8.0
+2026-05-14T08:48:10.6999474Z [36;1m: work around spurious network errors in curl 8.0[0m
+2026-05-14T08:48:10.7000171Z [36;1m# https://rust-lang.zulipchat.com/#narrow/stream/246057-t-cargo/topic/timeout.20investigation[0m
+2026-05-14T08:48:10.7000758Z [36;1mif rustc +stable --version --verbose | grep -q '^release: 1\.7[01]\.'; then[0m
+2026-05-14T08:48:10.7001408Z [36;1m  echo CARGO_HTTP_MULTIPLEXING=false >> $GITHUB_ENV[0m
+2026-05-14T08:48:10.7001726Z [36;1mfi[0m
+2026-05-14T08:48:10.7036360Z shell: /usr/bin/bash --noprofile --norc -e -o pipefail {0}
+2026-05-14T08:48:10.7036730Z env:
+2026-05-14T08:48:10.7036959Z   BINARY_NAME: oidc-jwks-converter
+2026-05-14T08:48:10.7037287Z   THIRD_PARTY_LICENSE_OUTPUT: THIRD_PARTY_LICENSES.html
+2026-05-14T08:48:10.7037616Z   TARGET: x86_64-unknown-linux-musl
+2026-05-14T08:48:10.7037882Z   CARGO_HOME: /home/runner/.cargo
+2026-05-14T08:48:10.7038144Z   CARGO_INCREMENTAL: 0
+2026-05-14T08:48:10.7038386Z   CARGO_TERM_COLOR: always
+2026-05-14T08:48:10.7038622Z ##[endgroup]
+2026-05-14T08:48:10.7349604Z ##[group]Run rustc +stable --version --verbose
+2026-05-14T08:48:10.7349973Z [36;1mrustc +stable --version --verbose[0m
+2026-05-14T08:48:10.7385006Z shell: /usr/bin/bash --noprofile --norc -e -o pipefail {0}
+2026-05-14T08:48:10.7385362Z env:
+2026-05-14T08:48:10.7385581Z   BINARY_NAME: oidc-jwks-converter
+2026-05-14T08:48:10.7385915Z   THIRD_PARTY_LICENSE_OUTPUT: THIRD_PARTY_LICENSES.html
+2026-05-14T08:48:10.7386241Z   TARGET: x86_64-unknown-linux-musl
+2026-05-14T08:48:10.7386504Z   CARGO_HOME: /home/runner/.cargo
+2026-05-14T08:48:10.7386762Z   CARGO_INCREMENTAL: 0
+2026-05-14T08:48:10.7386984Z   CARGO_TERM_COLOR: always
+2026-05-14T08:48:10.7387221Z ##[endgroup]
+2026-05-14T08:48:10.7563371Z rustc 1.95.0 (59807616e 2026-04-14)
+2026-05-14T08:48:10.7564270Z binary: rustc
+2026-05-14T08:48:10.7564845Z commit-hash: 59807616e1fa2540724bfbac14d7976d7e4a3860
+2026-05-14T08:48:10.7565483Z commit-date: 2026-04-14
+2026-05-14T08:48:10.7566413Z host: x86_64-unknown-linux-gnu
+2026-05-14T08:48:10.7566916Z release: 1.95.0
+2026-05-14T08:48:10.7567347Z LLVM version: 22.1.2
+2026-05-14T08:48:10.7650396Z ##[group]Run sudo apt-get update
+2026-05-14T08:48:10.7650740Z [36;1msudo apt-get update[0m
+2026-05-14T08:48:10.7651025Z [36;1msudo apt-get install -y musl-tools[0m
+2026-05-14T08:48:10.7686176Z shell: /usr/bin/bash -e {0}
+2026-05-14T08:48:10.7686482Z env:
+2026-05-14T08:48:10.7686702Z   BINARY_NAME: oidc-jwks-converter
+2026-05-14T08:48:10.7687030Z   THIRD_PARTY_LICENSE_OUTPUT: THIRD_PARTY_LICENSES.html
+2026-05-14T08:48:10.7687351Z   TARGET: x86_64-unknown-linux-musl
+2026-05-14T08:48:10.7687632Z   CARGO_HOME: /home/runner/.cargo
+2026-05-14T08:48:10.7687887Z   CARGO_INCREMENTAL: 0
+2026-05-14T08:48:10.7688123Z   CARGO_TERM_COLOR: always
+2026-05-14T08:48:10.7688348Z ##[endgroup]
+2026-05-14T08:48:10.8755954Z Get:1 file:/etc/apt/apt-mirrors.txt Mirrorlist [144 B]
+2026-05-14T08:48:10.9070011Z Hit:2 http://azure.archive.ubuntu.com/ubuntu jammy InRelease
+2026-05-14T08:48:10.9080900Z Hit:6 https://packages.microsoft.com/repos/azure-cli jammy InRelease
+2026-05-14T08:48:10.9088727Z Get:3 http://azure.archive.ubuntu.com/ubuntu jammy-updates InRelease [128 kB]
+2026-05-14T08:48:10.9111080Z Get:7 https://packages.microsoft.com/ubuntu/22.04/prod jammy InRelease [3632 B]
+2026-05-14T08:48:10.9184140Z Get:4 http://azure.archive.ubuntu.com/ubuntu jammy-backports InRelease [127 kB]
+2026-05-14T08:48:10.9203437Z Get:5 http://azure.archive.ubuntu.com/ubuntu jammy-security InRelease [129 kB]
+2026-05-14T08:48:11.0753585Z Get:8 https://packages.microsoft.com/ubuntu/22.04/prod jammy/main armhf Packages [21.8 kB]
+2026-05-14T08:48:11.0844971Z Get:9 https://packages.microsoft.com/ubuntu/22.04/prod jammy/main arm64 Packages [178 kB]
+2026-05-14T08:48:11.0894387Z Get:10 https://packages.microsoft.com/ubuntu/22.04/prod jammy/main amd64 Packages [363 kB]
+2026-05-14T08:48:11.1000934Z Get:11 https://dl.google.com/linux/chrome-stable/deb stable InRelease [1825 B]
+2026-05-14T08:48:11.3195876Z Get:12 https://dl.google.com/linux/chrome-stable/deb stable/main amd64 Packages [1211 B]
+2026-05-14T08:48:13.8330200Z Fetched 954 kB in 0s (2029 kB/s)
+2026-05-14T08:48:14.8699903Z Reading package lists...
+2026-05-14T08:48:14.9268312Z Reading package lists...
+2026-05-14T08:48:15.1468918Z Building dependency tree...
+2026-05-14T08:48:15.1478835Z Reading state information...
+2026-05-14T08:48:15.3144304Z The following additional packages will be installed:
+2026-05-14T08:48:15.3145238Z   musl musl-dev
+2026-05-14T08:48:15.3150730Z Recommended packages:
+2026-05-14T08:48:15.3151059Z   linux-musl-dev
+2026-05-14T08:48:15.3315653Z The following NEW packages will be installed:
+2026-05-14T08:48:15.3316785Z   musl musl-dev musl-tools
+2026-05-14T08:48:15.3459934Z 0 upgraded, 3 newly installed, 0 to remove and 4 not upgraded.
+2026-05-14T08:48:15.3460590Z Need to get 1018 kB of archives.
+2026-05-14T08:48:15.3461246Z After this operation, 4100 kB of additional disk space will be used.
+2026-05-14T08:48:15.3462072Z Get:1 file:/etc/apt/apt-mirrors.txt Mirrorlist [144 B]
+2026-05-14T08:48:15.3939977Z Get:2 http://azure.archive.ubuntu.com/ubuntu jammy/universe amd64 musl amd64 1.2.2-4 [407 kB]
+2026-05-14T08:48:15.4331108Z Get:3 http://azure.archive.ubuntu.com/ubuntu jammy/universe amd64 musl-dev amd64 1.2.2-4 [605 kB]
+2026-05-14T08:48:15.4709744Z Get:4 http://azure.archive.ubuntu.com/ubuntu jammy/universe amd64 musl-tools amd64 1.2.2-4 [5520 B]
+2026-05-14T08:48:15.7656598Z Fetched 1018 kB in 0s (7604 kB/s)
+2026-05-14T08:48:15.7894663Z Selecting previously unselected package musl:amd64.
+2026-05-14T08:48:15.8169454Z (Reading database ... 
+2026-05-14T08:48:15.8169804Z (Reading database ... 5%
+2026-05-14T08:48:15.8170053Z (Reading database ... 10%
+2026-05-14T08:48:15.8170327Z (Reading database ... 15%
+2026-05-14T08:48:15.8170550Z (Reading database ... 20%
+2026-05-14T08:48:15.8170780Z (Reading database ... 25%
+2026-05-14T08:48:15.8171028Z (Reading database ... 30%
+2026-05-14T08:48:15.8171251Z (Reading database ... 35%
+2026-05-14T08:48:15.8171597Z (Reading database ... 40%
+2026-05-14T08:48:15.8171843Z (Reading database ... 45%
+2026-05-14T08:48:15.8172407Z (Reading database ... 50%
+2026-05-14T08:48:15.9289987Z (Reading database ... 55%
+2026-05-14T08:48:16.0339578Z (Reading database ... 60%
+2026-05-14T08:48:16.0846215Z (Reading database ... 65%
+2026-05-14T08:48:16.2925078Z (Reading database ... 70%
+2026-05-14T08:48:16.5248282Z (Reading database ... 75%
+2026-05-14T08:48:16.7006436Z (Reading database ... 80%
+2026-05-14T08:48:16.9516794Z (Reading database ... 85%
+2026-05-14T08:48:17.1416766Z (Reading database ... 90%
+2026-05-14T08:48:17.3362792Z (Reading database ... 95%
+2026-05-14T08:48:17.3363223Z (Reading database ... 100%
+2026-05-14T08:48:17.3363583Z (Reading database ... 267626 files and directories currently installed.)
+2026-05-14T08:48:17.3429653Z Preparing to unpack .../musl_1.2.2-4_amd64.deb ...
+2026-05-14T08:48:17.3455415Z Unpacking musl:amd64 (1.2.2-4) ...
+2026-05-14T08:48:17.3721113Z Selecting previously unselected package musl-dev:amd64.
+2026-05-14T08:48:17.3874139Z Preparing to unpack .../musl-dev_1.2.2-4_amd64.deb ...
+2026-05-14T08:48:17.3886863Z Unpacking musl-dev:amd64 (1.2.2-4) ...
+2026-05-14T08:48:17.4381370Z Selecting previously unselected package musl-tools.
+2026-05-14T08:48:17.4531044Z Preparing to unpack .../musl-tools_1.2.2-4_amd64.deb ...
+2026-05-14T08:48:17.4541901Z Unpacking musl-tools (1.2.2-4) ...
+2026-05-14T08:48:17.4948074Z Setting up musl:amd64 (1.2.2-4) ...
+2026-05-14T08:48:17.5006992Z Setting up musl-dev:amd64 (1.2.2-4) ...
+2026-05-14T08:48:17.5046873Z Setting up musl-tools (1.2.2-4) ...
+2026-05-14T08:48:17.5083509Z Processing triggers for man-db (2.10.2-1) ...
+2026-05-14T08:48:17.5106478Z Not building database; man-db/auto-update is not 'true'.
+2026-05-14T08:48:17.9943875Z 
+2026-05-14T08:48:17.9944535Z Running kernel seems to be up-to-date.
+2026-05-14T08:48:17.9944876Z 
+2026-05-14T08:48:17.9945043Z No services need to be restarted.
+2026-05-14T08:48:17.9945284Z 
+2026-05-14T08:48:17.9945420Z No containers need to be restarted.
+2026-05-14T08:48:17.9945720Z 
+2026-05-14T08:48:17.9945892Z No user sessions are running outdated binaries.
+2026-05-14T08:48:17.9946215Z 
+2026-05-14T08:48:17.9946485Z No VM guests are running outdated hypervisor (qemu) binaries on this host.
+2026-05-14T08:48:19.1298497Z ##[group]Run cargo build --release --target $TARGET
+2026-05-14T08:48:19.1299057Z [36;1mcargo build --release --target $TARGET[0m
+2026-05-14T08:48:19.1325390Z shell: /usr/bin/bash -e {0}
+2026-05-14T08:48:19.1325627Z env:
+2026-05-14T08:48:19.1325814Z   BINARY_NAME: oidc-jwks-converter
+2026-05-14T08:48:19.1326091Z   THIRD_PARTY_LICENSE_OUTPUT: THIRD_PARTY_LICENSES.html
+2026-05-14T08:48:19.1326379Z   TARGET: x86_64-unknown-linux-musl
+2026-05-14T08:48:19.1326604Z   CARGO_HOME: /home/runner/.cargo
+2026-05-14T08:48:19.1326823Z   CARGO_INCREMENTAL: 0
+2026-05-14T08:48:19.1327007Z   CARGO_TERM_COLOR: always
+2026-05-14T08:48:19.1327201Z ##[endgroup]
+2026-05-14T08:48:22.0346450Z [1m[92m    Updating[0m crates.io index
+2026-05-14T08:48:22.8918846Z [1m[92m Downloading[0m crates ...
+2026-05-14T08:48:22.9481256Z [1m[92m  Downloaded[0m anstyle-query v1.1.5
+2026-05-14T08:48:22.9902677Z [1m[92m  Downloaded[0m base16ct v0.2.0
+2026-05-14T08:48:23.0015011Z [1m[92m  Downloaded[0m percent-encoding v2.3.2
+2026-05-14T08:48:23.0023954Z [1m[92m  Downloaded[0m httpdate v1.0.3
+2026-05-14T08:48:23.0034040Z [1m[92m  Downloaded[0m equivalent v1.0.2
+2026-05-14T08:48:23.0071980Z [1m[92m  Downloaded[0m futures-task v0.3.32
+2026-05-14T08:48:23.0081947Z [1m[92m  Downloaded[0m foreign-types-shared v0.1.1
+2026-05-14T08:48:23.0088906Z [1m[92m  Downloaded[0m fnv v1.0.7
+2026-05-14T08:48:23.0096653Z [1m[92m  Downloaded[0m itoa v1.0.18
+2026-05-14T08:48:23.0109881Z [1m[92m  Downloaded[0m mime v0.3.17
+2026-05-14T08:48:23.0121492Z [1m[92m  Downloaded[0m form_urlencoded v1.2.2
+2026-05-14T08:48:23.0128723Z [1m[92m  Downloaded[0m crypto-common v0.1.6
+2026-05-14T08:48:23.0138060Z [1m[92m  Downloaded[0m rand_chacha v0.3.1
+2026-05-14T08:48:23.0147232Z [1m[92m  Downloaded[0m colorchoice v1.0.5
+2026-05-14T08:48:23.0158360Z [1m[92m  Downloaded[0m scopeguard v1.2.0
+2026-05-14T08:48:23.0170723Z [1m[92m  Downloaded[0m openssl-probe v0.2.1
+2026-05-14T08:48:23.0180708Z [1m[92m  Downloaded[0m futures-sink v0.3.32
+2026-05-14T08:48:23.0191608Z [1m[92m  Downloaded[0m base64ct v1.8.3
+2026-05-14T08:48:23.0212797Z [1m[92m  Downloaded[0m potential_utf v0.1.5
+2026-05-14T08:48:23.0225597Z [1m[92m  Downloaded[0m idna_adapter v1.2.2
+2026-05-14T08:48:23.0232909Z [1m[92m  Downloaded[0m errno v0.3.14
+2026-05-14T08:48:23.0250168Z [1m[92m  Downloaded[0m rustls-pemfile v1.0.4
+2026-05-14T08:48:23.0273340Z [1m[92m  Downloaded[0m ryu v1.0.23
+2026-05-14T08:48:23.0309837Z [1m[92m  Downloaded[0m primeorder v0.13.6
+2026-05-14T08:48:23.0323099Z [1m[92m  Downloaded[0m parking_lot_core v0.9.12
+2026-05-14T08:48:23.0353409Z [1m[92m  Downloaded[0m zerofrom-derive v0.1.7
+2026-05-14T08:48:23.0371432Z [1m[92m  Downloaded[0m stable_deref_trait v1.2.1
+2026-05-14T08:48:23.0384998Z [1m[92m  Downloaded[0m memchr v2.8.0
+2026-05-14T08:48:23.0474155Z [1m[92m  Downloaded[0m zerofrom v0.1.8
+2026-05-14T08:48:23.0488948Z [1m[92m  Downloaded[0m utf8_iter v1.0.4
+2026-05-14T08:48:23.0497851Z [1m[92m  Downloaded[0m idna v1.1.0
+2026-05-14T08:48:23.0530229Z [1m[92m  Downloaded[0m writeable v0.6.3
+2026-05-14T08:48:23.0545526Z [1m[92m  Downloaded[0m hyper v0.14.32
+2026-05-14T08:48:23.0597062Z [1m[92m  Downloaded[0m zmij v1.0.21
+2026-05-14T08:48:23.0611001Z [1m[92m  Downloaded[0m zeroize v1.8.2
+2026-05-14T08:48:23.0623177Z [1m[92m  Downloaded[0m yoke v0.8.2
+2026-05-14T08:48:23.0638156Z [1m[92m  Downloaded[0m tinystr v0.8.3
+2026-05-14T08:48:23.0654828Z [1m[92m  Downloaded[0m socket2 v0.5.10
+2026-05-14T08:48:23.0672328Z [1m[92m  Downloaded[0m unicode-ident v1.0.24
+2026-05-14T08:48:23.0691587Z [1m[92m  Downloaded[0m serde_core v1.0.228
+2026-05-14T08:48:23.0715875Z [1m[92m  Downloaded[0m zerotrie v0.2.4
+2026-05-14T08:48:23.0741678Z [1m[92m  Downloaded[0m url v2.5.8
+2026-05-14T08:48:23.0764998Z [1m[92m  Downloaded[0m reqwest v0.11.27
+2026-05-14T08:48:23.0810463Z [1m[92m  Downloaded[0m zerovec v0.11.6
+2026-05-14T08:48:23.0847646Z [1m[92m  Downloaded[0m serde_json v1.0.149
+2026-05-14T08:48:23.0890414Z [1m[92m  Downloaded[0m tokio-util v0.7.18
+2026-05-14T08:48:23.0935739Z [1m[92m  Downloaded[0m typenum v1.20.0
+2026-05-14T08:48:23.0964008Z [1m[92m  Downloaded[0m serde v1.0.228
+2026-05-14T08:48:23.0987592Z [1m[92m  Downloaded[0m vcpkg v0.2.15
+2026-05-14T08:48:23.1232764Z [1m[92m  Downloaded[0m tracing-core v0.1.36
+2026-05-14T08:48:23.1250156Z [1m[92m  Downloaded[0m socket2 v0.6.3
+2026-05-14T08:48:23.1266918Z [1m[92m  Downloaded[0m serde_derive v1.0.228
+2026-05-14T08:48:23.1285796Z [1m[92m  Downloaded[0m zerocopy v0.8.48
+2026-05-14T08:48:23.1400729Z [1m[92m  Downloaded[0m openssl v0.10.79
+2026-05-14T08:48:23.1460618Z [1m[92m  Downloaded[0m syn v2.0.117
+2026-05-14T08:48:23.1528950Z [1m[92m  Downloaded[0m spin v0.9.8
+2026-05-14T08:48:23.1545177Z [1m[92m  Downloaded[0m smallvec v1.15.1
+2026-05-14T08:48:23.1560746Z [1m[92m  Downloaded[0m thiserror-impl v1.0.69
+2026-05-14T08:48:23.1570761Z [1m[92m  Downloaded[0m synstructure v0.13.2
+2026-05-14T08:48:23.1578180Z [1m[92m  Downloaded[0m slab v0.4.12
+2026-05-14T08:48:23.1586910Z [1m[92m  Downloaded[0m sha2 v0.10.9
+2026-05-14T08:48:23.1603628Z [1m[92m  Downloaded[0m tracing v0.1.44
+2026-05-14T08:48:23.1709869Z [1m[92m  Downloaded[0m zerovec-derive v0.11.3
+2026-05-14T08:48:23.1718969Z [1m[92m  Downloaded[0m tokio-native-tls v0.3.1
+2026-05-14T08:48:23.1730013Z [1m[92m  Downloaded[0m thiserror v1.0.69
+2026-05-14T08:48:23.1757183Z [1m[92m  Downloaded[0m spki v0.7.3
+2026-05-14T08:48:23.1768063Z [1m[92m  Downloaded[0m libc v0.2.186
+2026-05-14T08:48:23.1984921Z [1m[92m  Downloaded[0m signature v2.2.0
+2026-05-14T08:48:23.1993493Z [1m[92m  Downloaded[0m shlex v1.3.0
+2026-05-14T08:48:23.2001190Z [1m[92m  Downloaded[0m sec1 v0.7.3
+2026-05-14T08:48:23.2011417Z [1m[92m  Downloaded[0m rsa v0.9.10
+2026-05-14T08:48:23.2040526Z [1m[92m  Downloaded[0m h2 v0.3.27
+2026-05-14T08:48:23.2079929Z [1m[92m  Downloaded[0m futures-util v0.3.32
+2026-05-14T08:48:23.2151359Z [1m[92m  Downloaded[0m clap_builder v4.6.0
+2026-05-14T08:48:23.2190577Z [1m[92m  Downloaded[0m signal-hook-registry v1.4.8
+2026-05-14T08:48:23.2198548Z [1m[92m  Downloaded[0m libm v0.2.16
+2026-05-14T08:48:23.2255145Z [1m[92m  Downloaded[0m icu_properties_data v2.2.0
+2026-05-14T08:48:23.2312577Z [1m[92m  Downloaded[0m hashbrown v0.17.1
+2026-05-14T08:48:23.2350399Z [1m[92m  Downloaded[0m subtle v2.6.1
+2026-05-14T08:48:23.2358469Z [1m[92m  Downloaded[0m num-bigint-dig v0.8.6
+2026-05-14T08:48:23.2386633Z [1m[92m  Downloaded[0m mio v1.2.0
+2026-05-14T08:48:23.2420909Z [1m[92m  Downloaded[0m yoke-derive v0.8.2
+2026-05-14T08:48:23.2428413Z [1m[92m  Downloaded[0m want v0.3.1
+2026-05-14T08:48:23.2434327Z [1m[92m  Downloaded[0m version_check v0.9.5
+2026-05-14T08:48:23.2441812Z [1m[92m  Downloaded[0m tokio v1.52.3
+2026-05-14T08:48:23.2690409Z [1m[92m  Downloaded[0m utf8parse v0.2.2
+2026-05-14T08:48:23.2696556Z [1m[92m  Downloaded[0m try-lock v0.2.5
+2026-05-14T08:48:23.2701689Z [1m[92m  Downloaded[0m tower-service v0.3.3
+2026-05-14T08:48:23.2706370Z [1m[92m  Downloaded[0m sync_wrapper v0.1.2
+2026-05-14T08:48:23.2711247Z [1m[92m  Downloaded[0m serde_urlencoded v0.7.1
+2026-05-14T08:48:23.2720703Z [1m[92m  Downloaded[0m rand v0.8.6
+2026-05-14T08:48:23.2740603Z [1m[92m  Downloaded[0m http v0.2.12
+2026-05-14T08:48:23.2763822Z [1m[92m  Downloaded[0m der v0.7.10
+2026-05-14T08:48:23.2792830Z [1m[92m  Downloaded[0m cc v1.2.62
+2026-05-14T08:48:23.2814995Z [1m[92m  Downloaded[0m indexmap v2.14.0
+2026-05-14T08:48:23.2841038Z [1m[92m  Downloaded[0m icu_properties v2.2.0
+2026-05-14T08:48:23.2857800Z [1m[92m  Downloaded[0m icu_locale_core v2.2.0
+2026-05-14T08:48:23.2895001Z [1m[92m  Downloaded[0m icu_collections v2.2.0
+2026-05-14T08:48:23.2929167Z [1m[92m  Downloaded[0m crypto-bigint v0.5.5
+2026-05-14T08:48:23.2967206Z [1m[92m  Downloaded[0m bytes v1.11.1
+2026-05-14T08:48:23.2992661Z [1m[92m  Downloaded[0m base64 v0.21.7
+2026-05-14T08:48:23.3017153Z [1m[92m  Downloaded[0m quote v1.0.45
+2026-05-14T08:48:23.3032918Z [1m[92m  Downloaded[0m openssl-sys v0.9.115
+2026-05-14T08:48:23.3062909Z [1m[92m  Downloaded[0m encoding_rs v0.8.35
+2026-05-14T08:48:23.3216608Z [1m[92m  Downloaded[0m icu_normalizer_data v2.2.0
+2026-05-14T08:48:23.3234801Z [1m[92m  Downloaded[0m icu_normalizer v2.2.0
+2026-05-14T08:48:23.3257795Z [1m[92m  Downloaded[0m clap v4.6.1
+2026-05-14T08:48:23.3306988Z [1m[92m  Downloaded[0m tokio-macros v2.7.0
+2026-05-14T08:48:23.3313791Z [1m[92m  Downloaded[0m strsim v0.11.1
+2026-05-14T08:48:23.3320979Z [1m[92m  Downloaded[0m rand_core v0.6.4
+2026-05-14T08:48:23.3328659Z [1m[92m  Downloaded[0m proc-macro2 v1.0.106
+2026-05-14T08:48:23.3345748Z [1m[92m  Downloaded[0m parking_lot v0.12.5
+2026-05-14T08:48:23.3360207Z [1m[92m  Downloaded[0m p256 v0.13.2
+2026-05-14T08:48:23.3379576Z [1m[92m  Downloaded[0m num-traits v0.2.19
+2026-05-14T08:48:23.3394545Z [1m[92m  Downloaded[0m log v0.4.29
+2026-05-14T08:48:23.3409208Z [1m[92m  Downloaded[0m futures-channel v0.3.32
+2026-05-14T08:48:23.3420333Z [1m[92m  Downloaded[0m elliptic-curve v0.13.8
+2026-05-14T08:48:23.3441840Z [1m[92m  Downloaded[0m icu_provider v2.2.0
+2026-05-14T08:48:23.3457771Z [1m[92m  Downloaded[0m httparse v1.10.1
+2026-05-14T08:48:23.3472309Z [1m[92m  Downloaded[0m hmac v0.12.1
+2026-05-14T08:48:23.3483018Z [1m[92m  Downloaded[0m getrandom v0.2.17
+2026-05-14T08:48:23.3499541Z [1m[92m  Downloaded[0m digest v0.10.7
+2026-05-14T08:48:23.3509066Z [1m[92m  Downloaded[0m const-oid v0.9.6
+2026-05-14T08:48:23.3520647Z [1m[92m  Downloaded[0m clap_derive v4.6.1
+2026-05-14T08:48:23.3533624Z [1m[92m  Downloaded[0m bitflags v2.11.1
+2026-05-14T08:48:23.3555808Z [1m[92m  Downloaded[0m anyhow v1.0.102
+2026-05-14T08:48:23.3576871Z [1m[92m  Downloaded[0m pkcs1 v0.7.5
+2026-05-14T08:48:23.3590118Z [1m[92m  Downloaded[0m once_cell v1.21.4
+2026-05-14T08:48:23.3604207Z [1m[92m  Downloaded[0m native-tls v0.2.18
+2026-05-14T08:48:23.3613534Z [1m[92m  Downloaded[0m lock_api v0.4.14
+2026-05-14T08:48:23.3621910Z [1m[92m  Downloaded[0m litemap v0.8.2
+2026-05-14T08:48:23.3635687Z [1m[92m  Downloaded[0m ff v0.13.1
+2026-05-14T08:48:23.3645210Z [1m[92m  Downloaded[0m rfc6979 v0.4.0
+2026-05-14T08:48:23.3651751Z [1m[92m  Downloaded[0m pin-project-lite v0.2.17
+2026-05-14T08:48:23.3680942Z [1m[92m  Downloaded[0m generic-array v0.14.9
+2026-05-14T08:48:23.3689771Z [1m[92m  Downloaded[0m find-msvc-tools v0.1.9
+2026-05-14T08:48:23.3699756Z [1m[92m  Downloaded[0m displaydoc v0.2.5
+2026-05-14T08:48:23.3715870Z [1m[92m  Downloaded[0m ppv-lite86 v0.2.21
+2026-05-14T08:48:23.3724101Z [1m[92m  Downloaded[0m pkg-config v0.3.33
+2026-05-14T08:48:23.3733472Z [1m[92m  Downloaded[0m pkcs8 v0.10.2
+2026-05-14T08:48:23.3749060Z [1m[92m  Downloaded[0m pem-rfc7468 v0.7.0
+2026-05-14T08:48:23.3760266Z [1m[92m  Downloaded[0m num-integer v0.1.46
+2026-05-14T08:48:23.3769721Z [1m[92m  Downloaded[0m lazy_static v1.5.0
+2026-05-14T08:48:23.3779680Z [1m[92m  Downloaded[0m ipnet v2.12.0
+2026-05-14T08:48:23.3789928Z [1m[92m  Downloaded[0m group v0.13.0
+2026-05-14T08:48:23.3799147Z [1m[92m  Downloaded[0m ecdsa v0.16.9
+2026-05-14T08:48:23.3810470Z [1m[92m  Downloaded[0m block-buffer v0.10.4
+2026-05-14T08:48:23.3817052Z [1m[92m  Downloaded[0m is_terminal_polyfill v1.70.2
+2026-05-14T08:48:23.3823306Z [1m[92m  Downloaded[0m anstream v1.0.0
+2026-05-14T08:48:23.3836316Z [1m[92m  Downloaded[0m autocfg v1.5.0
+2026-05-14T08:48:23.3847458Z [1m[92m  Downloaded[0m anstyle-parse v1.0.0
+2026-05-14T08:48:23.3858465Z [1m[92m  Downloaded[0m anstyle v1.0.14
+2026-05-14T08:48:23.3867879Z [1m[92m  Downloaded[0m openssl-macros v0.1.1
+2026-05-14T08:48:23.3872715Z [1m[92m  Downloaded[0m num-iter v0.1.45
+2026-05-14T08:48:23.3878894Z [1m[92m  Downloaded[0m http-body v0.4.6
+2026-05-14T08:48:23.3888886Z [1m[92m  Downloaded[0m heck v0.5.0
+2026-05-14T08:48:23.3897009Z [1m[92m  Downloaded[0m futures-core v0.3.32
+2026-05-14T08:48:23.3906752Z [1m[92m  Downloaded[0m foreign-types v0.3.2
+2026-05-14T08:48:23.3912028Z [1m[92m  Downloaded[0m hyper-tls v0.5.0
+2026-05-14T08:48:23.3919497Z [1m[92m  Downloaded[0m clap_lex v1.1.0
+2026-05-14T08:48:23.3927888Z [1m[92m  Downloaded[0m cfg-if v1.0.4
+2026-05-14T08:48:23.3935501Z [1m[92m  Downloaded[0m cpufeatures v0.2.17
+2026-05-14T08:48:23.4914103Z [1m[92m   Compiling[0m proc-macro2 v1.0.106
+2026-05-14T08:48:23.4914827Z [1m[92m   Compiling[0m unicode-ident v1.0.24
+2026-05-14T08:48:23.4915411Z [1m[92m   Compiling[0m quote v1.0.45
+2026-05-14T08:48:23.4916020Z [1m[92m   Compiling[0m libc v0.2.186
+2026-05-14T08:48:27.4469975Z [1m[92m   Compiling[0m cfg-if v1.0.4
+2026-05-14T08:48:27.4945283Z [1m[92m   Compiling[0m zeroize v1.8.2
+2026-05-14T08:48:28.1282553Z [1m[92m   Compiling[0m version_check v0.9.5
+2026-05-14T08:48:28.4679393Z [1m[92m   Compiling[0m generic-array v0.14.9
+2026-05-14T08:48:30.4188665Z [1m[92m   Compiling[0m typenum v1.20.0
+2026-05-14T08:48:30.4391141Z [1m[92m   Compiling[0m const-oid v0.9.6
+2026-05-14T08:48:30.7425957Z [1m[92m   Compiling[0m smallvec v1.15.1
+2026-05-14T08:48:30.8729588Z [1m[92m   Compiling[0m subtle v2.6.1
+2026-05-14T08:48:30.9417358Z [1m[92m   Compiling[0m stable_deref_trait v1.2.1
+2026-05-14T08:48:30.9651217Z [1m[92m   Compiling[0m find-msvc-tools v0.1.9
+2026-05-14T08:48:31.2098043Z [1m[92m   Compiling[0m base64ct v1.8.3
+2026-05-14T08:48:31.4423999Z [1m[92m   Compiling[0m shlex v1.3.0
+2026-05-14T08:48:31.5516833Z [1m[92m   Compiling[0m getrandom v0.2.17
+2026-05-14T08:48:31.6024004Z [1m[92m   Compiling[0m cc v1.2.62
+2026-05-14T08:48:31.6750316Z [1m[92m   Compiling[0m syn v2.0.117
+2026-05-14T08:48:31.7017154Z [1m[92m   Compiling[0m rand_core v0.6.4
+2026-05-14T08:48:31.7242032Z [1m[92m   Compiling[0m block-buffer v0.10.4
+2026-05-14T08:48:31.8115232Z [1m[92m   Compiling[0m crypto-common v0.1.6
+2026-05-14T08:48:31.8625271Z [1m[92m   Compiling[0m pem-rfc7468 v0.7.0
+2026-05-14T08:48:31.8791785Z [1m[92m   Compiling[0m vcpkg v0.2.15
+2026-05-14T08:48:32.5842347Z [1m[92m   Compiling[0m pkg-config v0.3.33
+2026-05-14T08:48:32.5939178Z [1m[92m   Compiling[0m parking_lot_core v0.9.12
+2026-05-14T08:48:32.6929500Z [1m[92m   Compiling[0m pin-project-lite v0.2.17
+2026-05-14T08:48:32.7409740Z [1m[92m   Compiling[0m der v0.7.10
+2026-05-14T08:48:32.9621942Z [1m[92m   Compiling[0m digest v0.10.7
+2026-05-14T08:48:33.0120281Z [1m[92m   Compiling[0m openssl-sys v0.9.115
+2026-05-14T08:48:33.1294065Z [1m[92m   Compiling[0m scopeguard v1.2.0
+2026-05-14T08:48:33.1662258Z [1m[92m   Compiling[0m bytes v1.11.1
+2026-05-14T08:48:33.3768060Z [1m[33mwarning[0m: openssl-sys@0.9.115: Could not find directory of OpenSSL installation, and this `-sys` crate cannot proceed without this knowledge. If OpenSSL is installed and this crate had trouble finding it,  you can set the `OPENSSL_DIR` environment variable for the compilation process. See stderr section below for further information.
+2026-05-14T08:48:33.3777522Z [1m[91merror[0m: failed to run custom build command for `openssl-sys v0.9.115`
+2026-05-14T08:48:33.3778012Z 
+2026-05-14T08:48:33.3778127Z Caused by:
+2026-05-14T08:48:33.3780494Z   process didn't exit successfully: `/home/runner/work/oidc-jwks-converter/oidc-jwks-converter/target/release/build/openssl-sys-33c73d9001fe9212/build-script-main` (exit status: 101)
+2026-05-14T08:48:33.3781691Z   --- stdout
+2026-05-14T08:48:33.3785264Z   cargo:rustc-check-cfg=cfg(osslconf, values("OPENSSL_NO_OCB", "OPENSSL_NO_SM4", "OPENSSL_NO_SEED", "OPENSSL_NO_CHACHA", "OPENSSL_NO_CAST", "OPENSSL_NO_IDEA", "OPENSSL_NO_CAMELLIA", "OPENSSL_NO_RC4", "OPENSSL_NO_BF", "OPENSSL_NO_PSK", "OPENSSL_NO_DEPRECATED_3_0", "OPENSSL_NO_SCRYPT", "OPENSSL_NO_SM3", "OPENSSL_NO_RMD160", "OPENSSL_NO_EC2M", "OPENSSL_NO_OCSP", "OPENSSL_NO_CMS", "OPENSSL_NO_COMP", "OPENSSL_NO_SOCK", "OPENSSL_NO_STDIO", "OPENSSL_NO_EC", "OPENSSL_NO_SSL3_METHOD", "OPENSSL_NO_KRB5", "OPENSSL_NO_TLSEXT", "OPENSSL_NO_SRP", "OPENSSL_NO_SRTP", "OPENSSL_NO_RFC3779", "OPENSSL_NO_SHA", "OPENSSL_NO_NEXTPROTONEG", "OPENSSL_NO_ENGINE", "OPENSSL_NO_BUF_FREELISTS", "OPENSSL_NO_RC2"))
+2026-05-14T08:48:33.3788915Z   cargo:rustc-check-cfg=cfg(openssl)
+2026-05-14T08:48:33.3794140Z   cargo:rustc-check-cfg=cfg(libressl)
+2026-05-14T08:48:33.3794563Z   cargo:rustc-check-cfg=cfg(boringssl)
+2026-05-14T08:48:33.3794953Z   cargo:rustc-check-cfg=cfg(awslc)
+2026-05-14T08:48:33.3795366Z   cargo:rustc-check-cfg=cfg(awslc_pregenerated)
+2026-05-14T08:48:33.3795812Z   cargo:rustc-check-cfg=cfg(libressl250)
+2026-05-14T08:48:33.3796210Z   cargo:rustc-check-cfg=cfg(libressl251)
+2026-05-14T08:48:33.3796600Z   cargo:rustc-check-cfg=cfg(libressl252)
+2026-05-14T08:48:33.3797003Z   cargo:rustc-check-cfg=cfg(libressl261)
+2026-05-14T08:48:33.3797415Z   cargo:rustc-check-cfg=cfg(libressl270)
+2026-05-14T08:48:33.3797834Z   cargo:rustc-check-cfg=cfg(libressl271)
+2026-05-14T08:48:33.3798236Z   cargo:rustc-check-cfg=cfg(libressl273)
+2026-05-14T08:48:33.3798626Z   cargo:rustc-check-cfg=cfg(libressl280)
+2026-05-14T08:48:33.3799214Z   cargo:rustc-check-cfg=cfg(libressl281)
+2026-05-14T08:48:33.3799595Z   cargo:rustc-check-cfg=cfg(libressl291)
+2026-05-14T08:48:33.3800002Z   cargo:rustc-check-cfg=cfg(libressl310)
+2026-05-14T08:48:33.3800391Z   cargo:rustc-check-cfg=cfg(libressl321)
+2026-05-14T08:48:33.3800805Z   cargo:rustc-check-cfg=cfg(libressl332)
+2026-05-14T08:48:33.3801213Z   cargo:rustc-check-cfg=cfg(libressl340)
+2026-05-14T08:48:33.3801609Z   cargo:rustc-check-cfg=cfg(libressl350)
+2026-05-14T08:48:33.3801995Z   cargo:rustc-check-cfg=cfg(libressl360)
+2026-05-14T08:48:33.3802386Z   cargo:rustc-check-cfg=cfg(libressl361)
+2026-05-14T08:48:33.3802808Z   cargo:rustc-check-cfg=cfg(libressl370)
+2026-05-14T08:48:33.3803236Z   cargo:rustc-check-cfg=cfg(libressl380)
+2026-05-14T08:48:33.3803684Z   cargo:rustc-check-cfg=cfg(libressl381)
+2026-05-14T08:48:33.3804105Z   cargo:rustc-check-cfg=cfg(libressl382)
+2026-05-14T08:48:33.3804548Z   cargo:rustc-check-cfg=cfg(libressl390)
+2026-05-14T08:48:33.3804967Z   cargo:rustc-check-cfg=cfg(libressl400)
+2026-05-14T08:48:33.3805388Z   cargo:rustc-check-cfg=cfg(libressl410)
+2026-05-14T08:48:33.3805787Z   cargo:rustc-check-cfg=cfg(libressl420)
+2026-05-14T08:48:33.3806193Z   cargo:rustc-check-cfg=cfg(libressl430)
+2026-05-14T08:48:33.3806569Z   cargo:rustc-check-cfg=cfg(ossl101)
+2026-05-14T08:48:33.3806935Z   cargo:rustc-check-cfg=cfg(ossl102)
+2026-05-14T08:48:33.3807317Z   cargo:rustc-check-cfg=cfg(ossl102f)
+2026-05-14T08:48:33.3807689Z   cargo:rustc-check-cfg=cfg(ossl102h)
+2026-05-14T08:48:33.3808105Z   cargo:rustc-check-cfg=cfg(ossl110)
+2026-05-14T08:48:33.3808534Z   cargo:rustc-check-cfg=cfg(ossl110f)
+2026-05-14T08:48:33.3809085Z   cargo:rustc-check-cfg=cfg(ossl110g)
+2026-05-14T08:48:33.3809468Z   cargo:rustc-check-cfg=cfg(ossl110h)
+2026-05-14T08:48:33.3809849Z   cargo:rustc-check-cfg=cfg(ossl111)
+2026-05-14T08:48:33.3810493Z   cargo:rustc-check-cfg=cfg(ossl111b)
+2026-05-14T08:48:33.3810897Z   cargo:rustc-check-cfg=cfg(ossl111c)
+2026-05-14T08:48:33.3811259Z   cargo:rustc-check-cfg=cfg(ossl111d)
+2026-05-14T08:48:33.3811642Z   cargo:rustc-check-cfg=cfg(ossl300)
+2026-05-14T08:48:33.3812027Z   cargo:rustc-check-cfg=cfg(ossl310)
+2026-05-14T08:48:33.3812397Z   cargo:rustc-check-cfg=cfg(ossl320)
+2026-05-14T08:48:33.3812749Z   cargo:rustc-check-cfg=cfg(ossl330)
+2026-05-14T08:48:33.3813124Z   cargo:rustc-check-cfg=cfg(ossl340)
+2026-05-14T08:48:33.3813492Z   cargo:rustc-check-cfg=cfg(ossl400)
+2026-05-14T08:48:33.3814050Z   cargo:rerun-if-env-changed=X86_64_UNKNOWN_LINUX_MUSL_OPENSSL_LIB_DIR
+2026-05-14T08:48:33.3814639Z   X86_64_UNKNOWN_LINUX_MUSL_OPENSSL_LIB_DIR unset
+2026-05-14T08:48:33.3815094Z   cargo:rerun-if-env-changed=OPENSSL_LIB_DIR
+2026-05-14T08:48:33.3815518Z   OPENSSL_LIB_DIR unset
+2026-05-14T08:48:33.3816050Z   cargo:rerun-if-env-changed=X86_64_UNKNOWN_LINUX_MUSL_OPENSSL_INCLUDE_DIR
+2026-05-14T08:48:33.3816706Z   X86_64_UNKNOWN_LINUX_MUSL_OPENSSL_INCLUDE_DIR unset
+2026-05-14T08:48:33.3817209Z   cargo:rerun-if-env-changed=OPENSSL_INCLUDE_DIR
+2026-05-14T08:48:33.3817657Z   OPENSSL_INCLUDE_DIR unset
+2026-05-14T08:48:33.3818357Z   cargo:rerun-if-env-changed=X86_64_UNKNOWN_LINUX_MUSL_OPENSSL_DIR
+2026-05-14T08:48:33.3819882Z   X86_64_UNKNOWN_LINUX_MUSL_OPENSSL_DIR unset
+2026-05-14T08:48:33.3820327Z   cargo:rerun-if-env-changed=OPENSSL_DIR
+2026-05-14T08:48:33.3820700Z   OPENSSL_DIR unset
+2026-05-14T08:48:33.3821029Z   cargo:rerun-if-env-changed=OPENSSL_NO_PKG_CONFIG
+2026-05-14T08:48:33.3821645Z   cargo:rerun-if-env-changed=PKG_CONFIG_ALLOW_CROSS_x86_64-unknown-linux-musl
+2026-05-14T08:48:33.3822442Z   cargo:rerun-if-env-changed=PKG_CONFIG_ALLOW_CROSS_x86_64_unknown_linux_musl
+2026-05-14T08:48:33.3823075Z   cargo:rerun-if-env-changed=TARGET_PKG_CONFIG_ALLOW_CROSS
+2026-05-14T08:48:33.3823605Z   cargo:rerun-if-env-changed=PKG_CONFIG_ALLOW_CROSS
+2026-05-14T08:48:33.3824170Z   cargo:rerun-if-env-changed=PKG_CONFIG_x86_64-unknown-linux-musl
+2026-05-14T08:48:33.3824817Z   cargo:rerun-if-env-changed=PKG_CONFIG_x86_64_unknown_linux_musl
+2026-05-14T08:48:33.3825354Z   cargo:rerun-if-env-changed=TARGET_PKG_CONFIG
+2026-05-14T08:48:33.3825785Z   cargo:rerun-if-env-changed=PKG_CONFIG
+2026-05-14T08:48:33.3826338Z   cargo:rerun-if-env-changed=PKG_CONFIG_SYSROOT_DIR_x86_64-unknown-linux-musl
+2026-05-14T08:48:33.3827080Z   cargo:rerun-if-env-changed=PKG_CONFIG_SYSROOT_DIR_x86_64_unknown_linux_musl
+2026-05-14T08:48:33.3827768Z   cargo:rerun-if-env-changed=TARGET_PKG_CONFIG_SYSROOT_DIR
+2026-05-14T08:48:33.3828316Z   cargo:rerun-if-env-changed=PKG_CONFIG_SYSROOT_DIR
+2026-05-14T08:48:33.3828688Z 
+2026-05-14T08:48:33.3828697Z 
+2026-05-14T08:48:33.3829027Z   Could not find openssl via pkg-config:
+2026-05-14T08:48:33.3829591Z   pkg-config has not been configured to support cross-compilation.
+2026-05-14T08:48:33.3830018Z 
+2026-05-14T08:48:33.3830273Z   Install a sysroot for the target platform and configure it via
+2026-05-14T08:48:33.3830847Z   PKG_CONFIG_SYSROOT_DIR and PKG_CONFIG_PATH, or install a
+2026-05-14T08:48:33.3831419Z   cross-compiling wrapper for pkg-config and set it via
+2026-05-14T08:48:33.3831921Z   PKG_CONFIG environment variable.
+2026-05-14T08:48:33.3832169Z 
+2026-05-14T08:48:33.3837574Z   cargo:warning=Could not find directory of OpenSSL installation, and this `-sys` crate cannot proceed without this knowledge. If OpenSSL is installed and this crate had trouble finding it,  you can set the `OPENSSL_DIR` environment variable for the compilation process. See stderr section below for further information.
+2026-05-14T08:48:33.3840282Z 
+2026-05-14T08:48:33.3840417Z   --- stderr
+2026-05-14T08:48:33.3840583Z 
+2026-05-14T08:48:33.3840590Z 
+2026-05-14T08:48:33.3840882Z   Could not find directory of OpenSSL installation, and this `-sys` crate cannot
+2026-05-14T08:48:33.3841601Z   proceed without this knowledge. If OpenSSL is installed and this crate had
+2026-05-14T08:48:33.3842321Z   trouble finding it,  you can set the `OPENSSL_DIR` environment variable for the
+2026-05-14T08:48:33.3843124Z   compilation process.
+2026-05-14T08:48:33.3843318Z 
+2026-05-14T08:48:33.3843588Z   Make sure you also have the development packages of openssl installed.
+2026-05-14T08:48:33.3844251Z   For example, `libssl-dev` on Ubuntu or `openssl-devel` on Fedora.
+2026-05-14T08:48:33.3844628Z 
+2026-05-14T08:48:33.3844875Z   If you're in a situation where you think the directory *should* be found
+2026-05-14T08:48:33.3845615Z   automatically, please open a bug at https://github.com/rust-openssl/rust-openssl
+2026-05-14T08:48:33.3846354Z   and include information about your system as well as this message.
+2026-05-14T08:48:33.3846760Z 
+2026-05-14T08:48:33.3846890Z   $HOST = x86_64-unknown-linux-gnu
+2026-05-14T08:48:33.3847275Z   $TARGET = x86_64-unknown-linux-musl
+2026-05-14T08:48:33.3847662Z   openssl-sys = 0.9.115
+2026-05-14T08:48:33.3847860Z 
+2026-05-14T08:48:33.3847866Z 
+2026-05-14T08:48:33.3848368Z [1m[33mwarning[0m: build failed, waiting for other jobs to finish...
+2026-05-14T08:48:35.0978916Z ##[error]Process completed with exit code 101.
+2026-05-14T08:48:35.1083973Z Post job cleanup.
+2026-05-14T08:48:35.1851653Z [command]/usr/bin/git version
+2026-05-14T08:48:35.1883557Z git version 2.54.0
+2026-05-14T08:48:35.1917600Z Temporarily overriding HOME='/home/runner/work/_temp/8765e417-3e76-4d45-8986-05d128aaef09' before making global git config changes
+2026-05-14T08:48:35.1919027Z Adding repository directory to the temporary git global config as a safe directory
+2026-05-14T08:48:35.1922404Z [command]/usr/bin/git config --global --add safe.directory /home/runner/work/oidc-jwks-converter/oidc-jwks-converter
+2026-05-14T08:48:35.1946857Z Removing SSH command configuration
+2026-05-14T08:48:35.1952542Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+2026-05-14T08:48:35.1980780Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+2026-05-14T08:48:35.2150566Z Removing HTTP extra header
+2026-05-14T08:48:35.2154830Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+2026-05-14T08:48:35.2182667Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+2026-05-14T08:48:35.2345890Z Removing includeIf entries pointing to credentials config files
+2026-05-14T08:48:35.2352154Z [command]/usr/bin/git config --local --name-only --get-regexp ^includeIf\.gitdir:
+2026-05-14T08:48:35.2371996Z includeif.gitdir:/home/runner/work/oidc-jwks-converter/oidc-jwks-converter/.git.path
+2026-05-14T08:48:35.2373141Z includeif.gitdir:/home/runner/work/oidc-jwks-converter/oidc-jwks-converter/.git/worktrees/*.path
+2026-05-14T08:48:35.2373976Z includeif.gitdir:/github/workspace/.git.path
+2026-05-14T08:48:35.2374568Z includeif.gitdir:/github/workspace/.git/worktrees/*.path
+2026-05-14T08:48:35.2379893Z [command]/usr/bin/git config --local --get-all includeif.gitdir:/home/runner/work/oidc-jwks-converter/oidc-jwks-converter/.git.path
+2026-05-14T08:48:35.2397035Z /home/runner/work/_temp/git-credentials-3c0c9c6a-8040-4d46-a02a-8b4de00d14b5.config
+2026-05-14T08:48:35.2405790Z [command]/usr/bin/git config --local --unset includeif.gitdir:/home/runner/work/oidc-jwks-converter/oidc-jwks-converter/.git.path /home/runner/work/_temp/git-credentials-3c0c9c6a-8040-4d46-a02a-8b4de00d14b5.config
+2026-05-14T08:48:35.2432452Z [command]/usr/bin/git config --local --get-all includeif.gitdir:/home/runner/work/oidc-jwks-converter/oidc-jwks-converter/.git/worktrees/*.path
+2026-05-14T08:48:35.2449101Z /home/runner/work/_temp/git-credentials-3c0c9c6a-8040-4d46-a02a-8b4de00d14b5.config
+2026-05-14T08:48:35.2456624Z [command]/usr/bin/git config --local --unset includeif.gitdir:/home/runner/work/oidc-jwks-converter/oidc-jwks-converter/.git/worktrees/*.path /home/runner/work/_temp/git-credentials-3c0c9c6a-8040-4d46-a02a-8b4de00d14b5.config
+2026-05-14T08:48:35.2480393Z [command]/usr/bin/git config --local --get-all includeif.gitdir:/github/workspace/.git.path
+2026-05-14T08:48:35.2496565Z /github/runner_temp/git-credentials-3c0c9c6a-8040-4d46-a02a-8b4de00d14b5.config
+2026-05-14T08:48:35.2503348Z [command]/usr/bin/git config --local --unset includeif.gitdir:/github/workspace/.git.path /github/runner_temp/git-credentials-3c0c9c6a-8040-4d46-a02a-8b4de00d14b5.config
+2026-05-14T08:48:35.2527571Z [command]/usr/bin/git config --local --get-all includeif.gitdir:/github/workspace/.git/worktrees/*.path
+2026-05-14T08:48:35.2544180Z /github/runner_temp/git-credentials-3c0c9c6a-8040-4d46-a02a-8b4de00d14b5.config
+2026-05-14T08:48:35.2551788Z [command]/usr/bin/git config --local --unset includeif.gitdir:/github/workspace/.git/worktrees/*.path /github/runner_temp/git-credentials-3c0c9c6a-8040-4d46-a02a-8b4de00d14b5.config
+2026-05-14T08:48:35.2577123Z [command]/usr/bin/git submodule foreach --recursive git config --local --show-origin --name-only --get-regexp remote.origin.url
+2026-05-14T08:48:35.2739866Z Removing credentials config '/home/runner/work/_temp/git-credentials-3c0c9c6a-8040-4d46-a02a-8b4de00d14b5.config'
+2026-05-14T08:48:35.2856670Z Cleaning up orphan processes
