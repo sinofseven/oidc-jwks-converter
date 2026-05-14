@@ -19,7 +19,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - **Comprehensive Testing**: 20 unit and integration tests covering core functionality
 
 ### Supported
-- **Platforms**: Linux (x86_64, ARM64, ARM32), macOS (Intel & Apple Silicon), Windows
+- **Platforms**: Linux (x86_64, ARM64, ARM32), macOS (Apple Silicon), Windows
 - **Key Types and Algorithms**: 
   - RSA keys: All RSA key sizes (2048-bit and higher) with any signing algorithm (RS256, RS384, RS512, etc.)
   - EC keys: P-256 curve (secp256r1) only
