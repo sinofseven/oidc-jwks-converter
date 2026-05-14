@@ -21,8 +21,8 @@ jobs:
     env:
       TARGET: x86_64-unknown-linux-musl
     steps:
-      - uses: actions/checkout@v6
-      - uses: dtolnay/rust-toolchain@stable
+      - uses: actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd # v6
+      - uses: dtolnay/rust-toolchain@29eef336d9b2848a0b548edc03f92a220660cdb8 # stable
         with:
           target: ${{ env.TARGET }}
       - run: |
@@ -36,7 +36,7 @@ jobs:
         env:
           TMP_DIR: tmp/package/${{ env.BINARY_NAME }}_${{ github.ref_name }}_${{ env.TARGET }}
           SOURCE_BINARY: target/${{ env.TARGET }}/release/${{ env.BINARY_NAME }}
-      - uses: actions/upload-artifact@v7
+      - uses: actions/upload-artifact@043fb46d1a93c77aae656e7c1c64a875d1fc6a0a # v7
         if: ${{ github.ref_type == 'tag' }}
         with:
           name: tmp-${{ env.TARGET }}
@@ -48,8 +48,8 @@ jobs:
     env:
       TARGET: aarch64-unknown-linux-musl
     steps:
-      - uses: actions/checkout@v6
-      - uses: dtolnay/rust-toolchain@stable
+      - uses: actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd # v6
+      - uses: dtolnay/rust-toolchain@29eef336d9b2848a0b548edc03f92a220660cdb8 # stable
         with:
           target: ${{ env.TARGET }}
       - run: |
@@ -63,7 +63,7 @@ jobs:
         env:
           TMP_DIR: tmp/package/${{ env.BINARY_NAME }}_${{ github.ref_name }}_${{ env.TARGET }}
           SOURCE_BINARY: target/${{ env.TARGET }}/release/${{ env.BINARY_NAME }}
-      - uses: actions/upload-artifact@v7
+      - uses: actions/upload-artifact@043fb46d1a93c77aae656e7c1c64a875d1fc6a0a # v7
         if: ${{ github.ref_type == 'tag' }}
         with:
           name: tmp-${{ env.TARGET }}
@@ -76,8 +76,8 @@ jobs:
     env:
       TARGET: arm-unknown-linux-musleabihf
     steps:
-      - uses: actions/checkout@v6
-      - uses: dtolnay/rust-toolchain@stable
+      - uses: actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd # v6
+      - uses: dtolnay/rust-toolchain@29eef336d9b2848a0b548edc03f92a220660cdb8 # stable
         with:
           target: ${{ env.TARGET }}
       - run: |
@@ -93,7 +93,7 @@ jobs:
         env:
           TMP_DIR: tmp/package/${{ env.BINARY_NAME }}_${{ github.ref_name }}_${{ env.TARGET }}
           SOURCE_BINARY: target/${{ env.TARGET }}/release/${{ env.BINARY_NAME }}
-      - uses: actions/upload-artifact@v7
+      - uses: actions/upload-artifact@043fb46d1a93c77aae656e7c1c64a875d1fc6a0a # v7
         if: ${{ github.ref_type == 'tag' }}
         with:
           name: tmp-${{ env.TARGET }}
@@ -105,8 +105,8 @@ jobs:
     env:
       TARGET: aarch64-apple-darwin
     steps:
-      - uses: actions/checkout@v6
-      - uses: dtolnay/rust-toolchain@stable
+      - uses: actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd # v6
+      - uses: dtolnay/rust-toolchain@29eef336d9b2848a0b548edc03f92a220660cdb8 # stable
         with:
           target: ${{ env.TARGET }}
       - run: cargo build --release --target $TARGET
@@ -117,7 +117,7 @@ jobs:
         env:
           TMP_DIR: tmp/package/${{ env.BINARY_NAME }}_${{ github.ref_name }}_${{ env.TARGET }}
           SOURCE_BINARY: target/${{ env.TARGET }}/release/${{ env.BINARY_NAME }}
-      - uses: actions/upload-artifact@v7
+      - uses: actions/upload-artifact@043fb46d1a93c77aae656e7c1c64a875d1fc6a0a # v7
         if: ${{ github.ref_type == 'tag' }}
         with:
           name: tmp-${{ env.TARGET }}
@@ -129,8 +129,8 @@ jobs:
     env:
       TARGET: x86_64-pc-windows-msvc
     steps:
-      - uses: actions/checkout@v6
-      - uses: dtolnay/rust-toolchain@stable
+      - uses: actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd # v6
+      - uses: dtolnay/rust-toolchain@29eef336d9b2848a0b548edc03f92a220660cdb8 # stable
         with:
           target: ${{ env.TARGET }}
       - run: cargo build --release --target $env:TARGET
@@ -143,7 +143,7 @@ jobs:
         env:
           TMP_DIR: tmp/package/${{ env.BINARY_NAME }}_${{ github.ref_name }}_${{ env.TARGET }}
           SOURCE_BINARY: target/${{ env.TARGET }}/release/${{ env.BINARY_NAME }}
-      - uses: actions/upload-artifact@v7
+      - uses: actions/upload-artifact@043fb46d1a93c77aae656e7c1c64a875d1fc6a0a # v7
         if: ${{ github.ref_type == 'tag' }}
         with:
           name: tmp-${{ env.TARGET }}
@@ -153,12 +153,12 @@ jobs:
   third-party-licenses:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v6
-      - uses: dtolnay/rust-toolchain@stable
-      - uses: Swatinem/rust-cache@v2
+      - uses: actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd # v6
+      - uses: dtolnay/rust-toolchain@29eef336d9b2848a0b548edc03f92a220660cdb8 # stable
+      - uses: Swatinem/rust-cache@e18b497796c12c097a38f9edb9d0641fb99eee32 # v2
       - run: cargo install cargo-about --features="cli"
       - run: cargo about generate about.hbs > ${{ env.THIRD_PARTY_LICENSE_OUTPUT }}
-      - uses: actions/upload-artifact@v7
+      - uses: actions/upload-artifact@043fb46d1a93c77aae656e7c1c64a875d1fc6a0a # v7
         with:
           name: third_party_licenses
           path: ${{ env.THIRD_PARTY_LICENSE_OUTPUT }}
@@ -177,12 +177,12 @@ jobs:
       - third-party-licenses
     if: ${{ github.ref_type == 'tag' }}
     steps:
-      - uses: actions/checkout@v6
-      - uses: actions/download-artifact@v7
+      - uses: actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd # v6
+      - uses: actions/download-artifact@37930b1c2abaa49bbe596cd826c3c89aef350131 # v7
         with:
           pattern: tmp-*
           merge-multiple: true
-      - uses: actions/download-artifact@v7
+      - uses: actions/download-artifact@37930b1c2abaa49bbe596cd826c3c89aef350131 # v7
         with:
           name: third_party_licenses
       - run: find . -type f | sort
@@ -200,7 +200,7 @@ jobs:
           echo "$FILES" >> $GITHUB_OUTPUT
           echo "EOF" >> $GITHUB_OUTPUT
         id: release-files
-      - uses: softprops/action-gh-release@v2
+      - uses: softprops/action-gh-release@3bb12739c298aeb8a4eeaf626c5b8d85266b0e65 # v2
         with:
           draft: true
           generate_release_notes: true
