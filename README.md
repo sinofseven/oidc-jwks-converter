@@ -1,110 +1,112 @@
+English | [日本語](README_ja.md)
+
 # oidc-jwks-converter
 
-OIDC (OpenID Connect) の JWKS (JSON Web Key Set) を取得して、PEM フォーマットに変換するコマンドラインツールです。
+A command-line tool to fetch OIDC (OpenID Connect) JWKS (JSON Web Key Set) and convert it to PEM format.
 
-## 概要
+## Overview
 
-OpenID Connect プロバイダーの JWKS エンドポイントから公開鍵情報を取得し、RSA および EC (Elliptic Curve) の暗号化方式に対応した個別のPEMファイルを生成します。各鍵には Key ID (kid) をファイル名として使用します。
+Retrieves public key information from an OpenID Connect provider's JWKS endpoint and generates individual PEM files in formats supporting RSA and EC (Elliptic Curve) cryptographic methods. Each key uses its Key ID (kid) as the filename.
 
-## 機能
+## Features
 
-- **JWKS 自動取得**: OpenID Connect プロバイダーから JWKS を取得
-- **複数の暗号方式対応**: RSA および EC (P-256) の鍵を処理
-- **バッチ処理**: 複数の鍵を一括で PEM フォーマットに変換
-- **エラーハンドリング**: サポートされていない鍵タイプはスキップし、処理を継続
+- **Automatic JWKS Fetching**: Retrieve JWKS from OpenID Connect providers
+- **Multiple Cryptographic Methods**: Handle RSA and EC (P-256) keys
+- **Batch Processing**: Convert multiple keys to PEM format at once
+- **Error Handling**: Skip unsupported key types and continue processing
 
-## インストール
+## Installation
 
-### 前提条件
+### Prerequisites
 
-- Rust 1.56 以上
+- Rust 1.56 or later
 
-### ビルド
+### Build
 
 ```bash
 cargo build --release
 ```
 
-実行可能ファイルは `target/release/oidc-jwks-converter` に生成されます。
+The executable will be generated at `target/release/oidc-jwks-converter`.
 
-## 使用方法
+## Usage
 
-### 基本的な使い方
+### Basic Usage
 
 ```bash
 oidc-jwks-converter <JWKS_URL>
 ```
 
-JWKS URL を指定して実行します。各鍵は `{key_id}.pem` というファイル名で現在のディレクトリに保存されます。
+Specify a JWKS URL to run. Each key will be saved as `{key_id}.pem` in the current directory.
 
-### 出力ディレクトリの指定
+### Specifying Output Directory
 
 ```bash
 oidc-jwks-converter <JWKS_URL> -o ./keys
 oidc-jwks-converter <JWKS_URL> --output /path/to/keys
 ```
 
-`-o` または `--output` オプションで出力先ディレクトリを指定できます。ディレクトリが存在しない場合は自動的に作成されます。
+Use the `-o` or `--output` option to specify the output directory. The directory will be created automatically if it doesn't exist.
 
-### 使用例
+### Example
 
 ```bash
-# Google の JWKS から鍵を取得（例）
+# Fetch keys from Google's JWKS (example)
 oidc-jwks-converter https://www.googleapis.com/oauth2/v3/certs -o ./google_keys
 
-# 出力例
+# Output example
 # Fetching JWKS from: https://www.googleapis.com/oauth2/v3/certs
 # Found 2 key(s)
 # Saved: ./google_keys/key_id_1.pem
 # Saved: ./google_keys/key_id_2.pem
 ```
 
-## 対応フォーマット
+## Supported Formats
 
-### サポートキータイプと署名アルゴリズム
+### Supported Key Types and Signing Algorithms
 
-| キータイプ | 署名アルゴリズム | 説明 |
-|-----------|-----------------|------|
-| RSA | RS256, RS384, RS512 | RSA-PSS による署名 |
-| EC | ES256, ES384, ES512 | ECDSA による署名 |
+| Key Type | Signing Algorithm | Description |
+|----------|-------------------|-------------|
+| RSA | RS256, RS384, RS512 | RSA-PSS signature |
+| EC | ES256, ES384, ES512 | ECDSA signature |
 
-### 出力形式
+### Output Format
 
-生成されるPEMファイルはテキスト形式の標準的な PEM エンコーディング（PKCS#8）です。
+Generated PEM files are in standard text PEM encoding (PKCS#8) format.
 
-例：
+Example:
 ```
 -----BEGIN PUBLIC KEY-----
 MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEA...
 -----END PUBLIC KEY-----
 ```
 
-## 開発
+## Development
 
-### コマンド
+### Commands
 
 ```bash
-# ビルド
+# Build
 cargo build
 
-# リリースビルド
+# Release build
 cargo build --release
 
-# テスト実行
+# Run tests
 cargo test
 
-# コードフォーマット
+# Format code
 cargo fmt
 
-# フォーマットチェック
+# Check formatting
 cargo fmt --check
 
 # Lint
 cargo clippy
 ```
 
-### プロジェクト構成
+### Project Structure
 
-- `src/main.rs`: CLIエントリーポイント
-- `src/jwks.rs`: JWKS 取得ロジック
-- `src/converter.rs`: 鍵変換ロジック
+- `src/main.rs`: CLI entry point
+- `src/jwks.rs`: JWKS fetching logic
+- `src/converter.rs`: Key conversion logic
