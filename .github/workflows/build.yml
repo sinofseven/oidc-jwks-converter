@@ -1,0 +1,206 @@
+on:
+  push:
+    branches:
+      - master
+    tags:
+      - "v*"
+  pull_request:
+    branches:
+      - master
+
+env:
+  BINARY_NAME: oidc-jwks-converter
+  THIRD_PARTY_LICENSE_OUTPUT: THIRD_PARTY_LICENSES.html
+
+jobs:
+  build-linux-x86_64:
+    runs-on: ubuntu-22.04
+    env:
+      TARGET: x86_64-unknown-linux-musl
+    steps:
+      - uses: actions/checkout@v6
+      - uses: dtolnay/rust-toolchain@stable
+        with:
+          target: ${{ env.TARGET }}
+      - run: |
+          sudo apt-get update
+          sudo apt-get install -y musl-tools
+      - run: cargo build --release --target $TARGET
+      - run: |
+          mkdir -p "${{ env.TMP_DIR }}"
+          cp "${{ env.SOURCE_BINARY }}" "${{ env.TMP_DIR }}"
+        if: ${{ github.ref_type == 'tag' }}
+        env:
+          TMP_DIR: tmp/package/${{ env.BINARY_NAME }}_${{ github.ref_name }}_${{ env.TARGET }}
+          SOURCE_BINARY: target/${{ env.TARGET }}/release/${{ env.BINARY_NAME }}
+      - uses: actions/upload-artifact@v7
+        if: ${{ github.ref_type == 'tag' }}
+        with:
+          name: tmp-${{ env.TARGET }}
+          path: tmp
+          retention-days: 1
+
+  build-linux-arm64:
+    runs-on: ubuntu-22.04-arm
+    env:
+      TARGET: aarch64-unknown-linux-musl
+    steps:
+      - uses: actions/checkout@v6
+      - uses: dtolnay/rust-toolchain@stable
+        with:
+          target: ${{ env.TARGET }}
+      - run: |
+          sudo apt-get update
+          sudo apt-get install -y musl-tools
+      - run: cargo build --release --target $TARGET
+      - run: |
+          mkdir -p "${{ env.TMP_DIR }}"
+          cp "${{ env.SOURCE_BINARY }}" "${{ env.TMP_DIR }}"
+        if: ${{ github.ref_type == 'tag' }}
+        env:
+          TMP_DIR: tmp/package/${{ env.BINARY_NAME }}_${{ github.ref_name }}_${{ env.TARGET }}
+          SOURCE_BINARY: target/${{ env.TARGET }}/release/${{ env.BINARY_NAME }}
+      - uses: actions/upload-artifact@v7
+        if: ${{ github.ref_type == 'tag' }}
+        with:
+          name: tmp-${{ env.TARGET }}
+          path: tmp
+          retention-days: 1
+
+
+  build-linux-arm:
+    runs-on: ubuntu-22.04-arm
+    env:
+      TARGET: arm-unknown-linux-musleabihf
+    steps:
+      - uses: actions/checkout@v6
+      - uses: dtolnay/rust-toolchain@stable
+        with:
+          target: ${{ env.TARGET }}
+      - run: |
+          sudo apt-get update
+          sudo apt-get install -y musl-tools gcc-arm-linux-gnueabihf
+      - run: cargo build --release --target $TARGET
+        env:
+          CARGO_TARGET_ARM_UNKNOWN_LINUX_MUSLEABIHF_LINKER: arm-linux-gnueabihf-gcc
+      - run: |
+          mkdir -p "${{ env.TMP_DIR }}"
+          cp "${{ env.SOURCE_BINARY }}" "${{ env.TMP_DIR }}"
+        if: ${{ github.ref_type == 'tag' }}
+        env:
+          TMP_DIR: tmp/package/${{ env.BINARY_NAME }}_${{ github.ref_name }}_${{ env.TARGET }}
+          SOURCE_BINARY: target/${{ env.TARGET }}/release/${{ env.BINARY_NAME }}
+      - uses: actions/upload-artifact@v7
+        if: ${{ github.ref_type == 'tag' }}
+        with:
+          name: tmp-${{ env.TARGET }}
+          path: tmp
+          retention-days: 1
+
+  build-macos:
+    runs-on: macos-latest
+    env:
+      TARGET: aarch64-apple-darwin
+    steps:
+      - uses: actions/checkout@v6
+      - uses: dtolnay/rust-toolchain@stable
+        with:
+          target: ${{ env.TARGET }}
+      - run: cargo build --release --target $TARGET
+      - run: |
+          mkdir -p "${{ env.TMP_DIR }}"
+          cp "${{ env.SOURCE_BINARY }}" "${{ env.TMP_DIR }}"
+        if: ${{ github.ref_type == 'tag' }}
+        env:
+          TMP_DIR: tmp/package/${{ env.BINARY_NAME }}_${{ github.ref_name }}_${{ env.TARGET }}
+          SOURCE_BINARY: target/${{ env.TARGET }}/release/${{ env.BINARY_NAME }}
+      - uses: actions/upload-artifact@v7
+        if: ${{ github.ref_type == 'tag' }}
+        with:
+          name: tmp-${{ env.TARGET }}
+          path: tmp
+          retention-days: 1
+
+  build-windows-x86_64:
+    runs-on: windows-latest
+    env:
+      TARGET: x86_64-pc-windows-msvc
+    steps:
+      - uses: actions/checkout@v6
+      - uses: dtolnay/rust-toolchain@stable
+        with:
+          target: ${{ env.TARGET }}
+      - run: cargo build --release --target $env:TARGET
+        env:
+          RUSTFLAGS: -C target-feature=+crt-static
+      - run: |
+          mkdir -p "${{ env.TMP_DIR }}"
+          cp "${{ env.SOURCE_BINARY }}.exe" "${{ env.TMP_DIR }}"
+        if: ${{ github.ref_type == 'tag' }}
+        env:
+          TMP_DIR: tmp/package/${{ env.BINARY_NAME }}_${{ github.ref_name }}_${{ env.TARGET }}
+          SOURCE_BINARY: target/${{ env.TARGET }}/release/${{ env.BINARY_NAME }}
+      - uses: actions/upload-artifact@v7
+        if: ${{ github.ref_type == 'tag' }}
+        with:
+          name: tmp-${{ env.TARGET }}
+          path: tmp
+          retention-days: 1
+
+  third-party-licenses:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v6
+      - uses: dtolnay/rust-toolchain@stable
+      - uses: Swatinem/rust-cache@v2
+      - run: cargo install cargo-about
+      - run: cargo about generate about.hbs > ${{ env.THIRD_PARTY_LICENSE_OUTPUT }}
+      - uses: actions/upload-artifact@v7
+        with:
+          name: third_party_licenses
+          path: ${{ env.THIRD_PARTY_LICENSE_OUTPUT }}
+          retention-days: 1
+
+  packaging:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    needs:
+      - build-linux-x86_64
+      - build-linux-arm64
+      - build-linux-arm
+      - build-windows-x86_64
+      - build-macos
+      - third-party-licenses
+    if: ${{ github.ref_type == 'tag' }}
+    steps:
+      - uses: actions/checkout@v6
+      - uses: actions/download-artifact@v7
+        with:
+          pattern: tmp-*
+          merge-multiple: true
+      - uses: actions/download-artifact@v7
+        with:
+          name: third_party_licenses
+      - run: find . -type f | sort
+      - run: ls package | xargs -I {} sh -c 'chmod +x package/{}/*'
+      - run: ls package | xargs -I {} cp ${{ env.THIRD_PARTY_LICENSE_OUTPUT }} package/{}/
+      - run: ls package | xargs -I {} cp README.md package/{}/
+      - run: ls package | xargs -I {} cp README_ja.md package/{}/
+      - run: ls package | xargs -I {} cp LICENSE package/{}/
+      - run: ls . | xargs -I {} zip -r "{}.zip" "{}"
+        working-directory: package
+      - run: find package -type f | sort
+      - run: |
+          FILES=$(find package -type f | grep -F ".zip")
+          echo "files<<EOF" >> $GITHUB_OUTPUT
+          echo "$FILES" >> $GITHUB_OUTPUT
+          echo "EOF" >> $GITHUB_OUTPUT
+        id: release-files
+      - uses: softprops/action-gh-release@v2
+        with:
+          draft: true
+          generate_release_notes: true
+          files: package/*.zip
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
