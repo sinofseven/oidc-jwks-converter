@@ -11,7 +11,7 @@ reqwest = { version = "0.11", default-features = false, features = ["json", "rus
 tokio = { version = "1.0", features = ["full"] }
 rsa = "0.9"
 p256 = "0.13"
-base64 = "0.21"
+base64 = "0.22"
 clap = { version = "4.0", features = ["derive"] }
 thiserror = "1.0"
 anyhow = "1.0"
