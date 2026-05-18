@@ -13,13 +13,13 @@ jobs:
     steps:
       - name: Request ID Token
         id: get-jwt-token
-        uses: sinofseven/action-request-id-token@v1.0.1
+        uses: sinofseven/action-request-id-token@d98c556ca8df2d4d50b9e59255284ede00a770b1 # v1.0.1
         with:
           audience: ${{ secrets.JWT_AUDIENCE }}
 
       - name: Request PAT
         id: get-pat
-        uses: actions/create-github-app-token@v3
+        uses: actions/create-github-app-token@bcd2ba49218906704ab6c1aa796996da409d3eb1 # v3
         with:
           client-id: ${{ secrets.CLIENT_ID_LUCIFEROUS_TAP_PAT_PROVIDER }}
           private-key: ${{ secrets.PRIVATE_KEY_LUCIFEROUS_TAP_PAT_PROVIDER }}
@@ -27,7 +27,7 @@ jobs:
           repositories: homebrew-luciferous-tap
 
       - name: Dispatch workflow
-        uses: sinofseven/action-workflow-dispatch@v1.0.0
+        uses: sinofseven/action-workflow-dispatch@d14f3b51612cd9200658a52b8576981c4f96d6f6 # v1.0.0
         with:
           target_repo: "sinofseven/homebrew-luciferous-tap"
           ref: master
