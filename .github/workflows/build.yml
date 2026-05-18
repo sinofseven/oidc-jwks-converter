@@ -100,7 +100,6 @@ jobs:
             ${{ runner.os }}-musl-${{ env.TARGET }}-
       - run: |
           docker run --rm \
-            --user 1001:1001 \
             -v ${{ github.workspace }}:/workspace \
             -v $HOME/.cargo/registry:/root/.cargo/registry \
             -v $HOME/.cargo/git:/root/.cargo/git \
