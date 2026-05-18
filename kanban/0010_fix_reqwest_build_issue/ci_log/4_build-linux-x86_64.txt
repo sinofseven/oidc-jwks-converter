@@ -1,0 +1,501 @@
+﻿2026-05-14T12:28:47.3477009Z Current runner version: '2.334.0'
+2026-05-14T12:28:47.3510463Z ##[group]Runner Image Provisioner
+2026-05-14T12:28:47.3511729Z Hosted Compute Agent
+2026-05-14T12:28:47.3512537Z Version: 20260213.493
+2026-05-14T12:28:47.3513414Z Commit: 5c115507f6dd24b8de37d8bbe0bb4509d0cc0fa3
+2026-05-14T12:28:47.3514669Z Build Date: 2026-02-13T00:28:41Z
+2026-05-14T12:28:47.3515678Z Worker ID: {ada9ae30-ec1f-475e-8c50-198bc4be2480}
+2026-05-14T12:28:47.3516761Z Azure Region: eastus
+2026-05-14T12:28:47.3517628Z ##[endgroup]
+2026-05-14T12:28:47.3520147Z ##[group]Operating System
+2026-05-14T12:28:47.3521064Z Ubuntu
+2026-05-14T12:28:47.3521843Z 22.04.5
+2026-05-14T12:28:47.3522596Z LTS
+2026-05-14T12:28:47.3523286Z ##[endgroup]
+2026-05-14T12:28:47.3524201Z ##[group]Runner Image
+2026-05-14T12:28:47.3525006Z Image: ubuntu-22.04
+2026-05-14T12:28:47.3525799Z Version: 20260413.88.1
+2026-05-14T12:28:47.3527778Z Included Software: https://github.com/actions/runner-images/blob/ubuntu22/20260413.88/images/ubuntu/Ubuntu2204-Readme.md
+2026-05-14T12:28:47.3530586Z Image Release: https://github.com/actions/runner-images/releases/tag/ubuntu22%2F20260413.88
+2026-05-14T12:28:47.3532133Z ##[endgroup]
+2026-05-14T12:28:47.3533822Z ##[group]GITHUB_TOKEN Permissions
+2026-05-14T12:28:47.3536708Z Contents: read
+2026-05-14T12:28:47.3537529Z Metadata: read
+2026-05-14T12:28:47.3538224Z Packages: read
+2026-05-14T12:28:47.3539360Z ##[endgroup]
+2026-05-14T12:28:47.3542077Z Secret source: Actions
+2026-05-14T12:28:47.3543098Z Prepare workflow directory
+2026-05-14T12:28:47.4083184Z Prepare all required actions
+2026-05-14T12:28:47.4136940Z Getting action download info
+2026-05-14T12:28:47.7359674Z Download action repository 'actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd' (SHA:de0fac2e4500dabe0009e67214ff5f5447ce83dd)
+2026-05-14T12:28:47.9014789Z Download action repository 'dtolnay/rust-toolchain@29eef336d9b2848a0b548edc03f92a220660cdb8' (SHA:29eef336d9b2848a0b548edc03f92a220660cdb8)
+2026-05-14T12:28:47.9871703Z Download action repository 'actions/upload-artifact@043fb46d1a93c77aae656e7c1c64a875d1fc6a0a' (SHA:043fb46d1a93c77aae656e7c1c64a875d1fc6a0a)
+2026-05-14T12:28:48.3625559Z Complete job name: build-linux-x86_64
+2026-05-14T12:28:48.4339613Z ##[group]Run actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd
+2026-05-14T12:28:48.4340724Z with:
+2026-05-14T12:28:48.4341194Z   repository: sinofseven/oidc-jwks-converter
+2026-05-14T12:28:48.4341950Z   token: ***
+2026-05-14T12:28:48.4342364Z   ssh-strict: true
+2026-05-14T12:28:48.4342788Z   ssh-user: git
+2026-05-14T12:28:48.4343227Z   persist-credentials: true
+2026-05-14T12:28:48.4343697Z   clean: true
+2026-05-14T12:28:48.4344120Z   sparse-checkout-cone-mode: true
+2026-05-14T12:28:48.4344622Z   fetch-depth: 1
+2026-05-14T12:28:48.4345042Z   fetch-tags: false
+2026-05-14T12:28:48.4345491Z   show-progress: true
+2026-05-14T12:28:48.4345926Z   lfs: false
+2026-05-14T12:28:48.4346329Z   submodules: false
+2026-05-14T12:28:48.4346764Z   set-safe-directory: true
+2026-05-14T12:28:48.4347456Z env:
+2026-05-14T12:28:48.4347878Z   BINARY_NAME: oidc-jwks-converter
+2026-05-14T12:28:48.4348513Z   THIRD_PARTY_LICENSE_OUTPUT: THIRD_PARTY_LICENSES.html
+2026-05-14T12:28:48.4349370Z   TARGET: x86_64-unknown-linux-musl
+2026-05-14T12:28:48.4349871Z ##[endgroup]
+2026-05-14T12:28:48.5315990Z Syncing repository: sinofseven/oidc-jwks-converter
+2026-05-14T12:28:48.5317873Z ##[group]Getting Git version info
+2026-05-14T12:28:48.5318816Z Working directory is '/home/runner/work/oidc-jwks-converter/oidc-jwks-converter'
+2026-05-14T12:28:48.5320280Z [command]/usr/bin/git version
+2026-05-14T12:28:48.5400056Z git version 2.53.0
+2026-05-14T12:28:48.5422320Z ##[endgroup]
+2026-05-14T12:28:48.5435630Z Temporarily overriding HOME='/home/runner/work/_temp/c585d05d-1c21-4cb6-9a60-0ae210a3233f' before making global git config changes
+2026-05-14T12:28:48.5440899Z Adding repository directory to the temporary git global config as a safe directory
+2026-05-14T12:28:48.5442327Z [command]/usr/bin/git config --global --add safe.directory /home/runner/work/oidc-jwks-converter/oidc-jwks-converter
+2026-05-14T12:28:48.5476956Z Deleting the contents of '/home/runner/work/oidc-jwks-converter/oidc-jwks-converter'
+2026-05-14T12:28:48.5481056Z ##[group]Initializing the repository
+2026-05-14T12:28:48.5485648Z [command]/usr/bin/git init /home/runner/work/oidc-jwks-converter/oidc-jwks-converter
+2026-05-14T12:28:48.5615006Z hint: Using 'master' as the name for the initial branch. This default branch name
+2026-05-14T12:28:48.5617252Z hint: will change to "main" in Git 3.0. To configure the initial branch name
+2026-05-14T12:28:48.5619432Z hint: to use in all of your new repositories, which will suppress this warning,
+2026-05-14T12:28:48.5620911Z hint: call:
+2026-05-14T12:28:48.5621567Z hint:
+2026-05-14T12:28:48.5622193Z hint: 	git config --global init.defaultBranch <name>
+2026-05-14T12:28:48.5622810Z hint:
+2026-05-14T12:28:48.5623388Z hint: Names commonly chosen instead of 'master' are 'main', 'trunk' and
+2026-05-14T12:28:48.5624317Z hint: 'development'. The just-created branch can be renamed via this command:
+2026-05-14T12:28:48.5625075Z hint:
+2026-05-14T12:28:48.5625465Z hint: 	git branch -m <name>
+2026-05-14T12:28:48.5626002Z hint:
+2026-05-14T12:28:48.5626799Z hint: Disable this message with "git config set advice.defaultBranchName false"
+2026-05-14T12:28:48.5627992Z Initialized empty Git repository in /home/runner/work/oidc-jwks-converter/oidc-jwks-converter/.git/
+2026-05-14T12:28:48.5633180Z [command]/usr/bin/git remote add origin https://github.com/sinofseven/oidc-jwks-converter
+2026-05-14T12:28:48.5667136Z ##[endgroup]
+2026-05-14T12:28:48.5667911Z ##[group]Disabling automatic garbage collection
+2026-05-14T12:28:48.5672329Z [command]/usr/bin/git config --local gc.auto 0
+2026-05-14T12:28:48.5702296Z ##[endgroup]
+2026-05-14T12:28:48.5703441Z ##[group]Setting up auth
+2026-05-14T12:28:48.5704107Z Removing SSH command configuration
+2026-05-14T12:28:48.5711126Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+2026-05-14T12:28:48.5743981Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+2026-05-14T12:28:48.6110150Z Removing HTTP extra header
+2026-05-14T12:28:48.6115488Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+2026-05-14T12:28:48.6147834Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+2026-05-14T12:28:48.6361935Z Removing includeIf entries pointing to credentials config files
+2026-05-14T12:28:48.6367981Z [command]/usr/bin/git config --local --name-only --get-regexp ^includeIf\.gitdir:
+2026-05-14T12:28:48.6399825Z [command]/usr/bin/git submodule foreach --recursive git config --local --show-origin --name-only --get-regexp remote.origin.url
+2026-05-14T12:28:48.6626423Z [command]/usr/bin/git config --file /home/runner/work/_temp/git-credentials-9d5db37f-0549-49f9-89ba-3224a2730afa.config http.https://github.com/.extraheader AUTHORIZATION: basic ***
+2026-05-14T12:28:48.6700182Z [command]/usr/bin/git config --local includeIf.gitdir:/home/runner/work/oidc-jwks-converter/oidc-jwks-converter/.git.path /home/runner/work/_temp/git-credentials-9d5db37f-0549-49f9-89ba-3224a2730afa.config
+2026-05-14T12:28:48.6727932Z [command]/usr/bin/git config --local includeIf.gitdir:/home/runner/work/oidc-jwks-converter/oidc-jwks-converter/.git/worktrees/*.path /home/runner/work/_temp/git-credentials-9d5db37f-0549-49f9-89ba-3224a2730afa.config
+2026-05-14T12:28:48.6756905Z [command]/usr/bin/git config --local includeIf.gitdir:/github/workspace/.git.path /github/runner_temp/git-credentials-9d5db37f-0549-49f9-89ba-3224a2730afa.config
+2026-05-14T12:28:48.6784579Z [command]/usr/bin/git config --local includeIf.gitdir:/github/workspace/.git/worktrees/*.path /github/runner_temp/git-credentials-9d5db37f-0549-49f9-89ba-3224a2730afa.config
+2026-05-14T12:28:48.6810491Z ##[endgroup]
+2026-05-14T12:28:48.6811923Z ##[group]Fetching the repository
+2026-05-14T12:28:48.6818040Z [command]/usr/bin/git -c protocol.version=2 fetch --no-tags --prune --no-recurse-submodules --depth=1 origin +c84fbd3b886217b4d1105dbf8f338d42d85d65b3:refs/remotes/pull/5/merge
+2026-05-14T12:28:48.9029385Z From https://github.com/sinofseven/oidc-jwks-converter
+2026-05-14T12:28:48.9030882Z  * [new ref]         c84fbd3b886217b4d1105dbf8f338d42d85d65b3 -> pull/5/merge
+2026-05-14T12:28:48.9064332Z ##[endgroup]
+2026-05-14T12:28:48.9066152Z ##[group]Determining the checkout info
+2026-05-14T12:28:48.9067607Z ##[endgroup]
+2026-05-14T12:28:48.9070834Z [command]/usr/bin/git sparse-checkout disable
+2026-05-14T12:28:48.9113361Z [command]/usr/bin/git config --local --unset-all extensions.worktreeConfig
+2026-05-14T12:28:48.9142142Z ##[group]Checking out the ref
+2026-05-14T12:28:48.9145063Z [command]/usr/bin/git checkout --progress --force refs/remotes/pull/5/merge
+2026-05-14T12:28:48.9209510Z Note: switching to 'refs/remotes/pull/5/merge'.
+2026-05-14T12:28:48.9210845Z 
+2026-05-14T12:28:48.9211961Z You are in 'detached HEAD' state. You can look around, make experimental
+2026-05-14T12:28:48.9214270Z changes and commit them, and you can discard any commits you make in this
+2026-05-14T12:28:48.9216388Z state without impacting any branches by switching back to a branch.
+2026-05-14T12:28:48.9217577Z 
+2026-05-14T12:28:48.9218227Z If you want to create a new branch to retain commits you create, you may
+2026-05-14T12:28:48.9220099Z do so (now or later) by using -c with the switch command. Example:
+2026-05-14T12:28:48.9221114Z 
+2026-05-14T12:28:48.9221585Z   git switch -c <new-branch-name>
+2026-05-14T12:28:48.9222218Z 
+2026-05-14T12:28:48.9222590Z Or undo this operation with:
+2026-05-14T12:28:48.9223208Z 
+2026-05-14T12:28:48.9223537Z   git switch -
+2026-05-14T12:28:48.9223987Z 
+2026-05-14T12:28:48.9224792Z Turn off this advice by setting config variable advice.detachedHead to false
+2026-05-14T12:28:48.9226062Z 
+2026-05-14T12:28:48.9227362Z HEAD is now at c84fbd3 Merge 64a81b7434540026a2250e23d83e57c4618eb3c3 into 7995739c4acd0ab49d5c451a2ed464369e4b8e61
+2026-05-14T12:28:48.9232020Z ##[endgroup]
+2026-05-14T12:28:48.9253359Z [command]/usr/bin/git log -1 --format=%H
+2026-05-14T12:28:48.9276747Z c84fbd3b886217b4d1105dbf8f338d42d85d65b3
+2026-05-14T12:28:48.9880871Z ##[group]Run dtolnay/rust-toolchain@29eef336d9b2848a0b548edc03f92a220660cdb8
+2026-05-14T12:28:48.9882561Z with:
+2026-05-14T12:28:48.9883464Z   target: x86_64-unknown-linux-musl
+2026-05-14T12:28:48.9884653Z   toolchain: stable
+2026-05-14T12:28:48.9885648Z env:
+2026-05-14T12:28:48.9886528Z   BINARY_NAME: oidc-jwks-converter
+2026-05-14T12:28:48.9887871Z   THIRD_PARTY_LICENSE_OUTPUT: THIRD_PARTY_LICENSES.html
+2026-05-14T12:28:48.9889370Z   TARGET: x86_64-unknown-linux-musl
+2026-05-14T12:28:48.9890518Z ##[endgroup]
+2026-05-14T12:28:49.0114391Z ##[group]Run : parse toolchain version
+2026-05-14T12:28:49.0115575Z [36;1m: parse toolchain version[0m
+2026-05-14T12:28:49.0116637Z [36;1mif [[ -z $toolchain ]]; then[0m
+2026-05-14T12:28:49.0118505Z [36;1m  # GitHub does not enforce `required: true` inputs itself. https://github.com/actions/runner/issues/1070[0m
+2026-05-14T12:28:49.0120699Z [36;1m  echo "'toolchain' is a required input" >&2[0m
+2026-05-14T12:28:49.0121885Z [36;1m  exit 1[0m
+2026-05-14T12:28:49.0123111Z [36;1melif [[ $toolchain =~ ^stable' '[0-9]+' '(year|month|week|day)s?' 'ago$ ]]; then[0m
+2026-05-14T12:28:49.0124647Z [36;1m  if [[ Linux == macOS ]]; then[0m
+2026-05-14T12:28:49.0126568Z [36;1m    echo "toolchain=1.$((($(date -v-$(sed 's/stable \([0-9]*\) \(.\).*/\1\2/' <<< $toolchain) +%s)/60/60/24-16569)/7/6))" >> $GITHUB_OUTPUT[0m
+2026-05-14T12:28:49.0128689Z [36;1m  else[0m
+2026-05-14T12:28:49.0130337Z [36;1m    echo "toolchain=1.$((($(date --date "${toolchain#stable }" +%s)/60/60/24-16569)/7/6))" >> $GITHUB_OUTPUT[0m
+2026-05-14T12:28:49.0132066Z [36;1m  fi[0m
+2026-05-14T12:28:49.0133171Z [36;1melif [[ $toolchain =~ ^stable' 'minus' '[0-9]+' 'releases?$ ]]; then[0m
+2026-05-14T12:28:49.0135351Z [36;1m  echo "toolchain=1.$((($(date +%s)/60/60/24-16569)/7/6-${toolchain//[^0-9]/}))" >> $GITHUB_OUTPUT[0m
+2026-05-14T12:28:49.0137080Z [36;1melif [[ $toolchain =~ ^1\.[0-9]+$ ]]; then[0m
+2026-05-14T12:28:49.0139152Z [36;1m  echo "toolchain=1.$((i=${toolchain#1.}, c=($(date +%s)/60/60/24-16569)/7/6, i+9*i*(10*i<=c)+90*i*(100*i<=c)))" >> $GITHUB_OUTPUT[0m
+2026-05-14T12:28:49.0140998Z [36;1melse[0m
+2026-05-14T12:28:49.0141926Z [36;1m  echo "toolchain=$toolchain" >> $GITHUB_OUTPUT[0m
+2026-05-14T12:28:49.0143076Z [36;1mfi[0m
+2026-05-14T12:28:49.0212327Z shell: /usr/bin/bash --noprofile --norc -e -o pipefail {0}
+2026-05-14T12:28:49.0213567Z env:
+2026-05-14T12:28:49.0214306Z   BINARY_NAME: oidc-jwks-converter
+2026-05-14T12:28:49.0215465Z   THIRD_PARTY_LICENSE_OUTPUT: THIRD_PARTY_LICENSES.html
+2026-05-14T12:28:49.0216681Z   TARGET: x86_64-unknown-linux-musl
+2026-05-14T12:28:49.0217660Z   toolchain: stable
+2026-05-14T12:28:49.0218432Z ##[endgroup]
+2026-05-14T12:28:49.0421817Z ##[group]Run : construct rustup command line
+2026-05-14T12:28:49.0422955Z [36;1m: construct rustup command line[0m
+2026-05-14T12:28:49.0424566Z [36;1mecho "targets=$(for t in ${targets//,/ }; do echo -n ' --target' $t; done)" >> $GITHUB_OUTPUT[0m
+2026-05-14T12:28:49.0426836Z [36;1mecho "components=$(for c in ${components//,/ }; do echo -n ' --component' $c; done)" >> $GITHUB_OUTPUT[0m
+2026-05-14T12:28:49.0428619Z [36;1mecho "downgrade=" >> $GITHUB_OUTPUT[0m
+2026-05-14T12:28:49.0484542Z shell: /usr/bin/bash --noprofile --norc -e -o pipefail {0}
+2026-05-14T12:28:49.0485713Z env:
+2026-05-14T12:28:49.0486493Z   BINARY_NAME: oidc-jwks-converter
+2026-05-14T12:28:49.0487622Z   THIRD_PARTY_LICENSE_OUTPUT: THIRD_PARTY_LICENSES.html
+2026-05-14T12:28:49.0488793Z   TARGET: x86_64-unknown-linux-musl
+2026-05-14T12:28:49.0489924Z   targets: x86_64-unknown-linux-musl
+2026-05-14T12:28:49.0490891Z   components: 
+2026-05-14T12:28:49.0491610Z ##[endgroup]
+2026-05-14T12:28:49.0635824Z ##[group]Run : set $CARGO_HOME
+2026-05-14T12:28:49.0636858Z [36;1m: set $CARGO_HOME[0m
+2026-05-14T12:28:49.0637994Z [36;1mecho CARGO_HOME=${CARGO_HOME:-"$HOME/.cargo"} >> $GITHUB_ENV[0m
+2026-05-14T12:28:49.0693394Z shell: /usr/bin/bash --noprofile --norc -e -o pipefail {0}
+2026-05-14T12:28:49.0694576Z env:
+2026-05-14T12:28:49.0695500Z   BINARY_NAME: oidc-jwks-converter
+2026-05-14T12:28:49.0696639Z   THIRD_PARTY_LICENSE_OUTPUT: THIRD_PARTY_LICENSES.html
+2026-05-14T12:28:49.0697812Z   TARGET: x86_64-unknown-linux-musl
+2026-05-14T12:28:49.0698724Z ##[endgroup]
+2026-05-14T12:28:49.0841398Z ##[group]Run : install rustup if needed
+2026-05-14T12:28:49.0842429Z [36;1m: install rustup if needed[0m
+2026-05-14T12:28:49.0843488Z [36;1mif ! command -v rustup &>/dev/null; then[0m
+2026-05-14T12:28:49.0846086Z [36;1m  curl --proto '=https' --tlsv1.2 --retry 10 --retry-connrefused --location --silent --show-error --fail https://sh.rustup.rs | sh -s -- --default-toolchain none -y[0m
+2026-05-14T12:28:49.0848619Z [36;1m  echo "$CARGO_HOME/bin" >> $GITHUB_PATH[0m
+2026-05-14T12:28:49.0849910Z [36;1mfi[0m
+2026-05-14T12:28:49.0902740Z shell: /usr/bin/bash --noprofile --norc -e -o pipefail {0}
+2026-05-14T12:28:49.0903910Z env:
+2026-05-14T12:28:49.0904599Z   BINARY_NAME: oidc-jwks-converter
+2026-05-14T12:28:49.0905724Z   THIRD_PARTY_LICENSE_OUTPUT: THIRD_PARTY_LICENSES.html
+2026-05-14T12:28:49.0906913Z   TARGET: x86_64-unknown-linux-musl
+2026-05-14T12:28:49.0907880Z   CARGO_HOME: /home/runner/.cargo
+2026-05-14T12:28:49.0908769Z ##[endgroup]
+2026-05-14T12:28:49.1051843Z ##[group]Run rustup toolchain install stable --target x86_64-unknown-linux-musl --profile minimal --no-self-update
+2026-05-14T12:28:49.1054510Z [36;1mrustup toolchain install stable --target x86_64-unknown-linux-musl --profile minimal --no-self-update[0m
+2026-05-14T12:28:49.1107403Z shell: /usr/bin/bash --noprofile --norc -e -o pipefail {0}
+2026-05-14T12:28:49.1108562Z env:
+2026-05-14T12:28:49.1109435Z   BINARY_NAME: oidc-jwks-converter
+2026-05-14T12:28:49.1110725Z   THIRD_PARTY_LICENSE_OUTPUT: THIRD_PARTY_LICENSES.html
+2026-05-14T12:28:49.1111891Z   TARGET: x86_64-unknown-linux-musl
+2026-05-14T12:28:49.1112845Z   CARGO_HOME: /home/runner/.cargo
+2026-05-14T12:28:49.1113780Z   RUSTUP_PERMIT_COPY_RENAME: 1
+2026-05-14T12:28:49.1114628Z ##[endgroup]
+2026-05-14T12:28:49.3667446Z info: syncing channel updates for stable-x86_64-unknown-linux-gnu
+2026-05-14T12:28:49.5751050Z info: latest update on 2026-04-16 for version 1.95.0 (59807616e 2026-04-14)
+2026-05-14T12:28:49.6175918Z info: removing previous version of component clippy
+2026-05-14T12:28:49.6279328Z info: removing previous version of component rustfmt
+2026-05-14T12:28:49.6291900Z info: removing previous version of component cargo
+2026-05-14T12:28:49.6343176Z info: removing previous version of component rust-std
+2026-05-14T12:28:49.6426600Z info: removing previous version of component rustc
+2026-05-14T12:28:49.6480499Z info: downloading 6 components
+2026-05-14T12:29:00.3504552Z 
+2026-05-14T12:29:00.3608515Z   stable-x86_64-unknown-linux-gnu updated - rustc 1.95.0 (59807616e 2026-04-14) (from rustc 1.94.1 (e408947bf 2026-03-25))
+2026-05-14T12:29:00.3610411Z 
+2026-05-14T12:29:00.3765185Z ##[group]Run rustup default stable
+2026-05-14T12:29:00.3765498Z [36;1mrustup default stable[0m
+2026-05-14T12:29:00.3825089Z shell: /usr/bin/bash --noprofile --norc -e -o pipefail {0}
+2026-05-14T12:29:00.3825435Z env:
+2026-05-14T12:29:00.3825638Z   BINARY_NAME: oidc-jwks-converter
+2026-05-14T12:29:00.3825971Z   THIRD_PARTY_LICENSE_OUTPUT: THIRD_PARTY_LICENSES.html
+2026-05-14T12:29:00.3826294Z   TARGET: x86_64-unknown-linux-musl
+2026-05-14T12:29:00.3826556Z   CARGO_HOME: /home/runner/.cargo
+2026-05-14T12:29:00.3826788Z ##[endgroup]
+2026-05-14T12:29:00.3956991Z info: using existing install for stable-x86_64-unknown-linux-gnu
+2026-05-14T12:29:00.3964520Z info: default toolchain set to stable-x86_64-unknown-linux-gnu
+2026-05-14T12:29:00.3965030Z 
+2026-05-14T12:29:00.4067519Z   stable-x86_64-unknown-linux-gnu unchanged - rustc 1.95.0 (59807616e 2026-04-14)
+2026-05-14T12:29:00.4068047Z 
+2026-05-14T12:29:00.4112658Z ##[group]Run : create cachekey
+2026-05-14T12:29:00.4112946Z [36;1m: create cachekey[0m
+2026-05-14T12:29:00.4113437Z [36;1mDATE=$(rustc +stable --version --verbose | sed -ne 's/^commit-date: \(20[0-9][0-9]\)-\([01][0-9]\)-\([0-3][0-9]\)$/\1\2\3/p')[0m
+2026-05-14T12:29:00.4114384Z [36;1mHASH=$(rustc +stable --version --verbose | sed -ne 's/^commit-hash: //p')[0m
+2026-05-14T12:29:00.4114887Z [36;1mecho "cachekey=$(echo $DATE$HASH | head -c12)" >> $GITHUB_OUTPUT[0m
+2026-05-14T12:29:00.4173462Z shell: /usr/bin/bash --noprofile --norc -e -o pipefail {0}
+2026-05-14T12:29:00.4173792Z env:
+2026-05-14T12:29:00.4173980Z   BINARY_NAME: oidc-jwks-converter
+2026-05-14T12:29:00.4174294Z   THIRD_PARTY_LICENSE_OUTPUT: THIRD_PARTY_LICENSES.html
+2026-05-14T12:29:00.4174608Z   TARGET: x86_64-unknown-linux-musl
+2026-05-14T12:29:00.4174853Z   CARGO_HOME: /home/runner/.cargo
+2026-05-14T12:29:00.4175079Z ##[endgroup]
+2026-05-14T12:29:00.4624889Z ##[group]Run : disable incremental compilation
+2026-05-14T12:29:00.4625475Z [36;1m: disable incremental compilation[0m
+2026-05-14T12:29:00.4625995Z [36;1mif [ -z "${CARGO_INCREMENTAL+set}" ]; then[0m
+2026-05-14T12:29:00.4626521Z [36;1m  echo CARGO_INCREMENTAL=0 >> $GITHUB_ENV[0m
+2026-05-14T12:29:00.4626975Z [36;1mfi[0m
+2026-05-14T12:29:00.4707171Z shell: /usr/bin/bash --noprofile --norc -e -o pipefail {0}
+2026-05-14T12:29:00.4707702Z env:
+2026-05-14T12:29:00.4707998Z   BINARY_NAME: oidc-jwks-converter
+2026-05-14T12:29:00.4708492Z   THIRD_PARTY_LICENSE_OUTPUT: THIRD_PARTY_LICENSES.html
+2026-05-14T12:29:00.4709220Z   TARGET: x86_64-unknown-linux-musl
+2026-05-14T12:29:00.4709638Z   CARGO_HOME: /home/runner/.cargo
+2026-05-14T12:29:00.4710016Z ##[endgroup]
+2026-05-14T12:29:00.4831726Z ##[group]Run : enable colors in Cargo output
+2026-05-14T12:29:00.4832045Z [36;1m: enable colors in Cargo output[0m
+2026-05-14T12:29:00.4832338Z [36;1mif [ -z "${CARGO_TERM_COLOR+set}" ]; then[0m
+2026-05-14T12:29:00.4832655Z [36;1m  echo CARGO_TERM_COLOR=always >> $GITHUB_ENV[0m
+2026-05-14T12:29:00.4833120Z [36;1mfi[0m
+2026-05-14T12:29:00.4889244Z shell: /usr/bin/bash --noprofile --norc -e -o pipefail {0}
+2026-05-14T12:29:00.4889576Z env:
+2026-05-14T12:29:00.4889761Z   BINARY_NAME: oidc-jwks-converter
+2026-05-14T12:29:00.4890074Z   THIRD_PARTY_LICENSE_OUTPUT: THIRD_PARTY_LICENSES.html
+2026-05-14T12:29:00.4890379Z   TARGET: x86_64-unknown-linux-musl
+2026-05-14T12:29:00.4890629Z   CARGO_HOME: /home/runner/.cargo
+2026-05-14T12:29:00.4890860Z   CARGO_INCREMENTAL: 0
+2026-05-14T12:29:00.4891050Z ##[endgroup]
+2026-05-14T12:29:00.5022631Z ##[group]Run : enable Cargo sparse registry
+2026-05-14T12:29:00.5022951Z [36;1m: enable Cargo sparse registry[0m
+2026-05-14T12:29:00.5023310Z [36;1m# implemented in 1.66, stabilized in 1.68, made default in 1.70[0m
+2026-05-14T12:29:00.5024003Z [36;1mif [ -z "${CARGO_REGISTRIES_CRATES_IO_PROTOCOL+set}" -o -f "/home/runner/work/_temp"/.implicit_cargo_registries_crates_io_protocol ]; then[0m
+2026-05-14T12:29:00.5024713Z [36;1m  if rustc +stable --version --verbose | grep -q '^release: 1\.6[89]\.'; then[0m
+2026-05-14T12:29:00.5025263Z [36;1m    touch "/home/runner/work/_temp"/.implicit_cargo_registries_crates_io_protocol || true[0m
+2026-05-14T12:29:00.5025785Z [36;1m    echo CARGO_REGISTRIES_CRATES_IO_PROTOCOL=sparse >> $GITHUB_ENV[0m
+2026-05-14T12:29:00.5026258Z [36;1m  elif rustc +stable --version --verbose | grep -q '^release: 1\.6[67]\.'; then[0m
+2026-05-14T12:29:00.5026797Z [36;1m    touch "/home/runner/work/_temp"/.implicit_cargo_registries_crates_io_protocol || true[0m
+2026-05-14T12:29:00.5027288Z [36;1m    echo CARGO_REGISTRIES_CRATES_IO_PROTOCOL=git >> $GITHUB_ENV[0m
+2026-05-14T12:29:00.5027613Z [36;1m  fi[0m
+2026-05-14T12:29:00.5027785Z [36;1mfi[0m
+2026-05-14T12:29:00.5084775Z shell: /usr/bin/bash --noprofile --norc -e -o pipefail {0}
+2026-05-14T12:29:00.5085266Z env:
+2026-05-14T12:29:00.5085540Z   BINARY_NAME: oidc-jwks-converter
+2026-05-14T12:29:00.5085996Z   THIRD_PARTY_LICENSE_OUTPUT: THIRD_PARTY_LICENSES.html
+2026-05-14T12:29:00.5086539Z   TARGET: x86_64-unknown-linux-musl
+2026-05-14T12:29:00.5086961Z   CARGO_HOME: /home/runner/.cargo
+2026-05-14T12:29:00.5087355Z   CARGO_INCREMENTAL: 0
+2026-05-14T12:29:00.5087706Z   CARGO_TERM_COLOR: always
+2026-05-14T12:29:00.5088051Z ##[endgroup]
+2026-05-14T12:29:00.5493215Z ##[group]Run : work around spurious network errors in curl 8.0
+2026-05-14T12:29:00.5493657Z [36;1m: work around spurious network errors in curl 8.0[0m
+2026-05-14T12:29:00.5494194Z [36;1m# https://rust-lang.zulipchat.com/#narrow/stream/246057-t-cargo/topic/timeout.20investigation[0m
+2026-05-14T12:29:00.5494781Z [36;1mif rustc +stable --version --verbose | grep -q '^release: 1\.7[01]\.'; then[0m
+2026-05-14T12:29:00.5495240Z [36;1m  echo CARGO_HTTP_MULTIPLEXING=false >> $GITHUB_ENV[0m
+2026-05-14T12:29:00.5495537Z [36;1mfi[0m
+2026-05-14T12:29:00.5557857Z shell: /usr/bin/bash --noprofile --norc -e -o pipefail {0}
+2026-05-14T12:29:00.5558200Z env:
+2026-05-14T12:29:00.5558416Z   BINARY_NAME: oidc-jwks-converter
+2026-05-14T12:29:00.5558728Z   THIRD_PARTY_LICENSE_OUTPUT: THIRD_PARTY_LICENSES.html
+2026-05-14T12:29:00.5559171Z   TARGET: x86_64-unknown-linux-musl
+2026-05-14T12:29:00.5559423Z   CARGO_HOME: /home/runner/.cargo
+2026-05-14T12:29:00.5559663Z   CARGO_INCREMENTAL: 0
+2026-05-14T12:29:00.5559872Z   CARGO_TERM_COLOR: always
+2026-05-14T12:29:00.5560080Z ##[endgroup]
+2026-05-14T12:29:00.5816404Z ##[group]Run rustc +stable --version --verbose
+2026-05-14T12:29:00.5816743Z [36;1mrustc +stable --version --verbose[0m
+2026-05-14T12:29:00.5877519Z shell: /usr/bin/bash --noprofile --norc -e -o pipefail {0}
+2026-05-14T12:29:00.5877845Z env:
+2026-05-14T12:29:00.5878027Z   BINARY_NAME: oidc-jwks-converter
+2026-05-14T12:29:00.5878332Z   THIRD_PARTY_LICENSE_OUTPUT: THIRD_PARTY_LICENSES.html
+2026-05-14T12:29:00.5878634Z   TARGET: x86_64-unknown-linux-musl
+2026-05-14T12:29:00.5879086Z   CARGO_HOME: /home/runner/.cargo
+2026-05-14T12:29:00.5879369Z   CARGO_INCREMENTAL: 0
+2026-05-14T12:29:00.5879764Z   CARGO_TERM_COLOR: always
+2026-05-14T12:29:00.5879976Z ##[endgroup]
+2026-05-14T12:29:00.6081805Z rustc 1.95.0 (59807616e 2026-04-14)
+2026-05-14T12:29:00.6082816Z binary: rustc
+2026-05-14T12:29:00.6083331Z commit-hash: 59807616e1fa2540724bfbac14d7976d7e4a3860
+2026-05-14T12:29:00.6083936Z commit-date: 2026-04-14
+2026-05-14T12:29:00.6084424Z host: x86_64-unknown-linux-gnu
+2026-05-14T12:29:00.6084856Z release: 1.95.0
+2026-05-14T12:29:00.6085223Z LLVM version: 22.1.2
+2026-05-14T12:29:00.6172777Z ##[group]Run sudo apt-get update
+2026-05-14T12:29:00.6173092Z [36;1msudo apt-get update[0m
+2026-05-14T12:29:00.6173363Z [36;1msudo apt-get install -y musl-tools[0m
+2026-05-14T12:29:00.6234884Z shell: /usr/bin/bash -e {0}
+2026-05-14T12:29:00.6235123Z env:
+2026-05-14T12:29:00.6235313Z   BINARY_NAME: oidc-jwks-converter
+2026-05-14T12:29:00.6235613Z   THIRD_PARTY_LICENSE_OUTPUT: THIRD_PARTY_LICENSES.html
+2026-05-14T12:29:00.6235927Z   TARGET: x86_64-unknown-linux-musl
+2026-05-14T12:29:00.6236184Z   CARGO_HOME: /home/runner/.cargo
+2026-05-14T12:29:00.6236433Z   CARGO_INCREMENTAL: 0
+2026-05-14T12:29:00.6236637Z   CARGO_TERM_COLOR: always
+2026-05-14T12:29:00.6236838Z ##[endgroup]
+2026-05-14T12:29:00.8329851Z Get:1 file:/etc/apt/apt-mirrors.txt Mirrorlist [144 B]
+2026-05-14T12:29:00.8491339Z Get:6 https://packages.microsoft.com/repos/azure-cli jammy InRelease [3596 B]
+2026-05-14T12:29:00.8705918Z Hit:2 http://azure.archive.ubuntu.com/ubuntu jammy InRelease
+2026-05-14T12:29:00.8711521Z Get:7 https://packages.microsoft.com/ubuntu/22.04/prod jammy InRelease [3632 B]
+2026-05-14T12:29:00.8773378Z Get:8 https://dl.google.com/linux/chrome-stable/deb stable InRelease [1825 B]
+2026-05-14T12:29:00.8815200Z Get:3 http://azure.archive.ubuntu.com/ubuntu jammy-updates InRelease [128 kB]
+2026-05-14T12:29:00.8838075Z Get:4 http://azure.archive.ubuntu.com/ubuntu jammy-backports InRelease [127 kB]
+2026-05-14T12:29:00.8863448Z Get:5 http://azure.archive.ubuntu.com/ubuntu jammy-security InRelease [129 kB]
+2026-05-14T12:29:00.9727065Z Get:9 https://packages.microsoft.com/repos/azure-cli jammy/main amd64 Packages [3262 B]
+2026-05-14T12:29:01.1146882Z Get:10 https://packages.microsoft.com/ubuntu/22.04/prod jammy/main arm64 Packages [178 kB]
+2026-05-14T12:29:01.1214094Z Get:11 https://packages.microsoft.com/ubuntu/22.04/prod jammy/main armhf Packages [21.8 kB]
+2026-05-14T12:29:01.1235099Z Get:12 https://packages.microsoft.com/ubuntu/22.04/prod jammy/main amd64 Packages [363 kB]
+2026-05-14T12:29:01.1915292Z Get:13 https://dl.google.com/linux/chrome-stable/deb stable/main amd64 Packages [1212 B]
+2026-05-14T12:29:01.2522180Z Get:14 http://azure.archive.ubuntu.com/ubuntu jammy-updates/main amd64 Packages [3485 kB]
+2026-05-14T12:29:01.2755478Z Get:15 http://azure.archive.ubuntu.com/ubuntu jammy-updates/main Translation-en [524 kB]
+2026-05-14T12:29:01.2830378Z Get:16 http://azure.archive.ubuntu.com/ubuntu jammy-updates/main amd64 c-n-f Metadata [19.8 kB]
+2026-05-14T12:29:01.2850348Z Get:17 http://azure.archive.ubuntu.com/ubuntu jammy-updates/restricted amd64 Packages [5918 kB]
+2026-05-14T12:29:01.3183649Z Get:18 http://azure.archive.ubuntu.com/ubuntu jammy-updates/restricted Translation-en [1123 kB]
+2026-05-14T12:29:01.3301991Z Get:19 http://azure.archive.ubuntu.com/ubuntu jammy-updates/restricted amd64 c-n-f Metadata [600 B]
+2026-05-14T12:29:01.3323949Z Get:20 http://azure.archive.ubuntu.com/ubuntu jammy-updates/universe amd64 Packages [1269 kB]
+2026-05-14T12:29:01.3472522Z Get:21 http://azure.archive.ubuntu.com/ubuntu jammy-updates/universe Translation-en [316 kB]
+2026-05-14T12:29:01.3506019Z Get:22 http://azure.archive.ubuntu.com/ubuntu jammy-updates/universe amd64 c-n-f Metadata [30.5 kB]
+2026-05-14T12:29:01.3549219Z Get:23 http://azure.archive.ubuntu.com/ubuntu jammy-updates/multiverse amd64 Packages [71.3 kB]
+2026-05-14T12:29:01.4003651Z Get:24 http://azure.archive.ubuntu.com/ubuntu jammy-updates/multiverse Translation-en [15.5 kB]
+2026-05-14T12:29:01.4023013Z Get:25 http://azure.archive.ubuntu.com/ubuntu jammy-updates/multiverse amd64 c-n-f Metadata [756 B]
+2026-05-14T12:29:01.4051382Z Get:26 http://azure.archive.ubuntu.com/ubuntu jammy-backports/main amd64 Packages [70.2 kB]
+2026-05-14T12:29:01.4074689Z Get:27 http://azure.archive.ubuntu.com/ubuntu jammy-backports/main Translation-en [11.4 kB]
+2026-05-14T12:29:01.4094612Z Get:28 http://azure.archive.ubuntu.com/ubuntu jammy-backports/main amd64 c-n-f Metadata [412 B]
+2026-05-14T12:29:01.4134723Z Get:29 http://azure.archive.ubuntu.com/ubuntu jammy-backports/universe amd64 Packages [30.8 kB]
+2026-05-14T12:29:01.4152682Z Get:30 http://azure.archive.ubuntu.com/ubuntu jammy-backports/universe Translation-en [16.9 kB]
+2026-05-14T12:29:01.4166290Z Get:31 http://azure.archive.ubuntu.com/ubuntu jammy-backports/universe amd64 c-n-f Metadata [676 B]
+2026-05-14T12:29:01.4980475Z Get:32 http://azure.archive.ubuntu.com/ubuntu jammy-security/main amd64 Packages [3216 kB]
+2026-05-14T12:29:01.5391201Z Get:33 http://azure.archive.ubuntu.com/ubuntu jammy-security/main Translation-en [453 kB]
+2026-05-14T12:29:01.5425238Z Get:34 http://azure.archive.ubuntu.com/ubuntu jammy-security/main amd64 c-n-f Metadata [14.3 kB]
+2026-05-14T12:29:01.5447647Z Get:35 http://azure.archive.ubuntu.com/ubuntu jammy-security/restricted amd64 Packages [5710 kB]
+2026-05-14T12:29:01.7930605Z Get:36 http://azure.archive.ubuntu.com/ubuntu jammy-security/restricted Translation-en [1090 kB]
+2026-05-14T12:29:01.7990272Z Get:37 http://azure.archive.ubuntu.com/ubuntu jammy-security/universe amd64 Packages [1031 kB]
+2026-05-14T12:29:01.8465554Z Get:38 http://azure.archive.ubuntu.com/ubuntu jammy-security/universe Translation-en [227 kB]
+2026-05-14T12:29:01.8485113Z Get:39 http://azure.archive.ubuntu.com/ubuntu jammy-security/universe amd64 c-n-f Metadata [22.9 kB]
+2026-05-14T12:29:01.8497712Z Get:40 http://azure.archive.ubuntu.com/ubuntu jammy-security/multiverse amd64 Packages [52.3 kB]
+2026-05-14T12:29:01.8510456Z Get:41 http://azure.archive.ubuntu.com/ubuntu jammy-security/multiverse Translation-en [10.5 kB]
+2026-05-14T12:29:10.0014158Z Fetched 25.7 MB in 3s (8005 kB/s)
+2026-05-14T12:29:10.9652310Z Reading package lists...
+2026-05-14T12:29:11.0245842Z Reading package lists...
+2026-05-14T12:29:11.2382876Z Building dependency tree...
+2026-05-14T12:29:11.2393844Z Reading state information...
+2026-05-14T12:29:11.4004530Z The following additional packages will be installed:
+2026-05-14T12:29:11.4005443Z   musl musl-dev
+2026-05-14T12:29:11.4012167Z Recommended packages:
+2026-05-14T12:29:11.4012419Z   linux-musl-dev
+2026-05-14T12:29:11.4184208Z The following NEW packages will be installed:
+2026-05-14T12:29:11.4185111Z   musl musl-dev musl-tools
+2026-05-14T12:29:11.4338113Z 0 upgraded, 3 newly installed, 0 to remove and 81 not upgraded.
+2026-05-14T12:29:11.4338510Z Need to get 1018 kB of archives.
+2026-05-14T12:29:11.4338841Z After this operation, 4100 kB of additional disk space will be used.
+2026-05-14T12:29:11.4339573Z Get:1 file:/etc/apt/apt-mirrors.txt Mirrorlist [144 B]
+2026-05-14T12:29:11.4586261Z Get:2 http://azure.archive.ubuntu.com/ubuntu jammy/universe amd64 musl amd64 1.2.2-4 [407 kB]
+2026-05-14T12:29:11.4712244Z Get:3 http://azure.archive.ubuntu.com/ubuntu jammy/universe amd64 musl-dev amd64 1.2.2-4 [605 kB]
+2026-05-14T12:29:11.4901958Z Get:4 http://azure.archive.ubuntu.com/ubuntu jammy/universe amd64 musl-tools amd64 1.2.2-4 [5520 B]
+2026-05-14T12:29:11.7986885Z Fetched 1018 kB in 0s (15.3 MB/s)
+2026-05-14T12:29:11.8418353Z Selecting previously unselected package musl:amd64.
+2026-05-14T12:29:11.9419112Z (Reading database ... 
+2026-05-14T12:29:11.9419580Z (Reading database ... 5%
+2026-05-14T12:29:11.9419859Z (Reading database ... 10%
+2026-05-14T12:29:11.9420111Z (Reading database ... 15%
+2026-05-14T12:29:11.9420373Z (Reading database ... 20%
+2026-05-14T12:29:11.9420614Z (Reading database ... 25%
+2026-05-14T12:29:11.9420855Z (Reading database ... 30%
+2026-05-14T12:29:11.9421095Z (Reading database ... 35%
+2026-05-14T12:29:11.9421329Z (Reading database ... 40%
+2026-05-14T12:29:11.9421568Z (Reading database ... 45%
+2026-05-14T12:29:11.9421801Z (Reading database ... 50%
+2026-05-14T12:29:12.2469721Z (Reading database ... 55%
+2026-05-14T12:29:12.3791123Z (Reading database ... 60%
+2026-05-14T12:29:12.5031343Z (Reading database ... 65%
+2026-05-14T12:29:12.8723533Z (Reading database ... 70%
+2026-05-14T12:29:13.2724112Z (Reading database ... 75%
+2026-05-14T12:29:13.6368115Z (Reading database ... 80%
+2026-05-14T12:29:14.2696031Z (Reading database ... 85%
+2026-05-14T12:29:14.8128026Z (Reading database ... 90%
+2026-05-14T12:29:15.4796989Z (Reading database ... 95%
+2026-05-14T12:29:15.4797418Z (Reading database ... 100%
+2026-05-14T12:29:15.4797937Z (Reading database ... 286901 files and directories currently installed.)
+2026-05-14T12:29:15.4857917Z Preparing to unpack .../musl_1.2.2-4_amd64.deb ...
+2026-05-14T12:29:15.4886062Z Unpacking musl:amd64 (1.2.2-4) ...
+2026-05-14T12:29:15.5405240Z Selecting previously unselected package musl-dev:amd64.
+2026-05-14T12:29:15.5579874Z Preparing to unpack .../musl-dev_1.2.2-4_amd64.deb ...
+2026-05-14T12:29:15.5591258Z Unpacking musl-dev:amd64 (1.2.2-4) ...
+2026-05-14T12:29:15.6367255Z Selecting previously unselected package musl-tools.
+2026-05-14T12:29:15.6544308Z Preparing to unpack .../musl-tools_1.2.2-4_amd64.deb ...
+2026-05-14T12:29:15.6558269Z Unpacking musl-tools (1.2.2-4) ...
+2026-05-14T12:29:15.7328145Z Setting up musl:amd64 (1.2.2-4) ...
+2026-05-14T12:29:15.7375525Z Setting up musl-dev:amd64 (1.2.2-4) ...
+2026-05-14T12:29:15.7415357Z Setting up musl-tools (1.2.2-4) ...
+2026-05-14T12:29:15.7452792Z Processing triggers for man-db (2.10.2-1) ...
+2026-05-14T12:29:15.7512877Z Not building database; man-db/auto-update is not 'true'.
+2026-05-14T12:29:16.7913229Z 
+2026-05-14T12:29:16.7913904Z Running kernel seems to be up-to-date.
+2026-05-14T12:29:16.7914296Z 
+2026-05-14T12:29:16.7914451Z No services need to be restarted.
+2026-05-14T12:29:16.7914743Z 
+2026-05-14T12:29:16.7914900Z No containers need to be restarted.
+2026-05-14T12:29:16.7915177Z 
+2026-05-14T12:29:16.7915357Z No user sessions are running outdated binaries.
+2026-05-14T12:29:16.7915721Z 
+2026-05-14T12:29:16.7916028Z No VM guests are running outdated hypervisor (qemu) binaries on this host.
+2026-05-14T12:29:18.3808170Z ##[group]Run cargo build --release --target $TARGET
+2026-05-14T12:29:18.3808565Z [36;1mcargo build --release --target $TARGET[0m
+2026-05-14T12:29:18.3864964Z shell: /usr/bin/bash -e {0}
+2026-05-14T12:29:18.3865202Z env:
+2026-05-14T12:29:18.3865407Z   BINARY_NAME: oidc-jwks-converter
+2026-05-14T12:29:18.3865710Z   THIRD_PARTY_LICENSE_OUTPUT: THIRD_PARTY_LICENSES.html
+2026-05-14T12:29:18.3866014Z   TARGET: x86_64-unknown-linux-musl
+2026-05-14T12:29:18.3866256Z   CARGO_HOME: /home/runner/.cargo
+2026-05-14T12:29:18.3866476Z   CARGO_INCREMENTAL: 0
+2026-05-14T12:29:18.3866679Z   CARGO_TERM_COLOR: always
+2026-05-14T12:29:18.3866874Z ##[endgroup]
+2026-05-14T12:29:18.4586348Z [1m[92m    Updating[0m crates.io index
+2026-05-14T12:29:18.5568576Z [1m[91merror[0m: failed to select a version for `reqwest`.
+2026-05-14T12:29:18.5569943Z     ... required by package `oidc-jwks-converter v0.1.0 (/home/runner/work/oidc-jwks-converter/oidc-jwks-converter)`
+2026-05-14T12:29:18.5570860Z versions that meet the requirements `^0.13` are: 0.13.3, 0.13.2, 0.13.1, 0.13.0
+2026-05-14T12:29:18.5571252Z 
+2026-05-14T12:29:18.5571636Z package `oidc-jwks-converter` depends on `reqwest` with feature `rustls-tls` but `reqwest` does not have that feature.
+2026-05-14T12:29:18.5573637Z  available features: __native-tls, __native-tls-alpn, __rustls, __rustls-aws-lc-rs, __tls, blocking, brotli, charset, cookies, default, default-tls, deflate, form, gzip, h2, hickory-dns, http2, http3, json, multipart, native-tls, native-tls-no-alpn, native-tls-vendored, native-tls-vendored-no-alpn, query, rustls, rustls-native-certs, rustls-no-provider, socks, stream, system-proxy, webpki-roots, zstd
+2026-05-14T12:29:18.5575244Z 
+2026-05-14T12:29:18.5575248Z 
+2026-05-14T12:29:18.5575459Z failed to select a version for `reqwest` which could resolve this conflict
+2026-05-14T12:29:18.5610018Z ##[error]Process completed with exit code 101.
+2026-05-14T12:29:18.5728811Z Post job cleanup.
+2026-05-14T12:29:18.6571415Z [command]/usr/bin/git version
+2026-05-14T12:29:18.6610162Z git version 2.53.0
+2026-05-14T12:29:18.6650549Z Temporarily overriding HOME='/home/runner/work/_temp/9127fc5c-a486-4270-892f-bb387c966c0b' before making global git config changes
+2026-05-14T12:29:18.6651892Z Adding repository directory to the temporary git global config as a safe directory
+2026-05-14T12:29:18.6656647Z [command]/usr/bin/git config --global --add safe.directory /home/runner/work/oidc-jwks-converter/oidc-jwks-converter
+2026-05-14T12:29:18.6687817Z Removing SSH command configuration
+2026-05-14T12:29:18.6694696Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+2026-05-14T12:29:18.6729714Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+2026-05-14T12:29:18.6977093Z Removing HTTP extra header
+2026-05-14T12:29:18.6983041Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+2026-05-14T12:29:18.7022203Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+2026-05-14T12:29:18.7269911Z Removing includeIf entries pointing to credentials config files
+2026-05-14T12:29:18.7277392Z [command]/usr/bin/git config --local --name-only --get-regexp ^includeIf\.gitdir:
+2026-05-14T12:29:18.7304352Z includeif.gitdir:/home/runner/work/oidc-jwks-converter/oidc-jwks-converter/.git.path
+2026-05-14T12:29:18.7305827Z includeif.gitdir:/home/runner/work/oidc-jwks-converter/oidc-jwks-converter/.git/worktrees/*.path
+2026-05-14T12:29:18.7306803Z includeif.gitdir:/github/workspace/.git.path
+2026-05-14T12:29:18.7307437Z includeif.gitdir:/github/workspace/.git/worktrees/*.path
+2026-05-14T12:29:18.7315887Z [command]/usr/bin/git config --local --get-all includeif.gitdir:/home/runner/work/oidc-jwks-converter/oidc-jwks-converter/.git.path
+2026-05-14T12:29:18.7341134Z /home/runner/work/_temp/git-credentials-9d5db37f-0549-49f9-89ba-3224a2730afa.config
+2026-05-14T12:29:18.7355037Z [command]/usr/bin/git config --local --unset includeif.gitdir:/home/runner/work/oidc-jwks-converter/oidc-jwks-converter/.git.path /home/runner/work/_temp/git-credentials-9d5db37f-0549-49f9-89ba-3224a2730afa.config
+2026-05-14T12:29:18.7392061Z [command]/usr/bin/git config --local --get-all includeif.gitdir:/home/runner/work/oidc-jwks-converter/oidc-jwks-converter/.git/worktrees/*.path
+2026-05-14T12:29:18.7415374Z /home/runner/work/_temp/git-credentials-9d5db37f-0549-49f9-89ba-3224a2730afa.config
+2026-05-14T12:29:18.7426052Z [command]/usr/bin/git config --local --unset includeif.gitdir:/home/runner/work/oidc-jwks-converter/oidc-jwks-converter/.git/worktrees/*.path /home/runner/work/_temp/git-credentials-9d5db37f-0549-49f9-89ba-3224a2730afa.config
+2026-05-14T12:29:18.7457933Z [command]/usr/bin/git config --local --get-all includeif.gitdir:/github/workspace/.git.path
+2026-05-14T12:29:18.7480841Z /github/runner_temp/git-credentials-9d5db37f-0549-49f9-89ba-3224a2730afa.config
+2026-05-14T12:29:18.7490768Z [command]/usr/bin/git config --local --unset includeif.gitdir:/github/workspace/.git.path /github/runner_temp/git-credentials-9d5db37f-0549-49f9-89ba-3224a2730afa.config
+2026-05-14T12:29:18.7539085Z [command]/usr/bin/git config --local --get-all includeif.gitdir:/github/workspace/.git/worktrees/*.path
+2026-05-14T12:29:18.7547739Z /github/runner_temp/git-credentials-9d5db37f-0549-49f9-89ba-3224a2730afa.config
+2026-05-14T12:29:18.7557939Z [command]/usr/bin/git config --local --unset includeif.gitdir:/github/workspace/.git/worktrees/*.path /github/runner_temp/git-credentials-9d5db37f-0549-49f9-89ba-3224a2730afa.config
+2026-05-14T12:29:18.7591573Z [command]/usr/bin/git submodule foreach --recursive git config --local --show-origin --name-only --get-regexp remote.origin.url
+2026-05-14T12:29:18.7830085Z Removing credentials config '/home/runner/work/_temp/git-credentials-9d5db37f-0549-49f9-89ba-3224a2730afa.config'
+2026-05-14T12:29:18.7966834Z Cleaning up orphan processes

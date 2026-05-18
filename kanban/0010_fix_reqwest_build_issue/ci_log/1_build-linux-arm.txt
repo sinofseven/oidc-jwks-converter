@@ -1,0 +1,613 @@
+﻿2026-05-14T12:28:48.8626693Z Current runner version: '2.334.0'
+2026-05-14T12:28:48.8657568Z ##[group]Runner Image Provisioner
+2026-05-14T12:28:48.8658618Z Hosted Compute Agent
+2026-05-14T12:28:48.8659160Z Version: 20260213.493
+2026-05-14T12:28:48.8659783Z Commit: 5c115507f6dd24b8de37d8bbe0bb4509d0cc0fa3
+2026-05-14T12:28:48.8660398Z Build Date: 2026-02-13T00:28:41Z
+2026-05-14T12:28:48.8661139Z Worker ID: {6e78208d-54d8-426e-95e2-0098a9f7e650}
+2026-05-14T12:28:48.8661773Z Azure Region: westus3
+2026-05-14T12:28:48.8662293Z ##[endgroup]
+2026-05-14T12:28:48.8664718Z ##[group]VM Image
+2026-05-14T12:28:48.8665334Z - OS: Linux (arm64)
+2026-05-14T12:28:48.8666309Z - Source: Partner
+2026-05-14T12:28:48.8666976Z - Name: Ubuntu 22.04 by Arm Limited
+2026-05-14T12:28:48.8667625Z - Version: 20260318.46.1
+2026-05-14T12:28:48.8668561Z - Included Software: https://github.com/actions/partner-runner-images/blob/main/images/arm-ubuntu-22-image.md
+2026-05-14T12:28:48.8669596Z ##[endgroup]
+2026-05-14T12:28:48.8670962Z ##[group]GITHUB_TOKEN Permissions
+2026-05-14T12:28:48.8674128Z Contents: read
+2026-05-14T12:28:48.8674695Z Metadata: read
+2026-05-14T12:28:48.8675302Z Packages: read
+2026-05-14T12:28:48.8676248Z ##[endgroup]
+2026-05-14T12:28:48.8679141Z Secret source: Actions
+2026-05-14T12:28:48.8680355Z Prepare workflow directory
+2026-05-14T12:28:48.9125403Z Prepare all required actions
+2026-05-14T12:28:48.9165295Z Getting action download info
+2026-05-14T12:28:49.4140303Z Download action repository 'actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd' (SHA:de0fac2e4500dabe0009e67214ff5f5447ce83dd)
+2026-05-14T12:28:49.7770756Z Download action repository 'dtolnay/rust-toolchain@29eef336d9b2848a0b548edc03f92a220660cdb8' (SHA:29eef336d9b2848a0b548edc03f92a220660cdb8)
+2026-05-14T12:28:50.0407420Z Download action repository 'actions/upload-artifact@043fb46d1a93c77aae656e7c1c64a875d1fc6a0a' (SHA:043fb46d1a93c77aae656e7c1c64a875d1fc6a0a)
+2026-05-14T12:28:50.9207438Z Complete job name: build-linux-arm
+2026-05-14T12:28:51.0174635Z ##[group]Run actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd
+2026-05-14T12:28:51.0176497Z with:
+2026-05-14T12:28:51.0177134Z   repository: sinofseven/oidc-jwks-converter
+2026-05-14T12:28:51.0178165Z   token: ***
+2026-05-14T12:28:51.0178700Z   ssh-strict: true
+2026-05-14T12:28:51.0179261Z   ssh-user: git
+2026-05-14T12:28:51.0179825Z   persist-credentials: true
+2026-05-14T12:28:51.0180454Z   clean: true
+2026-05-14T12:28:51.0181017Z   sparse-checkout-cone-mode: true
+2026-05-14T12:28:51.0181692Z   fetch-depth: 1
+2026-05-14T12:28:51.0182266Z   fetch-tags: false
+2026-05-14T12:28:51.0182828Z   show-progress: true
+2026-05-14T12:28:51.0183420Z   lfs: false
+2026-05-14T12:28:51.0183947Z   submodules: false
+2026-05-14T12:28:51.0184528Z   set-safe-directory: true
+2026-05-14T12:28:51.0185765Z env:
+2026-05-14T12:28:51.0186339Z   BINARY_NAME: oidc-jwks-converter
+2026-05-14T12:28:51.0187154Z   THIRD_PARTY_LICENSE_OUTPUT: THIRD_PARTY_LICENSES.html
+2026-05-14T12:28:51.0188085Z   TARGET: arm-unknown-linux-musleabihf
+2026-05-14T12:28:51.0188788Z ##[endgroup]
+2026-05-14T12:28:51.1031690Z Syncing repository: sinofseven/oidc-jwks-converter
+2026-05-14T12:28:51.1034027Z ##[group]Getting Git version info
+2026-05-14T12:28:51.1035129Z Working directory is '/home/runner/work/oidc-jwks-converter/oidc-jwks-converter'
+2026-05-14T12:28:51.1037199Z [command]/usr/bin/git version
+2026-05-14T12:28:51.1967995Z git version 2.53.0
+2026-05-14T12:28:51.1988236Z ##[endgroup]
+2026-05-14T12:28:51.2002303Z Temporarily overriding HOME='/home/runner/work/_temp/72b077cb-a71c-45ed-a2fc-3f59a8e448af' before making global git config changes
+2026-05-14T12:28:51.2004267Z Adding repository directory to the temporary git global config as a safe directory
+2026-05-14T12:28:51.2006981Z [command]/usr/bin/git config --global --add safe.directory /home/runner/work/oidc-jwks-converter/oidc-jwks-converter
+2026-05-14T12:28:51.2125747Z Deleting the contents of '/home/runner/work/oidc-jwks-converter/oidc-jwks-converter'
+2026-05-14T12:28:51.2130194Z ##[group]Initializing the repository
+2026-05-14T12:28:51.2134876Z [command]/usr/bin/git init /home/runner/work/oidc-jwks-converter/oidc-jwks-converter
+2026-05-14T12:28:51.2568242Z hint: Using 'master' as the name for the initial branch. This default branch name
+2026-05-14T12:28:51.2569625Z hint: will change to "main" in Git 3.0. To configure the initial branch name
+2026-05-14T12:28:51.2570897Z hint: to use in all of your new repositories, which will suppress this warning,
+2026-05-14T12:28:51.2571946Z hint: call:
+2026-05-14T12:28:51.2572462Z hint:
+2026-05-14T12:28:51.2573121Z hint: 	git config --global init.defaultBranch <name>
+2026-05-14T12:28:51.2573918Z hint:
+2026-05-14T12:28:51.2574671Z hint: Names commonly chosen instead of 'master' are 'main', 'trunk' and
+2026-05-14T12:28:51.2576131Z hint: 'development'. The just-created branch can be renamed via this command:
+2026-05-14T12:28:51.2577154Z hint:
+2026-05-14T12:28:51.2577692Z hint: 	git branch -m <name>
+2026-05-14T12:28:51.2578312Z hint:
+2026-05-14T12:28:51.2579185Z hint: Disable this message with "git config set advice.defaultBranchName false"
+2026-05-14T12:28:51.2580724Z Initialized empty Git repository in /home/runner/work/oidc-jwks-converter/oidc-jwks-converter/.git/
+2026-05-14T12:28:51.2583413Z [command]/usr/bin/git remote add origin https://github.com/sinofseven/oidc-jwks-converter
+2026-05-14T12:28:51.2669440Z ##[endgroup]
+2026-05-14T12:28:51.2670452Z ##[group]Disabling automatic garbage collection
+2026-05-14T12:28:51.2672832Z [command]/usr/bin/git config --local gc.auto 0
+2026-05-14T12:28:51.2700308Z ##[endgroup]
+2026-05-14T12:28:51.2701292Z ##[group]Setting up auth
+2026-05-14T12:28:51.2701992Z Removing SSH command configuration
+2026-05-14T12:28:51.2707538Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+2026-05-14T12:28:51.2736792Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+2026-05-14T12:28:51.4241187Z Removing HTTP extra header
+2026-05-14T12:28:51.4247116Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+2026-05-14T12:28:51.4273671Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+2026-05-14T12:28:51.4449223Z Removing includeIf entries pointing to credentials config files
+2026-05-14T12:28:51.4454849Z [command]/usr/bin/git config --local --name-only --get-regexp ^includeIf\.gitdir:
+2026-05-14T12:28:51.4482548Z [command]/usr/bin/git submodule foreach --recursive git config --local --show-origin --name-only --get-regexp remote.origin.url
+2026-05-14T12:28:51.4661746Z [command]/usr/bin/git config --file /home/runner/work/_temp/git-credentials-3898e19f-2e68-4def-8d3d-2cc64efb8e94.config http.https://github.com/.extraheader AUTHORIZATION: basic ***
+2026-05-14T12:28:51.4696485Z [command]/usr/bin/git config --local includeIf.gitdir:/home/runner/work/oidc-jwks-converter/oidc-jwks-converter/.git.path /home/runner/work/_temp/git-credentials-3898e19f-2e68-4def-8d3d-2cc64efb8e94.config
+2026-05-14T12:28:51.4722995Z [command]/usr/bin/git config --local includeIf.gitdir:/home/runner/work/oidc-jwks-converter/oidc-jwks-converter/.git/worktrees/*.path /home/runner/work/_temp/git-credentials-3898e19f-2e68-4def-8d3d-2cc64efb8e94.config
+2026-05-14T12:28:51.4749945Z [command]/usr/bin/git config --local includeIf.gitdir:/github/workspace/.git.path /github/runner_temp/git-credentials-3898e19f-2e68-4def-8d3d-2cc64efb8e94.config
+2026-05-14T12:28:51.4775958Z [command]/usr/bin/git config --local includeIf.gitdir:/github/workspace/.git/worktrees/*.path /github/runner_temp/git-credentials-3898e19f-2e68-4def-8d3d-2cc64efb8e94.config
+2026-05-14T12:28:51.4798130Z ##[endgroup]
+2026-05-14T12:28:51.4798521Z ##[group]Fetching the repository
+2026-05-14T12:28:51.4806325Z [command]/usr/bin/git -c protocol.version=2 fetch --no-tags --prune --no-recurse-submodules --depth=1 origin +c84fbd3b886217b4d1105dbf8f338d42d85d65b3:refs/remotes/pull/5/merge
+2026-05-14T12:28:52.0958837Z From https://github.com/sinofseven/oidc-jwks-converter
+2026-05-14T12:28:52.1032556Z  * [new ref]         c84fbd3b886217b4d1105dbf8f338d42d85d65b3 -> pull/5/merge
+2026-05-14T12:28:52.1034430Z ##[endgroup]
+2026-05-14T12:28:52.1035074Z ##[group]Determining the checkout info
+2026-05-14T12:28:52.1035959Z ##[endgroup]
+2026-05-14T12:28:52.1040950Z [command]/usr/bin/git sparse-checkout disable
+2026-05-14T12:28:52.1129102Z [command]/usr/bin/git config --local --unset-all extensions.worktreeConfig
+2026-05-14T12:28:52.1152728Z ##[group]Checking out the ref
+2026-05-14T12:28:52.1156185Z [command]/usr/bin/git checkout --progress --force refs/remotes/pull/5/merge
+2026-05-14T12:28:52.1246627Z Note: switching to 'refs/remotes/pull/5/merge'.
+2026-05-14T12:28:52.1246876Z 
+2026-05-14T12:28:52.1247147Z You are in 'detached HEAD' state. You can look around, make experimental
+2026-05-14T12:28:52.1247600Z changes and commit them, and you can discard any commits you make in this
+2026-05-14T12:28:52.1248051Z state without impacting any branches by switching back to a branch.
+2026-05-14T12:28:52.1248301Z 
+2026-05-14T12:28:52.1248484Z If you want to create a new branch to retain commits you create, you may
+2026-05-14T12:28:52.1248958Z do so (now or later) by using -c with the switch command. Example:
+2026-05-14T12:28:52.1249190Z 
+2026-05-14T12:28:52.1249286Z   git switch -c <new-branch-name>
+2026-05-14T12:28:52.1249440Z 
+2026-05-14T12:28:52.1249547Z Or undo this operation with:
+2026-05-14T12:28:52.1249735Z 
+2026-05-14T12:28:52.1249810Z   git switch -
+2026-05-14T12:28:52.1249908Z 
+2026-05-14T12:28:52.1250110Z Turn off this advice by setting config variable advice.detachedHead to false
+2026-05-14T12:28:52.1250394Z 
+2026-05-14T12:28:52.1250758Z HEAD is now at c84fbd3 Merge 64a81b7434540026a2250e23d83e57c4618eb3c3 into 7995739c4acd0ab49d5c451a2ed464369e4b8e61
+2026-05-14T12:28:52.1252180Z ##[endgroup]
+2026-05-14T12:28:52.1281662Z [command]/usr/bin/git log -1 --format=%H
+2026-05-14T12:28:52.1300333Z c84fbd3b886217b4d1105dbf8f338d42d85d65b3
+2026-05-14T12:28:52.1645115Z ##[group]Run dtolnay/rust-toolchain@29eef336d9b2848a0b548edc03f92a220660cdb8
+2026-05-14T12:28:52.1645719Z with:
+2026-05-14T12:28:52.1645909Z   target: arm-unknown-linux-musleabihf
+2026-05-14T12:28:52.1646134Z   toolchain: stable
+2026-05-14T12:28:52.1646291Z env:
+2026-05-14T12:28:52.1646441Z   BINARY_NAME: oidc-jwks-converter
+2026-05-14T12:28:52.1646702Z   THIRD_PARTY_LICENSE_OUTPUT: THIRD_PARTY_LICENSES.html
+2026-05-14T12:28:52.1646985Z   TARGET: arm-unknown-linux-musleabihf
+2026-05-14T12:28:52.1647198Z ##[endgroup]
+2026-05-14T12:28:52.1772758Z ##[group]Run : parse toolchain version
+2026-05-14T12:28:52.1773146Z [36;1m: parse toolchain version[0m
+2026-05-14T12:28:52.1773382Z [36;1mif [[ -z $toolchain ]]; then[0m
+2026-05-14T12:28:52.1773852Z [36;1m  # GitHub does not enforce `required: true` inputs itself. https://github.com/actions/runner/issues/1070[0m
+2026-05-14T12:28:52.1774376Z [36;1m  echo "'toolchain' is a required input" >&2[0m
+2026-05-14T12:28:52.1774669Z [36;1m  exit 1[0m
+2026-05-14T12:28:52.1774950Z [36;1melif [[ $toolchain =~ ^stable' '[0-9]+' '(year|month|week|day)s?' 'ago$ ]]; then[0m
+2026-05-14T12:28:52.1775311Z [36;1m  if [[ Linux == macOS ]]; then[0m
+2026-05-14T12:28:52.1776082Z [36;1m    echo "toolchain=1.$((($(date -v-$(sed 's/stable \([0-9]*\) \(.\).*/\1\2/' <<< $toolchain) +%s)/60/60/24-16569)/7/6))" >> $GITHUB_OUTPUT[0m
+2026-05-14T12:28:52.1776553Z [36;1m  else[0m
+2026-05-14T12:28:52.1776903Z [36;1m    echo "toolchain=1.$((($(date --date "${toolchain#stable }" +%s)/60/60/24-16569)/7/6))" >> $GITHUB_OUTPUT[0m
+2026-05-14T12:28:52.1777308Z [36;1m  fi[0m
+2026-05-14T12:28:52.1777557Z [36;1melif [[ $toolchain =~ ^stable' 'minus' '[0-9]+' 'releases?$ ]]; then[0m
+2026-05-14T12:28:52.1778029Z [36;1m  echo "toolchain=1.$((($(date +%s)/60/60/24-16569)/7/6-${toolchain//[^0-9]/}))" >> $GITHUB_OUTPUT[0m
+2026-05-14T12:28:52.1778435Z [36;1melif [[ $toolchain =~ ^1\.[0-9]+$ ]]; then[0m
+2026-05-14T12:28:52.1779235Z [36;1m  echo "toolchain=1.$((i=${toolchain#1.}, c=($(date +%s)/60/60/24-16569)/7/6, i+9*i*(10*i<=c)+90*i*(100*i<=c)))" >> $GITHUB_OUTPUT[0m
+2026-05-14T12:28:52.1779677Z [36;1melse[0m
+2026-05-14T12:28:52.1779881Z [36;1m  echo "toolchain=$toolchain" >> $GITHUB_OUTPUT[0m
+2026-05-14T12:28:52.1780128Z [36;1mfi[0m
+2026-05-14T12:28:52.1802223Z shell: /usr/bin/bash --noprofile --norc -e -o pipefail {0}
+2026-05-14T12:28:52.1802545Z env:
+2026-05-14T12:28:52.1802702Z   BINARY_NAME: oidc-jwks-converter
+2026-05-14T12:28:52.1802964Z   THIRD_PARTY_LICENSE_OUTPUT: THIRD_PARTY_LICENSES.html
+2026-05-14T12:28:52.1803250Z   TARGET: arm-unknown-linux-musleabihf
+2026-05-14T12:28:52.1803468Z   toolchain: stable
+2026-05-14T12:28:52.1803629Z ##[endgroup]
+2026-05-14T12:28:52.1940635Z ##[group]Run : construct rustup command line
+2026-05-14T12:28:52.1940949Z [36;1m: construct rustup command line[0m
+2026-05-14T12:28:52.1941346Z [36;1mecho "targets=$(for t in ${targets//,/ }; do echo -n ' --target' $t; done)" >> $GITHUB_OUTPUT[0m
+2026-05-14T12:28:52.1941943Z [36;1mecho "components=$(for c in ${components//,/ }; do echo -n ' --component' $c; done)" >> $GITHUB_OUTPUT[0m
+2026-05-14T12:28:52.1942373Z [36;1mecho "downgrade=" >> $GITHUB_OUTPUT[0m
+2026-05-14T12:28:52.1958583Z shell: /usr/bin/bash --noprofile --norc -e -o pipefail {0}
+2026-05-14T12:28:52.1958887Z env:
+2026-05-14T12:28:52.1959196Z   BINARY_NAME: oidc-jwks-converter
+2026-05-14T12:28:52.1959460Z   THIRD_PARTY_LICENSE_OUTPUT: THIRD_PARTY_LICENSES.html
+2026-05-14T12:28:52.1959746Z   TARGET: arm-unknown-linux-musleabihf
+2026-05-14T12:28:52.1959984Z   targets: arm-unknown-linux-musleabihf
+2026-05-14T12:28:52.1960205Z   components: 
+2026-05-14T12:28:52.1960352Z ##[endgroup]
+2026-05-14T12:28:52.2034122Z ##[group]Run : set $CARGO_HOME
+2026-05-14T12:28:52.2034375Z [36;1m: set $CARGO_HOME[0m
+2026-05-14T12:28:52.2034648Z [36;1mecho CARGO_HOME=${CARGO_HOME:-"$HOME/.cargo"} >> $GITHUB_ENV[0m
+2026-05-14T12:28:52.2049167Z shell: /usr/bin/bash --noprofile --norc -e -o pipefail {0}
+2026-05-14T12:28:52.2049466Z env:
+2026-05-14T12:28:52.2049873Z   BINARY_NAME: oidc-jwks-converter
+2026-05-14T12:28:52.2050158Z   THIRD_PARTY_LICENSE_OUTPUT: THIRD_PARTY_LICENSES.html
+2026-05-14T12:28:52.2050436Z   TARGET: arm-unknown-linux-musleabihf
+2026-05-14T12:28:52.2050657Z ##[endgroup]
+2026-05-14T12:28:52.2119718Z ##[group]Run : install rustup if needed
+2026-05-14T12:28:52.2120006Z [36;1m: install rustup if needed[0m
+2026-05-14T12:28:52.2120317Z [36;1mif ! command -v rustup &>/dev/null; then[0m
+2026-05-14T12:28:52.2121011Z [36;1m  curl --proto '=https' --tlsv1.2 --retry 10 --retry-connrefused --location --silent --show-error --fail https://sh.rustup.rs | sh -s -- --default-toolchain none -y[0m
+2026-05-14T12:28:52.2121682Z [36;1m  echo "$CARGO_HOME/bin" >> $GITHUB_PATH[0m
+2026-05-14T12:28:52.2121914Z [36;1mfi[0m
+2026-05-14T12:28:52.2136664Z shell: /usr/bin/bash --noprofile --norc -e -o pipefail {0}
+2026-05-14T12:28:52.2136975Z env:
+2026-05-14T12:28:52.2137153Z   BINARY_NAME: oidc-jwks-converter
+2026-05-14T12:28:52.2137428Z   THIRD_PARTY_LICENSE_OUTPUT: THIRD_PARTY_LICENSES.html
+2026-05-14T12:28:52.2137715Z   TARGET: arm-unknown-linux-musleabihf
+2026-05-14T12:28:52.2137949Z   CARGO_HOME: /home/runner/.cargo
+2026-05-14T12:28:52.2138143Z ##[endgroup]
+2026-05-14T12:28:52.2209069Z ##[group]Run rustup toolchain install stable --target arm-unknown-linux-musleabihf --profile minimal --no-self-update
+2026-05-14T12:28:52.2209842Z [36;1mrustup toolchain install stable --target arm-unknown-linux-musleabihf --profile minimal --no-self-update[0m
+2026-05-14T12:28:52.2224921Z shell: /usr/bin/bash --noprofile --norc -e -o pipefail {0}
+2026-05-14T12:28:52.2225223Z env:
+2026-05-14T12:28:52.2225385Z   BINARY_NAME: oidc-jwks-converter
+2026-05-14T12:28:52.2225931Z   THIRD_PARTY_LICENSE_OUTPUT: THIRD_PARTY_LICENSES.html
+2026-05-14T12:28:52.2226238Z   TARGET: arm-unknown-linux-musleabihf
+2026-05-14T12:28:52.2226471Z   CARGO_HOME: /home/runner/.cargo
+2026-05-14T12:28:52.2226965Z   RUSTUP_PERMIT_COPY_RENAME: 1
+2026-05-14T12:28:52.2227158Z ##[endgroup]
+2026-05-14T12:28:53.6991595Z info: syncing channel updates for 'stable-aarch64-unknown-linux-gnu'
+2026-05-14T12:28:53.9193094Z info: latest update on 2026-04-16, rust version 1.95.0 (59807616e 2026-04-14)
+2026-05-14T12:28:53.9475635Z info: downloading component 'rust-std' for 'arm-unknown-linux-musleabihf'
+2026-05-14T12:28:54.2446797Z info: downloading component 'clippy'
+2026-05-14T12:28:54.3412031Z info: downloading component 'rustfmt'
+2026-05-14T12:28:54.4511803Z info: downloading component 'cargo'
+2026-05-14T12:28:54.6407328Z info: downloading component 'rust-std'
+2026-05-14T12:28:55.0367588Z info: downloading component 'rustc'
+2026-05-14T12:28:55.8256178Z info: removing previous version of component 'clippy'
+2026-05-14T12:28:55.8317570Z info: removing previous version of component 'rustfmt'
+2026-05-14T12:28:55.8324571Z info: removing previous version of component 'cargo'
+2026-05-14T12:28:55.8406057Z info: removing previous version of component 'rust-std'
+2026-05-14T12:28:55.8423580Z info: removing previous version of component 'rustc'
+2026-05-14T12:28:55.8461954Z info: installing component 'rust-std' for 'arm-unknown-linux-musleabihf'
+2026-05-14T12:28:57.0482832Z info: installing component 'clippy'
+2026-05-14T12:28:57.3237973Z info: installing component 'rustfmt'
+2026-05-14T12:28:57.5210029Z info: installing component 'cargo'
+2026-05-14T12:28:58.0520735Z info: installing component 'rust-std'
+2026-05-14T12:28:59.3824701Z info: installing component 'rustc'
+2026-05-14T12:29:02.2579868Z 
+2026-05-14T12:29:02.2651730Z   stable-aarch64-unknown-linux-gnu updated - rustc 1.95.0 (59807616e 2026-04-14) (from rustc 1.93.1 (01f6ddf75 2026-02-11))
+2026-05-14T12:29:02.2673264Z 
+2026-05-14T12:29:02.2701138Z ##[group]Run rustup default stable
+2026-05-14T12:29:02.2701404Z [36;1mrustup default stable[0m
+2026-05-14T12:29:02.2718258Z shell: /usr/bin/bash --noprofile --norc -e -o pipefail {0}
+2026-05-14T12:29:02.2718549Z env:
+2026-05-14T12:29:02.2718733Z   BINARY_NAME: oidc-jwks-converter
+2026-05-14T12:29:02.2719228Z   THIRD_PARTY_LICENSE_OUTPUT: THIRD_PARTY_LICENSES.html
+2026-05-14T12:29:02.2719519Z   TARGET: arm-unknown-linux-musleabihf
+2026-05-14T12:29:02.2719790Z   CARGO_HOME: /home/runner/.cargo
+2026-05-14T12:29:02.2719997Z ##[endgroup]
+2026-05-14T12:29:02.2796073Z info: using existing install for 'stable-aarch64-unknown-linux-gnu'
+2026-05-14T12:29:02.3141701Z info: default toolchain set to 'stable-aarch64-unknown-linux-gnu'
+2026-05-14T12:29:02.3142010Z 
+2026-05-14T12:29:02.3213853Z   stable-aarch64-unknown-linux-gnu unchanged - rustc 1.95.0 (59807616e 2026-04-14)
+2026-05-14T12:29:02.3214214Z 
+2026-05-14T12:29:02.3254934Z ##[group]Run : create cachekey
+2026-05-14T12:29:02.3255259Z [36;1m: create cachekey[0m
+2026-05-14T12:29:02.3255919Z [36;1mDATE=$(rustc +stable --version --verbose | sed -ne 's/^commit-date: \(20[0-9][0-9]\)-\([01][0-9]\)-\([0-3][0-9]\)$/\1\2\3/p')[0m
+2026-05-14T12:29:02.3256599Z [36;1mHASH=$(rustc +stable --version --verbose | sed -ne 's/^commit-hash: //p')[0m
+2026-05-14T12:29:02.3257123Z [36;1mecho "cachekey=$(echo $DATE$HASH | head -c12)" >> $GITHUB_OUTPUT[0m
+2026-05-14T12:29:02.3274310Z shell: /usr/bin/bash --noprofile --norc -e -o pipefail {0}
+2026-05-14T12:29:02.3274630Z env:
+2026-05-14T12:29:02.3274826Z   BINARY_NAME: oidc-jwks-converter
+2026-05-14T12:29:02.3275184Z   THIRD_PARTY_LICENSE_OUTPUT: THIRD_PARTY_LICENSES.html
+2026-05-14T12:29:02.3275979Z   TARGET: arm-unknown-linux-musleabihf
+2026-05-14T12:29:02.3276292Z   CARGO_HOME: /home/runner/.cargo
+2026-05-14T12:29:02.3276584Z ##[endgroup]
+2026-05-14T12:29:02.3594539Z ##[group]Run : disable incremental compilation
+2026-05-14T12:29:02.3594964Z [36;1m: disable incremental compilation[0m
+2026-05-14T12:29:02.3595294Z [36;1mif [ -z "${CARGO_INCREMENTAL+set}" ]; then[0m
+2026-05-14T12:29:02.3596037Z [36;1m  echo CARGO_INCREMENTAL=0 >> $GITHUB_ENV[0m
+2026-05-14T12:29:02.3596374Z [36;1mfi[0m
+2026-05-14T12:29:02.3612940Z shell: /usr/bin/bash --noprofile --norc -e -o pipefail {0}
+2026-05-14T12:29:02.3613585Z env:
+2026-05-14T12:29:02.3613811Z   BINARY_NAME: oidc-jwks-converter
+2026-05-14T12:29:02.3614120Z   THIRD_PARTY_LICENSE_OUTPUT: THIRD_PARTY_LICENSES.html
+2026-05-14T12:29:02.3614482Z   TARGET: arm-unknown-linux-musleabihf
+2026-05-14T12:29:02.3614740Z   CARGO_HOME: /home/runner/.cargo
+2026-05-14T12:29:02.3614991Z ##[endgroup]
+2026-05-14T12:29:02.3674783Z ##[group]Run : enable colors in Cargo output
+2026-05-14T12:29:02.3675118Z [36;1m: enable colors in Cargo output[0m
+2026-05-14T12:29:02.3675463Z [36;1mif [ -z "${CARGO_TERM_COLOR+set}" ]; then[0m
+2026-05-14T12:29:02.3676157Z [36;1m  echo CARGO_TERM_COLOR=always >> $GITHUB_ENV[0m
+2026-05-14T12:29:02.3676447Z [36;1mfi[0m
+2026-05-14T12:29:02.3691135Z shell: /usr/bin/bash --noprofile --norc -e -o pipefail {0}
+2026-05-14T12:29:02.3691478Z env:
+2026-05-14T12:29:02.3691805Z   BINARY_NAME: oidc-jwks-converter
+2026-05-14T12:29:02.3692111Z   THIRD_PARTY_LICENSE_OUTPUT: THIRD_PARTY_LICENSES.html
+2026-05-14T12:29:02.3692461Z   TARGET: arm-unknown-linux-musleabihf
+2026-05-14T12:29:02.3692735Z   CARGO_HOME: /home/runner/.cargo
+2026-05-14T12:29:02.3693026Z   CARGO_INCREMENTAL: 0
+2026-05-14T12:29:02.3693223Z ##[endgroup]
+2026-05-14T12:29:02.3753490Z ##[group]Run : enable Cargo sparse registry
+2026-05-14T12:29:02.3753915Z [36;1m: enable Cargo sparse registry[0m
+2026-05-14T12:29:02.3754362Z [36;1m# implemented in 1.66, stabilized in 1.68, made default in 1.70[0m
+2026-05-14T12:29:02.3755013Z [36;1mif [ -z "${CARGO_REGISTRIES_CRATES_IO_PROTOCOL+set}" -o -f "/home/runner/work/_temp"/.implicit_cargo_registries_crates_io_protocol ]; then[0m
+2026-05-14T12:29:02.3755904Z [36;1m  if rustc +stable --version --verbose | grep -q '^release: 1\.6[89]\.'; then[0m
+2026-05-14T12:29:02.3756523Z [36;1m    touch "/home/runner/work/_temp"/.implicit_cargo_registries_crates_io_protocol || true[0m
+2026-05-14T12:29:02.3757038Z [36;1m    echo CARGO_REGISTRIES_CRATES_IO_PROTOCOL=sparse >> $GITHUB_ENV[0m
+2026-05-14T12:29:02.3757521Z [36;1m  elif rustc +stable --version --verbose | grep -q '^release: 1\.6[67]\.'; then[0m
+2026-05-14T12:29:02.3758335Z [36;1m    touch "/home/runner/work/_temp"/.implicit_cargo_registries_crates_io_protocol || true[0m
+2026-05-14T12:29:02.3758866Z [36;1m    echo CARGO_REGISTRIES_CRATES_IO_PROTOCOL=git >> $GITHUB_ENV[0m
+2026-05-14T12:29:02.3759210Z [36;1m  fi[0m
+2026-05-14T12:29:02.3759452Z [36;1mfi[0m
+2026-05-14T12:29:02.3773876Z shell: /usr/bin/bash --noprofile --norc -e -o pipefail {0}
+2026-05-14T12:29:02.3774346Z env:
+2026-05-14T12:29:02.3774560Z   BINARY_NAME: oidc-jwks-converter
+2026-05-14T12:29:02.3774871Z   THIRD_PARTY_LICENSE_OUTPUT: THIRD_PARTY_LICENSES.html
+2026-05-14T12:29:02.3775240Z   TARGET: arm-unknown-linux-musleabihf
+2026-05-14T12:29:02.3775798Z   CARGO_HOME: /home/runner/.cargo
+2026-05-14T12:29:02.3776086Z   CARGO_INCREMENTAL: 0
+2026-05-14T12:29:02.3776355Z   CARGO_TERM_COLOR: always
+2026-05-14T12:29:02.3776561Z ##[endgroup]
+2026-05-14T12:29:02.4068534Z ##[group]Run : work around spurious network errors in curl 8.0
+2026-05-14T12:29:02.4069027Z [36;1m: work around spurious network errors in curl 8.0[0m
+2026-05-14T12:29:02.4069600Z [36;1m# https://rust-lang.zulipchat.com/#narrow/stream/246057-t-cargo/topic/timeout.20investigation[0m
+2026-05-14T12:29:02.4070163Z [36;1mif rustc +stable --version --verbose | grep -q '^release: 1\.7[01]\.'; then[0m
+2026-05-14T12:29:02.4070604Z [36;1m  echo CARGO_HTTP_MULTIPLEXING=false >> $GITHUB_ENV[0m
+2026-05-14T12:29:02.4070935Z [36;1mfi[0m
+2026-05-14T12:29:02.4086860Z shell: /usr/bin/bash --noprofile --norc -e -o pipefail {0}
+2026-05-14T12:29:02.4087333Z env:
+2026-05-14T12:29:02.4087522Z   BINARY_NAME: oidc-jwks-converter
+2026-05-14T12:29:02.4087833Z   THIRD_PARTY_LICENSE_OUTPUT: THIRD_PARTY_LICENSES.html
+2026-05-14T12:29:02.4088181Z   TARGET: arm-unknown-linux-musleabihf
+2026-05-14T12:29:02.4088460Z   CARGO_HOME: /home/runner/.cargo
+2026-05-14T12:29:02.4088696Z   CARGO_INCREMENTAL: 0
+2026-05-14T12:29:02.4088924Z   CARGO_TERM_COLOR: always
+2026-05-14T12:29:02.4089357Z ##[endgroup]
+2026-05-14T12:29:02.4268433Z ##[group]Run rustc +stable --version --verbose
+2026-05-14T12:29:02.4268807Z [36;1mrustc +stable --version --verbose[0m
+2026-05-14T12:29:02.4284756Z shell: /usr/bin/bash --noprofile --norc -e -o pipefail {0}
+2026-05-14T12:29:02.4285089Z env:
+2026-05-14T12:29:02.4285437Z   BINARY_NAME: oidc-jwks-converter
+2026-05-14T12:29:02.4286018Z   THIRD_PARTY_LICENSE_OUTPUT: THIRD_PARTY_LICENSES.html
+2026-05-14T12:29:02.4286324Z   TARGET: arm-unknown-linux-musleabihf
+2026-05-14T12:29:02.4286650Z   CARGO_HOME: /home/runner/.cargo
+2026-05-14T12:29:02.4286887Z   CARGO_INCREMENTAL: 0
+2026-05-14T12:29:02.4287119Z   CARGO_TERM_COLOR: always
+2026-05-14T12:29:02.4287318Z ##[endgroup]
+2026-05-14T12:29:02.4419036Z rustc 1.95.0 (59807616e 2026-04-14)
+2026-05-14T12:29:02.4419750Z binary: rustc
+2026-05-14T12:29:02.4420056Z commit-hash: 59807616e1fa2540724bfbac14d7976d7e4a3860
+2026-05-14T12:29:02.4420396Z commit-date: 2026-04-14
+2026-05-14T12:29:02.4420609Z host: aarch64-unknown-linux-gnu
+2026-05-14T12:29:02.4420954Z release: 1.95.0
+2026-05-14T12:29:02.4421172Z LLVM version: 22.1.2
+2026-05-14T12:29:02.4503422Z ##[group]Run sudo apt-get update
+2026-05-14T12:29:02.4503770Z [36;1msudo apt-get update[0m
+2026-05-14T12:29:02.4504101Z [36;1msudo apt-get install -y musl-tools gcc-arm-linux-gnueabihf[0m
+2026-05-14T12:29:02.4520959Z shell: /usr/bin/bash -e {0}
+2026-05-14T12:29:02.4521232Z env:
+2026-05-14T12:29:02.4521604Z   BINARY_NAME: oidc-jwks-converter
+2026-05-14T12:29:02.4521887Z   THIRD_PARTY_LICENSE_OUTPUT: THIRD_PARTY_LICENSES.html
+2026-05-14T12:29:02.4522211Z   TARGET: arm-unknown-linux-musleabihf
+2026-05-14T12:29:02.4522520Z   CARGO_HOME: /home/runner/.cargo
+2026-05-14T12:29:02.4522748Z   CARGO_INCREMENTAL: 0
+2026-05-14T12:29:02.4522985Z   CARGO_TERM_COLOR: always
+2026-05-14T12:29:02.4523222Z ##[endgroup]
+2026-05-14T12:29:02.6417338Z Get:1 https://packages.microsoft.com/repos/azure-cli jammy InRelease [3596 B]
+2026-05-14T12:29:02.6593242Z Get:2 https://packages.microsoft.com/ubuntu/22.04/prod jammy InRelease [3632 B]
+2026-05-14T12:29:02.7431114Z Get:3 https://packages.microsoft.com/repos/azure-cli jammy/main arm64 Packages [3282 B]
+2026-05-14T12:29:02.8111354Z Get:4 https://packages.microsoft.com/ubuntu/22.04/prod jammy/main all Packages [1319 B]
+2026-05-14T12:29:02.8158602Z Get:5 https://packages.microsoft.com/ubuntu/22.04/prod jammy/main armhf Packages [21.8 kB]
+2026-05-14T12:29:02.8225685Z Get:6 https://packages.microsoft.com/ubuntu/22.04/prod jammy/main arm64 Packages [178 kB]
+2026-05-14T12:29:02.8315804Z Get:7 https://packages.microsoft.com/ubuntu/22.04/prod jammy/main amd64 Packages [363 kB]
+2026-05-14T12:29:03.0738480Z Hit:8 http://ports.ubuntu.com/ubuntu-ports jammy InRelease
+2026-05-14T12:29:03.2359134Z Get:9 http://ports.ubuntu.com/ubuntu-ports jammy-updates InRelease [128 kB]
+2026-05-14T12:29:03.9340627Z Get:10 http://ports.ubuntu.com/ubuntu-ports jammy-backports InRelease [127 kB]
+2026-05-14T12:29:04.2132913Z Get:11 http://ports.ubuntu.com/ubuntu-ports jammy-security InRelease [129 kB]
+2026-05-14T12:29:04.4719303Z Get:12 http://ports.ubuntu.com/ubuntu-ports jammy-updates/main arm64 Packages [3335 kB]
+2026-05-14T12:29:05.3696649Z Get:13 http://ports.ubuntu.com/ubuntu-ports jammy-updates/main Translation-en [524 kB]
+2026-05-14T12:29:05.5486177Z Get:14 http://ports.ubuntu.com/ubuntu-ports jammy-updates/main arm64 c-n-f Metadata [19.4 kB]
+2026-05-14T12:29:05.7113080Z Get:15 http://ports.ubuntu.com/ubuntu-ports jammy-updates/restricted arm64 Packages [5971 kB]
+2026-05-14T12:29:06.1015160Z Get:16 http://ports.ubuntu.com/ubuntu-ports jammy-updates/restricted Translation-en [1123 kB]
+2026-05-14T12:29:06.2787610Z Get:17 http://ports.ubuntu.com/ubuntu-ports jammy-updates/restricted arm64 c-n-f Metadata [448 B]
+2026-05-14T12:29:06.4407738Z Get:18 http://ports.ubuntu.com/ubuntu-ports jammy-updates/universe arm64 Packages [1320 kB]
+2026-05-14T12:29:06.6212897Z Get:19 http://ports.ubuntu.com/ubuntu-ports jammy-updates/universe Translation-en [316 kB]
+2026-05-14T12:29:06.7863899Z Get:20 http://ports.ubuntu.com/ubuntu-ports jammy-updates/universe arm64 c-n-f Metadata [27.3 kB]
+2026-05-14T12:29:06.9491292Z Get:21 http://ports.ubuntu.com/ubuntu-ports jammy-updates/multiverse arm64 Packages [52.0 kB]
+2026-05-14T12:29:07.3141205Z Get:22 http://ports.ubuntu.com/ubuntu-ports jammy-updates/multiverse Translation-en [15.5 kB]
+2026-05-14T12:29:07.4766960Z Get:23 http://ports.ubuntu.com/ubuntu-ports jammy-updates/multiverse arm64 c-n-f Metadata [488 B]
+2026-05-14T12:29:07.6391158Z Get:24 http://ports.ubuntu.com/ubuntu-ports jammy-backports/main arm64 Packages [69.8 kB]
+2026-05-14T12:29:07.8017138Z Get:25 http://ports.ubuntu.com/ubuntu-ports jammy-backports/main Translation-en [11.4 kB]
+2026-05-14T12:29:07.9641802Z Get:26 http://ports.ubuntu.com/ubuntu-ports jammy-backports/main arm64 c-n-f Metadata [416 B]
+2026-05-14T12:29:08.1263617Z Get:27 http://ports.ubuntu.com/ubuntu-ports jammy-backports/universe arm64 Packages [29.2 kB]
+2026-05-14T12:29:08.2887853Z Get:28 http://ports.ubuntu.com/ubuntu-ports jammy-backports/universe Translation-en [16.9 kB]
+2026-05-14T12:29:08.4513443Z Get:29 http://ports.ubuntu.com/ubuntu-ports jammy-backports/universe arm64 c-n-f Metadata [604 B]
+2026-05-14T12:29:08.6135261Z Get:30 http://ports.ubuntu.com/ubuntu-ports jammy-security/main arm64 Packages [3083 kB]
+2026-05-14T12:29:08.8183023Z Get:31 http://ports.ubuntu.com/ubuntu-ports jammy-security/main Translation-en [453 kB]
+2026-05-14T12:29:08.9864068Z Get:32 http://ports.ubuntu.com/ubuntu-ports jammy-security/main arm64 c-n-f Metadata [13.9 kB]
+2026-05-14T12:29:09.1488469Z Get:33 http://ports.ubuntu.com/ubuntu-ports jammy-security/restricted arm64 Packages [5774 kB]
+2026-05-14T12:29:09.4963684Z Get:34 http://ports.ubuntu.com/ubuntu-ports jammy-security/restricted Translation-en [1090 kB]
+2026-05-14T12:29:09.6722091Z Get:35 http://ports.ubuntu.com/ubuntu-ports jammy-security/restricted arm64 c-n-f Metadata [528 B]
+2026-05-14T12:29:09.8344255Z Get:36 http://ports.ubuntu.com/ubuntu-ports jammy-security/universe arm64 Packages [1087 kB]
+2026-05-14T12:29:10.2145915Z Get:37 http://ports.ubuntu.com/ubuntu-ports jammy-security/universe Translation-en [227 kB]
+2026-05-14T12:29:10.3790081Z Get:38 http://ports.ubuntu.com/ubuntu-ports jammy-security/universe arm64 c-n-f Metadata [20.2 kB]
+2026-05-14T12:29:10.5413986Z Get:39 http://ports.ubuntu.com/ubuntu-ports jammy-security/multiverse arm64 Packages [34.6 kB]
+2026-05-14T12:29:10.7040118Z Get:40 http://ports.ubuntu.com/ubuntu-ports jammy-security/multiverse Translation-en [10.5 kB]
+2026-05-14T12:29:18.6503811Z Fetched 25.6 MB in 8s (3156 kB/s)
+2026-05-14T12:29:19.6421514Z Reading package lists...
+2026-05-14T12:29:19.7037934Z Reading package lists...
+2026-05-14T12:29:19.9871331Z Building dependency tree...
+2026-05-14T12:29:19.9882285Z Reading state information...
+2026-05-14T12:29:20.2436139Z The following additional packages will be installed:
+2026-05-14T12:29:20.2436976Z   binutils-arm-linux-gnueabihf cpp-11-arm-linux-gnueabihf
+2026-05-14T12:29:20.2437566Z   cpp-arm-linux-gnueabihf gcc-11-arm-linux-gnueabihf
+2026-05-14T12:29:20.2438065Z   gcc-11-arm-linux-gnueabihf-base gcc-11-cross-base gcc-12-cross-base
+2026-05-14T12:29:20.2438503Z   libasan6-armhf-cross libatomic1-armhf-cross libc6-armhf-cross
+2026-05-14T12:29:20.2438983Z   libc6-dev-armhf-cross libgcc-11-dev-armhf-cross libgcc-s1-armhf-cross
+2026-05-14T12:29:20.2439478Z   libgomp1-armhf-cross libstdc++6-armhf-cross libubsan1-armhf-cross
+2026-05-14T12:29:20.2442422Z   linux-libc-dev-armhf-cross musl musl-dev
+2026-05-14T12:29:20.2450841Z Suggested packages:
+2026-05-14T12:29:20.2451173Z   binutils-doc gcc-11-locales cpp-doc gcc-11-doc manpages-dev
+2026-05-14T12:29:20.2451527Z   gdb-arm-linux-gnueabihf gcc-doc
+2026-05-14T12:29:20.2451865Z Recommended packages:
+2026-05-14T12:29:20.2452105Z   linux-musl-dev
+2026-05-14T12:29:20.2793098Z The following NEW packages will be installed:
+2026-05-14T12:29:20.2793796Z   binutils-arm-linux-gnueabihf cpp-11-arm-linux-gnueabihf
+2026-05-14T12:29:20.2794249Z   cpp-arm-linux-gnueabihf gcc-11-arm-linux-gnueabihf
+2026-05-14T12:29:20.2795126Z   gcc-11-arm-linux-gnueabihf-base gcc-11-cross-base gcc-12-cross-base
+2026-05-14T12:29:20.2795963Z   gcc-arm-linux-gnueabihf libasan6-armhf-cross libatomic1-armhf-cross
+2026-05-14T12:29:20.2796435Z   libc6-armhf-cross libc6-dev-armhf-cross libgcc-11-dev-armhf-cross
+2026-05-14T12:29:20.2797362Z   libgcc-s1-armhf-cross libgomp1-armhf-cross libstdc++6-armhf-cross
+2026-05-14T12:29:20.2802214Z   libubsan1-armhf-cross linux-libc-dev-armhf-cross musl musl-dev musl-tools
+2026-05-14T12:29:20.4596757Z 0 upgraded, 21 newly installed, 0 to remove and 155 not upgraded.
+2026-05-14T12:29:20.4597409Z Need to get 39.1 MB of archives.
+2026-05-14T12:29:20.4597752Z After this operation, 121 MB of additional disk space will be used.
+2026-05-14T12:29:20.4598458Z Get:1 http://ports.ubuntu.com/ubuntu-ports jammy-updates/main arm64 gcc-11-arm-linux-gnueabihf-base arm64 11.4.0-1ubuntu1~22.04.3cross1 [216 kB]
+2026-05-14T12:29:20.8211270Z Get:2 http://ports.ubuntu.com/ubuntu-ports jammy-updates/main arm64 cpp-11-arm-linux-gnueabihf arm64 11.4.0-1ubuntu1~22.04.3cross1 [8653 kB]
+2026-05-14T12:29:21.2846625Z Get:3 http://ports.ubuntu.com/ubuntu-ports jammy/main arm64 cpp-arm-linux-gnueabihf arm64 4:11.2.0-1ubuntu1 [3472 B]
+2026-05-14T12:29:21.3536095Z Get:4 http://ports.ubuntu.com/ubuntu-ports jammy-updates/main arm64 binutils-arm-linux-gnueabihf arm64 2.38-4ubuntu2.12 [3386 kB]
+2026-05-14T12:29:21.4419638Z Get:5 http://ports.ubuntu.com/ubuntu-ports jammy-updates/main arm64 gcc-11-cross-base all 11.4.0-1ubuntu1~22.04.3cross1 [211 kB]
+2026-05-14T12:29:21.5120900Z Get:6 http://ports.ubuntu.com/ubuntu-ports jammy-updates/main arm64 gcc-12-cross-base all 12.3.0-1ubuntu1~22.04.3cross1 [211 kB]
+2026-05-14T12:29:21.5827397Z Get:7 http://ports.ubuntu.com/ubuntu-ports jammy/main arm64 libc6-armhf-cross all 2.35-0ubuntu1cross3 [957 kB]
+2026-05-14T12:29:21.6568347Z Get:8 http://ports.ubuntu.com/ubuntu-ports jammy-updates/main arm64 libgcc-s1-armhf-cross all 12.3.0-1ubuntu1~22.04.3cross1 [42.6 kB]
+2026-05-14T12:29:21.7262199Z Get:9 http://ports.ubuntu.com/ubuntu-ports jammy-updates/main arm64 libgomp1-armhf-cross all 12.3.0-1ubuntu1~22.04.3cross1 [108 kB]
+2026-05-14T12:29:21.7951747Z Get:10 http://ports.ubuntu.com/ubuntu-ports jammy-updates/main arm64 libatomic1-armhf-cross all 12.3.0-1ubuntu1~22.04.3cross1 [7442 B]
+2026-05-14T12:29:21.8637888Z Get:11 http://ports.ubuntu.com/ubuntu-ports jammy-updates/main arm64 libasan6-armhf-cross all 11.4.0-1ubuntu1~22.04.3cross1 [2235 kB]
+2026-05-14T12:29:21.9482896Z Get:12 http://ports.ubuntu.com/ubuntu-ports jammy-updates/main arm64 libstdc++6-armhf-cross all 12.3.0-1ubuntu1~22.04.3cross1 [569 kB]
+2026-05-14T12:29:22.0212427Z Get:13 http://ports.ubuntu.com/ubuntu-ports jammy-updates/main arm64 libubsan1-armhf-cross all 12.3.0-1ubuntu1~22.04.3cross1 [957 kB]
+2026-05-14T12:29:22.0958882Z Get:14 http://ports.ubuntu.com/ubuntu-ports jammy-updates/main arm64 libgcc-11-dev-armhf-cross all 11.4.0-1ubuntu1~22.04.3cross1 [839 kB]
+2026-05-14T12:29:22.1707064Z Get:15 http://ports.ubuntu.com/ubuntu-ports jammy-updates/main arm64 gcc-11-arm-linux-gnueabihf arm64 11.4.0-1ubuntu1~22.04.3cross1 [17.2 MB]
+2026-05-14T12:29:22.5194316Z Get:16 http://ports.ubuntu.com/ubuntu-ports jammy/main arm64 gcc-arm-linux-gnueabihf arm64 4:11.2.0-1ubuntu1 [1244 B]
+2026-05-14T12:29:22.6967642Z Get:17 http://ports.ubuntu.com/ubuntu-ports jammy/main arm64 linux-libc-dev-armhf-cross all 5.15.0-22.22cross3 [1204 kB]
+2026-05-14T12:29:22.7730046Z Get:18 http://ports.ubuntu.com/ubuntu-ports jammy/main arm64 libc6-dev-armhf-cross all 2.35-0ubuntu1cross3 [1334 kB]
+2026-05-14T12:29:22.8504977Z Get:19 http://ports.ubuntu.com/ubuntu-ports jammy/universe arm64 musl arm64 1.2.2-4 [413 kB]
+2026-05-14T12:29:22.9218092Z Get:20 http://ports.ubuntu.com/ubuntu-ports jammy/universe arm64 musl-dev arm64 1.2.2-4 [591 kB]
+2026-05-14T12:29:22.9942807Z Get:21 http://ports.ubuntu.com/ubuntu-ports jammy/universe arm64 musl-tools arm64 1.2.2-4 [5524 B]
+2026-05-14T12:29:23.3216473Z Fetched 39.1 MB in 3s (14.5 MB/s)
+2026-05-14T12:29:23.3988385Z Selecting previously unselected package gcc-11-arm-linux-gnueabihf-base:arm64.
+2026-05-14T12:29:23.4509663Z (Reading database ... 
+2026-05-14T12:29:23.4510003Z (Reading database ... 5%
+2026-05-14T12:29:23.4510217Z (Reading database ... 10%
+2026-05-14T12:29:23.4510480Z (Reading database ... 15%
+2026-05-14T12:29:23.4510781Z (Reading database ... 20%
+2026-05-14T12:29:23.4510997Z (Reading database ... 25%
+2026-05-14T12:29:23.4511245Z (Reading database ... 30%
+2026-05-14T12:29:23.4511474Z (Reading database ... 35%
+2026-05-14T12:29:23.4511703Z (Reading database ... 40%
+2026-05-14T12:29:23.4512097Z (Reading database ... 45%
+2026-05-14T12:29:23.4512410Z (Reading database ... 50%
+2026-05-14T12:29:23.7121577Z (Reading database ... 55%
+2026-05-14T12:29:24.0328583Z (Reading database ... 60%
+2026-05-14T12:29:24.2670043Z (Reading database ... 65%
+2026-05-14T12:29:24.6338609Z (Reading database ... 70%
+2026-05-14T12:29:25.2724184Z (Reading database ... 75%
+2026-05-14T12:29:25.9479741Z (Reading database ... 80%
+2026-05-14T12:29:26.6027863Z (Reading database ... 85%
+2026-05-14T12:29:27.9790186Z (Reading database ... 90%
+2026-05-14T12:29:28.6054936Z (Reading database ... 95%
+2026-05-14T12:29:28.6055303Z (Reading database ... 100%
+2026-05-14T12:29:28.6056076Z (Reading database ... 233701 files and directories currently installed.)
+2026-05-14T12:29:28.6109211Z Preparing to unpack .../00-gcc-11-arm-linux-gnueabihf-base_11.4.0-1ubuntu1~22.04.3cross1_arm64.deb ...
+2026-05-14T12:29:28.6207226Z Unpacking gcc-11-arm-linux-gnueabihf-base:arm64 (11.4.0-1ubuntu1~22.04.3cross1) ...
+2026-05-14T12:29:28.7200646Z Selecting previously unselected package cpp-11-arm-linux-gnueabihf.
+2026-05-14T12:29:28.7395702Z Preparing to unpack .../01-cpp-11-arm-linux-gnueabihf_11.4.0-1ubuntu1~22.04.3cross1_arm64.deb ...
+2026-05-14T12:29:28.7547432Z Unpacking cpp-11-arm-linux-gnueabihf (11.4.0-1ubuntu1~22.04.3cross1) ...
+2026-05-14T12:29:28.9816792Z Selecting previously unselected package cpp-arm-linux-gnueabihf.
+2026-05-14T12:29:29.0027180Z Preparing to unpack .../02-cpp-arm-linux-gnueabihf_4%3a11.2.0-1ubuntu1_arm64.deb ...
+2026-05-14T12:29:29.0229010Z Unpacking cpp-arm-linux-gnueabihf (4:11.2.0-1ubuntu1) ...
+2026-05-14T12:29:29.1033953Z Selecting previously unselected package binutils-arm-linux-gnueabihf.
+2026-05-14T12:29:29.1252569Z Preparing to unpack .../03-binutils-arm-linux-gnueabihf_2.38-4ubuntu2.12_arm64.deb ...
+2026-05-14T12:29:29.1470982Z Unpacking binutils-arm-linux-gnueabihf (2.38-4ubuntu2.12) ...
+2026-05-14T12:29:29.3662548Z Selecting previously unselected package gcc-11-cross-base.
+2026-05-14T12:29:29.3858875Z Preparing to unpack .../04-gcc-11-cross-base_11.4.0-1ubuntu1~22.04.3cross1_all.deb ...
+2026-05-14T12:29:29.3949930Z Unpacking gcc-11-cross-base (11.4.0-1ubuntu1~22.04.3cross1) ...
+2026-05-14T12:29:29.4647478Z Selecting previously unselected package gcc-12-cross-base.
+2026-05-14T12:29:29.4870818Z Preparing to unpack .../05-gcc-12-cross-base_12.3.0-1ubuntu1~22.04.3cross1_all.deb ...
+2026-05-14T12:29:29.4965939Z Unpacking gcc-12-cross-base (12.3.0-1ubuntu1~22.04.3cross1) ...
+2026-05-14T12:29:29.5703289Z Selecting previously unselected package libc6-armhf-cross.
+2026-05-14T12:29:29.5917693Z Preparing to unpack .../06-libc6-armhf-cross_2.35-0ubuntu1cross3_all.deb ...
+2026-05-14T12:29:29.6010587Z Unpacking libc6-armhf-cross (2.35-0ubuntu1cross3) ...
+2026-05-14T12:29:29.6866991Z Selecting previously unselected package libgcc-s1-armhf-cross.
+2026-05-14T12:29:29.7080249Z Preparing to unpack .../07-libgcc-s1-armhf-cross_12.3.0-1ubuntu1~22.04.3cross1_all.deb ...
+2026-05-14T12:29:29.7173345Z Unpacking libgcc-s1-armhf-cross (12.3.0-1ubuntu1~22.04.3cross1) ...
+2026-05-14T12:29:29.7874058Z Selecting previously unselected package libgomp1-armhf-cross.
+2026-05-14T12:29:29.8068542Z Preparing to unpack .../08-libgomp1-armhf-cross_12.3.0-1ubuntu1~22.04.3cross1_all.deb ...
+2026-05-14T12:29:29.8161308Z Unpacking libgomp1-armhf-cross (12.3.0-1ubuntu1~22.04.3cross1) ...
+2026-05-14T12:29:29.8851144Z Selecting previously unselected package libatomic1-armhf-cross.
+2026-05-14T12:29:29.9042943Z Preparing to unpack .../09-libatomic1-armhf-cross_12.3.0-1ubuntu1~22.04.3cross1_all.deb ...
+2026-05-14T12:29:29.9143079Z Unpacking libatomic1-armhf-cross (12.3.0-1ubuntu1~22.04.3cross1) ...
+2026-05-14T12:29:29.9869165Z Selecting previously unselected package libasan6-armhf-cross.
+2026-05-14T12:29:30.0083109Z Preparing to unpack .../10-libasan6-armhf-cross_11.4.0-1ubuntu1~22.04.3cross1_all.deb ...
+2026-05-14T12:29:30.0176488Z Unpacking libasan6-armhf-cross (11.4.0-1ubuntu1~22.04.3cross1) ...
+2026-05-14T12:29:30.1286330Z Selecting previously unselected package libstdc++6-armhf-cross.
+2026-05-14T12:29:30.1502355Z Preparing to unpack .../11-libstdc++6-armhf-cross_12.3.0-1ubuntu1~22.04.3cross1_all.deb ...
+2026-05-14T12:29:30.1591653Z Unpacking libstdc++6-armhf-cross (12.3.0-1ubuntu1~22.04.3cross1) ...
+2026-05-14T12:29:30.2371555Z Selecting previously unselected package libubsan1-armhf-cross.
+2026-05-14T12:29:30.2572611Z Preparing to unpack .../12-libubsan1-armhf-cross_12.3.0-1ubuntu1~22.04.3cross1_all.deb ...
+2026-05-14T12:29:30.2670726Z Unpacking libubsan1-armhf-cross (12.3.0-1ubuntu1~22.04.3cross1) ...
+2026-05-14T12:29:30.3498301Z Selecting previously unselected package libgcc-11-dev-armhf-cross.
+2026-05-14T12:29:30.3688128Z Preparing to unpack .../13-libgcc-11-dev-armhf-cross_11.4.0-1ubuntu1~22.04.3cross1_all.deb ...
+2026-05-14T12:29:30.3780397Z Unpacking libgcc-11-dev-armhf-cross (11.4.0-1ubuntu1~22.04.3cross1) ...
+2026-05-14T12:29:30.4753639Z Selecting previously unselected package gcc-11-arm-linux-gnueabihf.
+2026-05-14T12:29:30.4938655Z Preparing to unpack .../14-gcc-11-arm-linux-gnueabihf_11.4.0-1ubuntu1~22.04.3cross1_arm64.deb ...
+2026-05-14T12:29:30.5057304Z Unpacking gcc-11-arm-linux-gnueabihf (11.4.0-1ubuntu1~22.04.3cross1) ...
+2026-05-14T12:29:30.8561406Z Selecting previously unselected package gcc-arm-linux-gnueabihf.
+2026-05-14T12:29:30.8771820Z Preparing to unpack .../15-gcc-arm-linux-gnueabihf_4%3a11.2.0-1ubuntu1_arm64.deb ...
+2026-05-14T12:29:30.8865294Z Unpacking gcc-arm-linux-gnueabihf (4:11.2.0-1ubuntu1) ...
+2026-05-14T12:29:30.9578318Z Selecting previously unselected package linux-libc-dev-armhf-cross.
+2026-05-14T12:29:30.9750186Z Preparing to unpack .../16-linux-libc-dev-armhf-cross_5.15.0-22.22cross3_all.deb ...
+2026-05-14T12:29:30.9840821Z Unpacking linux-libc-dev-armhf-cross (5.15.0-22.22cross3) ...
+2026-05-14T12:29:31.2448875Z Selecting previously unselected package libc6-dev-armhf-cross.
+2026-05-14T12:29:31.2677416Z Preparing to unpack .../17-libc6-dev-armhf-cross_2.35-0ubuntu1cross3_all.deb ...
+2026-05-14T12:29:31.2772551Z Unpacking libc6-dev-armhf-cross (2.35-0ubuntu1cross3) ...
+2026-05-14T12:29:31.4143220Z Selecting previously unselected package musl:arm64.
+2026-05-14T12:29:31.4373621Z Preparing to unpack .../18-musl_1.2.2-4_arm64.deb ...
+2026-05-14T12:29:31.4483026Z Unpacking musl:arm64 (1.2.2-4) ...
+2026-05-14T12:29:31.5348127Z Selecting previously unselected package musl-dev:arm64.
+2026-05-14T12:29:31.5534714Z Preparing to unpack .../19-musl-dev_1.2.2-4_arm64.deb ...
+2026-05-14T12:29:31.5628867Z Unpacking musl-dev:arm64 (1.2.2-4) ...
+2026-05-14T12:29:31.6670263Z Selecting previously unselected package musl-tools.
+2026-05-14T12:29:31.6872362Z Preparing to unpack .../20-musl-tools_1.2.2-4_arm64.deb ...
+2026-05-14T12:29:31.6972096Z Unpacking musl-tools (1.2.2-4) ...
+2026-05-14T12:29:31.7959728Z Setting up libc6-armhf-cross (2.35-0ubuntu1cross3) ...
+2026-05-14T12:29:31.8241107Z Setting up gcc-12-cross-base (12.3.0-1ubuntu1~22.04.3cross1) ...
+2026-05-14T12:29:31.8507881Z Setting up libgcc-s1-armhf-cross (12.3.0-1ubuntu1~22.04.3cross1) ...
+2026-05-14T12:29:31.8781736Z Setting up libatomic1-armhf-cross (12.3.0-1ubuntu1~22.04.3cross1) ...
+2026-05-14T12:29:31.9048770Z Setting up libstdc++6-armhf-cross (12.3.0-1ubuntu1~22.04.3cross1) ...
+2026-05-14T12:29:31.9313731Z Setting up gcc-11-arm-linux-gnueabihf-base:arm64 (11.4.0-1ubuntu1~22.04.3cross1) ...
+2026-05-14T12:29:31.9617996Z Setting up linux-libc-dev-armhf-cross (5.15.0-22.22cross3) ...
+2026-05-14T12:29:31.9882745Z Setting up libubsan1-armhf-cross (12.3.0-1ubuntu1~22.04.3cross1) ...
+2026-05-14T12:29:32.0158840Z Setting up gcc-11-cross-base (11.4.0-1ubuntu1~22.04.3cross1) ...
+2026-05-14T12:29:32.0449449Z Setting up musl:arm64 (1.2.2-4) ...
+2026-05-14T12:29:32.0918179Z Setting up binutils-arm-linux-gnueabihf (2.38-4ubuntu2.12) ...
+2026-05-14T12:29:32.1222963Z Setting up cpp-11-arm-linux-gnueabihf (11.4.0-1ubuntu1~22.04.3cross1) ...
+2026-05-14T12:29:32.1493731Z Setting up libgomp1-armhf-cross (12.3.0-1ubuntu1~22.04.3cross1) ...
+2026-05-14T12:29:32.1765317Z Setting up libc6-dev-armhf-cross (2.35-0ubuntu1cross3) ...
+2026-05-14T12:29:32.2036854Z Setting up musl-dev:arm64 (1.2.2-4) ...
+2026-05-14T12:29:32.2324941Z Setting up libasan6-armhf-cross (11.4.0-1ubuntu1~22.04.3cross1) ...
+2026-05-14T12:29:32.2581677Z Setting up cpp-arm-linux-gnueabihf (4:11.2.0-1ubuntu1) ...
+2026-05-14T12:29:32.2867633Z Setting up musl-tools (1.2.2-4) ...
+2026-05-14T12:29:32.3134386Z Setting up libgcc-11-dev-armhf-cross (11.4.0-1ubuntu1~22.04.3cross1) ...
+2026-05-14T12:29:32.3409643Z Setting up gcc-11-arm-linux-gnueabihf (11.4.0-1ubuntu1~22.04.3cross1) ...
+2026-05-14T12:29:32.3684670Z Setting up gcc-arm-linux-gnueabihf (4:11.2.0-1ubuntu1) ...
+2026-05-14T12:29:32.3978510Z Processing triggers for man-db (2.10.2-1) ...
+2026-05-14T12:29:32.4119045Z Not building database; man-db/auto-update is not 'true'.
+2026-05-14T12:29:32.4222611Z Processing triggers for libc-bin (2.35-0ubuntu3.12) ...
+2026-05-14T12:29:37.4740230Z 
+2026-05-14T12:29:37.4742303Z Running kernel seems to be up-to-date.
+2026-05-14T12:29:37.4742794Z 
+2026-05-14T12:29:37.4742926Z No services need to be restarted.
+2026-05-14T12:29:37.4743104Z 
+2026-05-14T12:29:37.4743204Z No containers need to be restarted.
+2026-05-14T12:29:37.4743420Z 
+2026-05-14T12:29:37.4743538Z No user sessions are running outdated binaries.
+2026-05-14T12:29:37.4743726Z 
+2026-05-14T12:29:37.4743970Z No VM guests are running outdated hypervisor (qemu) binaries on this host.
+2026-05-14T12:29:39.4599955Z ##[group]Run cargo build --release --target $TARGET
+2026-05-14T12:29:39.4600448Z [36;1mcargo build --release --target $TARGET[0m
+2026-05-14T12:29:39.4618102Z shell: /usr/bin/bash -e {0}
+2026-05-14T12:29:39.4618361Z env:
+2026-05-14T12:29:39.4618565Z   BINARY_NAME: oidc-jwks-converter
+2026-05-14T12:29:39.4618913Z   THIRD_PARTY_LICENSE_OUTPUT: THIRD_PARTY_LICENSES.html
+2026-05-14T12:29:39.4619241Z   TARGET: arm-unknown-linux-musleabihf
+2026-05-14T12:29:39.4619564Z   CARGO_HOME: /home/runner/.cargo
+2026-05-14T12:29:39.4619841Z   CARGO_INCREMENTAL: 0
+2026-05-14T12:29:39.4620037Z   CARGO_TERM_COLOR: always
+2026-05-14T12:29:39.4620385Z   CARGO_TARGET_ARM_UNKNOWN_LINUX_MUSLEABIHF_LINKER: arm-linux-gnueabihf-gcc
+2026-05-14T12:29:39.4620783Z ##[endgroup]
+2026-05-14T12:29:39.5368523Z [1m[92m    Updating[0m crates.io index
+2026-05-14T12:29:39.7089304Z [1m[91merror[0m: failed to select a version for `reqwest`.
+2026-05-14T12:29:39.7090200Z     ... required by package `oidc-jwks-converter v0.1.0 (/home/runner/work/oidc-jwks-converter/oidc-jwks-converter)`
+2026-05-14T12:29:39.7090851Z versions that meet the requirements `^0.13` are: 0.13.3, 0.13.2, 0.13.1, 0.13.0
+2026-05-14T12:29:39.7091153Z 
+2026-05-14T12:29:39.7091475Z package `oidc-jwks-converter` depends on `reqwest` with feature `rustls-tls` but `reqwest` does not have that feature.
+2026-05-14T12:29:39.7093179Z  available features: __native-tls, __native-tls-alpn, __rustls, __rustls-aws-lc-rs, __tls, blocking, brotli, charset, cookies, default, default-tls, deflate, form, gzip, h2, hickory-dns, http2, http3, json, multipart, native-tls, native-tls-no-alpn, native-tls-vendored, native-tls-vendored-no-alpn, query, rustls, rustls-native-certs, rustls-no-provider, socks, stream, system-proxy, webpki-roots, zstd
+2026-05-14T12:29:39.7094550Z 
+2026-05-14T12:29:39.7094554Z 
+2026-05-14T12:29:39.7094733Z failed to select a version for `reqwest` which could resolve this conflict
+2026-05-14T12:29:39.7121321Z ##[error]Process completed with exit code 101.
+2026-05-14T12:29:39.7246132Z Post job cleanup.
+2026-05-14T12:29:39.7941775Z [command]/usr/bin/git version
+2026-05-14T12:29:39.7975593Z git version 2.53.0
+2026-05-14T12:29:39.8010654Z Temporarily overriding HOME='/home/runner/work/_temp/5ad7a87b-76c4-4509-b87d-e892a8599dc7' before making global git config changes
+2026-05-14T12:29:39.8011396Z Adding repository directory to the temporary git global config as a safe directory
+2026-05-14T12:29:39.8015743Z [command]/usr/bin/git config --global --add safe.directory /home/runner/work/oidc-jwks-converter/oidc-jwks-converter
+2026-05-14T12:29:39.8042506Z Removing SSH command configuration
+2026-05-14T12:29:39.8049040Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+2026-05-14T12:29:39.8079806Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+2026-05-14T12:29:39.8298595Z Removing HTTP extra header
+2026-05-14T12:29:39.8303302Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+2026-05-14T12:29:39.8333988Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+2026-05-14T12:29:39.8507725Z Removing includeIf entries pointing to credentials config files
+2026-05-14T12:29:39.8513233Z [command]/usr/bin/git config --local --name-only --get-regexp ^includeIf\.gitdir:
+2026-05-14T12:29:39.8533848Z includeif.gitdir:/home/runner/work/oidc-jwks-converter/oidc-jwks-converter/.git.path
+2026-05-14T12:29:39.8534670Z includeif.gitdir:/home/runner/work/oidc-jwks-converter/oidc-jwks-converter/.git/worktrees/*.path
+2026-05-14T12:29:39.8535292Z includeif.gitdir:/github/workspace/.git.path
+2026-05-14T12:29:39.8535733Z includeif.gitdir:/github/workspace/.git/worktrees/*.path
+2026-05-14T12:29:39.8542625Z [command]/usr/bin/git config --local --get-all includeif.gitdir:/home/runner/work/oidc-jwks-converter/oidc-jwks-converter/.git.path
+2026-05-14T12:29:39.8562251Z /home/runner/work/_temp/git-credentials-3898e19f-2e68-4def-8d3d-2cc64efb8e94.config
+2026-05-14T12:29:39.8571895Z [command]/usr/bin/git config --local --unset includeif.gitdir:/home/runner/work/oidc-jwks-converter/oidc-jwks-converter/.git.path /home/runner/work/_temp/git-credentials-3898e19f-2e68-4def-8d3d-2cc64efb8e94.config
+2026-05-14T12:29:39.8601655Z [command]/usr/bin/git config --local --get-all includeif.gitdir:/home/runner/work/oidc-jwks-converter/oidc-jwks-converter/.git/worktrees/*.path
+2026-05-14T12:29:39.8620479Z /home/runner/work/_temp/git-credentials-3898e19f-2e68-4def-8d3d-2cc64efb8e94.config
+2026-05-14T12:29:39.8628991Z [command]/usr/bin/git config --local --unset includeif.gitdir:/home/runner/work/oidc-jwks-converter/oidc-jwks-converter/.git/worktrees/*.path /home/runner/work/_temp/git-credentials-3898e19f-2e68-4def-8d3d-2cc64efb8e94.config
+2026-05-14T12:29:39.8656136Z [command]/usr/bin/git config --local --get-all includeif.gitdir:/github/workspace/.git.path
+2026-05-14T12:29:39.8675824Z /github/runner_temp/git-credentials-3898e19f-2e68-4def-8d3d-2cc64efb8e94.config
+2026-05-14T12:29:39.8682303Z [command]/usr/bin/git config --local --unset includeif.gitdir:/github/workspace/.git.path /github/runner_temp/git-credentials-3898e19f-2e68-4def-8d3d-2cc64efb8e94.config
+2026-05-14T12:29:39.8709570Z [command]/usr/bin/git config --local --get-all includeif.gitdir:/github/workspace/.git/worktrees/*.path
+2026-05-14T12:29:39.8727801Z /github/runner_temp/git-credentials-3898e19f-2e68-4def-8d3d-2cc64efb8e94.config
+2026-05-14T12:29:39.8735555Z [command]/usr/bin/git config --local --unset includeif.gitdir:/github/workspace/.git/worktrees/*.path /github/runner_temp/git-credentials-3898e19f-2e68-4def-8d3d-2cc64efb8e94.config
+2026-05-14T12:29:39.8763739Z [command]/usr/bin/git submodule foreach --recursive git config --local --show-origin --name-only --get-regexp remote.origin.url
+2026-05-14T12:29:39.8940376Z Removing credentials config '/home/runner/work/_temp/git-credentials-3898e19f-2e68-4def-8d3d-2cc64efb8e94.config'
+2026-05-14T12:29:39.9068431Z Cleaning up orphan processes

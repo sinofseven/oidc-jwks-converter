@@ -1,0 +1,447 @@
+﻿2026-05-14T12:28:47.4251666Z Current runner version: '2.334.0'
+2026-05-14T12:28:47.4276807Z ##[group]Runner Image Provisioner
+2026-05-14T12:28:47.4277575Z Hosted Compute Agent
+2026-05-14T12:28:47.4278122Z Version: 20260213.493
+2026-05-14T12:28:47.4279029Z Commit: 5c115507f6dd24b8de37d8bbe0bb4509d0cc0fa3
+2026-05-14T12:28:47.4279748Z Build Date: 2026-02-13T00:28:41Z
+2026-05-14T12:28:47.4280393Z Worker ID: {70911a7d-d634-4744-a732-4798323686e1}
+2026-05-14T12:28:47.4281162Z Azure Region: eastus2
+2026-05-14T12:28:47.4281729Z ##[endgroup]
+2026-05-14T12:28:47.4283115Z ##[group]Operating System
+2026-05-14T12:28:47.4283798Z Ubuntu
+2026-05-14T12:28:47.4284245Z 24.04.4
+2026-05-14T12:28:47.4284726Z LTS
+2026-05-14T12:28:47.4285223Z ##[endgroup]
+2026-05-14T12:28:47.4285756Z ##[group]Runner Image
+2026-05-14T12:28:47.4286326Z Image: ubuntu-24.04
+2026-05-14T12:28:47.4286863Z Version: 20260513.135.3
+2026-05-14T12:28:47.4288121Z Included Software: https://github.com/actions/runner-images/blob/ubuntu24/20260513.135/images/ubuntu/Ubuntu2404-Readme.md
+2026-05-14T12:28:47.4290162Z Image Release: https://github.com/actions/runner-images/releases/tag/ubuntu24%2F20260513.135
+2026-05-14T12:28:47.4291016Z ##[endgroup]
+2026-05-14T12:28:47.4292073Z ##[group]GITHUB_TOKEN Permissions
+2026-05-14T12:28:47.4294120Z Contents: read
+2026-05-14T12:28:47.4294671Z Metadata: read
+2026-05-14T12:28:47.4295171Z Packages: read
+2026-05-14T12:28:47.4295802Z ##[endgroup]
+2026-05-14T12:28:47.4297918Z Secret source: Actions
+2026-05-14T12:28:47.4299089Z Prepare workflow directory
+2026-05-14T12:28:47.4697418Z Prepare all required actions
+2026-05-14T12:28:47.4734188Z Getting action download info
+2026-05-14T12:28:47.8621094Z Download action repository 'actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd' (SHA:de0fac2e4500dabe0009e67214ff5f5447ce83dd)
+2026-05-14T12:28:48.0070593Z Download action repository 'dtolnay/rust-toolchain@29eef336d9b2848a0b548edc03f92a220660cdb8' (SHA:29eef336d9b2848a0b548edc03f92a220660cdb8)
+2026-05-14T12:28:48.1135656Z Download action repository 'Swatinem/rust-cache@e18b497796c12c097a38f9edb9d0641fb99eee32' (SHA:e18b497796c12c097a38f9edb9d0641fb99eee32)
+2026-05-14T12:28:48.4099726Z Download action repository 'actions/upload-artifact@043fb46d1a93c77aae656e7c1c64a875d1fc6a0a' (SHA:043fb46d1a93c77aae656e7c1c64a875d1fc6a0a)
+2026-05-14T12:28:48.6168830Z Complete job name: third-party-licenses
+2026-05-14T12:28:48.6850805Z ##[group]Run actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd
+2026-05-14T12:28:48.6851745Z with:
+2026-05-14T12:28:48.6852174Z   repository: sinofseven/oidc-jwks-converter
+2026-05-14T12:28:48.6852866Z   token: ***
+2026-05-14T12:28:48.6853295Z   ssh-strict: true
+2026-05-14T12:28:48.6853681Z   ssh-user: git
+2026-05-14T12:28:48.6854074Z   persist-credentials: true
+2026-05-14T12:28:48.6854503Z   clean: true
+2026-05-14T12:28:48.6854899Z   sparse-checkout-cone-mode: true
+2026-05-14T12:28:48.6855363Z   fetch-depth: 1
+2026-05-14T12:28:48.6855733Z   fetch-tags: false
+2026-05-14T12:28:48.6856124Z   show-progress: true
+2026-05-14T12:28:48.6856502Z   lfs: false
+2026-05-14T12:28:48.6856891Z   submodules: false
+2026-05-14T12:28:48.6857273Z   set-safe-directory: true
+2026-05-14T12:28:48.6857843Z env:
+2026-05-14T12:28:48.6858205Z   BINARY_NAME: oidc-jwks-converter
+2026-05-14T12:28:48.6859024Z   THIRD_PARTY_LICENSE_OUTPUT: THIRD_PARTY_LICENSES.html
+2026-05-14T12:28:48.6859635Z ##[endgroup]
+2026-05-14T12:28:48.7860546Z Syncing repository: sinofseven/oidc-jwks-converter
+2026-05-14T12:28:48.7862503Z ##[group]Getting Git version info
+2026-05-14T12:28:48.7863420Z Working directory is '/home/runner/work/oidc-jwks-converter/oidc-jwks-converter'
+2026-05-14T12:28:48.7864482Z [command]/usr/bin/git version
+2026-05-14T12:28:48.7899343Z git version 2.54.0
+2026-05-14T12:28:48.7953215Z ##[endgroup]
+2026-05-14T12:28:48.7968407Z Temporarily overriding HOME='/home/runner/work/_temp/bbbdaf5d-5834-4687-8167-b9f92c1d1f12' before making global git config changes
+2026-05-14T12:28:48.7970800Z Adding repository directory to the temporary git global config as a safe directory
+2026-05-14T12:28:48.7974815Z [command]/usr/bin/git config --global --add safe.directory /home/runner/work/oidc-jwks-converter/oidc-jwks-converter
+2026-05-14T12:28:48.8018225Z Deleting the contents of '/home/runner/work/oidc-jwks-converter/oidc-jwks-converter'
+2026-05-14T12:28:48.8022607Z ##[group]Initializing the repository
+2026-05-14T12:28:48.8027634Z [command]/usr/bin/git init /home/runner/work/oidc-jwks-converter/oidc-jwks-converter
+2026-05-14T12:28:48.8099235Z hint: Using 'master' as the name for the initial branch. This default branch name
+2026-05-14T12:28:48.8100561Z hint: will change to "main" in Git 3.0. To configure the initial branch name
+2026-05-14T12:28:48.8102132Z hint: to use in all of your new repositories, which will suppress this warning,
+2026-05-14T12:28:48.8103192Z hint: call:
+2026-05-14T12:28:48.8103720Z hint:
+2026-05-14T12:28:48.8104409Z hint: 	git config --global init.defaultBranch <name>
+2026-05-14T12:28:48.8105277Z hint:
+2026-05-14T12:28:48.8105857Z hint: Names commonly chosen instead of 'master' are 'main', 'trunk' and
+2026-05-14T12:28:48.8106760Z hint: 'development'. The just-created branch can be renamed via this command:
+2026-05-14T12:28:48.8107426Z hint:
+2026-05-14T12:28:48.8107795Z hint: 	git branch -m <name>
+2026-05-14T12:28:48.8108219Z hint:
+2026-05-14T12:28:48.8109062Z hint: Disable this message with "git config set advice.defaultBranchName false"
+2026-05-14T12:28:48.8110343Z Initialized empty Git repository in /home/runner/work/oidc-jwks-converter/oidc-jwks-converter/.git/
+2026-05-14T12:28:48.8115914Z [command]/usr/bin/git remote add origin https://github.com/sinofseven/oidc-jwks-converter
+2026-05-14T12:28:48.8154671Z ##[endgroup]
+2026-05-14T12:28:48.8155379Z ##[group]Disabling automatic garbage collection
+2026-05-14T12:28:48.8158387Z [command]/usr/bin/git config --local gc.auto 0
+2026-05-14T12:28:48.8189163Z ##[endgroup]
+2026-05-14T12:28:48.8189798Z ##[group]Setting up auth
+2026-05-14T12:28:48.8190270Z Removing SSH command configuration
+2026-05-14T12:28:48.8195051Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+2026-05-14T12:28:48.8229577Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+2026-05-14T12:28:48.8526449Z Removing HTTP extra header
+2026-05-14T12:28:48.8533287Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+2026-05-14T12:28:48.8565437Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+2026-05-14T12:28:48.8788975Z Removing includeIf entries pointing to credentials config files
+2026-05-14T12:28:48.8794356Z [command]/usr/bin/git config --local --name-only --get-regexp ^includeIf\.gitdir:
+2026-05-14T12:28:48.8827529Z [command]/usr/bin/git submodule foreach --recursive git config --local --show-origin --name-only --get-regexp remote.origin.url
+2026-05-14T12:28:48.9059383Z [command]/usr/bin/git config --file /home/runner/work/_temp/git-credentials-2238f751-d06a-41d2-80ab-9f8761600188.config http.https://github.com/.extraheader AUTHORIZATION: basic ***
+2026-05-14T12:28:48.9103488Z [command]/usr/bin/git config --local includeIf.gitdir:/home/runner/work/oidc-jwks-converter/oidc-jwks-converter/.git.path /home/runner/work/_temp/git-credentials-2238f751-d06a-41d2-80ab-9f8761600188.config
+2026-05-14T12:28:48.9132812Z [command]/usr/bin/git config --local includeIf.gitdir:/home/runner/work/oidc-jwks-converter/oidc-jwks-converter/.git/worktrees/*.path /home/runner/work/_temp/git-credentials-2238f751-d06a-41d2-80ab-9f8761600188.config
+2026-05-14T12:28:48.9164802Z [command]/usr/bin/git config --local includeIf.gitdir:/github/workspace/.git.path /github/runner_temp/git-credentials-2238f751-d06a-41d2-80ab-9f8761600188.config
+2026-05-14T12:28:48.9193953Z [command]/usr/bin/git config --local includeIf.gitdir:/github/workspace/.git/worktrees/*.path /github/runner_temp/git-credentials-2238f751-d06a-41d2-80ab-9f8761600188.config
+2026-05-14T12:28:48.9219719Z ##[endgroup]
+2026-05-14T12:28:48.9220398Z ##[group]Fetching the repository
+2026-05-14T12:28:48.9228375Z [command]/usr/bin/git -c protocol.version=2 fetch --no-tags --prune --no-recurse-submodules --depth=1 origin +c84fbd3b886217b4d1105dbf8f338d42d85d65b3:refs/remotes/pull/5/merge
+2026-05-14T12:28:49.1771595Z From https://github.com/sinofseven/oidc-jwks-converter
+2026-05-14T12:28:49.1773671Z  * [new ref]         c84fbd3b886217b4d1105dbf8f338d42d85d65b3 -> pull/5/merge
+2026-05-14T12:28:49.1807652Z ##[endgroup]
+2026-05-14T12:28:49.1809337Z ##[group]Determining the checkout info
+2026-05-14T12:28:49.1811171Z ##[endgroup]
+2026-05-14T12:28:49.1814672Z [command]/usr/bin/git sparse-checkout disable
+2026-05-14T12:28:49.1860880Z [command]/usr/bin/git config --local --unset-all extensions.worktreeConfig
+2026-05-14T12:28:49.1890102Z ##[group]Checking out the ref
+2026-05-14T12:28:49.1893953Z [command]/usr/bin/git checkout --progress --force refs/remotes/pull/5/merge
+2026-05-14T12:28:49.1966592Z Note: switching to 'refs/remotes/pull/5/merge'.
+2026-05-14T12:28:49.1967501Z 
+2026-05-14T12:28:49.1968267Z You are in 'detached HEAD' state. You can look around, make experimental
+2026-05-14T12:28:49.1970042Z changes and commit them, and you can discard any commits you make in this
+2026-05-14T12:28:49.1972305Z state without impacting any branches by switching back to a branch.
+2026-05-14T12:28:49.1973694Z 
+2026-05-14T12:28:49.1974573Z If you want to create a new branch to retain commits you create, you may
+2026-05-14T12:28:49.1976608Z do so (now or later) by using -c with the switch command. Example:
+2026-05-14T12:28:49.1977795Z 
+2026-05-14T12:28:49.1978321Z   git switch -c <new-branch-name>
+2026-05-14T12:28:49.1979340Z 
+2026-05-14T12:28:49.1979783Z Or undo this operation with:
+2026-05-14T12:28:49.1980477Z 
+2026-05-14T12:28:49.1980846Z   git switch -
+2026-05-14T12:28:49.1981369Z 
+2026-05-14T12:28:49.1982296Z Turn off this advice by setting config variable advice.detachedHead to false
+2026-05-14T12:28:49.1983627Z 
+2026-05-14T12:28:49.1985276Z HEAD is now at c84fbd3 Merge 64a81b7434540026a2250e23d83e57c4618eb3c3 into 7995739c4acd0ab49d5c451a2ed464369e4b8e61
+2026-05-14T12:28:49.1989065Z ##[endgroup]
+2026-05-14T12:28:49.2016606Z [command]/usr/bin/git log -1 --format=%H
+2026-05-14T12:28:49.2041358Z c84fbd3b886217b4d1105dbf8f338d42d85d65b3
+2026-05-14T12:28:49.2673059Z ##[group]Run dtolnay/rust-toolchain@29eef336d9b2848a0b548edc03f92a220660cdb8
+2026-05-14T12:28:49.2674406Z with:
+2026-05-14T12:28:49.2675031Z   toolchain: stable
+2026-05-14T12:28:49.2675705Z env:
+2026-05-14T12:28:49.2676342Z   BINARY_NAME: oidc-jwks-converter
+2026-05-14T12:28:49.2677371Z   THIRD_PARTY_LICENSE_OUTPUT: THIRD_PARTY_LICENSES.html
+2026-05-14T12:28:49.2678404Z ##[endgroup]
+2026-05-14T12:28:49.2829611Z ##[group]Run : parse toolchain version
+2026-05-14T12:28:49.2830652Z [36;1m: parse toolchain version[0m
+2026-05-14T12:28:49.2831555Z [36;1mif [[ -z $toolchain ]]; then[0m
+2026-05-14T12:28:49.2833231Z [36;1m  # GitHub does not enforce `required: true` inputs itself. https://github.com/actions/runner/issues/1070[0m
+2026-05-14T12:28:49.2835023Z [36;1m  echo "'toolchain' is a required input" >&2[0m
+2026-05-14T12:28:49.2835988Z [36;1m  exit 1[0m
+2026-05-14T12:28:49.2837042Z [36;1melif [[ $toolchain =~ ^stable' '[0-9]+' '(year|month|week|day)s?' 'ago$ ]]; then[0m
+2026-05-14T12:28:49.2838406Z [36;1m  if [[ Linux == macOS ]]; then[0m
+2026-05-14T12:28:49.2840229Z [36;1m    echo "toolchain=1.$((($(date -v-$(sed 's/stable \([0-9]*\) \(.\).*/\1\2/' <<< $toolchain) +%s)/60/60/24-16569)/7/6))" >> $GITHUB_OUTPUT[0m
+2026-05-14T12:28:49.2841926Z [36;1m  else[0m
+2026-05-14T12:28:49.2843224Z [36;1m    echo "toolchain=1.$((($(date --date "${toolchain#stable }" +%s)/60/60/24-16569)/7/6))" >> $GITHUB_OUTPUT[0m
+2026-05-14T12:28:49.2844737Z [36;1m  fi[0m
+2026-05-14T12:28:49.2845675Z [36;1melif [[ $toolchain =~ ^stable' 'minus' '[0-9]+' 'releases?$ ]]; then[0m
+2026-05-14T12:28:49.2847655Z [36;1m  echo "toolchain=1.$((($(date +%s)/60/60/24-16569)/7/6-${toolchain//[^0-9]/}))" >> $GITHUB_OUTPUT[0m
+2026-05-14T12:28:49.2849488Z [36;1melif [[ $toolchain =~ ^1\.[0-9]+$ ]]; then[0m
+2026-05-14T12:28:49.2851221Z [36;1m  echo "toolchain=1.$((i=${toolchain#1.}, c=($(date +%s)/60/60/24-16569)/7/6, i+9*i*(10*i<=c)+90*i*(100*i<=c)))" >> $GITHUB_OUTPUT[0m
+2026-05-14T12:28:49.2852875Z [36;1melse[0m
+2026-05-14T12:28:49.2853660Z [36;1m  echo "toolchain=$toolchain" >> $GITHUB_OUTPUT[0m
+2026-05-14T12:28:49.2854654Z [36;1mfi[0m
+2026-05-14T12:28:49.2896679Z shell: /usr/bin/bash --noprofile --norc -e -o pipefail {0}
+2026-05-14T12:28:49.2897772Z env:
+2026-05-14T12:28:49.2898390Z   BINARY_NAME: oidc-jwks-converter
+2026-05-14T12:28:49.2899649Z   THIRD_PARTY_LICENSE_OUTPUT: THIRD_PARTY_LICENSES.html
+2026-05-14T12:28:49.2900670Z   toolchain: stable
+2026-05-14T12:28:49.2901322Z ##[endgroup]
+2026-05-14T12:28:49.3084410Z ##[group]Run : construct rustup command line
+2026-05-14T12:28:49.3085443Z [36;1m: construct rustup command line[0m
+2026-05-14T12:28:49.3086877Z [36;1mecho "targets=$(for t in ${targets//,/ }; do echo -n ' --target' $t; done)" >> $GITHUB_OUTPUT[0m
+2026-05-14T12:28:49.3089158Z [36;1mecho "components=$(for c in ${components//,/ }; do echo -n ' --component' $c; done)" >> $GITHUB_OUTPUT[0m
+2026-05-14T12:28:49.3090772Z [36;1mecho "downgrade=" >> $GITHUB_OUTPUT[0m
+2026-05-14T12:28:49.3125212Z shell: /usr/bin/bash --noprofile --norc -e -o pipefail {0}
+2026-05-14T12:28:49.3126266Z env:
+2026-05-14T12:28:49.3126892Z   BINARY_NAME: oidc-jwks-converter
+2026-05-14T12:28:49.3127896Z   THIRD_PARTY_LICENSE_OUTPUT: THIRD_PARTY_LICENSES.html
+2026-05-14T12:28:49.3129059Z   targets: 
+2026-05-14T12:28:49.3129743Z   components: 
+2026-05-14T12:28:49.3130359Z ##[endgroup]
+2026-05-14T12:28:49.3247043Z ##[group]Run : set $CARGO_HOME
+2026-05-14T12:28:49.3247843Z [36;1m: set $CARGO_HOME[0m
+2026-05-14T12:28:49.3249144Z [36;1mecho CARGO_HOME=${CARGO_HOME:-"$HOME/.cargo"} >> $GITHUB_ENV[0m
+2026-05-14T12:28:49.3283414Z shell: /usr/bin/bash --noprofile --norc -e -o pipefail {0}
+2026-05-14T12:28:49.3284455Z env:
+2026-05-14T12:28:49.3285068Z   BINARY_NAME: oidc-jwks-converter
+2026-05-14T12:28:49.3286046Z   THIRD_PARTY_LICENSE_OUTPUT: THIRD_PARTY_LICENSES.html
+2026-05-14T12:28:49.3287036Z ##[endgroup]
+2026-05-14T12:28:49.3403425Z ##[group]Run : install rustup if needed
+2026-05-14T12:28:49.3404518Z [36;1m: install rustup if needed[0m
+2026-05-14T12:28:49.3405448Z [36;1mif ! command -v rustup &>/dev/null; then[0m
+2026-05-14T12:28:49.3407789Z [36;1m  curl --proto '=https' --tlsv1.2 --retry 10 --retry-connrefused --location --silent --show-error --fail https://sh.rustup.rs | sh -s -- --default-toolchain none -y[0m
+2026-05-14T12:28:49.3410370Z [36;1m  echo "$CARGO_HOME/bin" >> $GITHUB_PATH[0m
+2026-05-14T12:28:49.3411272Z [36;1mfi[0m
+2026-05-14T12:28:49.3444938Z shell: /usr/bin/bash --noprofile --norc -e -o pipefail {0}
+2026-05-14T12:28:49.3445977Z env:
+2026-05-14T12:28:49.3446572Z   BINARY_NAME: oidc-jwks-converter
+2026-05-14T12:28:49.3447575Z   THIRD_PARTY_LICENSE_OUTPUT: THIRD_PARTY_LICENSES.html
+2026-05-14T12:28:49.3448815Z   CARGO_HOME: /home/runner/.cargo
+2026-05-14T12:28:49.3449594Z ##[endgroup]
+2026-05-14T12:28:49.3569477Z ##[group]Run rustup toolchain install stable --profile minimal --no-self-update
+2026-05-14T12:28:49.3571259Z [36;1mrustup toolchain install stable --profile minimal --no-self-update[0m
+2026-05-14T12:28:49.3605150Z shell: /usr/bin/bash --noprofile --norc -e -o pipefail {0}
+2026-05-14T12:28:49.3606183Z env:
+2026-05-14T12:28:49.3606785Z   BINARY_NAME: oidc-jwks-converter
+2026-05-14T12:28:49.3607743Z   THIRD_PARTY_LICENSE_OUTPUT: THIRD_PARTY_LICENSES.html
+2026-05-14T12:28:49.3609004Z   CARGO_HOME: /home/runner/.cargo
+2026-05-14T12:28:49.3609821Z   RUSTUP_PERMIT_COPY_RENAME: 1
+2026-05-14T12:28:49.3610552Z ##[endgroup]
+2026-05-14T12:28:49.5266286Z info: syncing channel updates for stable-x86_64-unknown-linux-gnu
+2026-05-14T12:28:49.6650610Z 
+2026-05-14T12:28:49.6741769Z   stable-x86_64-unknown-linux-gnu unchanged - rustc 1.95.0 (59807616e 2026-04-14)
+2026-05-14T12:28:49.6743015Z 
+2026-05-14T12:28:49.6816014Z ##[group]Run rustup default stable
+2026-05-14T12:28:49.6816885Z [36;1mrustup default stable[0m
+2026-05-14T12:28:49.6854201Z shell: /usr/bin/bash --noprofile --norc -e -o pipefail {0}
+2026-05-14T12:28:49.6855211Z env:
+2026-05-14T12:28:49.6855807Z   BINARY_NAME: oidc-jwks-converter
+2026-05-14T12:28:49.6856784Z   THIRD_PARTY_LICENSE_OUTPUT: THIRD_PARTY_LICENSES.html
+2026-05-14T12:28:49.6857788Z   CARGO_HOME: /home/runner/.cargo
+2026-05-14T12:28:49.6858813Z ##[endgroup]
+2026-05-14T12:28:49.6979293Z info: using existing install for stable-x86_64-unknown-linux-gnu
+2026-05-14T12:28:49.6984051Z info: default toolchain set to stable-x86_64-unknown-linux-gnu
+2026-05-14T12:28:49.6985001Z 
+2026-05-14T12:28:49.7069118Z   stable-x86_64-unknown-linux-gnu unchanged - rustc 1.95.0 (59807616e 2026-04-14)
+2026-05-14T12:28:49.7070180Z 
+2026-05-14T12:28:49.7128138Z ##[group]Run : create cachekey
+2026-05-14T12:28:49.7129219Z [36;1m: create cachekey[0m
+2026-05-14T12:28:49.7130783Z [36;1mDATE=$(rustc +stable --version --verbose | sed -ne 's/^commit-date: \(20[0-9][0-9]\)-\([01][0-9]\)-\([0-3][0-9]\)$/\1\2\3/p')[0m
+2026-05-14T12:28:49.7132839Z [36;1mHASH=$(rustc +stable --version --verbose | sed -ne 's/^commit-hash: //p')[0m
+2026-05-14T12:28:49.7134404Z [36;1mecho "cachekey=$(echo $DATE$HASH | head -c12)" >> $GITHUB_OUTPUT[0m
+2026-05-14T12:28:49.7170553Z shell: /usr/bin/bash --noprofile --norc -e -o pipefail {0}
+2026-05-14T12:28:49.7171575Z env:
+2026-05-14T12:28:49.7172168Z   BINARY_NAME: oidc-jwks-converter
+2026-05-14T12:28:49.7173117Z   THIRD_PARTY_LICENSE_OUTPUT: THIRD_PARTY_LICENSES.html
+2026-05-14T12:28:49.7174110Z   CARGO_HOME: /home/runner/.cargo
+2026-05-14T12:28:49.7174871Z ##[endgroup]
+2026-05-14T12:28:49.7613852Z ##[group]Run : disable incremental compilation
+2026-05-14T12:28:49.7614897Z [36;1m: disable incremental compilation[0m
+2026-05-14T12:28:49.7615886Z [36;1mif [ -z "${CARGO_INCREMENTAL+set}" ]; then[0m
+2026-05-14T12:28:49.7616936Z [36;1m  echo CARGO_INCREMENTAL=0 >> $GITHUB_ENV[0m
+2026-05-14T12:28:49.7617833Z [36;1mfi[0m
+2026-05-14T12:28:49.7654838Z shell: /usr/bin/bash --noprofile --norc -e -o pipefail {0}
+2026-05-14T12:28:49.7655864Z env:
+2026-05-14T12:28:49.7656455Z   BINARY_NAME: oidc-jwks-converter
+2026-05-14T12:28:49.7657413Z   THIRD_PARTY_LICENSE_OUTPUT: THIRD_PARTY_LICENSES.html
+2026-05-14T12:28:49.7658852Z   CARGO_HOME: /home/runner/.cargo
+2026-05-14T12:28:49.7659621Z ##[endgroup]
+2026-05-14T12:28:49.7797458Z ##[group]Run : enable colors in Cargo output
+2026-05-14T12:28:49.7798633Z [36;1m: enable colors in Cargo output[0m
+2026-05-14T12:28:49.7799617Z [36;1mif [ -z "${CARGO_TERM_COLOR+set}" ]; then[0m
+2026-05-14T12:28:49.7800709Z [36;1m  echo CARGO_TERM_COLOR=always >> $GITHUB_ENV[0m
+2026-05-14T12:28:49.7801665Z [36;1mfi[0m
+2026-05-14T12:28:49.7836991Z shell: /usr/bin/bash --noprofile --norc -e -o pipefail {0}
+2026-05-14T12:28:49.7838029Z env:
+2026-05-14T12:28:49.7838940Z   BINARY_NAME: oidc-jwks-converter
+2026-05-14T12:28:49.7839969Z   THIRD_PARTY_LICENSE_OUTPUT: THIRD_PARTY_LICENSES.html
+2026-05-14T12:28:49.7841005Z   CARGO_HOME: /home/runner/.cargo
+2026-05-14T12:28:49.7841807Z   CARGO_INCREMENTAL: 0
+2026-05-14T12:28:49.7842459Z ##[endgroup]
+2026-05-14T12:28:49.7952280Z ##[group]Run : enable Cargo sparse registry
+2026-05-14T12:28:49.7953259Z [36;1m: enable Cargo sparse registry[0m
+2026-05-14T12:28:49.7954404Z [36;1m# implemented in 1.66, stabilized in 1.68, made default in 1.70[0m
+2026-05-14T12:28:49.7956574Z [36;1mif [ -z "${CARGO_REGISTRIES_CRATES_IO_PROTOCOL+set}" -o -f "/home/runner/work/_temp"/.implicit_cargo_registries_crates_io_protocol ]; then[0m
+2026-05-14T12:28:49.7959066Z [36;1m  if rustc +stable --version --verbose | grep -q '^release: 1\.6[89]\.'; then[0m
+2026-05-14T12:28:49.7960852Z [36;1m    touch "/home/runner/work/_temp"/.implicit_cargo_registries_crates_io_protocol || true[0m
+2026-05-14T12:28:49.7962553Z [36;1m    echo CARGO_REGISTRIES_CRATES_IO_PROTOCOL=sparse >> $GITHUB_ENV[0m
+2026-05-14T12:28:49.7964340Z [36;1m  elif rustc +stable --version --verbose | grep -q '^release: 1\.6[67]\.'; then[0m
+2026-05-14T12:28:49.7966134Z [36;1m    touch "/home/runner/work/_temp"/.implicit_cargo_registries_crates_io_protocol || true[0m
+2026-05-14T12:28:49.7967790Z [36;1m    echo CARGO_REGISTRIES_CRATES_IO_PROTOCOL=git >> $GITHUB_ENV[0m
+2026-05-14T12:28:49.7969052Z [36;1m  fi[0m
+2026-05-14T12:28:49.7969637Z [36;1mfi[0m
+2026-05-14T12:28:49.8003524Z shell: /usr/bin/bash --noprofile --norc -e -o pipefail {0}
+2026-05-14T12:28:49.8004543Z env:
+2026-05-14T12:28:49.8005148Z   BINARY_NAME: oidc-jwks-converter
+2026-05-14T12:28:49.8006088Z   THIRD_PARTY_LICENSE_OUTPUT: THIRD_PARTY_LICENSES.html
+2026-05-14T12:28:49.8007105Z   CARGO_HOME: /home/runner/.cargo
+2026-05-14T12:28:49.8007886Z   CARGO_INCREMENTAL: 0
+2026-05-14T12:28:49.8008668Z   CARGO_TERM_COLOR: always
+2026-05-14T12:28:49.8009360Z ##[endgroup]
+2026-05-14T12:28:49.8413811Z ##[group]Run : work around spurious network errors in curl 8.0
+2026-05-14T12:28:49.8415096Z [36;1m: work around spurious network errors in curl 8.0[0m
+2026-05-14T12:28:49.8416739Z [36;1m# https://rust-lang.zulipchat.com/#narrow/stream/246057-t-cargo/topic/timeout.20investigation[0m
+2026-05-14T12:28:49.8418831Z [36;1mif rustc +stable --version --verbose | grep -q '^release: 1\.7[01]\.'; then[0m
+2026-05-14T12:28:49.8420292Z [36;1m  echo CARGO_HTTP_MULTIPLEXING=false >> $GITHUB_ENV[0m
+2026-05-14T12:28:49.8421275Z [36;1mfi[0m
+2026-05-14T12:28:49.8456587Z shell: /usr/bin/bash --noprofile --norc -e -o pipefail {0}
+2026-05-14T12:28:49.8457600Z env:
+2026-05-14T12:28:49.8458182Z   BINARY_NAME: oidc-jwks-converter
+2026-05-14T12:28:49.8459375Z   THIRD_PARTY_LICENSE_OUTPUT: THIRD_PARTY_LICENSES.html
+2026-05-14T12:28:49.8460371Z   CARGO_HOME: /home/runner/.cargo
+2026-05-14T12:28:49.8461135Z   CARGO_INCREMENTAL: 0
+2026-05-14T12:28:49.8461805Z   CARGO_TERM_COLOR: always
+2026-05-14T12:28:49.8462483Z ##[endgroup]
+2026-05-14T12:28:49.8720249Z ##[group]Run rustc +stable --version --verbose
+2026-05-14T12:28:49.8721349Z [36;1mrustc +stable --version --verbose[0m
+2026-05-14T12:28:49.8756921Z shell: /usr/bin/bash --noprofile --norc -e -o pipefail {0}
+2026-05-14T12:28:49.8758036Z env:
+2026-05-14T12:28:49.8758959Z   BINARY_NAME: oidc-jwks-converter
+2026-05-14T12:28:49.8760040Z   THIRD_PARTY_LICENSE_OUTPUT: THIRD_PARTY_LICENSES.html
+2026-05-14T12:28:49.8761335Z   CARGO_HOME: /home/runner/.cargo
+2026-05-14T12:28:49.8762493Z   CARGO_INCREMENTAL: 0
+2026-05-14T12:28:49.8763224Z   CARGO_TERM_COLOR: always
+2026-05-14T12:28:49.8763965Z ##[endgroup]
+2026-05-14T12:28:49.8960020Z rustc 1.95.0 (59807616e 2026-04-14)
+2026-05-14T12:28:49.8961362Z binary: rustc
+2026-05-14T12:28:49.8962859Z commit-hash: 59807616e1fa2540724bfbac14d7976d7e4a3860
+2026-05-14T12:28:49.8964649Z commit-date: 2026-04-14
+2026-05-14T12:28:49.8965984Z host: x86_64-unknown-linux-gnu
+2026-05-14T12:28:49.8967416Z release: 1.95.0
+2026-05-14T12:28:49.8968936Z LLVM version: 22.1.2
+2026-05-14T12:28:49.9161236Z ##[group]Run Swatinem/rust-cache@e18b497796c12c097a38f9edb9d0641fb99eee32
+2026-05-14T12:28:49.9162304Z with:
+2026-05-14T12:28:49.9162890Z   prefix-key: v0-rust
+2026-05-14T12:28:49.9163555Z   add-job-id-key: true
+2026-05-14T12:28:49.9164265Z   add-rust-environment-hash-key: true
+2026-05-14T12:28:49.9165064Z   cache-targets: true
+2026-05-14T12:28:49.9165724Z   cache-all-crates: false
+2026-05-14T12:28:49.9166927Z   cache-workspace-crates: false
+2026-05-14T12:28:49.9167876Z   save-if: true
+2026-05-14T12:28:49.9168675Z   cache-provider: github
+2026-05-14T12:28:49.9169358Z   cache-bin: true
+2026-05-14T12:28:49.9169982Z   lookup-only: false
+2026-05-14T12:28:49.9170711Z   cmd-format: {0}
+2026-05-14T12:28:49.9171306Z env:
+2026-05-14T12:28:49.9171901Z   BINARY_NAME: oidc-jwks-converter
+2026-05-14T12:28:49.9172789Z   THIRD_PARTY_LICENSE_OUTPUT: THIRD_PARTY_LICENSES.html
+2026-05-14T12:28:49.9173737Z   CARGO_HOME: /home/runner/.cargo
+2026-05-14T12:28:49.9174483Z   CARGO_INCREMENTAL: 0
+2026-05-14T12:28:49.9175426Z   CARGO_TERM_COLOR: always
+2026-05-14T12:28:49.9176112Z ##[endgroup]
+2026-05-14T12:28:50.1971438Z (node:2332) [DEP0040] DeprecationWarning: The `punycode` module is deprecated. Please use a userland alternative instead.
+2026-05-14T12:28:50.1972688Z (Use `node --trace-deprecation ...` to show where the warning was created)
+2026-05-14T12:28:50.3748011Z ##[group]Cache Configuration
+2026-05-14T12:28:50.3750169Z Cache Provider:
+2026-05-14T12:28:50.3751299Z     github
+2026-05-14T12:28:50.3752383Z Workspaces:
+2026-05-14T12:28:50.3753710Z     /home/runner/work/oidc-jwks-converter/oidc-jwks-converter
+2026-05-14T12:28:50.3755188Z Cache Paths:
+2026-05-14T12:28:50.3756443Z     /home/runner/.cargo/bin
+2026-05-14T12:28:50.3757649Z     /home/runner/.cargo/.crates.toml
+2026-05-14T12:28:50.3759065Z     /home/runner/.cargo/.crates2.json
+2026-05-14T12:28:50.3760547Z     /home/runner/.cargo/registry
+2026-05-14T12:28:50.3761829Z     /home/runner/.cargo/git
+2026-05-14T12:28:50.3763384Z     /home/runner/work/oidc-jwks-converter/oidc-jwks-converter/target
+2026-05-14T12:28:50.3765045Z Restore Key:
+2026-05-14T12:28:50.3770177Z     v0-rust-third-party-licenses-Linux-x64-e88b75f5
+2026-05-14T12:28:50.3771366Z Cache Key:
+2026-05-14T12:28:50.3772594Z     v0-rust-third-party-licenses-Linux-x64-e88b75f5-e4d2d41c
+2026-05-14T12:28:50.3773447Z .. Prefix:
+2026-05-14T12:28:50.3774134Z   - v0-rust-third-party-licenses-Linux-x64
+2026-05-14T12:28:50.3774922Z .. Environment considered:
+2026-05-14T12:28:50.3775610Z   - Rust Versions:
+2026-05-14T12:28:50.3776430Z     - 1.95.0 x86_64-unknown-linux-gnu 59807616e1fa2540724bfbac14d7976d7e4a3860
+2026-05-14T12:28:50.3777421Z     - 1.95.0 x86_64-unknown-linux-gnu 59807616e1fa2540724bfbac14d7976d7e4a3860
+2026-05-14T12:28:50.3778276Z   - CARGO_HOME
+2026-05-14T12:28:50.3779334Z   - CARGO_INCREMENTAL
+2026-05-14T12:28:50.3780291Z   - CARGO_TERM_COLOR
+2026-05-14T12:28:50.3781256Z .. Lockfiles considered:
+2026-05-14T12:28:50.3782523Z   - /home/runner/work/oidc-jwks-converter/oidc-jwks-converter/Cargo.lock
+2026-05-14T12:28:50.3784060Z   - /home/runner/work/oidc-jwks-converter/oidc-jwks-converter/Cargo.toml
+2026-05-14T12:28:50.3786012Z ##[endgroup]
+2026-05-14T12:28:50.3786609Z 
+2026-05-14T12:28:50.3787058Z ... Restoring cache ...
+2026-05-14T12:28:50.4529361Z Cache hit for restore-key: v0-rust-third-party-licenses-Linux-x64-e88b75f5-9edd227a
+2026-05-14T12:28:50.8040157Z Received 48673806 of 48673806 (100.0%), 145.1 MBs/sec
+2026-05-14T12:28:50.8041156Z Cache Size: ~46 MB (48673806 B)
+2026-05-14T12:28:50.8066087Z [command]/usr/bin/tar -xf /home/runner/work/_temp/14d9ecd1-b1d0-4727-a37a-b19b33d1b1c8/cache.tzst -P -C /home/runner/work/oidc-jwks-converter/oidc-jwks-converter --use-compress-program unzstd
+2026-05-14T12:28:51.1702181Z Cache restored successfully
+2026-05-14T12:28:51.1738057Z Restored from cache key "v0-rust-third-party-licenses-Linux-x64-e88b75f5-9edd227a" full match: false.
+2026-05-14T12:28:51.2026326Z ##[group]Run cargo install cargo-about --features="cli"
+2026-05-14T12:28:51.2027394Z [36;1mcargo install cargo-about --features="cli"[0m
+2026-05-14T12:28:51.2067415Z shell: /usr/bin/bash -e {0}
+2026-05-14T12:28:51.2068257Z env:
+2026-05-14T12:28:51.2069174Z   BINARY_NAME: oidc-jwks-converter
+2026-05-14T12:28:51.2070112Z   THIRD_PARTY_LICENSE_OUTPUT: THIRD_PARTY_LICENSES.html
+2026-05-14T12:28:51.2071048Z   CARGO_HOME: /home/runner/.cargo
+2026-05-14T12:28:51.2071859Z   CARGO_INCREMENTAL: 0
+2026-05-14T12:28:51.2072646Z   CARGO_TERM_COLOR: always
+2026-05-14T12:28:51.2073440Z   CACHE_ON_FAILURE: false
+2026-05-14T12:28:51.2074207Z ##[endgroup]
+2026-05-14T12:28:51.3005782Z [1m[92m    Updating[0m crates.io index
+2026-05-14T12:28:51.4799067Z [1m[92m Downloading[0m crates ...
+2026-05-14T12:28:51.6008403Z [1m[92m  Downloaded[0m cargo-about v0.9.0
+2026-05-14T12:28:51.9286991Z [1m[92m     Ignored[0m package `cargo-about v0.9.0` is already installed, use --force to override
+2026-05-14T12:28:51.9583903Z ##[group]Run cargo about generate about.hbs > THIRD_PARTY_LICENSES.html
+2026-05-14T12:28:51.9584384Z [36;1mcargo about generate about.hbs > THIRD_PARTY_LICENSES.html[0m
+2026-05-14T12:28:51.9621320Z shell: /usr/bin/bash -e {0}
+2026-05-14T12:28:51.9621557Z env:
+2026-05-14T12:28:51.9621755Z   BINARY_NAME: oidc-jwks-converter
+2026-05-14T12:28:51.9622071Z   THIRD_PARTY_LICENSE_OUTPUT: THIRD_PARTY_LICENSES.html
+2026-05-14T12:28:51.9622385Z   CARGO_HOME: /home/runner/.cargo
+2026-05-14T12:28:51.9622624Z   CARGO_INCREMENTAL: 0
+2026-05-14T12:28:51.9622837Z   CARGO_TERM_COLOR: always
+2026-05-14T12:28:51.9623053Z   CACHE_ON_FAILURE: false
+2026-05-14T12:28:51.9623255Z ##[endgroup]
+2026-05-14T12:28:53.2470386Z 2026-05-14T12:28:53.246683339Z [[31mERROR[0m] `cargo metadata` exited with an error: [1m[92m    Updating[0m crates.io index
+2026-05-14T12:28:53.2471902Z [1m[91merror[0m: failed to select a version for `reqwest`.
+2026-05-14T12:28:53.2473154Z     ... required by package `oidc-jwks-converter v0.1.0 (/home/runner/work/oidc-jwks-converter/oidc-jwks-converter)`
+2026-05-14T12:28:53.2474086Z versions that meet the requirements `^0.13` are: 0.13.3, 0.13.2, 0.13.1, 0.13.0
+2026-05-14T12:28:53.2475048Z 
+2026-05-14T12:28:53.2475670Z package `oidc-jwks-converter` depends on `reqwest` with feature `rustls-tls` but `reqwest` does not have that feature.
+2026-05-14T12:28:53.2478814Z  available features: __native-tls, __native-tls-alpn, __rustls, __rustls-aws-lc-rs, __tls, blocking, brotli, charset, cookies, default, default-tls, deflate, form, gzip, h2, hickory-dns, http2, http3, json, multipart, native-tls, native-tls-no-alpn, native-tls-vendored, native-tls-vendored-no-alpn, query, rustls, rustls-native-certs, rustls-no-provider, socks, stream, system-proxy, webpki-roots, zstd
+2026-05-14T12:28:53.2481274Z 
+2026-05-14T12:28:53.2481282Z 
+2026-05-14T12:28:53.2481722Z failed to select a version for `reqwest` which could resolve this conflict
+2026-05-14T12:28:53.2482902Z : `cargo metadata` exited with an error: [1m[92m    Updating[0m crates.io index
+2026-05-14T12:28:53.2483690Z [1m[91merror[0m: failed to select a version for `reqwest`.
+2026-05-14T12:28:53.2484938Z     ... required by package `oidc-jwks-converter v0.1.0 (/home/runner/work/oidc-jwks-converter/oidc-jwks-converter)`
+2026-05-14T12:28:53.2486016Z versions that meet the requirements `^0.13` are: 0.13.3, 0.13.2, 0.13.1, 0.13.0
+2026-05-14T12:28:53.2486460Z 
+2026-05-14T12:28:53.2487125Z package `oidc-jwks-converter` depends on `reqwest` with feature `rustls-tls` but `reqwest` does not have that feature.
+2026-05-14T12:28:53.2490127Z  available features: __native-tls, __native-tls-alpn, __rustls, __rustls-aws-lc-rs, __tls, blocking, brotli, charset, cookies, default, default-tls, deflate, form, gzip, h2, hickory-dns, http2, http3, json, multipart, native-tls, native-tls-no-alpn, native-tls-vendored, native-tls-vendored-no-alpn, query, rustls, rustls-native-certs, rustls-no-provider, socks, stream, system-proxy, webpki-roots, zstd
+2026-05-14T12:28:53.2492250Z 
+2026-05-14T12:28:53.2492258Z 
+2026-05-14T12:28:53.2492582Z failed to select a version for `reqwest` which could resolve this conflict
+2026-05-14T12:28:53.2493442Z [0m
+2026-05-14T12:28:53.2503962Z ##[error]Process completed with exit code 1.
+2026-05-14T12:28:53.2637948Z Post job cleanup.
+2026-05-14T12:28:53.3450982Z [command]/usr/bin/git version
+2026-05-14T12:28:53.3487810Z git version 2.54.0
+2026-05-14T12:28:53.3525056Z Temporarily overriding HOME='/home/runner/work/_temp/453e7cf6-93a3-499d-9d11-4c008fd73a37' before making global git config changes
+2026-05-14T12:28:53.3525981Z Adding repository directory to the temporary git global config as a safe directory
+2026-05-14T12:28:53.3530830Z [command]/usr/bin/git config --global --add safe.directory /home/runner/work/oidc-jwks-converter/oidc-jwks-converter
+2026-05-14T12:28:53.3561931Z Removing SSH command configuration
+2026-05-14T12:28:53.3568602Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+2026-05-14T12:28:53.3603581Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+2026-05-14T12:28:53.3836422Z Removing HTTP extra header
+2026-05-14T12:28:53.3841614Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+2026-05-14T12:28:53.3875714Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+2026-05-14T12:28:53.4103765Z Removing includeIf entries pointing to credentials config files
+2026-05-14T12:28:53.4110581Z [command]/usr/bin/git config --local --name-only --get-regexp ^includeIf\.gitdir:
+2026-05-14T12:28:53.4169092Z includeif.gitdir:/home/runner/work/oidc-jwks-converter/oidc-jwks-converter/.git.path
+2026-05-14T12:28:53.4169987Z includeif.gitdir:/home/runner/work/oidc-jwks-converter/oidc-jwks-converter/.git/worktrees/*.path
+2026-05-14T12:28:53.4170629Z includeif.gitdir:/github/workspace/.git.path
+2026-05-14T12:28:53.4171116Z includeif.gitdir:/github/workspace/.git/worktrees/*.path
+2026-05-14T12:28:53.4182730Z [command]/usr/bin/git config --local --get-all includeif.gitdir:/home/runner/work/oidc-jwks-converter/oidc-jwks-converter/.git.path
+2026-05-14T12:28:53.4205549Z /home/runner/work/_temp/git-credentials-2238f751-d06a-41d2-80ab-9f8761600188.config
+2026-05-14T12:28:53.4216186Z [command]/usr/bin/git config --local --unset includeif.gitdir:/home/runner/work/oidc-jwks-converter/oidc-jwks-converter/.git.path /home/runner/work/_temp/git-credentials-2238f751-d06a-41d2-80ab-9f8761600188.config
+2026-05-14T12:28:53.4252639Z [command]/usr/bin/git config --local --get-all includeif.gitdir:/home/runner/work/oidc-jwks-converter/oidc-jwks-converter/.git/worktrees/*.path
+2026-05-14T12:28:53.4274702Z /home/runner/work/_temp/git-credentials-2238f751-d06a-41d2-80ab-9f8761600188.config
+2026-05-14T12:28:53.4283671Z [command]/usr/bin/git config --local --unset includeif.gitdir:/home/runner/work/oidc-jwks-converter/oidc-jwks-converter/.git/worktrees/*.path /home/runner/work/_temp/git-credentials-2238f751-d06a-41d2-80ab-9f8761600188.config
+2026-05-14T12:28:53.4315611Z [command]/usr/bin/git config --local --get-all includeif.gitdir:/github/workspace/.git.path
+2026-05-14T12:28:53.4337345Z /github/runner_temp/git-credentials-2238f751-d06a-41d2-80ab-9f8761600188.config
+2026-05-14T12:28:53.4345886Z [command]/usr/bin/git config --local --unset includeif.gitdir:/github/workspace/.git.path /github/runner_temp/git-credentials-2238f751-d06a-41d2-80ab-9f8761600188.config
+2026-05-14T12:28:53.4378167Z [command]/usr/bin/git config --local --get-all includeif.gitdir:/github/workspace/.git/worktrees/*.path
+2026-05-14T12:28:53.4406894Z /github/runner_temp/git-credentials-2238f751-d06a-41d2-80ab-9f8761600188.config
+2026-05-14T12:28:53.4416076Z [command]/usr/bin/git config --local --unset includeif.gitdir:/github/workspace/.git/worktrees/*.path /github/runner_temp/git-credentials-2238f751-d06a-41d2-80ab-9f8761600188.config
+2026-05-14T12:28:53.4449236Z [command]/usr/bin/git submodule foreach --recursive git config --local --show-origin --name-only --get-regexp remote.origin.url
+2026-05-14T12:28:53.4673390Z Removing credentials config '/home/runner/work/_temp/git-credentials-2238f751-d06a-41d2-80ab-9f8761600188.config'
+2026-05-14T12:28:53.4811651Z Cleaning up orphan processes

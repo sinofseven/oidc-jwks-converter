@@ -1,0 +1,365 @@
+﻿2026-05-14T12:28:48.4363970Z Current runner version: '2.334.0'
+2026-05-14T12:28:48.4393910Z ##[group]Runner Image Provisioner
+2026-05-14T12:28:48.4394620Z Hosted Compute Agent
+2026-05-14T12:28:48.4395060Z Version: 20260422.526
+2026-05-14T12:28:48.4395500Z Commit: e1a9e573f4d0838b3a7c1b07401aeb29ed3635a9
+2026-05-14T12:28:48.4396000Z Build Date: 2026-04-22T09:31:31Z
+2026-05-14T12:28:48.4396420Z Worker ID: {12c83d9e-e241-4438-befa-4b0b9ceeb8f6}
+2026-05-14T12:28:48.4396880Z Azure Region: westus
+2026-05-14T12:28:48.4397370Z ##[endgroup]
+2026-05-14T12:28:48.4398760Z ##[group]Operating System
+2026-05-14T12:28:48.4399160Z macOS
+2026-05-14T12:28:48.4399560Z 15.7.4
+2026-05-14T12:28:48.4399950Z 24G517
+2026-05-14T12:28:48.4400310Z ##[endgroup]
+2026-05-14T12:28:48.4400710Z ##[group]Runner Image
+2026-05-14T12:28:48.4401200Z Image: macos-15-arm64
+2026-05-14T12:28:48.4401590Z Version: 20260427.0018.1
+2026-05-14T12:28:48.4402490Z Included Software: https://github.com/actions/runner-images/blob/macos-15-arm64/20260427.0018/images/macos/macos-15-arm64-Readme.md
+2026-05-14T12:28:48.4403580Z Image Release: https://github.com/actions/runner-images/releases/tag/macos-15-arm64%2F20260427.0018
+2026-05-14T12:28:48.4404320Z ##[endgroup]
+2026-05-14T12:28:48.4405180Z ##[group]GITHUB_TOKEN Permissions
+2026-05-14T12:28:48.4406540Z Contents: read
+2026-05-14T12:28:48.4406870Z Metadata: read
+2026-05-14T12:28:48.4407230Z Packages: read
+2026-05-14T12:28:48.4407680Z ##[endgroup]
+2026-05-14T12:28:48.4409530Z Secret source: Actions
+2026-05-14T12:28:48.4409990Z Prepare workflow directory
+2026-05-14T12:28:48.4783550Z Prepare all required actions
+2026-05-14T12:28:48.4844700Z Getting action download info
+2026-05-14T12:28:48.9121250Z Download action repository 'actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd' (SHA:de0fac2e4500dabe0009e67214ff5f5447ce83dd)
+2026-05-14T12:28:49.4461400Z Download action repository 'dtolnay/rust-toolchain@29eef336d9b2848a0b548edc03f92a220660cdb8' (SHA:29eef336d9b2848a0b548edc03f92a220660cdb8)
+2026-05-14T12:28:49.9826610Z Download action repository 'actions/upload-artifact@043fb46d1a93c77aae656e7c1c64a875d1fc6a0a' (SHA:043fb46d1a93c77aae656e7c1c64a875d1fc6a0a)
+2026-05-14T12:28:50.2081050Z Complete job name: build-macos
+2026-05-14T12:28:50.2552820Z ##[group]Run actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd
+2026-05-14T12:28:50.2553620Z with:
+2026-05-14T12:28:50.2554040Z   repository: sinofseven/oidc-jwks-converter
+2026-05-14T12:28:50.2554770Z   token: ***
+2026-05-14T12:28:50.2555130Z   ssh-strict: true
+2026-05-14T12:28:50.2555470Z   ssh-user: git
+2026-05-14T12:28:50.2555830Z   persist-credentials: true
+2026-05-14T12:28:50.2556240Z   clean: true
+2026-05-14T12:28:50.2574070Z   sparse-checkout-cone-mode: true
+2026-05-14T12:28:50.2574650Z   fetch-depth: 1
+2026-05-14T12:28:50.2574970Z   fetch-tags: false
+2026-05-14T12:28:50.2575280Z   show-progress: true
+2026-05-14T12:28:50.2575620Z   lfs: false
+2026-05-14T12:28:50.2575920Z   submodules: false
+2026-05-14T12:28:50.2576250Z   set-safe-directory: true
+2026-05-14T12:28:50.2577380Z env:
+2026-05-14T12:28:50.2577740Z   BINARY_NAME: oidc-jwks-converter
+2026-05-14T12:28:50.2578200Z   THIRD_PARTY_LICENSE_OUTPUT: THIRD_PARTY_LICENSES.html
+2026-05-14T12:28:50.2578720Z   TARGET: aarch64-apple-darwin
+2026-05-14T12:28:50.2579080Z ##[endgroup]
+2026-05-14T12:28:50.9464380Z Syncing repository: sinofseven/oidc-jwks-converter
+2026-05-14T12:28:50.9466250Z ##[group]Getting Git version info
+2026-05-14T12:28:50.9466890Z Working directory is '/Users/runner/work/oidc-jwks-converter/oidc-jwks-converter'
+2026-05-14T12:28:50.9467860Z [command]/opt/homebrew/bin/git version
+2026-05-14T12:28:51.0037540Z git version 2.54.0
+2026-05-14T12:28:51.0054970Z ##[endgroup]
+2026-05-14T12:28:51.0062210Z Copying '/Users/runner/.gitconfig' to '/Users/runner/work/_temp/5482be46-386b-4294-9c19-7aa1c36f122d/.gitconfig'
+2026-05-14T12:28:51.0068460Z Temporarily overriding HOME='/Users/runner/work/_temp/5482be46-386b-4294-9c19-7aa1c36f122d' before making global git config changes
+2026-05-14T12:28:51.0069730Z Adding repository directory to the temporary git global config as a safe directory
+2026-05-14T12:28:51.0072310Z [command]/opt/homebrew/bin/git config --global --add safe.directory /Users/runner/work/oidc-jwks-converter/oidc-jwks-converter
+2026-05-14T12:28:51.0265150Z Deleting the contents of '/Users/runner/work/oidc-jwks-converter/oidc-jwks-converter'
+2026-05-14T12:28:51.0274970Z ##[group]Initializing the repository
+2026-05-14T12:28:51.0277230Z [command]/opt/homebrew/bin/git init /Users/runner/work/oidc-jwks-converter/oidc-jwks-converter
+2026-05-14T12:28:51.0647410Z hint: Using 'master' as the name for the initial branch. This default branch name
+2026-05-14T12:28:51.0651610Z hint: will change to "main" in Git 3.0. To configure the initial branch name
+2026-05-14T12:28:51.0654320Z hint: to use in all of your new repositories, which will suppress this warning,
+2026-05-14T12:28:51.0655240Z hint: call:
+2026-05-14T12:28:51.0655790Z hint:
+2026-05-14T12:28:51.0656450Z hint: 	git config --global init.defaultBranch <name>
+2026-05-14T12:28:51.0660550Z hint:
+2026-05-14T12:28:51.0681330Z hint: Names commonly chosen instead of 'master' are 'main', 'trunk' and
+2026-05-14T12:28:51.0686330Z hint: 'development'. The just-created branch can be renamed via this command:
+2026-05-14T12:28:51.0689670Z hint:
+2026-05-14T12:28:51.0690330Z hint: 	git branch -m <name>
+2026-05-14T12:28:51.0706620Z hint:
+2026-05-14T12:28:51.0776040Z hint: Disable this message with "git config set advice.defaultBranchName false"
+2026-05-14T12:28:51.0781770Z Initialized empty Git repository in /Users/runner/work/oidc-jwks-converter/oidc-jwks-converter/.git/
+2026-05-14T12:28:51.0786730Z [command]/opt/homebrew/bin/git remote add origin https://github.com/sinofseven/oidc-jwks-converter
+2026-05-14T12:28:51.0837050Z ##[endgroup]
+2026-05-14T12:28:51.0840590Z ##[group]Disabling automatic garbage collection
+2026-05-14T12:28:51.0844890Z [command]/opt/homebrew/bin/git config --local gc.auto 0
+2026-05-14T12:28:51.0958400Z ##[endgroup]
+2026-05-14T12:28:51.0959470Z ##[group]Setting up auth
+2026-05-14T12:28:51.0960490Z Removing SSH command configuration
+2026-05-14T12:28:51.0961550Z [command]/opt/homebrew/bin/git config --local --name-only --get-regexp core\.sshCommand
+2026-05-14T12:28:51.1061470Z [command]/opt/homebrew/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+2026-05-14T12:28:51.2445420Z Removing HTTP extra header
+2026-05-14T12:28:51.2447630Z [command]/opt/homebrew/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+2026-05-14T12:28:51.2530790Z [command]/opt/homebrew/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+2026-05-14T12:28:51.3513140Z Removing includeIf entries pointing to credentials config files
+2026-05-14T12:28:51.3518080Z [command]/opt/homebrew/bin/git config --local --name-only --get-regexp ^includeIf\.gitdir:
+2026-05-14T12:28:51.3575150Z [command]/opt/homebrew/bin/git submodule foreach --recursive git config --local --show-origin --name-only --get-regexp remote.origin.url
+2026-05-14T12:28:51.5029570Z [command]/opt/homebrew/bin/git config --file /Users/runner/work/_temp/git-credentials-9dbf4cfc-31e3-4070-8ea5-abe1cdf8893b.config http.https://github.com/.extraheader AUTHORIZATION: basic ***
+2026-05-14T12:28:51.5181420Z [command]/opt/homebrew/bin/git config --local includeIf.gitdir:/Users/runner/work/oidc-jwks-converter/oidc-jwks-converter/.git.path /Users/runner/work/_temp/git-credentials-9dbf4cfc-31e3-4070-8ea5-abe1cdf8893b.config
+2026-05-14T12:28:51.5278060Z [command]/opt/homebrew/bin/git config --local includeIf.gitdir:/Users/runner/work/oidc-jwks-converter/oidc-jwks-converter/.git/worktrees/*.path /Users/runner/work/_temp/git-credentials-9dbf4cfc-31e3-4070-8ea5-abe1cdf8893b.config
+2026-05-14T12:28:51.5363210Z [command]/opt/homebrew/bin/git config --local includeIf.gitdir:/github/workspace/.git.path /github/runner_temp/git-credentials-9dbf4cfc-31e3-4070-8ea5-abe1cdf8893b.config
+2026-05-14T12:28:51.5430730Z [command]/opt/homebrew/bin/git config --local includeIf.gitdir:/github/workspace/.git/worktrees/*.path /github/runner_temp/git-credentials-9dbf4cfc-31e3-4070-8ea5-abe1cdf8893b.config
+2026-05-14T12:28:51.5502240Z ##[endgroup]
+2026-05-14T12:28:51.5508520Z ##[group]Fetching the repository
+2026-05-14T12:28:51.5515630Z [command]/opt/homebrew/bin/git -c protocol.version=2 fetch --no-tags --prune --no-recurse-submodules --depth=1 origin +c84fbd3b886217b4d1105dbf8f338d42d85d65b3:refs/remotes/pull/5/merge
+2026-05-14T12:28:52.2403110Z From https://github.com/sinofseven/oidc-jwks-converter
+2026-05-14T12:28:52.2404830Z  * [new ref]         c84fbd3b886217b4d1105dbf8f338d42d85d65b3 -> pull/5/merge
+2026-05-14T12:28:52.2537560Z ##[endgroup]
+2026-05-14T12:28:52.2538600Z ##[group]Determining the checkout info
+2026-05-14T12:28:52.2544020Z ##[endgroup]
+2026-05-14T12:28:52.2545190Z [command]/opt/homebrew/bin/git sparse-checkout disable
+2026-05-14T12:28:52.2643330Z [command]/opt/homebrew/bin/git config --local --unset-all extensions.worktreeConfig
+2026-05-14T12:28:52.2704440Z ##[group]Checking out the ref
+2026-05-14T12:28:52.2706910Z [command]/opt/homebrew/bin/git checkout --progress --force refs/remotes/pull/5/merge
+2026-05-14T12:28:52.2864080Z HEAD is now at c84fbd3 Merge 64a81b7434540026a2250e23d83e57c4618eb3c3 into 7995739c4acd0ab49d5c451a2ed464369e4b8e61
+2026-05-14T12:28:52.3172050Z ##[endgroup]
+2026-05-14T12:28:52.3361290Z [command]/opt/homebrew/bin/git log -1 --format=%H
+2026-05-14T12:28:52.3362890Z c84fbd3b886217b4d1105dbf8f338d42d85d65b3
+2026-05-14T12:28:52.3932670Z ##[group]Run dtolnay/rust-toolchain@29eef336d9b2848a0b548edc03f92a220660cdb8
+2026-05-14T12:28:52.3933770Z with:
+2026-05-14T12:28:52.3934380Z   target: aarch64-apple-darwin
+2026-05-14T12:28:52.3935070Z   toolchain: stable
+2026-05-14T12:28:52.3935670Z env:
+2026-05-14T12:28:52.3936250Z   BINARY_NAME: oidc-jwks-converter
+2026-05-14T12:28:52.3937120Z   THIRD_PARTY_LICENSE_OUTPUT: THIRD_PARTY_LICENSES.html
+2026-05-14T12:28:52.3937980Z   TARGET: aarch64-apple-darwin
+2026-05-14T12:28:52.3938670Z ##[endgroup]
+2026-05-14T12:28:52.4082590Z ##[group]Run : parse toolchain version
+2026-05-14T12:28:52.4083430Z [36;1m: parse toolchain version[0m
+2026-05-14T12:28:52.4084180Z [36;1mif [[ -z $toolchain ]]; then[0m
+2026-05-14T12:28:52.4085490Z [36;1m  # GitHub does not enforce `required: true` inputs itself. https://github.com/actions/runner/issues/1070[0m
+2026-05-14T12:28:52.4086890Z [36;1m  echo "'toolchain' is a required input" >&2[0m
+2026-05-14T12:28:52.4087620Z [36;1m  exit 1[0m
+2026-05-14T12:28:52.4088500Z [36;1melif [[ $toolchain =~ ^stable' '[0-9]+' '(year|month|week|day)s?' 'ago$ ]]; then[0m
+2026-05-14T12:28:52.4089500Z [36;1m  if [[ macOS == macOS ]]; then[0m
+2026-05-14T12:28:52.4090740Z [36;1m    echo "toolchain=1.$((($(date -v-$(sed 's/stable \([0-9]*\) \(.\).*/\1\2/' <<< $toolchain) +%s)/60/60/24-16569)/7/6))" >> $GITHUB_OUTPUT[0m
+2026-05-14T12:28:52.4092060Z [36;1m  else[0m
+2026-05-14T12:28:52.4093020Z [36;1m    echo "toolchain=1.$((($(date --date "${toolchain#stable }" +%s)/60/60/24-16569)/7/6))" >> $GITHUB_OUTPUT[0m
+2026-05-14T12:28:52.4094150Z [36;1m  fi[0m
+2026-05-14T12:28:52.4094860Z [36;1melif [[ $toolchain =~ ^stable' 'minus' '[0-9]+' 'releases?$ ]]; then[0m
+2026-05-14T12:28:52.4096140Z [36;1m  echo "toolchain=1.$((($(date +%s)/60/60/24-16569)/7/6-${toolchain//[^0-9]/}))" >> $GITHUB_OUTPUT[0m
+2026-05-14T12:28:52.4097260Z [36;1melif [[ $toolchain =~ ^1\.[0-9]+$ ]]; then[0m
+2026-05-14T12:28:52.4098550Z [36;1m  echo "toolchain=1.$((i=${toolchain#1.}, c=($(date +%s)/60/60/24-16569)/7/6, i+9*i*(10*i<=c)+90*i*(100*i<=c)))" >> $GITHUB_OUTPUT[0m
+2026-05-14T12:28:52.4099780Z [36;1melse[0m
+2026-05-14T12:28:52.4100390Z [36;1m  echo "toolchain=$toolchain" >> $GITHUB_OUTPUT[0m
+2026-05-14T12:28:52.4101120Z [36;1mfi[0m
+2026-05-14T12:28:52.4151740Z shell: /bin/bash --noprofile --norc -e -o pipefail {0}
+2026-05-14T12:28:52.4152820Z env:
+2026-05-14T12:28:52.4153330Z   BINARY_NAME: oidc-jwks-converter
+2026-05-14T12:28:52.4154070Z   THIRD_PARTY_LICENSE_OUTPUT: THIRD_PARTY_LICENSES.html
+2026-05-14T12:28:52.4154840Z   TARGET: aarch64-apple-darwin
+2026-05-14T12:28:52.4155440Z   toolchain: stable
+2026-05-14T12:28:52.4155960Z ##[endgroup]
+2026-05-14T12:28:52.4892140Z ##[group]Run : construct rustup command line
+2026-05-14T12:28:52.4893020Z [36;1m: construct rustup command line[0m
+2026-05-14T12:28:52.4894100Z [36;1mecho "targets=$(for t in ${targets//,/ }; do echo -n ' --target' $t; done)" >> $GITHUB_OUTPUT[0m
+2026-05-14T12:28:52.4895660Z [36;1mecho "components=$(for c in ${components//,/ }; do echo -n ' --component' $c; done)" >> $GITHUB_OUTPUT[0m
+2026-05-14T12:28:52.4896850Z [36;1mecho "downgrade=" >> $GITHUB_OUTPUT[0m
+2026-05-14T12:28:52.4953590Z shell: /bin/bash --noprofile --norc -e -o pipefail {0}
+2026-05-14T12:28:52.4954480Z env:
+2026-05-14T12:28:52.4955040Z   BINARY_NAME: oidc-jwks-converter
+2026-05-14T12:28:52.4955790Z   THIRD_PARTY_LICENSE_OUTPUT: THIRD_PARTY_LICENSES.html
+2026-05-14T12:28:52.4956630Z   TARGET: aarch64-apple-darwin
+2026-05-14T12:28:52.4957270Z   targets: aarch64-apple-darwin
+2026-05-14T12:28:52.4957870Z   components: 
+2026-05-14T12:28:52.4959640Z ##[endgroup]
+2026-05-14T12:28:52.5438850Z ##[group]Run : set $CARGO_HOME
+2026-05-14T12:28:52.5440180Z [36;1m: set $CARGO_HOME[0m
+2026-05-14T12:28:52.5441150Z [36;1mecho CARGO_HOME=${CARGO_HOME:-"$HOME/.cargo"} >> $GITHUB_ENV[0m
+2026-05-14T12:28:52.5497200Z shell: /bin/bash --noprofile --norc -e -o pipefail {0}
+2026-05-14T12:28:52.5498520Z env:
+2026-05-14T12:28:52.5500150Z   BINARY_NAME: oidc-jwks-converter
+2026-05-14T12:28:52.5501710Z   THIRD_PARTY_LICENSE_OUTPUT: THIRD_PARTY_LICENSES.html
+2026-05-14T12:28:52.5502690Z   TARGET: aarch64-apple-darwin
+2026-05-14T12:28:52.5504280Z ##[endgroup]
+2026-05-14T12:28:52.6092620Z ##[group]Run : install rustup if needed
+2026-05-14T12:28:52.6093400Z [36;1m: install rustup if needed[0m
+2026-05-14T12:28:52.6094120Z [36;1mif ! command -v rustup &>/dev/null; then[0m
+2026-05-14T12:28:52.6095840Z [36;1m  curl --proto '=https' --tlsv1.2 --retry 10 --retry-connrefused --location --silent --show-error --fail https://sh.rustup.rs | sh -s -- --default-toolchain none -y[0m
+2026-05-14T12:28:52.6097560Z [36;1m  echo "$CARGO_HOME/bin" >> $GITHUB_PATH[0m
+2026-05-14T12:28:52.6098250Z [36;1mfi[0m
+2026-05-14T12:28:52.6137440Z shell: /bin/bash --noprofile --norc -e -o pipefail {0}
+2026-05-14T12:28:52.6138270Z env:
+2026-05-14T12:28:52.6138850Z   BINARY_NAME: oidc-jwks-converter
+2026-05-14T12:28:52.6139610Z   THIRD_PARTY_LICENSE_OUTPUT: THIRD_PARTY_LICENSES.html
+2026-05-14T12:28:52.6140430Z   TARGET: aarch64-apple-darwin
+2026-05-14T12:28:52.6141090Z   CARGO_HOME: /Users/runner/.cargo
+2026-05-14T12:28:52.6141720Z ##[endgroup]
+2026-05-14T12:28:52.6481690Z ##[group]Run rustup toolchain install stable --target aarch64-apple-darwin --profile minimal --no-self-update
+2026-05-14T12:28:52.6483420Z [36;1mrustup toolchain install stable --target aarch64-apple-darwin --profile minimal --no-self-update[0m
+2026-05-14T12:28:52.6628500Z shell: /bin/bash --noprofile --norc -e -o pipefail {0}
+2026-05-14T12:28:52.6629410Z env:
+2026-05-14T12:28:52.6630870Z   BINARY_NAME: oidc-jwks-converter
+2026-05-14T12:28:52.6631960Z   THIRD_PARTY_LICENSE_OUTPUT: THIRD_PARTY_LICENSES.html
+2026-05-14T12:28:52.6633220Z   TARGET: aarch64-apple-darwin
+2026-05-14T12:28:52.6634100Z   CARGO_HOME: /Users/runner/.cargo
+2026-05-14T12:28:52.6634950Z   RUSTUP_PERMIT_COPY_RENAME: 1
+2026-05-14T12:28:52.6636150Z ##[endgroup]
+2026-05-14T12:28:53.2250650Z info: syncing channel updates for stable-aarch64-apple-darwin
+2026-05-14T12:28:53.4798020Z info: latest update on 2026-04-16 for version 1.95.0 (59807616e 2026-04-14)
+2026-05-14T12:28:53.4986950Z info: component rust-std is up to date
+2026-05-14T12:28:53.4992640Z 
+2026-05-14T12:28:53.5186730Z info: self-update is disabled for this build of rustup
+2026-05-14T12:28:53.5187390Z   stable-aarch64-apple-darwin unchanged - rustc 1.95.0 (59807616e 2026-04-14)
+2026-05-14T12:28:53.5194480Z info: any updates to rustup will need to be fetched with your system package manager
+2026-05-14T12:28:53.5194880Z 
+2026-05-14T12:28:53.5242820Z ##[group]Run rustup default stable
+2026-05-14T12:28:53.5243210Z [36;1mrustup default stable[0m
+2026-05-14T12:28:53.5295980Z shell: /bin/bash --noprofile --norc -e -o pipefail {0}
+2026-05-14T12:28:53.5296450Z env:
+2026-05-14T12:28:53.5296730Z   BINARY_NAME: oidc-jwks-converter
+2026-05-14T12:28:53.5297110Z   THIRD_PARTY_LICENSE_OUTPUT: THIRD_PARTY_LICENSES.html
+2026-05-14T12:28:53.5297480Z   TARGET: aarch64-apple-darwin
+2026-05-14T12:28:53.5297920Z   CARGO_HOME: /Users/runner/.cargo
+2026-05-14T12:28:53.5298280Z ##[endgroup]
+2026-05-14T12:28:53.5918060Z info: using existing install for stable-aarch64-apple-darwin
+2026-05-14T12:28:53.5968650Z info: default toolchain set to stable-aarch64-apple-darwin
+2026-05-14T12:28:53.5969020Z 
+2026-05-14T12:28:53.6075690Z   stable-aarch64-apple-darwin unchanged - rustc 1.95.0 (59807616e 2026-04-14)
+2026-05-14T12:28:53.6076280Z 
+2026-05-14T12:28:53.6137010Z ##[group]Run : create cachekey
+2026-05-14T12:28:53.6137390Z [36;1m: create cachekey[0m
+2026-05-14T12:28:53.6137940Z [36;1mDATE=$(rustc +stable --version --verbose | sed -ne 's/^commit-date: \(20[0-9][0-9]\)-\([01][0-9]\)-\([0-3][0-9]\)$/\1\2\3/p')[0m
+2026-05-14T12:28:53.6138520Z [36;1mHASH=$(rustc +stable --version --verbose | sed -ne 's/^commit-hash: //p')[0m
+2026-05-14T12:28:53.6139050Z [36;1mecho "cachekey=$(echo $DATE$HASH | head -c12)" >> $GITHUB_OUTPUT[0m
+2026-05-14T12:28:53.6177390Z shell: /bin/bash --noprofile --norc -e -o pipefail {0}
+2026-05-14T12:28:53.6177820Z env:
+2026-05-14T12:28:53.6178490Z   BINARY_NAME: oidc-jwks-converter
+2026-05-14T12:28:53.6178840Z   THIRD_PARTY_LICENSE_OUTPUT: THIRD_PARTY_LICENSES.html
+2026-05-14T12:28:53.6179260Z   TARGET: aarch64-apple-darwin
+2026-05-14T12:28:53.6179600Z   CARGO_HOME: /Users/runner/.cargo
+2026-05-14T12:28:53.6179920Z ##[endgroup]
+2026-05-14T12:28:53.7176220Z ##[group]Run : disable incremental compilation
+2026-05-14T12:28:53.7176800Z [36;1m: disable incremental compilation[0m
+2026-05-14T12:28:53.7177270Z [36;1mif [ -z "${CARGO_INCREMENTAL+set}" ]; then[0m
+2026-05-14T12:28:53.7177660Z [36;1m  echo CARGO_INCREMENTAL=0 >> $GITHUB_ENV[0m
+2026-05-14T12:28:53.7177950Z [36;1mfi[0m
+2026-05-14T12:28:53.7213400Z shell: /bin/bash --noprofile --norc -e -o pipefail {0}
+2026-05-14T12:28:53.7213870Z env:
+2026-05-14T12:28:53.7214210Z   BINARY_NAME: oidc-jwks-converter
+2026-05-14T12:28:53.7214590Z   THIRD_PARTY_LICENSE_OUTPUT: THIRD_PARTY_LICENSES.html
+2026-05-14T12:28:53.7214960Z   TARGET: aarch64-apple-darwin
+2026-05-14T12:28:53.7215390Z   CARGO_HOME: /Users/runner/.cargo
+2026-05-14T12:28:53.7215680Z ##[endgroup]
+2026-05-14T12:28:53.7521050Z ##[group]Run : enable colors in Cargo output
+2026-05-14T12:28:53.7521450Z [36;1m: enable colors in Cargo output[0m
+2026-05-14T12:28:53.7521780Z [36;1mif [ -z "${CARGO_TERM_COLOR+set}" ]; then[0m
+2026-05-14T12:28:53.7522110Z [36;1m  echo CARGO_TERM_COLOR=always >> $GITHUB_ENV[0m
+2026-05-14T12:28:53.7522460Z [36;1mfi[0m
+2026-05-14T12:28:53.7560170Z shell: /bin/bash --noprofile --norc -e -o pipefail {0}
+2026-05-14T12:28:53.7560510Z env:
+2026-05-14T12:28:53.7560740Z   BINARY_NAME: oidc-jwks-converter
+2026-05-14T12:28:53.7561070Z   THIRD_PARTY_LICENSE_OUTPUT: THIRD_PARTY_LICENSES.html
+2026-05-14T12:28:53.7561390Z   TARGET: aarch64-apple-darwin
+2026-05-14T12:28:53.7561660Z   CARGO_HOME: /Users/runner/.cargo
+2026-05-14T12:28:53.7561920Z   CARGO_INCREMENTAL: 0
+2026-05-14T12:28:53.7562140Z ##[endgroup]
+2026-05-14T12:28:53.7864360Z ##[group]Run : enable Cargo sparse registry
+2026-05-14T12:28:53.7864730Z [36;1m: enable Cargo sparse registry[0m
+2026-05-14T12:28:53.7865110Z [36;1m# implemented in 1.66, stabilized in 1.68, made default in 1.70[0m
+2026-05-14T12:28:53.7865760Z [36;1mif [ -z "${CARGO_REGISTRIES_CRATES_IO_PROTOCOL+set}" -o -f "/Users/runner/work/_temp"/.implicit_cargo_registries_crates_io_protocol ]; then[0m
+2026-05-14T12:28:53.7866420Z [36;1m  if rustc +stable --version --verbose | grep -q '^release: 1\.6[89]\.'; then[0m
+2026-05-14T12:28:53.7867250Z [36;1m    touch "/Users/runner/work/_temp"/.implicit_cargo_registries_crates_io_protocol || true[0m
+2026-05-14T12:28:53.7867770Z [36;1m    echo CARGO_REGISTRIES_CRATES_IO_PROTOCOL=sparse >> $GITHUB_ENV[0m
+2026-05-14T12:28:53.7868230Z [36;1m  elif rustc +stable --version --verbose | grep -q '^release: 1\.6[67]\.'; then[0m
+2026-05-14T12:28:53.7868780Z [36;1m    touch "/Users/runner/work/_temp"/.implicit_cargo_registries_crates_io_protocol || true[0m
+2026-05-14T12:28:53.7869280Z [36;1m    echo CARGO_REGISTRIES_CRATES_IO_PROTOCOL=git >> $GITHUB_ENV[0m
+2026-05-14T12:28:53.7869610Z [36;1m  fi[0m
+2026-05-14T12:28:53.7869790Z [36;1mfi[0m
+2026-05-14T12:28:53.7907780Z shell: /bin/bash --noprofile --norc -e -o pipefail {0}
+2026-05-14T12:28:53.7908150Z env:
+2026-05-14T12:28:53.7908380Z   BINARY_NAME: oidc-jwks-converter
+2026-05-14T12:28:53.7908720Z   THIRD_PARTY_LICENSE_OUTPUT: THIRD_PARTY_LICENSES.html
+2026-05-14T12:28:53.7909050Z   TARGET: aarch64-apple-darwin
+2026-05-14T12:28:53.7909370Z   CARGO_HOME: /Users/runner/.cargo
+2026-05-14T12:28:53.7909630Z   CARGO_INCREMENTAL: 0
+2026-05-14T12:28:53.7909870Z   CARGO_TERM_COLOR: always
+2026-05-14T12:28:53.7910120Z ##[endgroup]
+2026-05-14T12:28:53.8626860Z ##[group]Run : work around spurious network errors in curl 8.0
+2026-05-14T12:28:53.8627300Z [36;1m: work around spurious network errors in curl 8.0[0m
+2026-05-14T12:28:53.8628030Z [36;1m# https://rust-lang.zulipchat.com/#narrow/stream/246057-t-cargo/topic/timeout.20investigation[0m
+2026-05-14T12:28:53.8628870Z [36;1mif rustc +stable --version --verbose | grep -q '^release: 1\.7[01]\.'; then[0m
+2026-05-14T12:28:53.8629320Z [36;1m  echo CARGO_HTTP_MULTIPLEXING=false >> $GITHUB_ENV[0m
+2026-05-14T12:28:53.8629640Z [36;1mfi[0m
+2026-05-14T12:28:53.8672390Z shell: /bin/bash --noprofile --norc -e -o pipefail {0}
+2026-05-14T12:28:53.8673060Z env:
+2026-05-14T12:28:53.8673330Z   BINARY_NAME: oidc-jwks-converter
+2026-05-14T12:28:53.8673670Z   THIRD_PARTY_LICENSE_OUTPUT: THIRD_PARTY_LICENSES.html
+2026-05-14T12:28:53.8674170Z   TARGET: aarch64-apple-darwin
+2026-05-14T12:28:53.8674460Z   CARGO_HOME: /Users/runner/.cargo
+2026-05-14T12:28:53.8674930Z   CARGO_INCREMENTAL: 0
+2026-05-14T12:28:53.8675210Z   CARGO_TERM_COLOR: always
+2026-05-14T12:28:53.8675450Z ##[endgroup]
+2026-05-14T12:28:53.9556910Z ##[group]Run rustc +stable --version --verbose
+2026-05-14T12:28:53.9557310Z [36;1mrustc +stable --version --verbose[0m
+2026-05-14T12:28:53.9605680Z shell: /bin/bash --noprofile --norc -e -o pipefail {0}
+2026-05-14T12:28:53.9606120Z env:
+2026-05-14T12:28:53.9606390Z   BINARY_NAME: oidc-jwks-converter
+2026-05-14T12:28:53.9606710Z   THIRD_PARTY_LICENSE_OUTPUT: THIRD_PARTY_LICENSES.html
+2026-05-14T12:28:53.9607050Z   TARGET: aarch64-apple-darwin
+2026-05-14T12:28:53.9607320Z   CARGO_HOME: /Users/runner/.cargo
+2026-05-14T12:28:53.9607570Z   CARGO_INCREMENTAL: 0
+2026-05-14T12:28:53.9607830Z   CARGO_TERM_COLOR: always
+2026-05-14T12:28:53.9608100Z ##[endgroup]
+2026-05-14T12:28:54.0291570Z rustc 1.95.0 (59807616e 2026-04-14)
+2026-05-14T12:28:54.0293370Z binary: rustc
+2026-05-14T12:28:54.0294790Z commit-hash: 59807616e1fa2540724bfbac14d7976d7e4a3860
+2026-05-14T12:28:54.0296180Z commit-date: 2026-04-14
+2026-05-14T12:28:54.0299680Z host: aarch64-apple-darwin
+2026-05-14T12:28:54.0301120Z release: 1.95.0
+2026-05-14T12:28:54.0301730Z LLVM version: 22.1.2
+2026-05-14T12:28:54.0383900Z ##[group]Run cargo build --release --target $TARGET
+2026-05-14T12:28:54.0384340Z [36;1mcargo build --release --target $TARGET[0m
+2026-05-14T12:28:54.0430850Z shell: /bin/bash -e {0}
+2026-05-14T12:28:54.0431140Z env:
+2026-05-14T12:28:54.0431370Z   BINARY_NAME: oidc-jwks-converter
+2026-05-14T12:28:54.0431690Z   THIRD_PARTY_LICENSE_OUTPUT: THIRD_PARTY_LICENSES.html
+2026-05-14T12:28:54.0432020Z   TARGET: aarch64-apple-darwin
+2026-05-14T12:28:54.0432290Z   CARGO_HOME: /Users/runner/.cargo
+2026-05-14T12:28:54.0432530Z   CARGO_INCREMENTAL: 0
+2026-05-14T12:28:54.0432760Z   CARGO_TERM_COLOR: always
+2026-05-14T12:28:54.0433300Z ##[endgroup]
+2026-05-14T12:28:54.3510400Z [1m[92m    Updating[0m crates.io index
+2026-05-14T12:28:54.5404920Z [1m[91merror[0m: failed to select a version for `reqwest`.
+2026-05-14T12:28:54.5406230Z     ... required by package `oidc-jwks-converter v0.1.0 (/Users/runner/work/oidc-jwks-converter/oidc-jwks-converter)`
+2026-05-14T12:28:54.5407000Z versions that meet the requirements `^0.13` are: 0.13.3, 0.13.2, 0.13.1, 0.13.0
+2026-05-14T12:28:54.5407390Z 
+2026-05-14T12:28:54.5407760Z package `oidc-jwks-converter` depends on `reqwest` with feature `rustls-tls` but `reqwest` does not have that feature.
+2026-05-14T12:28:54.5409360Z  available features: __native-tls, __native-tls-alpn, __rustls, __rustls-aws-lc-rs, __tls, blocking, brotli, charset, cookies, default, default-tls, deflate, form, gzip, h2, hickory-dns, http2, http3, json, multipart, native-tls, native-tls-no-alpn, native-tls-vendored, native-tls-vendored-no-alpn, query, rustls, rustls-native-certs, rustls-no-provider, socks, stream, system-proxy, webpki-roots, zstd
+2026-05-14T12:28:54.5410670Z 
+2026-05-14T12:28:54.5410680Z 
+2026-05-14T12:28:54.5410900Z failed to select a version for `reqwest` which could resolve this conflict
+2026-05-14T12:28:54.5420970Z ##[error]Process completed with exit code 101.
+2026-05-14T12:28:54.5571410Z Post job cleanup.
+2026-05-14T12:28:54.6910330Z [command]/opt/homebrew/bin/git version
+2026-05-14T12:28:54.6996470Z git version 2.54.0
+2026-05-14T12:28:54.7019390Z Copying '/Users/runner/.gitconfig' to '/Users/runner/work/_temp/8846bdf9-5274-41b1-a275-7d0c7a827704/.gitconfig'
+2026-05-14T12:28:54.7028440Z Temporarily overriding HOME='/Users/runner/work/_temp/8846bdf9-5274-41b1-a275-7d0c7a827704' before making global git config changes
+2026-05-14T12:28:54.7030000Z Adding repository directory to the temporary git global config as a safe directory
+2026-05-14T12:28:54.7033790Z [command]/opt/homebrew/bin/git config --global --add safe.directory /Users/runner/work/oidc-jwks-converter/oidc-jwks-converter
+2026-05-14T12:28:54.7099020Z Removing SSH command configuration
+2026-05-14T12:28:54.7101040Z [command]/opt/homebrew/bin/git config --local --name-only --get-regexp core\.sshCommand
+2026-05-14T12:28:54.7190700Z [command]/opt/homebrew/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+2026-05-14T12:28:54.8292480Z Removing HTTP extra header
+2026-05-14T12:28:54.8298060Z [command]/opt/homebrew/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+2026-05-14T12:28:54.8383260Z [command]/opt/homebrew/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+2026-05-14T12:28:55.0233120Z Removing includeIf entries pointing to credentials config files
+2026-05-14T12:28:55.0241200Z [command]/opt/homebrew/bin/git config --local --name-only --get-regexp ^includeIf\.gitdir:
+2026-05-14T12:28:55.0357020Z includeif.gitdir:/Users/runner/work/oidc-jwks-converter/oidc-jwks-converter/.git.path
+2026-05-14T12:28:55.0364490Z includeif.gitdir:/Users/runner/work/oidc-jwks-converter/oidc-jwks-converter/.git/worktrees/*.path
+2026-05-14T12:28:55.0365450Z includeif.gitdir:/github/workspace/.git.path
+2026-05-14T12:28:55.0365850Z includeif.gitdir:/github/workspace/.git/worktrees/*.path
+2026-05-14T12:28:55.0400740Z [command]/opt/homebrew/bin/git config --local --get-all includeif.gitdir:/Users/runner/work/oidc-jwks-converter/oidc-jwks-converter/.git.path
+2026-05-14T12:28:55.0524690Z /Users/runner/work/_temp/git-credentials-9dbf4cfc-31e3-4070-8ea5-abe1cdf8893b.config
+2026-05-14T12:28:55.0557360Z [command]/opt/homebrew/bin/git config --local --unset includeif.gitdir:/Users/runner/work/oidc-jwks-converter/oidc-jwks-converter/.git.path /Users/runner/work/_temp/git-credentials-9dbf4cfc-31e3-4070-8ea5-abe1cdf8893b.config
+2026-05-14T12:28:55.0643000Z [command]/opt/homebrew/bin/git config --local --get-all includeif.gitdir:/Users/runner/work/oidc-jwks-converter/oidc-jwks-converter/.git/worktrees/*.path
+2026-05-14T12:28:55.0716940Z /Users/runner/work/_temp/git-credentials-9dbf4cfc-31e3-4070-8ea5-abe1cdf8893b.config
+2026-05-14T12:28:55.0725010Z [command]/opt/homebrew/bin/git config --local --unset includeif.gitdir:/Users/runner/work/oidc-jwks-converter/oidc-jwks-converter/.git/worktrees/*.path /Users/runner/work/_temp/git-credentials-9dbf4cfc-31e3-4070-8ea5-abe1cdf8893b.config
+2026-05-14T12:28:55.0864220Z [command]/opt/homebrew/bin/git config --local --get-all includeif.gitdir:/github/workspace/.git.path
+2026-05-14T12:28:55.0906830Z /github/runner_temp/git-credentials-9dbf4cfc-31e3-4070-8ea5-abe1cdf8893b.config
+2026-05-14T12:28:55.0916520Z [command]/opt/homebrew/bin/git config --local --unset includeif.gitdir:/github/workspace/.git.path /github/runner_temp/git-credentials-9dbf4cfc-31e3-4070-8ea5-abe1cdf8893b.config
+2026-05-14T12:28:55.0997210Z [command]/opt/homebrew/bin/git config --local --get-all includeif.gitdir:/github/workspace/.git/worktrees/*.path
+2026-05-14T12:28:55.1071360Z /github/runner_temp/git-credentials-9dbf4cfc-31e3-4070-8ea5-abe1cdf8893b.config
+2026-05-14T12:28:55.1082660Z [command]/opt/homebrew/bin/git config --local --unset includeif.gitdir:/github/workspace/.git/worktrees/*.path /github/runner_temp/git-credentials-9dbf4cfc-31e3-4070-8ea5-abe1cdf8893b.config
+2026-05-14T12:28:55.1196030Z [command]/opt/homebrew/bin/git submodule foreach --recursive git config --local --show-origin --name-only --get-regexp remote.origin.url
+2026-05-14T12:28:55.2644240Z Removing credentials config '/Users/runner/work/_temp/git-credentials-9dbf4cfc-31e3-4070-8ea5-abe1cdf8893b.config'
+2026-05-14T12:28:55.2773610Z Cleaning up orphan processes
