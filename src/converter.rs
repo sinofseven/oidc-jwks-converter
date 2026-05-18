@@ -1,3 +1,9 @@
+//! RSA/EC公開鍵のPEM形式への変換モジュール
+//!
+//! JWK (JSON Web Key) 形式で提供される RSA または EC の公開鍵を、
+//! PEM 形式に変換します。各鍵タイプに応じた変換ロジックを提供し、
+//! エラーハンドリングも包含しています。
+
 use base64::{engine::general_purpose::URL_SAFE_NO_PAD, Engine};
 use p256::{pkcs8::EncodePublicKey as P256EncodePublicKey, PublicKey as P256PublicKey};
 use rsa::{BigUint, RsaPublicKey};

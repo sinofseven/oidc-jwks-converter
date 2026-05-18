@@ -1,3 +1,9 @@
+//! OIDC JWKS (JSON Web Key Set) の取得とパースモジュール
+//!
+//! OIDC プロバイダーの JWKS エンドポイントから公開鍵セットを取得し、
+//! JSON 形式でパースします。RSA および EC 鍵に対応し、
+//! 各鍵の検証に必要なメタデータを保持します。
+
 use serde::{Deserialize, Serialize};
 use thiserror::Error;
 
