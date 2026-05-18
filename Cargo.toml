@@ -3,6 +3,7 @@ name = "oidc-jwks-converter"
 version = "0.1.0"
 edition = "2024"
 license = "MIT"
+description = "CLI tool to extract and convert OIDC public keys to PEM certificate format"
 
 [dependencies]
 serde = { version = "1.0", features = ["derive"] }

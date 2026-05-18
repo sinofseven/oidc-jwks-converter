@@ -1,0 +1,43 @@
+name: publish_formula.yml
+
+on:
+  release:
+    types:
+      - published
+
+jobs:
+  publish:
+    runs-on: ubuntu-24.04
+    permissions:
+      id-token: write
+    steps:
+      - name: Request ID Token
+        id: get-jwt-token
+        uses: sinofseven/action-request-id-token@v1.0.1
+        with:
+          audience: ${{ secrets.JWT_AUDIENCE }}
+
+      - name: Request PAT
+        id: get-pat
+        uses: actions/create-github-app-token@v3
+        with:
+          client-id: ${{ secrets.CLIENT_ID_LUCIFEROUS_TAP_PAT_PROVIDER }}
+          private-key: ${{ secrets.PRIVATE_KEY_LUCIFEROUS_TAP_PAT_PROVIDER }}
+          owner: sinofseven
+          repositories: homebrew-luciferous-tap
+
+      - name: Dispatch workflow
+        uses: sinofseven/action-workflow-dispatch@v1.0.0
+        with:
+          target_repo: "sinofseven/homebrew-luciferous-tap"
+          ref: master
+          workflow_id: create_formula_by_published_release.yml
+          token: ${{ steps.get-pat.outputs.token }}
+          inputs: |
+            {
+              "name": "oidc-jwks-converter",
+              "description": "CLI tool to extract and convert OIDC public keys to PEM certificate format",
+              "license_name": "MIT",
+              "command_test": "--version",
+              "jwt_token": "${{ steps.get-jwt-token.outputs.jwt-token }}"
+            }
