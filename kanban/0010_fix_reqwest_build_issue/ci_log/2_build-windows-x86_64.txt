@@ -1,0 +1,367 @@
+﻿2026-05-14T12:28:47.7751541Z Current runner version: '2.334.0'
+2026-05-14T12:28:47.7786070Z ##[group]Runner Image Provisioner
+2026-05-14T12:28:47.7787268Z Hosted Compute Agent
+2026-05-14T12:28:47.7788167Z Version: 20260422.526
+2026-05-14T12:28:47.7789067Z Commit: e1a9e573f4d0838b3a7c1b07401aeb29ed3635a9
+2026-05-14T12:28:47.7790222Z Build Date: 2026-04-22T09:31:31Z
+2026-05-14T12:28:47.7791258Z Worker ID: {4e61d8fb-f9a3-485e-8598-b9ef490b2cf6}
+2026-05-14T12:28:47.7792450Z Azure Region: northcentralus
+2026-05-14T12:28:47.7793359Z ##[endgroup]
+2026-05-14T12:28:47.7795562Z ##[group]Operating System
+2026-05-14T12:28:47.7796547Z Microsoft Windows Server 2025
+2026-05-14T12:28:47.7797461Z 10.0.26100
+2026-05-14T12:28:47.7798207Z Datacenter
+2026-05-14T12:28:47.7798919Z ##[endgroup]
+2026-05-14T12:28:47.7799711Z ##[group]Runner Image
+2026-05-14T12:28:47.7800508Z Image: windows-2025
+2026-05-14T12:28:47.7801360Z Version: 20260428.110.2
+2026-05-14T12:28:47.7803597Z Included Software: https://github.com/actions/runner-images/blob/win25/20260428.110/images/windows/Windows2025-Readme.md
+2026-05-14T12:28:47.7806523Z Image Release: https://github.com/actions/runner-images/releases/tag/win25%2F20260428.110
+2026-05-14T12:28:47.7808072Z ##[endgroup]
+2026-05-14T12:28:47.7810149Z ##[group]GITHUB_TOKEN Permissions
+2026-05-14T12:28:47.7812526Z Contents: read
+2026-05-14T12:28:47.7813266Z Metadata: read
+2026-05-14T12:28:47.7814145Z Packages: read
+2026-05-14T12:28:47.7814853Z ##[endgroup]
+2026-05-14T12:28:47.7817676Z Secret source: Actions
+2026-05-14T12:28:47.7818749Z Prepare workflow directory
+2026-05-14T12:28:47.8330573Z Prepare all required actions
+2026-05-14T12:28:47.8369250Z Getting action download info
+2026-05-14T12:28:48.1134555Z Download action repository 'actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd' (SHA:de0fac2e4500dabe0009e67214ff5f5447ce83dd)
+2026-05-14T12:28:48.2462738Z Download action repository 'dtolnay/rust-toolchain@29eef336d9b2848a0b548edc03f92a220660cdb8' (SHA:29eef336d9b2848a0b548edc03f92a220660cdb8)
+2026-05-14T12:28:48.3832883Z Download action repository 'actions/upload-artifact@043fb46d1a93c77aae656e7c1c64a875d1fc6a0a' (SHA:043fb46d1a93c77aae656e7c1c64a875d1fc6a0a)
+2026-05-14T12:28:48.6448896Z Complete job name: build-windows-x86_64
+2026-05-14T12:28:48.8113203Z ##[group]Run actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd
+2026-05-14T12:28:48.8114315Z with:
+2026-05-14T12:28:48.8114725Z   repository: sinofseven/oidc-jwks-converter
+2026-05-14T12:28:48.8115401Z   token: ***
+2026-05-14T12:28:48.8115750Z   ssh-strict: true
+2026-05-14T12:28:48.8116098Z   ssh-user: git
+2026-05-14T12:28:48.8116478Z   persist-credentials: true
+2026-05-14T12:28:48.8116879Z   clean: true
+2026-05-14T12:28:48.8117249Z   sparse-checkout-cone-mode: true
+2026-05-14T12:28:48.8117805Z   fetch-depth: 1
+2026-05-14T12:28:48.8118321Z   fetch-tags: false
+2026-05-14T12:28:48.8118699Z   show-progress: true
+2026-05-14T12:28:48.8119059Z   lfs: false
+2026-05-14T12:28:48.8119384Z   submodules: false
+2026-05-14T12:28:48.8119745Z   set-safe-directory: true
+2026-05-14T12:28:48.8120418Z env:
+2026-05-14T12:28:48.8120758Z   BINARY_NAME: oidc-jwks-converter
+2026-05-14T12:28:48.8121299Z   THIRD_PARTY_LICENSE_OUTPUT: THIRD_PARTY_LICENSES.html
+2026-05-14T12:28:48.8121878Z   TARGET: x86_64-pc-windows-msvc
+2026-05-14T12:28:48.8122291Z ##[endgroup]
+2026-05-14T12:28:48.9569799Z Syncing repository: sinofseven/oidc-jwks-converter
+2026-05-14T12:28:48.9571888Z ##[group]Getting Git version info
+2026-05-14T12:28:48.9572596Z Working directory is 'D:\a\oidc-jwks-converter\oidc-jwks-converter'
+2026-05-14T12:28:49.0822279Z [command]"C:\Program Files\Git\bin\git.exe" version
+2026-05-14T12:28:49.5286343Z git version 2.54.0.windows.1
+2026-05-14T12:28:49.5340218Z ##[endgroup]
+2026-05-14T12:28:49.5359078Z Temporarily overriding HOME='D:\a\_temp\6614bcea-29aa-41e8-b5ab-ae47db2d673d' before making global git config changes
+2026-05-14T12:28:49.5360930Z Adding repository directory to the temporary git global config as a safe directory
+2026-05-14T12:28:49.5371574Z [command]"C:\Program Files\Git\bin\git.exe" config --global --add safe.directory D:\a\oidc-jwks-converter\oidc-jwks-converter
+2026-05-14T12:28:49.6093198Z Deleting the contents of 'D:\a\oidc-jwks-converter\oidc-jwks-converter'
+2026-05-14T12:28:49.6098915Z ##[group]Initializing the repository
+2026-05-14T12:28:49.6108451Z [command]"C:\Program Files\Git\bin\git.exe" init D:\a\oidc-jwks-converter\oidc-jwks-converter
+2026-05-14T12:28:49.6985711Z Initialized empty Git repository in D:/a/oidc-jwks-converter/oidc-jwks-converter/.git/
+2026-05-14T12:28:49.7036753Z [command]"C:\Program Files\Git\bin\git.exe" remote add origin https://github.com/sinofseven/oidc-jwks-converter
+2026-05-14T12:28:49.7751060Z ##[endgroup]
+2026-05-14T12:28:49.7752408Z ##[group]Disabling automatic garbage collection
+2026-05-14T12:28:49.7760380Z [command]"C:\Program Files\Git\bin\git.exe" config --local gc.auto 0
+2026-05-14T12:28:49.8054936Z ##[endgroup]
+2026-05-14T12:28:49.8056743Z ##[group]Setting up auth
+2026-05-14T12:28:49.8057796Z Removing SSH command configuration
+2026-05-14T12:28:49.8069180Z [command]"C:\Program Files\Git\bin\git.exe" config --local --name-only --get-regexp core\.sshCommand
+2026-05-14T12:28:49.8373422Z [command]"C:\Program Files\Git\bin\git.exe" submodule foreach --recursive "sh -c \"git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :\""
+2026-05-14T12:28:52.2870578Z Removing HTTP extra header
+2026-05-14T12:28:52.2879322Z [command]"C:\Program Files\Git\bin\git.exe" config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+2026-05-14T12:28:52.3190598Z [command]"C:\Program Files\Git\bin\git.exe" submodule foreach --recursive "sh -c \"git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :\""
+2026-05-14T12:28:52.8637853Z Removing includeIf entries pointing to credentials config files
+2026-05-14T12:28:52.8648061Z [command]"C:\Program Files\Git\bin\git.exe" config --local --name-only --get-regexp ^includeIf\.gitdir:
+2026-05-14T12:28:52.8977855Z [command]"C:\Program Files\Git\bin\git.exe" submodule foreach --recursive "git config --local --show-origin --name-only --get-regexp remote.origin.url"
+2026-05-14T12:28:53.9050319Z [command]"C:\Program Files\Git\bin\git.exe" config --file D:\a\_temp\git-credentials-71e4b1be-1dc8-4a07-90bc-05bc27ce3679.config http.https://github.com/.extraheader "AUTHORIZATION: basic ***"
+2026-05-14T12:28:53.9434386Z [command]"C:\Program Files\Git\bin\git.exe" config --local includeIf.gitdir:D:/a/oidc-jwks-converter/oidc-jwks-converter/.git.path D:\a\_temp\git-credentials-71e4b1be-1dc8-4a07-90bc-05bc27ce3679.config
+2026-05-14T12:28:53.9776665Z [command]"C:\Program Files\Git\bin\git.exe" config --local includeIf.gitdir:D:/a/oidc-jwks-converter/oidc-jwks-converter/.git/worktrees/*.path D:\a\_temp\git-credentials-71e4b1be-1dc8-4a07-90bc-05bc27ce3679.config
+2026-05-14T12:28:54.0944613Z [command]"C:\Program Files\Git\bin\git.exe" config --local includeIf.gitdir:/github/workspace/.git.path /github/runner_temp/git-credentials-71e4b1be-1dc8-4a07-90bc-05bc27ce3679.config
+2026-05-14T12:28:54.1363918Z [command]"C:\Program Files\Git\bin\git.exe" config --local includeIf.gitdir:/github/workspace/.git/worktrees/*.path /github/runner_temp/git-credentials-71e4b1be-1dc8-4a07-90bc-05bc27ce3679.config
+2026-05-14T12:28:54.1804125Z ##[endgroup]
+2026-05-14T12:28:54.1804552Z ##[group]Fetching the repository
+2026-05-14T12:28:54.1826975Z [command]"C:\Program Files\Git\bin\git.exe" -c protocol.version=2 fetch --no-tags --prune --no-recurse-submodules --depth=1 origin +c84fbd3b886217b4d1105dbf8f338d42d85d65b3:refs/remotes/pull/5/merge
+2026-05-14T12:28:55.6525127Z From https://github.com/sinofseven/oidc-jwks-converter
+2026-05-14T12:28:55.6526964Z  * [new ref]         c84fbd3b886217b4d1105dbf8f338d42d85d65b3 -> pull/5/merge
+2026-05-14T12:28:55.6773851Z ##[endgroup]
+2026-05-14T12:28:55.6774422Z ##[group]Determining the checkout info
+2026-05-14T12:28:55.6776925Z ##[endgroup]
+2026-05-14T12:28:55.6790898Z [command]"C:\Program Files\Git\bin\git.exe" sparse-checkout disable
+2026-05-14T12:28:55.7275202Z [command]"C:\Program Files\Git\bin\git.exe" config --local --unset-all extensions.worktreeConfig
+2026-05-14T12:28:55.7576459Z ##[group]Checking out the ref
+2026-05-14T12:28:55.7585556Z [command]"C:\Program Files\Git\bin\git.exe" checkout --progress --force refs/remotes/pull/5/merge
+2026-05-14T12:28:55.8257780Z Note: switching to 'refs/remotes/pull/5/merge'.
+2026-05-14T12:28:55.8258256Z 
+2026-05-14T12:28:55.8258646Z You are in 'detached HEAD' state. You can look around, make experimental
+2026-05-14T12:28:55.8259755Z changes and commit them, and you can discard any commits you make in this
+2026-05-14T12:28:55.8260600Z state without impacting any branches by switching back to a branch.
+2026-05-14T12:28:55.8260934Z 
+2026-05-14T12:28:55.8261147Z If you want to create a new branch to retain commits you create, you may
+2026-05-14T12:28:55.8261692Z do so (now or later) by using -c with the switch command. Example:
+2026-05-14T12:28:55.8262086Z 
+2026-05-14T12:28:55.8262240Z   git switch -c <new-branch-name>
+2026-05-14T12:28:55.8262487Z 
+2026-05-14T12:28:55.8262600Z Or undo this operation with:
+2026-05-14T12:28:55.8262770Z 
+2026-05-14T12:28:55.8262843Z   git switch -
+2026-05-14T12:28:55.8262978Z 
+2026-05-14T12:28:55.8263219Z Turn off this advice by setting config variable advice.detachedHead to false
+2026-05-14T12:28:55.8263570Z 
+2026-05-14T12:28:55.8263995Z HEAD is now at c84fbd3 Merge 64a81b7434540026a2250e23d83e57c4618eb3c3 into 7995739c4acd0ab49d5c451a2ed464369e4b8e61
+2026-05-14T12:28:55.8384122Z ##[endgroup]
+2026-05-14T12:28:55.9060973Z [command]"C:\Program Files\Git\bin\git.exe" log -1 --format=%H
+2026-05-14T12:28:55.9343229Z c84fbd3b886217b4d1105dbf8f338d42d85d65b3
+2026-05-14T12:28:55.9941494Z ##[group]Run dtolnay/rust-toolchain@29eef336d9b2848a0b548edc03f92a220660cdb8
+2026-05-14T12:28:55.9941993Z with:
+2026-05-14T12:28:55.9942167Z   target: x86_64-pc-windows-msvc
+2026-05-14T12:28:55.9942393Z   toolchain: stable
+2026-05-14T12:28:55.9942551Z env:
+2026-05-14T12:28:55.9942706Z   BINARY_NAME: oidc-jwks-converter
+2026-05-14T12:28:55.9942979Z   THIRD_PARTY_LICENSE_OUTPUT: THIRD_PARTY_LICENSES.html
+2026-05-14T12:28:55.9943286Z   TARGET: x86_64-pc-windows-msvc
+2026-05-14T12:28:55.9943498Z ##[endgroup]
+2026-05-14T12:28:56.0245380Z ##[group]Run : parse toolchain version
+2026-05-14T12:28:56.0245754Z [36;1m: parse toolchain version[0m
+2026-05-14T12:28:56.0246277Z [36;1mif [[ -z $toolchain ]]; then[0m
+2026-05-14T12:28:56.0246788Z [36;1m  # GitHub does not enforce `required: true` inputs itself. https://github.com/actions/runner/issues/1070[0m
+2026-05-14T12:28:56.0247317Z [36;1m  echo "'toolchain' is a required input" >&2[0m
+2026-05-14T12:28:56.0247622Z [36;1m  exit 1[0m
+2026-05-14T12:28:56.0247913Z [36;1melif [[ $toolchain =~ ^stable' '[0-9]+' '(year|month|week|day)s?' 'ago$ ]]; then[0m
+2026-05-14T12:28:56.0248308Z [36;1m  if [[ Windows == macOS ]]; then[0m
+2026-05-14T12:28:56.0248803Z [36;1m    echo "toolchain=1.$((($(date -v-$(sed 's/stable \([0-9]*\) \(.\).*/\1\2/' <<< $toolchain) +%s)/60/60/24-16569)/7/6))" >> $GITHUB_OUTPUT[0m
+2026-05-14T12:28:56.0249272Z [36;1m  else[0m
+2026-05-14T12:28:56.0249636Z [36;1m    echo "toolchain=1.$((($(date --date "${toolchain#stable }" +%s)/60/60/24-16569)/7/6))" >> $GITHUB_OUTPUT[0m
+2026-05-14T12:28:56.0250049Z [36;1m  fi[0m
+2026-05-14T12:28:56.0250306Z [36;1melif [[ $toolchain =~ ^stable' 'minus' '[0-9]+' 'releases?$ ]]; then[0m
+2026-05-14T12:28:56.0250798Z [36;1m  echo "toolchain=1.$((($(date +%s)/60/60/24-16569)/7/6-${toolchain//[^0-9]/}))" >> $GITHUB_OUTPUT[0m
+2026-05-14T12:28:56.0251216Z [36;1melif [[ $toolchain =~ ^1\.[0-9]+$ ]]; then[0m
+2026-05-14T12:28:56.0251712Z [36;1m  echo "toolchain=1.$((i=${toolchain#1.}, c=($(date +%s)/60/60/24-16569)/7/6, i+9*i*(10*i<=c)+90*i*(100*i<=c)))" >> $GITHUB_OUTPUT[0m
+2026-05-14T12:28:56.0252431Z [36;1melse[0m
+2026-05-14T12:28:56.0252640Z [36;1m  echo "toolchain=$toolchain" >> $GITHUB_OUTPUT[0m
+2026-05-14T12:28:56.0252900Z [36;1mfi[0m
+2026-05-14T12:28:56.0271469Z shell: C:\Program Files\Git\bin\bash.EXE --noprofile --norc -e -o pipefail {0}
+2026-05-14T12:28:56.0271866Z env:
+2026-05-14T12:28:56.0272024Z   BINARY_NAME: oidc-jwks-converter
+2026-05-14T12:28:56.0272371Z   THIRD_PARTY_LICENSE_OUTPUT: THIRD_PARTY_LICENSES.html
+2026-05-14T12:28:56.0272687Z   TARGET: x86_64-pc-windows-msvc
+2026-05-14T12:28:56.0272899Z   toolchain: stable
+2026-05-14T12:28:56.0273061Z ##[endgroup]
+2026-05-14T12:28:56.2296512Z ##[group]Run : construct rustup command line
+2026-05-14T12:28:56.2296842Z [36;1m: construct rustup command line[0m
+2026-05-14T12:28:56.2297270Z [36;1mecho "targets=$(for t in ${targets//,/ }; do echo -n ' --target' $t; done)" >> $GITHUB_OUTPUT[0m
+2026-05-14T12:28:56.2297871Z [36;1mecho "components=$(for c in ${components//,/ }; do echo -n ' --component' $c; done)" >> $GITHUB_OUTPUT[0m
+2026-05-14T12:28:56.2298328Z [36;1mecho "downgrade=" >> $GITHUB_OUTPUT[0m
+2026-05-14T12:28:56.2312582Z shell: C:\Program Files\Git\bin\bash.EXE --noprofile --norc -e -o pipefail {0}
+2026-05-14T12:28:56.2312960Z env:
+2026-05-14T12:28:56.2313127Z   BINARY_NAME: oidc-jwks-converter
+2026-05-14T12:28:56.2313408Z   THIRD_PARTY_LICENSE_OUTPUT: THIRD_PARTY_LICENSES.html
+2026-05-14T12:28:56.2313687Z   TARGET: x86_64-pc-windows-msvc
+2026-05-14T12:28:56.2313908Z   targets: x86_64-pc-windows-msvc
+2026-05-14T12:28:56.2314112Z   components: 
+2026-05-14T12:28:56.2314273Z ##[endgroup]
+2026-05-14T12:28:56.3153394Z ##[group]Run : set $CARGO_HOME
+2026-05-14T12:28:56.3153656Z [36;1m: set $CARGO_HOME[0m
+2026-05-14T12:28:56.3153993Z [36;1mecho CARGO_HOME=${CARGO_HOME:-"$USERPROFILE\.cargo"} >> $GITHUB_ENV[0m
+2026-05-14T12:28:56.3169607Z shell: C:\Program Files\Git\bin\bash.EXE --noprofile --norc -e -o pipefail {0}
+2026-05-14T12:28:56.3170496Z env:
+2026-05-14T12:28:56.3170675Z   BINARY_NAME: oidc-jwks-converter
+2026-05-14T12:28:56.3170976Z   THIRD_PARTY_LICENSE_OUTPUT: THIRD_PARTY_LICENSES.html
+2026-05-14T12:28:56.3171267Z   TARGET: x86_64-pc-windows-msvc
+2026-05-14T12:28:56.3171473Z ##[endgroup]
+2026-05-14T12:28:56.3709534Z ##[group]Run : install rustup if needed on windows
+2026-05-14T12:28:56.3709881Z [36;1m: install rustup if needed on windows[0m
+2026-05-14T12:28:56.3710166Z [36;1mif ! command -v rustup &>/dev/null; then[0m
+2026-05-14T12:28:56.3710897Z [36;1m  curl --proto '=https' --tlsv1.2 --retry 10 --retry-connrefused --location --silent --show-error --fail https://win.rustup.rs/x86_64 --output 'D:\a\_temp\rustup-init.exe'[0m
+2026-05-14T12:28:56.3711746Z [36;1m  'D:\a\_temp\rustup-init.exe' --default-toolchain none --no-modify-path -y[0m
+2026-05-14T12:28:56.3712136Z [36;1m  echo "$CARGO_HOME\bin" >> $GITHUB_PATH[0m
+2026-05-14T12:28:56.3712388Z [36;1mfi[0m
+2026-05-14T12:28:56.3725428Z shell: C:\Program Files\Git\bin\bash.EXE --noprofile --norc -e -o pipefail {0}
+2026-05-14T12:28:56.3725828Z env:
+2026-05-14T12:28:56.3725995Z   BINARY_NAME: oidc-jwks-converter
+2026-05-14T12:28:56.3726287Z   THIRD_PARTY_LICENSE_OUTPUT: THIRD_PARTY_LICENSES.html
+2026-05-14T12:28:56.3726951Z   TARGET: x86_64-pc-windows-msvc
+2026-05-14T12:28:56.3727335Z   CARGO_HOME: C:\Users\runneradmin\.cargo
+2026-05-14T12:28:56.3727571Z ##[endgroup]
+2026-05-14T12:28:56.4429243Z ##[group]Run rustup toolchain install stable --target x86_64-pc-windows-msvc --profile minimal --no-self-update
+2026-05-14T12:28:56.4429980Z [36;1mrustup toolchain install stable --target x86_64-pc-windows-msvc --profile minimal --no-self-update[0m
+2026-05-14T12:28:56.4446886Z shell: C:\Program Files\Git\bin\bash.EXE --noprofile --norc -e -o pipefail {0}
+2026-05-14T12:28:56.4447358Z env:
+2026-05-14T12:28:56.4447558Z   BINARY_NAME: oidc-jwks-converter
+2026-05-14T12:28:56.4447922Z   THIRD_PARTY_LICENSE_OUTPUT: THIRD_PARTY_LICENSES.html
+2026-05-14T12:28:56.4448273Z   TARGET: x86_64-pc-windows-msvc
+2026-05-14T12:28:56.4448774Z   CARGO_HOME: C:\Users\runneradmin\.cargo
+2026-05-14T12:28:56.4449048Z   RUSTUP_PERMIT_COPY_RENAME: 1
+2026-05-14T12:28:56.4449269Z ##[endgroup]
+2026-05-14T12:28:59.8805212Z info: syncing channel updates for stable-x86_64-pc-windows-msvc
+2026-05-14T12:29:00.3798728Z info: latest update on 2026-04-16 for version 1.95.0 (59807616e 2026-04-14)
+2026-05-14T12:29:00.4063141Z info: component rust-std is up to date
+2026-05-14T12:29:00.4081961Z 
+2026-05-14T12:29:00.4287538Z   stable-x86_64-pc-windows-msvc unchanged - rustc 1.95.0 (59807616e 2026-04-14)
+2026-05-14T12:29:00.4289648Z 
+2026-05-14T12:29:00.4568024Z ##[group]Run rustup default stable
+2026-05-14T12:29:00.4568273Z [36;1mrustup default stable[0m
+2026-05-14T12:29:00.4581716Z shell: C:\Program Files\Git\bin\bash.EXE --noprofile --norc -e -o pipefail {0}
+2026-05-14T12:29:00.4582084Z env:
+2026-05-14T12:29:00.4582264Z   BINARY_NAME: oidc-jwks-converter
+2026-05-14T12:29:00.4582532Z   THIRD_PARTY_LICENSE_OUTPUT: THIRD_PARTY_LICENSES.html
+2026-05-14T12:29:00.4582831Z   TARGET: x86_64-pc-windows-msvc
+2026-05-14T12:29:00.4583055Z   CARGO_HOME: C:\Users\runneradmin\.cargo
+2026-05-14T12:29:00.4583274Z ##[endgroup]
+2026-05-14T12:29:00.5274786Z info: using existing install for stable-x86_64-pc-windows-msvc
+2026-05-14T12:29:00.5329839Z info: default toolchain set to stable-x86_64-pc-windows-msvc
+2026-05-14T12:29:00.5330230Z 
+2026-05-14T12:29:00.5532656Z   stable-x86_64-pc-windows-msvc unchanged - rustc 1.95.0 (59807616e 2026-04-14)
+2026-05-14T12:29:00.5533067Z 
+2026-05-14T12:29:00.5746529Z ##[group]Run : create cachekey
+2026-05-14T12:29:00.5746792Z [36;1m: create cachekey[0m
+2026-05-14T12:29:00.5747275Z [36;1mDATE=$(rustc +stable --version --verbose | sed -ne 's/^commit-date: \(20[0-9][0-9]\)-\([01][0-9]\)-\([0-3][0-9]\)$/\1\2\3/p')[0m
+2026-05-14T12:29:00.5748576Z [36;1mHASH=$(rustc +stable --version --verbose | sed -ne 's/^commit-hash: //p')[0m
+2026-05-14T12:29:00.5749073Z [36;1mecho "cachekey=$(echo $DATE$HASH | head -c12)" >> $GITHUB_OUTPUT[0m
+2026-05-14T12:29:00.5763468Z shell: C:\Program Files\Git\bin\bash.EXE --noprofile --norc -e -o pipefail {0}
+2026-05-14T12:29:00.5763837Z env:
+2026-05-14T12:29:00.5763999Z   BINARY_NAME: oidc-jwks-converter
+2026-05-14T12:29:00.5764271Z   THIRD_PARTY_LICENSE_OUTPUT: THIRD_PARTY_LICENSES.html
+2026-05-14T12:29:00.5764553Z   TARGET: x86_64-pc-windows-msvc
+2026-05-14T12:29:00.5764770Z   CARGO_HOME: C:\Users\runneradmin\.cargo
+2026-05-14T12:29:00.5765003Z ##[endgroup]
+2026-05-14T12:29:01.5153771Z ##[group]Run : disable incremental compilation
+2026-05-14T12:29:01.5154116Z [36;1m: disable incremental compilation[0m
+2026-05-14T12:29:01.5154426Z [36;1mif [ -z "${CARGO_INCREMENTAL+set}" ]; then[0m
+2026-05-14T12:29:01.5154746Z [36;1m  echo CARGO_INCREMENTAL=0 >> $GITHUB_ENV[0m
+2026-05-14T12:29:01.5155021Z [36;1mfi[0m
+2026-05-14T12:29:01.5167934Z shell: C:\Program Files\Git\bin\bash.EXE --noprofile --norc -e -o pipefail {0}
+2026-05-14T12:29:01.5168296Z env:
+2026-05-14T12:29:01.5168450Z   BINARY_NAME: oidc-jwks-converter
+2026-05-14T12:29:01.5168739Z   THIRD_PARTY_LICENSE_OUTPUT: THIRD_PARTY_LICENSES.html
+2026-05-14T12:29:01.5169017Z   TARGET: x86_64-pc-windows-msvc
+2026-05-14T12:29:01.5169249Z   CARGO_HOME: C:\Users\runneradmin\.cargo
+2026-05-14T12:29:01.5169473Z ##[endgroup]
+2026-05-14T12:29:01.5689915Z ##[group]Run : enable colors in Cargo output
+2026-05-14T12:29:01.5690208Z [36;1m: enable colors in Cargo output[0m
+2026-05-14T12:29:01.5690475Z [36;1mif [ -z "${CARGO_TERM_COLOR+set}" ]; then[0m
+2026-05-14T12:29:01.5690764Z [36;1m  echo CARGO_TERM_COLOR=always >> $GITHUB_ENV[0m
+2026-05-14T12:29:01.5691012Z [36;1mfi[0m
+2026-05-14T12:29:01.5703743Z shell: C:\Program Files\Git\bin\bash.EXE --noprofile --norc -e -o pipefail {0}
+2026-05-14T12:29:01.5704101Z env:
+2026-05-14T12:29:01.5704253Z   BINARY_NAME: oidc-jwks-converter
+2026-05-14T12:29:01.5704549Z   THIRD_PARTY_LICENSE_OUTPUT: THIRD_PARTY_LICENSES.html
+2026-05-14T12:29:01.5704843Z   TARGET: x86_64-pc-windows-msvc
+2026-05-14T12:29:01.5705802Z   CARGO_HOME: C:\Users\runneradmin\.cargo
+2026-05-14T12:29:01.5706037Z   CARGO_INCREMENTAL: 0
+2026-05-14T12:29:01.5706200Z ##[endgroup]
+2026-05-14T12:29:01.6239203Z ##[group]Run : enable Cargo sparse registry
+2026-05-14T12:29:01.6239512Z [36;1m: enable Cargo sparse registry[0m
+2026-05-14T12:29:01.6239840Z [36;1m# implemented in 1.66, stabilized in 1.68, made default in 1.70[0m
+2026-05-14T12:29:01.6240488Z [36;1mif [ -z "${CARGO_REGISTRIES_CRATES_IO_PROTOCOL+set}" -o -f "D:\a\_temp"/.implicit_cargo_registries_crates_io_protocol ]; then[0m
+2026-05-14T12:29:01.6241146Z [36;1m  if rustc +stable --version --verbose | grep -q '^release: 1\.6[89]\.'; then[0m
+2026-05-14T12:29:01.6241624Z [36;1m    touch "D:\a\_temp"/.implicit_cargo_registries_crates_io_protocol || true[0m
+2026-05-14T12:29:01.6242097Z [36;1m    echo CARGO_REGISTRIES_CRATES_IO_PROTOCOL=sparse >> $GITHUB_ENV[0m
+2026-05-14T12:29:01.6242558Z [36;1m  elif rustc +stable --version --verbose | grep -q '^release: 1\.6[67]\.'; then[0m
+2026-05-14T12:29:01.6243056Z [36;1m    touch "D:\a\_temp"/.implicit_cargo_registries_crates_io_protocol || true[0m
+2026-05-14T12:29:01.6243489Z [36;1m    echo CARGO_REGISTRIES_CRATES_IO_PROTOCOL=git >> $GITHUB_ENV[0m
+2026-05-14T12:29:01.6243790Z [36;1m  fi[0m
+2026-05-14T12:29:01.6243934Z [36;1mfi[0m
+2026-05-14T12:29:01.6256556Z shell: C:\Program Files\Git\bin\bash.EXE --noprofile --norc -e -o pipefail {0}
+2026-05-14T12:29:01.6256932Z env:
+2026-05-14T12:29:01.6257088Z   BINARY_NAME: oidc-jwks-converter
+2026-05-14T12:29:01.6257372Z   THIRD_PARTY_LICENSE_OUTPUT: THIRD_PARTY_LICENSES.html
+2026-05-14T12:29:01.6257658Z   TARGET: x86_64-pc-windows-msvc
+2026-05-14T12:29:01.6257900Z   CARGO_HOME: C:\Users\runneradmin\.cargo
+2026-05-14T12:29:01.6258124Z   CARGO_INCREMENTAL: 0
+2026-05-14T12:29:01.6258302Z   CARGO_TERM_COLOR: always
+2026-05-14T12:29:01.6258696Z ##[endgroup]
+2026-05-14T12:29:01.8302155Z ##[group]Run : work around spurious network errors in curl 8.0
+2026-05-14T12:29:01.8302641Z [36;1m: work around spurious network errors in curl 8.0[0m
+2026-05-14T12:29:01.8303142Z [36;1m# https://rust-lang.zulipchat.com/#narrow/stream/246057-t-cargo/topic/timeout.20investigation[0m
+2026-05-14T12:29:01.8303708Z [36;1mif rustc +stable --version --verbose | grep -q '^release: 1\.7[01]\.'; then[0m
+2026-05-14T12:29:01.8304135Z [36;1m  echo CARGO_HTTP_MULTIPLEXING=false >> $GITHUB_ENV[0m
+2026-05-14T12:29:01.8304403Z [36;1mfi[0m
+2026-05-14T12:29:01.8316155Z shell: C:\Program Files\Git\bin\bash.EXE --noprofile --norc -e -o pipefail {0}
+2026-05-14T12:29:01.8316525Z env:
+2026-05-14T12:29:01.8316675Z   BINARY_NAME: oidc-jwks-converter
+2026-05-14T12:29:01.8316952Z   THIRD_PARTY_LICENSE_OUTPUT: THIRD_PARTY_LICENSES.html
+2026-05-14T12:29:01.8317225Z   TARGET: x86_64-pc-windows-msvc
+2026-05-14T12:29:01.8317456Z   CARGO_HOME: C:\Users\runneradmin\.cargo
+2026-05-14T12:29:01.8317691Z   CARGO_INCREMENTAL: 0
+2026-05-14T12:29:01.8317873Z   CARGO_TERM_COLOR: always
+2026-05-14T12:29:01.8318065Z ##[endgroup]
+2026-05-14T12:29:01.9722569Z ##[group]Run rustc +stable --version --verbose
+2026-05-14T12:29:01.9722886Z [36;1mrustc +stable --version --verbose[0m
+2026-05-14T12:29:01.9735289Z shell: C:\Program Files\Git\bin\bash.EXE --noprofile --norc -e -o pipefail {0}
+2026-05-14T12:29:01.9735640Z env:
+2026-05-14T12:29:01.9735801Z   BINARY_NAME: oidc-jwks-converter
+2026-05-14T12:29:01.9736072Z   THIRD_PARTY_LICENSE_OUTPUT: THIRD_PARTY_LICENSES.html
+2026-05-14T12:29:01.9736355Z   TARGET: x86_64-pc-windows-msvc
+2026-05-14T12:29:01.9736571Z   CARGO_HOME: C:\Users\runneradmin\.cargo
+2026-05-14T12:29:01.9736795Z   CARGO_INCREMENTAL: 0
+2026-05-14T12:29:01.9736968Z   CARGO_TERM_COLOR: always
+2026-05-14T12:29:01.9737140Z ##[endgroup]
+2026-05-14T12:29:02.0597589Z rustc 1.95.0 (59807616e 2026-04-14)
+2026-05-14T12:29:02.0598062Z binary: rustc
+2026-05-14T12:29:02.0598491Z commit-hash: 59807616e1fa2540724bfbac14d7976d7e4a3860
+2026-05-14T12:29:02.0598972Z commit-date: 2026-04-14
+2026-05-14T12:29:02.0599678Z host: x86_64-pc-windows-msvc
+2026-05-14T12:29:02.0600369Z release: 1.95.0
+2026-05-14T12:29:02.0601865Z LLVM version: 22.1.2
+2026-05-14T12:29:02.0904897Z ##[group]Run cargo build --release --target $env:TARGET
+2026-05-14T12:29:02.0905333Z [36;1mcargo build --release --target $env:TARGET[0m
+2026-05-14T12:29:02.1757221Z shell: C:\Program Files\PowerShell\7\pwsh.EXE -command ". '{0}'"
+2026-05-14T12:29:02.1757687Z env:
+2026-05-14T12:29:02.1757913Z   BINARY_NAME: oidc-jwks-converter
+2026-05-14T12:29:02.1758317Z   THIRD_PARTY_LICENSE_OUTPUT: THIRD_PARTY_LICENSES.html
+2026-05-14T12:29:02.1758721Z   TARGET: x86_64-pc-windows-msvc
+2026-05-14T12:29:02.1759041Z   CARGO_HOME: C:\Users\runneradmin\.cargo
+2026-05-14T12:29:02.1759376Z   CARGO_INCREMENTAL: 0
+2026-05-14T12:29:02.1759628Z   CARGO_TERM_COLOR: always
+2026-05-14T12:29:02.1759953Z   RUSTFLAGS: -C target-feature=+crt-static
+2026-05-14T12:29:02.1760285Z ##[endgroup]
+2026-05-14T12:29:11.0136460Z [1m[92m    Updating[0m crates.io index
+2026-05-14T12:29:11.2728736Z [1m[91merror[0m: failed to select a version for `reqwest`.
+2026-05-14T12:29:11.2730055Z     ... required by package `oidc-jwks-converter v0.1.0 (D:\a\oidc-jwks-converter\oidc-jwks-converter)`
+2026-05-14T12:29:11.2731449Z versions that meet the requirements `^0.13` are: 0.13.3, 0.13.2, 0.13.1, 0.13.0
+2026-05-14T12:29:11.2732144Z 
+2026-05-14T12:29:11.2732943Z package `oidc-jwks-converter` depends on `reqwest` with feature `rustls-tls` but `reqwest` does not have that feature.
+2026-05-14T12:29:11.2737720Z  available features: __native-tls, __native-tls-alpn, __rustls, __rustls-aws-lc-rs, __tls, blocking, brotli, charset, cookies, default, default-tls, deflate, form, gzip, h2, hickory-dns, http2, http3, json, multipart, native-tls, native-tls-no-alpn, native-tls-vendored, native-tls-vendored-no-alpn, query, rustls, rustls-native-certs, rustls-no-provider, socks, stream, system-proxy, webpki-roots, zstd
+2026-05-14T12:29:11.2741117Z 
+2026-05-14T12:29:11.2741126Z 
+2026-05-14T12:29:11.2741556Z failed to select a version for `reqwest` which could resolve this conflict
+2026-05-14T12:29:11.8195732Z ##[error]Process completed with exit code 1.
+2026-05-14T12:29:11.8433455Z Post job cleanup.
+2026-05-14T12:29:12.0308819Z [command]"C:\Program Files\Git\bin\git.exe" version
+2026-05-14T12:29:12.0623162Z git version 2.54.0.windows.1
+2026-05-14T12:29:12.0703916Z Temporarily overriding HOME='D:\a\_temp\884403c5-0e84-49c5-a6cc-dd82ca8e2790' before making global git config changes
+2026-05-14T12:29:12.0705135Z Adding repository directory to the temporary git global config as a safe directory
+2026-05-14T12:29:12.0716543Z [command]"C:\Program Files\Git\bin\git.exe" config --global --add safe.directory D:\a\oidc-jwks-converter\oidc-jwks-converter
+2026-05-14T12:29:12.1100918Z Removing SSH command configuration
+2026-05-14T12:29:12.1116343Z [command]"C:\Program Files\Git\bin\git.exe" config --local --name-only --get-regexp core\.sshCommand
+2026-05-14T12:29:12.1452085Z [command]"C:\Program Files\Git\bin\git.exe" submodule foreach --recursive "sh -c \"git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :\""
+2026-05-14T12:29:12.6830917Z Removing HTTP extra header
+2026-05-14T12:29:12.6841167Z [command]"C:\Program Files\Git\bin\git.exe" config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+2026-05-14T12:29:12.7152104Z [command]"C:\Program Files\Git\bin\git.exe" submodule foreach --recursive "sh -c \"git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :\""
+2026-05-14T12:29:13.3191336Z Removing includeIf entries pointing to credentials config files
+2026-05-14T12:29:13.3203809Z [command]"C:\Program Files\Git\bin\git.exe" config --local --name-only --get-regexp ^includeIf\.gitdir:
+2026-05-14T12:29:13.3474569Z includeif.gitdir:D:/a/oidc-jwks-converter/oidc-jwks-converter/.git.path
+2026-05-14T12:29:13.3475882Z includeif.gitdir:D:/a/oidc-jwks-converter/oidc-jwks-converter/.git/worktrees/*.path
+2026-05-14T12:29:13.3476593Z includeif.gitdir:/github/workspace/.git.path
+2026-05-14T12:29:13.3477127Z includeif.gitdir:/github/workspace/.git/worktrees/*.path
+2026-05-14T12:29:13.3520913Z [command]"C:\Program Files\Git\bin\git.exe" config --local --get-all includeif.gitdir:D:/a/oidc-jwks-converter/oidc-jwks-converter/.git.path
+2026-05-14T12:29:13.3790511Z D:\a\_temp\git-credentials-71e4b1be-1dc8-4a07-90bc-05bc27ce3679.config
+2026-05-14T12:29:13.3836887Z [command]"C:\Program Files\Git\bin\git.exe" config --local --unset includeif.gitdir:D:/a/oidc-jwks-converter/oidc-jwks-converter/.git.path D:\a\_temp\git-credentials-71e4b1be-1dc8-4a07-90bc-05bc27ce3679.config
+2026-05-14T12:29:13.4173165Z [command]"C:\Program Files\Git\bin\git.exe" config --local --get-all includeif.gitdir:D:/a/oidc-jwks-converter/oidc-jwks-converter/.git/worktrees/*.path
+2026-05-14T12:29:13.4434107Z D:\a\_temp\git-credentials-71e4b1be-1dc8-4a07-90bc-05bc27ce3679.config
+2026-05-14T12:29:13.4479597Z [command]"C:\Program Files\Git\bin\git.exe" config --local --unset includeif.gitdir:D:/a/oidc-jwks-converter/oidc-jwks-converter/.git/worktrees/*.path D:\a\_temp\git-credentials-71e4b1be-1dc8-4a07-90bc-05bc27ce3679.config
+2026-05-14T12:29:13.4787307Z [command]"C:\Program Files\Git\bin\git.exe" config --local --get-all includeif.gitdir:/github/workspace/.git.path
+2026-05-14T12:29:13.5058554Z /github/runner_temp/git-credentials-71e4b1be-1dc8-4a07-90bc-05bc27ce3679.config
+2026-05-14T12:29:13.5104256Z [command]"C:\Program Files\Git\bin\git.exe" config --local --unset includeif.gitdir:/github/workspace/.git.path /github/runner_temp/git-credentials-71e4b1be-1dc8-4a07-90bc-05bc27ce3679.config
+2026-05-14T12:29:13.5411685Z [command]"C:\Program Files\Git\bin\git.exe" config --local --get-all includeif.gitdir:/github/workspace/.git/worktrees/*.path
+2026-05-14T12:29:13.5668358Z /github/runner_temp/git-credentials-71e4b1be-1dc8-4a07-90bc-05bc27ce3679.config
+2026-05-14T12:29:13.5719163Z [command]"C:\Program Files\Git\bin\git.exe" config --local --unset includeif.gitdir:/github/workspace/.git/worktrees/*.path /github/runner_temp/git-credentials-71e4b1be-1dc8-4a07-90bc-05bc27ce3679.config
+2026-05-14T12:29:13.6033369Z [command]"C:\Program Files\Git\bin\git.exe" submodule foreach --recursive "git config --local --show-origin --name-only --get-regexp remote.origin.url"
+2026-05-14T12:29:14.1537719Z Removing credentials config 'D:\a\_temp\git-credentials-71e4b1be-1dc8-4a07-90bc-05bc27ce3679.config'
+2026-05-14T12:29:14.1737439Z Cleaning up orphan processes
