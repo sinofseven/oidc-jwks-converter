@@ -1,0 +1,135 @@
+
+<style>
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body { font-family: var(--font-sans); }
+.container { padding: 1.5rem 0; }
+.section { margin-bottom: 2rem; }
+.label { font-size: 12px; font-weight: 500; letter-spacing: 0.06em; text-transform: uppercase; color: var(--color-text-tertiary); margin-bottom: 0.5rem; }
+.bubble { border-radius: var(--border-radius-lg); padding: 1rem 1.25rem; }
+.q-bubble { background: var(--color-background-secondary); border: 0.5px solid var(--color-border-tertiary); }
+.a-bubble { background: var(--color-background-primary); border: 0.5px solid var(--color-border-tertiary); }
+pre { background: var(--color-background-secondary); border: 0.5px solid var(--color-border-tertiary); border-radius: var(--border-radius-md); padding: 0.75rem 1rem; overflow-x: auto; font-family: var(--font-mono); font-size: 13px; line-height: 1.6; color: var(--color-text-primary); margin: 0.75rem 0; }
+code { font-family: var(--font-mono); font-size: 13px; background: var(--color-background-secondary); padding: 1px 5px; border-radius: 4px; color: var(--color-text-primary); }
+p { font-size: 15px; line-height: 1.7; color: var(--color-text-primary); margin-bottom: 0.6rem; }
+h2 { font-size: 16px; font-weight: 500; color: var(--color-text-primary); margin: 1.25rem 0 0.5rem; }
+h3 { font-size: 14px; font-weight: 500; color: var(--color-text-secondary); margin: 1rem 0 0.4rem; }
+ul, ol { padding-left: 1.25rem; }
+li { font-size: 15px; line-height: 1.7; color: var(--color-text-primary); }
+.divider { border: none; border-top: 0.5px solid var(--color-border-tertiary); margin: 1.5rem 0; }
+table { width: 100%; border-collapse: collapse; font-size: 14px; margin: 0.75rem 0; }
+th { text-align: left; padding: 6px 10px; font-weight: 500; color: var(--color-text-secondary); border-bottom: 0.5px solid var(--color-border-tertiary); background: var(--color-background-secondary); }
+td { padding: 6px 10px; border-bottom: 0.5px solid var(--color-border-tertiary); color: var(--color-text-primary); vertical-align: top; }
+.badge { display: inline-block; font-size: 12px; padding: 2px 8px; border-radius: var(--border-radius-md); font-weight: 500; }
+.badge-blue { background: #E6F1FB; color: #0C447C; }
+.badge-teal { background: #E1F5EE; color: #085041; }
+.badge-amber { background: #FAEEDA; color: #633806; }
+@media (prefers-color-scheme: dark) {
+  .badge-blue { background: #0C447C; color: #B5D4F4; }
+  .badge-teal { background: #085041; color: #9FE1CB; }
+  .badge-amber { background: #633806; color: #FAC775; }
+}
+</style>
+
+<div class="container">
+  <h2 class="sr-only" style="position:absolute;width:1px;height:1px;overflow:hidden">Docker Rustビルドキャッシュ Q&A</h2>
+
+  <div class="section">
+    <div class="label">質問</div>
+    <div class="bubble q-bubble">
+      <p>以下のDockerコマンドにキャッシュを効かせることはできますか？Rustの依存関係周りなど。</p>
+      <pre>docker run --rm \
+  -v /home/runner/work/oidc-jwks-converter/oidc-jwks-converter:/workspace \
+  -w /workspace \
+  ghcr.io/rust-cross/rust-musl-cross:arm-unknown-linux-musleabihf \
+  cargo build --release --target arm-unknown-linux-musleabihf</pre>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="label">回答</div>
+    <div class="bubble a-bubble">
+
+      <p>RustのビルドキャッシュをDockerで効かせるには、主に2つのアプローチがあります。</p>
+
+      <h2>1. GitHub Actions cache + ボリュームマウント <span class="badge badge-blue">シンプル・推奨</span></h2>
+      <p><code>~/.cargo/registry</code> と <code>target/</code> をキャッシュする方法です。</p>
+
+      <pre>- name: Cache cargo registry
+  uses: actions/cache@v4
+  with:
+    path: |
+      ~/.cargo/registry
+      ~/.cargo/git
+    key: ${{ runner.os }}-cargo-registry-${{ hashFiles('**/Cargo.lock') }}
+    restore-keys: |
+      ${{ runner.os }}-cargo-registry-
+
+- name: Cache build artifacts
+  uses: actions/cache@v4
+  with:
+    path: target/arm-unknown-linux-musleabihf
+    key: ${{ runner.os }}-musl-arm-${{ hashFiles('**/Cargo.lock') }}-${{ hashFiles('src/**/*.rs') }}
+    restore-keys: |
+      ${{ runner.os }}-musl-arm-${{ hashFiles('**/Cargo.lock') }}-
+      ${{ runner.os }}-musl-arm-
+
+- name: Build
+  run: |
+    docker run --rm \
+      -v /home/runner/work/oidc-jwks-converter/oidc-jwks-converter:/workspace \
+      -v $HOME/.cargo/registry:/root/.cargo/registry \
+      -v $HOME/.cargo/git:/root/.cargo/git \
+      -w /workspace \
+      ghcr.io/rust-cross/rust-musl-cross:arm-unknown-linux-musleabihf \
+      cargo build --release --target arm-unknown-linux-musleabihf</pre>
+
+      <h3>ポイント</h3>
+      <ul>
+        <li><code>~/.cargo/registry</code> をホスト側でキャッシュしてコンテナにマウント → crates.ioからの再ダウンロードを防ぐ</li>
+        <li><code>target/</code> ディレクトリもキャッシュ → インクリメンタルビルドが効く</li>
+        <li><code>target/</code> はサイズが大きくなりがちなので注意</li>
+      </ul>
+
+      <hr class="divider">
+
+      <h2>2. <code>sccache</code> を使う <span class="badge badge-amber">より本格的</span></h2>
+
+      <pre>- name: Install sccache
+  uses: mozilla-actions/sccache-action@v0.0.9
+
+- name: Build
+  env:
+    SCCACHE_GHA_ENABLED: "true"
+    RUSTC_WRAPPER: sccache
+  run: |
+    docker run --rm \
+      -v /home/runner/work/oidc-jwks-converter/oidc-jwks-converter:/workspace \
+      -v $HOME/.cargo/registry:/root/.cargo/registry \
+      -v $HOME/.cargo/git:/root/.cargo/git \
+      -e SCCACHE_GHA_ENABLED=true \
+      -e RUSTC_WRAPPER=/usr/local/bin/sccache \
+      -v $(which sccache):/usr/local/bin/sccache \
+      -w /workspace \
+      ghcr.io/rust-cross/rust-musl-cross:arm-unknown-linux-musleabihf \
+      cargo build --release --target arm-unknown-linux-musleabihf</pre>
+
+      <p>ただし <code>sccache</code> はコンテナ内のバイナリ互換性（musl環境）に注意が必要で、設定が複雑になりがちです。</p>
+
+      <hr class="divider">
+
+      <h2>キャッシュ対象の比較</h2>
+      <table>
+        <thead>
+          <tr><th>キャッシュ対象</th><th>効果</th><th>サイズ</th></tr>
+        </thead>
+        <tbody>
+          <tr><td><code>~/.cargo/registry</code></td><td>依存クレートの再ダウンロード防止</td><td>中（数百MB）</td></tr>
+          <tr><td><code>~/.cargo/git</code></td><td>git依存クレートのキャッシュ</td><td>小</td></tr>
+          <tr><td><code>target/</code></td><td>インクリメンタルビルド</td><td>大（1GB超も）</td></tr>
+        </tbody>
+      </table>
+
+      <p>クロスコンパイル用途ではアプローチ1のシンプルな方が安定しています。<code>target/</code> のキャッシュは初回保存に時間がかかるため、<code>Cargo.lock</code> のハッシュをキーに含めて依存更新時は破棄するのが定石です。</p>
+    </div>
+  </div>
+</div>
