@@ -1,0 +1,382 @@
+﻿2026-05-18T07:10:44.7454213Z Current runner version: '2.334.0'
+2026-05-18T07:10:44.7476758Z ##[group]Runner Image Provisioner
+2026-05-18T07:10:44.7477474Z Hosted Compute Agent
+2026-05-18T07:10:44.7478003Z Version: 20260213.493
+2026-05-18T07:10:44.7478552Z Commit: 5c115507f6dd24b8de37d8bbe0bb4509d0cc0fa3
+2026-05-18T07:10:44.7479161Z Build Date: 2026-02-13T00:28:41Z
+2026-05-18T07:10:44.7479765Z Worker ID: {0897a63e-c592-40b3-b455-2f7ea76f9f3d}
+2026-05-18T07:10:44.7480383Z Azure Region: westus3
+2026-05-18T07:10:44.7480838Z ##[endgroup]
+2026-05-18T07:10:44.7482042Z ##[group]Operating System
+2026-05-18T07:10:44.7482530Z Ubuntu
+2026-05-18T07:10:44.7482955Z 24.04.4
+2026-05-18T07:10:44.7483360Z LTS
+2026-05-18T07:10:44.7483805Z ##[endgroup]
+2026-05-18T07:10:44.7484388Z ##[group]Runner Image
+2026-05-18T07:10:44.7484871Z Image: ubuntu-24.04
+2026-05-18T07:10:44.7485340Z Version: 20260513.135.3
+2026-05-18T07:10:44.7486357Z Included Software: https://github.com/actions/runner-images/blob/ubuntu24/20260513.135/images/ubuntu/Ubuntu2404-Readme.md
+2026-05-18T07:10:44.7487652Z Image Release: https://github.com/actions/runner-images/releases/tag/ubuntu24%2F20260513.135
+2026-05-18T07:10:44.7488426Z ##[endgroup]
+2026-05-18T07:10:44.7489384Z ##[group]GITHUB_TOKEN Permissions
+2026-05-18T07:10:44.7491147Z Contents: read
+2026-05-18T07:10:44.7491562Z Metadata: read
+2026-05-18T07:10:44.7492098Z Packages: read
+2026-05-18T07:10:44.7492506Z ##[endgroup]
+2026-05-18T07:10:44.7494648Z Secret source: Actions
+2026-05-18T07:10:44.7495339Z Prepare workflow directory
+2026-05-18T07:10:44.7904893Z Prepare all required actions
+2026-05-18T07:10:44.7943411Z Getting action download info
+2026-05-18T07:10:45.3160637Z Download action repository 'actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd' (SHA:de0fac2e4500dabe0009e67214ff5f5447ce83dd)
+2026-05-18T07:10:45.4563495Z Download action repository 'actions/cache@27d5ce7f107fe9357f9df03efb73ab90386fccae' (SHA:27d5ce7f107fe9357f9df03efb73ab90386fccae)
+2026-05-18T07:10:45.5570961Z Download action repository 'actions/upload-artifact@043fb46d1a93c77aae656e7c1c64a875d1fc6a0a' (SHA:043fb46d1a93c77aae656e7c1c64a875d1fc6a0a)
+2026-05-18T07:10:45.7405918Z Complete job name: build-linux-arm
+2026-05-18T07:10:45.8116855Z ##[group]Run actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd
+2026-05-18T07:10:45.8117928Z with:
+2026-05-18T07:10:45.8118564Z   repository: sinofseven/oidc-jwks-converter
+2026-05-18T07:10:45.8119468Z   token: ***
+2026-05-18T07:10:45.8119907Z   ssh-strict: true
+2026-05-18T07:10:45.8120509Z   ssh-user: git
+2026-05-18T07:10:45.8121014Z   persist-credentials: true
+2026-05-18T07:10:45.8121543Z   clean: true
+2026-05-18T07:10:45.8122547Z   sparse-checkout-cone-mode: true
+2026-05-18T07:10:45.8123152Z   fetch-depth: 1
+2026-05-18T07:10:45.8123638Z   fetch-tags: false
+2026-05-18T07:10:45.8124298Z   show-progress: true
+2026-05-18T07:10:45.8124841Z   lfs: false
+2026-05-18T07:10:45.8127237Z   submodules: false
+2026-05-18T07:10:45.8129154Z   set-safe-directory: true
+2026-05-18T07:10:45.8130127Z env:
+2026-05-18T07:10:45.8132059Z   BINARY_NAME: oidc-jwks-converter
+2026-05-18T07:10:45.8132863Z   THIRD_PARTY_LICENSE_OUTPUT: THIRD_PARTY_LICENSES.html
+2026-05-18T07:10:45.8133745Z   TARGET: arm-unknown-linux-musleabihf
+2026-05-18T07:10:45.8134497Z ##[endgroup]
+2026-05-18T07:10:45.9271327Z Syncing repository: sinofseven/oidc-jwks-converter
+2026-05-18T07:10:45.9273232Z ##[group]Getting Git version info
+2026-05-18T07:10:45.9274179Z Working directory is '/home/runner/work/oidc-jwks-converter/oidc-jwks-converter'
+2026-05-18T07:10:45.9275364Z [command]/usr/bin/git version
+2026-05-18T07:10:45.9338837Z git version 2.54.0
+2026-05-18T07:10:45.9358638Z ##[endgroup]
+2026-05-18T07:10:45.9372187Z Temporarily overriding HOME='/home/runner/work/_temp/63876b3b-49ea-4a1b-9fb6-ed96adb0c8a1' before making global git config changes
+2026-05-18T07:10:45.9373539Z Adding repository directory to the temporary git global config as a safe directory
+2026-05-18T07:10:45.9378212Z [command]/usr/bin/git config --global --add safe.directory /home/runner/work/oidc-jwks-converter/oidc-jwks-converter
+2026-05-18T07:10:45.9428253Z Deleting the contents of '/home/runner/work/oidc-jwks-converter/oidc-jwks-converter'
+2026-05-18T07:10:45.9431874Z ##[group]Initializing the repository
+2026-05-18T07:10:45.9437668Z [command]/usr/bin/git init /home/runner/work/oidc-jwks-converter/oidc-jwks-converter
+2026-05-18T07:10:45.9556780Z hint: Using 'master' as the name for the initial branch. This default branch name
+2026-05-18T07:10:45.9558180Z hint: will change to "main" in Git 3.0. To configure the initial branch name
+2026-05-18T07:10:45.9559386Z hint: to use in all of your new repositories, which will suppress this warning,
+2026-05-18T07:10:45.9560885Z hint: call:
+2026-05-18T07:10:45.9561707Z hint:
+2026-05-18T07:10:45.9562803Z hint: 	git config --global init.defaultBranch <name>
+2026-05-18T07:10:45.9564184Z hint:
+2026-05-18T07:10:45.9565318Z hint: Names commonly chosen instead of 'master' are 'main', 'trunk' and
+2026-05-18T07:10:45.9567139Z hint: 'development'. The just-created branch can be renamed via this command:
+2026-05-18T07:10:45.9568842Z hint:
+2026-05-18T07:10:45.9569739Z hint: 	git branch -m <name>
+2026-05-18T07:10:45.9570684Z hint:
+2026-05-18T07:10:45.9571937Z hint: Disable this message with "git config set advice.defaultBranchName false"
+2026-05-18T07:10:45.9574571Z Initialized empty Git repository in /home/runner/work/oidc-jwks-converter/oidc-jwks-converter/.git/
+2026-05-18T07:10:45.9578331Z [command]/usr/bin/git remote add origin https://github.com/sinofseven/oidc-jwks-converter
+2026-05-18T07:10:45.9617492Z ##[endgroup]
+2026-05-18T07:10:45.9619038Z ##[group]Disabling automatic garbage collection
+2026-05-18T07:10:45.9621158Z [command]/usr/bin/git config --local gc.auto 0
+2026-05-18T07:10:45.9646791Z ##[endgroup]
+2026-05-18T07:10:45.9648256Z ##[group]Setting up auth
+2026-05-18T07:10:45.9649414Z Removing SSH command configuration
+2026-05-18T07:10:45.9654626Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+2026-05-18T07:10:45.9685644Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+2026-05-18T07:10:46.0012912Z Removing HTTP extra header
+2026-05-18T07:10:46.0019299Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+2026-05-18T07:10:46.0047512Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+2026-05-18T07:10:46.0226420Z Removing includeIf entries pointing to credentials config files
+2026-05-18T07:10:46.0233386Z [command]/usr/bin/git config --local --name-only --get-regexp ^includeIf\.gitdir:
+2026-05-18T07:10:46.0262629Z [command]/usr/bin/git submodule foreach --recursive git config --local --show-origin --name-only --get-regexp remote.origin.url
+2026-05-18T07:10:46.0443809Z [command]/usr/bin/git config --file /home/runner/work/_temp/git-credentials-a2c7256a-74a4-4a2d-9dd4-7dfe8f1d1a1b.config http.https://github.com/.extraheader AUTHORIZATION: basic ***
+2026-05-18T07:10:46.0477015Z [command]/usr/bin/git config --local includeIf.gitdir:/home/runner/work/oidc-jwks-converter/oidc-jwks-converter/.git.path /home/runner/work/_temp/git-credentials-a2c7256a-74a4-4a2d-9dd4-7dfe8f1d1a1b.config
+2026-05-18T07:10:46.0506125Z [command]/usr/bin/git config --local includeIf.gitdir:/home/runner/work/oidc-jwks-converter/oidc-jwks-converter/.git/worktrees/*.path /home/runner/work/_temp/git-credentials-a2c7256a-74a4-4a2d-9dd4-7dfe8f1d1a1b.config
+2026-05-18T07:10:46.0550903Z [command]/usr/bin/git config --local includeIf.gitdir:/github/workspace/.git.path /github/runner_temp/git-credentials-a2c7256a-74a4-4a2d-9dd4-7dfe8f1d1a1b.config
+2026-05-18T07:10:46.0578731Z [command]/usr/bin/git config --local includeIf.gitdir:/github/workspace/.git/worktrees/*.path /github/runner_temp/git-credentials-a2c7256a-74a4-4a2d-9dd4-7dfe8f1d1a1b.config
+2026-05-18T07:10:46.0599309Z ##[endgroup]
+2026-05-18T07:10:46.0600046Z ##[group]Fetching the repository
+2026-05-18T07:10:46.0607698Z [command]/usr/bin/git -c protocol.version=2 fetch --no-tags --prune --no-recurse-submodules --depth=1 origin +3bfc70c5aa25d1d37197b473486857327bbc2485:refs/remotes/origin/master
+2026-05-18T07:10:46.6631451Z From https://github.com/sinofseven/oidc-jwks-converter
+2026-05-18T07:10:46.6633738Z  * [new ref]         3bfc70c5aa25d1d37197b473486857327bbc2485 -> origin/master
+2026-05-18T07:10:46.6672160Z [command]/usr/bin/git branch --list --remote origin/master
+2026-05-18T07:10:46.6696802Z   origin/master
+2026-05-18T07:10:46.6705572Z [command]/usr/bin/git rev-parse refs/remotes/origin/master
+2026-05-18T07:10:46.6724789Z 3bfc70c5aa25d1d37197b473486857327bbc2485
+2026-05-18T07:10:46.6729114Z ##[endgroup]
+2026-05-18T07:10:46.6731705Z ##[group]Determining the checkout info
+2026-05-18T07:10:46.6734507Z ##[endgroup]
+2026-05-18T07:10:46.6735824Z [command]/usr/bin/git sparse-checkout disable
+2026-05-18T07:10:46.6775887Z [command]/usr/bin/git config --local --unset-all extensions.worktreeConfig
+2026-05-18T07:10:46.6799999Z ##[group]Checking out the ref
+2026-05-18T07:10:46.6803152Z [command]/usr/bin/git checkout --progress --force -B master refs/remotes/origin/master
+2026-05-18T07:10:46.6882075Z Reset branch 'master'
+2026-05-18T07:10:46.6883255Z branch 'master' set up to track 'origin/master'.
+2026-05-18T07:10:46.6889963Z ##[endgroup]
+2026-05-18T07:10:46.6925127Z [command]/usr/bin/git log -1 --format=%H
+2026-05-18T07:10:46.6945217Z 3bfc70c5aa25d1d37197b473486857327bbc2485
+2026-05-18T07:10:46.8039710Z ##[group]Run actions/cache@27d5ce7f107fe9357f9df03efb73ab90386fccae
+2026-05-18T07:10:46.8041145Z with:
+2026-05-18T07:10:46.8041947Z   path: ~/.cargo/registry
+~/.cargo/git
+
+2026-05-18T07:10:46.8044051Z   key: Linux-cargo-registry-0f948577a233cea7995104e8a5a4bdc17836db31229acbca6e1e7ded66028fae
+2026-05-18T07:10:46.8046108Z   restore-keys: Linux-cargo-registry-
+
+2026-05-18T07:10:46.8047242Z   enableCrossOsArchive: false
+2026-05-18T07:10:46.8048303Z   fail-on-cache-miss: false
+2026-05-18T07:10:46.8049244Z   lookup-only: false
+2026-05-18T07:10:46.8050092Z   save-always: false
+2026-05-18T07:10:46.8050909Z env:
+2026-05-18T07:10:46.8051673Z   BINARY_NAME: oidc-jwks-converter
+2026-05-18T07:10:46.8052910Z   THIRD_PARTY_LICENSE_OUTPUT: THIRD_PARTY_LICENSES.html
+2026-05-18T07:10:46.8054328Z   TARGET: arm-unknown-linux-musleabihf
+2026-05-18T07:10:46.8055414Z ##[endgroup]
+2026-05-18T07:10:47.1528432Z Cache hit for: Linux-cargo-registry-0f948577a233cea7995104e8a5a4bdc17836db31229acbca6e1e7ded66028fae
+2026-05-18T07:10:48.4070161Z Received 33554432 of 41017165 (81.8%), 32.0 MBs/sec
+2026-05-18T07:10:48.4693297Z Received 41017165 of 41017165 (100.0%), 36.8 MBs/sec
+2026-05-18T07:10:48.4694228Z Cache Size: ~39 MB (41017165 B)
+2026-05-18T07:10:48.4725707Z [command]/usr/bin/tar -xf /home/runner/work/_temp/6fe083cb-1fa2-47bf-ad6e-7774ba17fed4/cache.tzst -P -C /home/runner/work/oidc-jwks-converter/oidc-jwks-converter --use-compress-program unzstd
+2026-05-18T07:10:48.8042503Z Cache restored successfully
+2026-05-18T07:10:48.8141168Z Cache restored from key: Linux-cargo-registry-0f948577a233cea7995104e8a5a4bdc17836db31229acbca6e1e7ded66028fae
+2026-05-18T07:10:49.0310146Z ##[group]Run actions/cache@27d5ce7f107fe9357f9df03efb73ab90386fccae
+2026-05-18T07:10:49.0310505Z with:
+2026-05-18T07:10:49.0310715Z   path: target/arm-unknown-linux-musleabihf
+2026-05-18T07:10:49.0311434Z   key: Linux-musl-arm-0f948577a233cea7995104e8a5a4bdc17836db31229acbca6e1e7ded66028fae-560fd939e75a911072667386b9aa09be7bf6b43d69208cad9516454cfec9a022
+2026-05-18T07:10:49.0312385Z   restore-keys: Linux-musl-arm-0f948577a233cea7995104e8a5a4bdc17836db31229acbca6e1e7ded66028fae-
+Linux-musl-arm-
+
+2026-05-18T07:10:49.0312921Z   enableCrossOsArchive: false
+2026-05-18T07:10:49.0313148Z   fail-on-cache-miss: false
+2026-05-18T07:10:49.0313368Z   lookup-only: false
+2026-05-18T07:10:49.0313570Z   save-always: false
+2026-05-18T07:10:49.0313769Z env:
+2026-05-18T07:10:49.0314176Z   BINARY_NAME: oidc-jwks-converter
+2026-05-18T07:10:49.0314756Z   THIRD_PARTY_LICENSE_OUTPUT: THIRD_PARTY_LICENSES.html
+2026-05-18T07:10:49.0315059Z   TARGET: arm-unknown-linux-musleabihf
+2026-05-18T07:10:49.0315369Z ##[endgroup]
+2026-05-18T07:10:49.4112885Z Cache hit for: Linux-musl-arm-0f948577a233cea7995104e8a5a4bdc17836db31229acbca6e1e7ded66028fae-560fd939e75a911072667386b9aa09be7bf6b43d69208cad9516454cfec9a022
+2026-05-18T07:10:50.6634906Z Received 8388608 of 80294754 (10.4%), 8.0 MBs/sec
+2026-05-18T07:10:51.1602082Z Received 80294754 of 80294754 (100.0%), 51.1 MBs/sec
+2026-05-18T07:10:51.1604448Z Cache Size: ~77 MB (80294754 B)
+2026-05-18T07:10:51.1645257Z [command]/usr/bin/tar -xf /home/runner/work/_temp/5cd84f00-9d78-40df-9b3c-60ef01f13fbc/cache.tzst -P -C /home/runner/work/oidc-jwks-converter/oidc-jwks-converter --use-compress-program unzstd
+2026-05-18T07:10:51.4843007Z Cache restored successfully
+2026-05-18T07:10:51.4948532Z Cache restored from key: Linux-musl-arm-0f948577a233cea7995104e8a5a4bdc17836db31229acbca6e1e7ded66028fae-560fd939e75a911072667386b9aa09be7bf6b43d69208cad9516454cfec9a022
+2026-05-18T07:10:51.5047157Z ##[group]Run docker run --rm \
+2026-05-18T07:10:51.5047562Z [36;1mdocker run --rm \[0m
+2026-05-18T07:10:51.5048038Z [36;1m  -v /home/runner/work/oidc-jwks-converter/oidc-jwks-converter:/workspace \[0m
+2026-05-18T07:10:51.5048546Z [36;1m  -v $HOME/.cargo/registry:/root/.cargo/registry \[0m
+2026-05-18T07:10:51.5048861Z [36;1m  -v $HOME/.cargo/git:/root/.cargo/git \[0m
+2026-05-18T07:10:51.5049145Z [36;1m  -w /workspace \[0m
+2026-05-18T07:10:51.5049487Z [36;1m  ghcr.io/rust-cross/rust-musl-cross:arm-unknown-linux-musleabihf \[0m
+2026-05-18T07:10:51.5049933Z [36;1m  cargo build --release --target arm-unknown-linux-musleabihf[0m
+2026-05-18T07:10:51.5075217Z shell: /usr/bin/bash -e {0}
+2026-05-18T07:10:51.5075489Z env:
+2026-05-18T07:10:51.5075685Z   BINARY_NAME: oidc-jwks-converter
+2026-05-18T07:10:51.5075985Z   THIRD_PARTY_LICENSE_OUTPUT: THIRD_PARTY_LICENSES.html
+2026-05-18T07:10:51.5076311Z   TARGET: arm-unknown-linux-musleabihf
+2026-05-18T07:10:51.5076555Z ##[endgroup]
+2026-05-18T07:10:51.6228255Z Unable to find image 'ghcr.io/rust-cross/rust-musl-cross:arm-unknown-linux-musleabihf' locally
+2026-05-18T07:10:52.5867599Z arm-unknown-linux-musleabihf: Pulling from rust-cross/rust-musl-cross
+2026-05-18T07:10:52.8458780Z 42041b00303d: Pulling fs layer
+2026-05-18T07:10:52.8459225Z 3995a6649905: Pulling fs layer
+2026-05-18T07:10:52.8459593Z bc27975738a7: Pulling fs layer
+2026-05-18T07:10:52.8459918Z a2f98f2e0258: Pulling fs layer
+2026-05-18T07:10:52.8460136Z f9719bb1465d: Pulling fs layer
+2026-05-18T07:10:52.8460341Z 710588233211: Pulling fs layer
+2026-05-18T07:10:52.8460546Z de7858605b4b: Pulling fs layer
+2026-05-18T07:10:52.8460761Z 4f4fb700ef54: Pulling fs layer
+2026-05-18T07:10:52.8460970Z 75497ff80c86: Pulling fs layer
+2026-05-18T07:10:52.8461178Z 627f26874f64: Pulling fs layer
+2026-05-18T07:10:52.8461383Z 685675a2105f: Pulling fs layer
+2026-05-18T07:10:52.8461589Z 3a0941597971: Pulling fs layer
+2026-05-18T07:10:52.8461823Z 12b5de5d000c: Pulling fs layer
+2026-05-18T07:10:52.8462045Z 053727d1494b: Pulling fs layer
+2026-05-18T07:10:52.8462261Z 627f26874f64: Waiting
+2026-05-18T07:10:52.8462448Z 685675a2105f: Waiting
+2026-05-18T07:10:52.8462636Z 3a0941597971: Waiting
+2026-05-18T07:10:52.8462821Z 12b5de5d000c: Waiting
+2026-05-18T07:10:52.8462992Z f9719bb1465d: Waiting
+2026-05-18T07:10:52.8463172Z a2f98f2e0258: Waiting
+2026-05-18T07:10:52.8463347Z 053727d1494b: Waiting
+2026-05-18T07:10:52.8463652Z 710588233211: Waiting
+2026-05-18T07:10:52.8463992Z de7858605b4b: Waiting
+2026-05-18T07:10:52.8464256Z 4f4fb700ef54: Waiting
+2026-05-18T07:10:52.8464433Z 75497ff80c86: Waiting
+2026-05-18T07:10:53.2702971Z bc27975738a7: Verifying Checksum
+2026-05-18T07:10:53.2703489Z bc27975738a7: Download complete
+2026-05-18T07:10:53.6314491Z 42041b00303d: Verifying Checksum
+2026-05-18T07:10:53.6314946Z 42041b00303d: Download complete
+2026-05-18T07:10:53.6583662Z a2f98f2e0258: Download complete
+2026-05-18T07:10:53.9556180Z f9719bb1465d: Verifying Checksum
+2026-05-18T07:10:53.9559925Z f9719bb1465d: Download complete
+2026-05-18T07:10:54.3788031Z de7858605b4b: Verifying Checksum
+2026-05-18T07:10:54.3788386Z de7858605b4b: Download complete
+2026-05-18T07:10:54.5496537Z 42041b00303d: Pull complete
+2026-05-18T07:10:54.7639905Z 4f4fb700ef54: Verifying Checksum
+2026-05-18T07:10:54.7640654Z 4f4fb700ef54: Download complete
+2026-05-18T07:10:54.8979756Z 710588233211: Verifying Checksum
+2026-05-18T07:10:54.8980097Z 710588233211: Download complete
+2026-05-18T07:10:55.0813214Z 75497ff80c86: Download complete
+2026-05-18T07:10:55.4233025Z 685675a2105f: Verifying Checksum
+2026-05-18T07:10:55.4233569Z 685675a2105f: Download complete
+2026-05-18T07:10:55.7640482Z 3a0941597971: Download complete
+2026-05-18T07:10:56.0598276Z 12b5de5d000c: Verifying Checksum
+2026-05-18T07:10:56.0598734Z 12b5de5d000c: Download complete
+2026-05-18T07:10:56.4007083Z 053727d1494b: Verifying Checksum
+2026-05-18T07:10:56.4007747Z 053727d1494b: Download complete
+2026-05-18T07:10:57.5728111Z 3995a6649905: Verifying Checksum
+2026-05-18T07:10:57.5731808Z 3995a6649905: Download complete
+2026-05-18T07:10:57.9109810Z 627f26874f64: Download complete
+2026-05-18T07:11:09.4378542Z 3995a6649905: Pull complete
+2026-05-18T07:11:09.4502272Z bc27975738a7: Pull complete
+2026-05-18T07:11:09.4705664Z a2f98f2e0258: Pull complete
+2026-05-18T07:11:09.4844826Z f9719bb1465d: Pull complete
+2026-05-18T07:11:10.9213394Z 710588233211: Pull complete
+2026-05-18T07:11:11.1895329Z de7858605b4b: Pull complete
+2026-05-18T07:11:11.1983423Z 4f4fb700ef54: Pull complete
+2026-05-18T07:11:11.2134760Z 75497ff80c86: Pull complete
+2026-05-18T07:11:14.3802331Z 627f26874f64: Pull complete
+2026-05-18T07:11:15.9330832Z 685675a2105f: Pull complete
+2026-05-18T07:11:15.9423198Z 3a0941597971: Pull complete
+2026-05-18T07:11:15.9539301Z 12b5de5d000c: Pull complete
+2026-05-18T07:11:15.9644283Z 053727d1494b: Pull complete
+2026-05-18T07:11:15.9796172Z Digest: sha256:1fdc7d3f8bef533a7a470b14ac048aed2ede649ce758c07e14de242db748132c
+2026-05-18T07:11:15.9808159Z Status: Downloaded newer image for ghcr.io/rust-cross/rust-musl-cross:arm-unknown-linux-musleabihf
+2026-05-18T07:11:16.6414908Z    Compiling libc v0.2.186
+2026-05-18T07:11:16.6415513Z    Compiling proc-macro2 v1.0.106
+2026-05-18T07:11:16.6416067Z    Compiling unicode-ident v1.0.24
+2026-05-18T07:11:16.6416791Z    Compiling quote v1.0.45
+2026-05-18T07:11:16.6985696Z    Compiling version_check v0.9.5
+2026-05-18T07:11:16.9021866Z    Compiling generic-array v0.14.9
+2026-05-18T07:11:17.6164389Z    Compiling find-msvc-tools v0.1.9
+2026-05-18T07:11:17.6699990Z    Compiling syn v2.0.117
+2026-05-18T07:11:17.6929534Z    Compiling shlex v1.3.0
+2026-05-18T07:11:17.7420234Z    Compiling jobserver v0.1.34
+2026-05-18T07:11:17.7876266Z    Compiling getrandom v0.2.17
+2026-05-18T07:11:17.8125745Z    Compiling fs_extra v1.3.0
+2026-05-18T07:11:17.9610274Z    Compiling cc v1.2.62
+2026-05-18T07:11:18.0190486Z    Compiling rand_core v0.6.4
+2026-05-18T07:11:18.0223346Z    Compiling dunce v1.0.5
+2026-05-18T07:11:18.0595411Z    Compiling parking_lot_core v0.9.12
+2026-05-18T07:11:18.1680121Z    Compiling block-buffer v0.10.4
+2026-05-18T07:11:18.2044623Z    Compiling crypto-common v0.1.6
+2026-05-18T07:11:18.2746031Z    Compiling digest v0.10.7
+2026-05-18T07:11:18.5117091Z    Compiling errno v0.3.14
+2026-05-18T07:11:18.5208977Z    Compiling aws-lc-rs v1.17.0
+2026-05-18T07:11:18.6076508Z    Compiling signal-hook-registry v1.4.8
+2026-05-18T07:11:18.6553730Z    Compiling parking_lot v0.12.5
+2026-05-18T07:11:19.0757041Z    Compiling cmake v0.1.58
+2026-05-18T07:11:19.3961488Z    Compiling mio v1.2.0
+2026-05-18T07:11:19.4575682Z    Compiling aws-lc-sys v0.41.0
+2026-05-18T07:11:19.6466636Z    Compiling socket2 v0.6.3
+2026-05-18T07:11:20.0573505Z    Compiling icu_normalizer_data v2.2.0
+2026-05-18T07:11:20.1330219Z    Compiling icu_properties_data v2.2.0
+2026-05-18T07:11:20.2162804Z    Compiling zerocopy v0.8.48
+2026-05-18T07:11:20.4197410Z    Compiling autocfg v1.5.0
+2026-05-18T07:11:20.6091901Z    Compiling libm v0.2.16
+2026-05-18T07:11:20.7188371Z    Compiling num-traits v0.2.19
+2026-05-18T07:11:20.8073296Z    Compiling httparse v1.10.1
+2026-05-18T07:11:20.8646892Z    Compiling rustls v0.23.40
+2026-05-18T07:11:20.9291660Z    Compiling synstructure v0.13.2
+2026-05-18T07:11:22.3496793Z    Compiling zerofrom-derive v0.1.7
+2026-05-18T07:11:23.3259394Z    Compiling yoke-derive v0.8.2
+2026-05-18T07:11:23.3422099Z    Compiling zerofrom v0.1.8
+2026-05-18T07:11:23.4155123Z    Compiling zerovec-derive v0.11.3
+2026-05-18T07:11:24.1123097Z    Compiling yoke v0.8.2
+2026-05-18T07:11:24.2572580Z    Compiling displaydoc v0.2.5
+2026-05-18T07:11:24.2678797Z    Compiling zerovec v0.11.6
+2026-05-18T07:11:24.4949455Z    Compiling tokio-macros v2.7.0
+2026-05-18T07:11:24.7057805Z    Compiling zerotrie v0.2.4
+2026-05-18T07:11:24.8668015Z    Compiling tinystr v0.8.3
+2026-05-18T07:11:24.9678040Z    Compiling potential_utf v0.1.5
+2026-05-18T07:11:25.0161649Z    Compiling icu_locale_core v2.2.0
+2026-05-18T07:11:25.0519384Z    Compiling icu_collections v2.2.0
+2026-05-18T07:11:25.0658948Z    Compiling tokio v1.52.3
+2026-05-18T07:11:25.6788527Z    Compiling ff v0.13.1
+2026-05-18T07:11:25.7594656Z    Compiling serde_core v1.0.228
+2026-05-18T07:11:25.9042923Z    Compiling icu_provider v2.2.0
+2026-05-18T07:11:26.4855254Z    Compiling icu_properties v2.2.0
+2026-05-18T07:11:28.2435400Z    Compiling icu_normalizer v2.2.0
+2026-05-18T07:11:28.2846848Z    Compiling sec1 v0.7.3
+2026-05-18T07:11:29.1028916Z    Compiling idna_adapter v1.2.2
+2026-05-18T07:11:29.1642597Z    Compiling group v0.13.0
+2026-05-18T07:11:29.2683261Z    Compiling ppv-lite86 v0.2.21
+2026-05-18T07:11:29.9544170Z    Compiling crypto-bigint v0.5.5
+2026-05-18T07:11:30.3102178Z    Compiling zmij v1.0.21
+2026-05-18T07:11:30.4351169Z    Compiling hyper v1.9.0
+2026-05-18T07:11:32.8842299Z    Compiling elliptic-curve v0.13.8
+2026-05-18T07:11:33.2250385Z    Compiling num-integer v0.1.46
+2026-05-18T07:11:33.7164723Z    Compiling rand_chacha v0.3.1
+2026-05-18T07:11:33.7236145Z    Compiling idna v1.1.0
+2026-05-18T07:11:36.1437931Z    Compiling hmac v0.12.1
+2026-05-18T07:11:36.2406036Z    Compiling signature v2.2.0
+2026-05-18T07:11:36.3266311Z    Compiling num-bigint-dig v0.8.6
+2026-05-18T07:11:36.3913692Z    Compiling serde v1.0.228
+2026-05-18T07:11:36.5400905Z    Compiling serde_json v1.0.149
+2026-05-18T07:11:36.6216826Z    Compiling hyper-util v0.1.20
+2026-05-18T07:11:37.4697206Z    Compiling tower v0.5.3
+2026-05-18T07:11:38.0206624Z    Compiling rfc6979 v0.4.0
+2026-05-18T07:11:38.0983547Z    Compiling url v2.5.8
+2026-05-18T07:11:39.2710862Z    Compiling rand v0.8.6
+2026-05-18T07:11:39.4921477Z    Compiling num-iter v0.1.45
+2026-05-18T07:11:39.7676143Z    Compiling serde_derive v1.0.228
+2026-05-18T07:11:39.7851613Z    Compiling anyhow v1.0.102
+2026-05-18T07:11:39.9438589Z    Compiling thiserror v2.0.18
+2026-05-18T07:11:40.1129877Z    Compiling heck v0.5.0
+2026-05-18T07:11:40.2214932Z    Compiling clap_derive v4.6.1
+2026-05-18T07:11:41.8412453Z    Compiling tower-http v0.6.10
+2026-05-18T07:11:43.1200206Z    Compiling ecdsa v0.16.9
+2026-05-18T07:11:43.7362699Z    Compiling primeorder v0.13.6
+2026-05-18T07:11:43.7995480Z    Compiling thiserror-impl v2.0.18
+2026-05-18T07:11:43.9110697Z    Compiling sha2 v0.10.9
+2026-05-18T07:11:44.7482393Z    Compiling p256 v0.13.2
+2026-05-18T07:11:45.0398344Z    Compiling rsa v0.9.10
+2026-05-18T07:11:46.2569770Z    Compiling clap v4.6.1
+2026-05-18T07:12:14.4786579Z    Compiling rustls-webpki v0.103.13
+2026-05-18T07:12:18.0333164Z    Compiling tokio-rustls v0.26.4
+2026-05-18T07:12:18.0334051Z    Compiling rustls-platform-verifier v0.7.0
+2026-05-18T07:12:18.2822305Z    Compiling hyper-rustls v0.27.9
+2026-05-18T07:12:18.5658883Z    Compiling reqwest v0.13.3
+2026-05-18T07:12:28.0025716Z    Compiling oidc-jwks-converter v0.1.0 (/workspace)
+2026-05-18T07:12:29.9565325Z     Finished `release` profile [optimized] target(s) in 1m 13s
+2026-05-18T07:12:30.5215641Z Post job cleanup.
+2026-05-18T07:12:30.6495638Z Cache hit occurred on the primary key Linux-musl-arm-0f948577a233cea7995104e8a5a4bdc17836db31229acbca6e1e7ded66028fae-560fd939e75a911072667386b9aa09be7bf6b43d69208cad9516454cfec9a022, not saving cache.
+2026-05-18T07:12:30.8661987Z Post job cleanup.
+2026-05-18T07:12:31.0071051Z Cache hit occurred on the primary key Linux-cargo-registry-0f948577a233cea7995104e8a5a4bdc17836db31229acbca6e1e7ded66028fae, not saving cache.
+2026-05-18T07:12:31.0252735Z Post job cleanup.
+2026-05-18T07:12:31.1067180Z [command]/usr/bin/git version
+2026-05-18T07:12:31.1104324Z git version 2.54.0
+2026-05-18T07:12:31.1140886Z Temporarily overriding HOME='/home/runner/work/_temp/89ce0490-a56f-43c8-9d22-93e678b0095f' before making global git config changes
+2026-05-18T07:12:31.1142093Z Adding repository directory to the temporary git global config as a safe directory
+2026-05-18T07:12:31.1147318Z [command]/usr/bin/git config --global --add safe.directory /home/runner/work/oidc-jwks-converter/oidc-jwks-converter
+2026-05-18T07:12:31.1174303Z Removing SSH command configuration
+2026-05-18T07:12:31.1180583Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+2026-05-18T07:12:31.1209804Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+2026-05-18T07:12:31.1383249Z Removing HTTP extra header
+2026-05-18T07:12:31.1389176Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+2026-05-18T07:12:31.1418194Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+2026-05-18T07:12:31.1586897Z Removing includeIf entries pointing to credentials config files
+2026-05-18T07:12:31.1594309Z [command]/usr/bin/git config --local --name-only --get-regexp ^includeIf\.gitdir:
+2026-05-18T07:12:31.1621075Z includeif.gitdir:/home/runner/work/oidc-jwks-converter/oidc-jwks-converter/.git.path
+2026-05-18T07:12:31.1621820Z includeif.gitdir:/home/runner/work/oidc-jwks-converter/oidc-jwks-converter/.git/worktrees/*.path
+2026-05-18T07:12:31.1622284Z includeif.gitdir:/github/workspace/.git.path
+2026-05-18T07:12:31.1622617Z includeif.gitdir:/github/workspace/.git/worktrees/*.path
+2026-05-18T07:12:31.1631819Z [command]/usr/bin/git config --local --get-all includeif.gitdir:/home/runner/work/oidc-jwks-converter/oidc-jwks-converter/.git.path
+2026-05-18T07:12:31.1652285Z /home/runner/work/_temp/git-credentials-a2c7256a-74a4-4a2d-9dd4-7dfe8f1d1a1b.config
+2026-05-18T07:12:31.1662945Z [command]/usr/bin/git config --local --unset includeif.gitdir:/home/runner/work/oidc-jwks-converter/oidc-jwks-converter/.git.path /home/runner/work/_temp/git-credentials-a2c7256a-74a4-4a2d-9dd4-7dfe8f1d1a1b.config
+2026-05-18T07:12:31.1691178Z [command]/usr/bin/git config --local --get-all includeif.gitdir:/home/runner/work/oidc-jwks-converter/oidc-jwks-converter/.git/worktrees/*.path
+2026-05-18T07:12:31.1708669Z /home/runner/work/_temp/git-credentials-a2c7256a-74a4-4a2d-9dd4-7dfe8f1d1a1b.config
+2026-05-18T07:12:31.1717421Z [command]/usr/bin/git config --local --unset includeif.gitdir:/home/runner/work/oidc-jwks-converter/oidc-jwks-converter/.git/worktrees/*.path /home/runner/work/_temp/git-credentials-a2c7256a-74a4-4a2d-9dd4-7dfe8f1d1a1b.config
+2026-05-18T07:12:31.1742296Z [command]/usr/bin/git config --local --get-all includeif.gitdir:/github/workspace/.git.path
+2026-05-18T07:12:31.1759220Z /github/runner_temp/git-credentials-a2c7256a-74a4-4a2d-9dd4-7dfe8f1d1a1b.config
+2026-05-18T07:12:31.1765558Z [command]/usr/bin/git config --local --unset includeif.gitdir:/github/workspace/.git.path /github/runner_temp/git-credentials-a2c7256a-74a4-4a2d-9dd4-7dfe8f1d1a1b.config
+2026-05-18T07:12:31.1790030Z [command]/usr/bin/git config --local --get-all includeif.gitdir:/github/workspace/.git/worktrees/*.path
+2026-05-18T07:12:31.1807708Z /github/runner_temp/git-credentials-a2c7256a-74a4-4a2d-9dd4-7dfe8f1d1a1b.config
+2026-05-18T07:12:31.1816088Z [command]/usr/bin/git config --local --unset includeif.gitdir:/github/workspace/.git/worktrees/*.path /github/runner_temp/git-credentials-a2c7256a-74a4-4a2d-9dd4-7dfe8f1d1a1b.config
+2026-05-18T07:12:31.1843619Z [command]/usr/bin/git submodule foreach --recursive git config --local --show-origin --name-only --get-regexp remote.origin.url
+2026-05-18T07:12:31.2010598Z Removing credentials config '/home/runner/work/_temp/git-credentials-a2c7256a-74a4-4a2d-9dd4-7dfe8f1d1a1b.config'
+2026-05-18T07:12:31.2131028Z Cleaning up orphan processes

@@ -1,0 +1,293 @@
+﻿2026-05-18T07:38:30.0577802Z Current runner version: '2.334.0'
+2026-05-18T07:38:30.0603416Z ##[group]Runner Image Provisioner
+2026-05-18T07:38:30.0604272Z Hosted Compute Agent
+2026-05-18T07:38:30.0604970Z Version: 20260213.493
+2026-05-18T07:38:30.0605610Z Commit: 5c115507f6dd24b8de37d8bbe0bb4509d0cc0fa3
+2026-05-18T07:38:30.0606388Z Build Date: 2026-02-13T00:28:41Z
+2026-05-18T07:38:30.0607120Z Worker ID: {9bfdeaa7-6060-42c5-ad45-8788ef63a30d}
+2026-05-18T07:38:30.0607896Z Azure Region: eastus2
+2026-05-18T07:38:30.0608425Z ##[endgroup]
+2026-05-18T07:38:30.0610256Z ##[group]Operating System
+2026-05-18T07:38:30.0610848Z Ubuntu
+2026-05-18T07:38:30.0611347Z 24.04.4
+2026-05-18T07:38:30.0611854Z LTS
+2026-05-18T07:38:30.0612673Z ##[endgroup]
+2026-05-18T07:38:30.0613172Z ##[group]Runner Image
+2026-05-18T07:38:30.0613835Z Image: ubuntu-24.04
+2026-05-18T07:38:30.0614455Z Version: 20260513.135.3
+2026-05-18T07:38:30.0615670Z Included Software: https://github.com/actions/runner-images/blob/ubuntu24/20260513.135/images/ubuntu/Ubuntu2404-Readme.md
+2026-05-18T07:38:30.0617287Z Image Release: https://github.com/actions/runner-images/releases/tag/ubuntu24%2F20260513.135
+2026-05-18T07:38:30.0618245Z ##[endgroup]
+2026-05-18T07:38:30.0619389Z ##[group]GITHUB_TOKEN Permissions
+2026-05-18T07:38:30.0621521Z Contents: read
+2026-05-18T07:38:30.0622111Z Metadata: read
+2026-05-18T07:38:30.0622872Z Packages: read
+2026-05-18T07:38:30.0623358Z ##[endgroup]
+2026-05-18T07:38:30.0625820Z Secret source: Actions
+2026-05-18T07:38:30.0626954Z Prepare workflow directory
+2026-05-18T07:38:30.1012527Z Prepare all required actions
+2026-05-18T07:38:30.1055696Z Getting action download info
+2026-05-18T07:38:30.5070733Z Download action repository 'actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd' (SHA:de0fac2e4500dabe0009e67214ff5f5447ce83dd)
+2026-05-18T07:38:30.6623371Z Download action repository 'actions/cache@27d5ce7f107fe9357f9df03efb73ab90386fccae' (SHA:27d5ce7f107fe9357f9df03efb73ab90386fccae)
+2026-05-18T07:38:30.8324606Z Download action repository 'actions/upload-artifact@043fb46d1a93c77aae656e7c1c64a875d1fc6a0a' (SHA:043fb46d1a93c77aae656e7c1c64a875d1fc6a0a)
+2026-05-18T07:38:31.0657800Z Complete job name: build-linux-arm
+2026-05-18T07:38:31.1377413Z ##[group]Run actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd
+2026-05-18T07:38:31.1378459Z with:
+2026-05-18T07:38:31.1378920Z   repository: sinofseven/oidc-jwks-converter
+2026-05-18T07:38:31.1379694Z   token: ***
+2026-05-18T07:38:31.1380129Z   ssh-strict: true
+2026-05-18T07:38:31.1380549Z   ssh-user: git
+2026-05-18T07:38:31.1380991Z   persist-credentials: true
+2026-05-18T07:38:31.1381473Z   clean: true
+2026-05-18T07:38:31.1381895Z   sparse-checkout-cone-mode: true
+2026-05-18T07:38:31.1382678Z   fetch-depth: 1
+2026-05-18T07:38:31.1383096Z   fetch-tags: false
+2026-05-18T07:38:31.1383537Z   show-progress: true
+2026-05-18T07:38:31.1383963Z   lfs: false
+2026-05-18T07:38:31.1384353Z   submodules: false
+2026-05-18T07:38:31.1384777Z   set-safe-directory: true
+2026-05-18T07:38:31.1385448Z env:
+2026-05-18T07:38:31.1385854Z   BINARY_NAME: oidc-jwks-converter
+2026-05-18T07:38:31.1386549Z   THIRD_PARTY_LICENSE_OUTPUT: THIRD_PARTY_LICENSES.html
+2026-05-18T07:38:31.1387249Z   TARGET: arm-unknown-linux-musleabihf
+2026-05-18T07:38:31.1387776Z ##[endgroup]
+2026-05-18T07:38:31.2368157Z Syncing repository: sinofseven/oidc-jwks-converter
+2026-05-18T07:38:31.2370081Z ##[group]Getting Git version info
+2026-05-18T07:38:31.2370910Z Working directory is '/home/runner/work/oidc-jwks-converter/oidc-jwks-converter'
+2026-05-18T07:38:31.2372101Z [command]/usr/bin/git version
+2026-05-18T07:38:31.2404789Z git version 2.54.0
+2026-05-18T07:38:31.2458016Z ##[endgroup]
+2026-05-18T07:38:31.2472748Z Temporarily overriding HOME='/home/runner/work/_temp/4250b604-3739-4eeb-a85d-83acd0bd57be' before making global git config changes
+2026-05-18T07:38:31.2474259Z Adding repository directory to the temporary git global config as a safe directory
+2026-05-18T07:38:31.2478325Z [command]/usr/bin/git config --global --add safe.directory /home/runner/work/oidc-jwks-converter/oidc-jwks-converter
+2026-05-18T07:38:31.2522808Z Deleting the contents of '/home/runner/work/oidc-jwks-converter/oidc-jwks-converter'
+2026-05-18T07:38:31.2526976Z ##[group]Initializing the repository
+2026-05-18T07:38:31.2531996Z [command]/usr/bin/git init /home/runner/work/oidc-jwks-converter/oidc-jwks-converter
+2026-05-18T07:38:31.2602209Z hint: Using 'master' as the name for the initial branch. This default branch name
+2026-05-18T07:38:31.2603605Z hint: will change to "main" in Git 3.0. To configure the initial branch name
+2026-05-18T07:38:31.2604964Z hint: to use in all of your new repositories, which will suppress this warning,
+2026-05-18T07:38:31.2605874Z hint: call:
+2026-05-18T07:38:31.2606319Z hint:
+2026-05-18T07:38:31.2607193Z hint: 	git config --global init.defaultBranch <name>
+2026-05-18T07:38:31.2608248Z hint:
+2026-05-18T07:38:31.2609242Z hint: Names commonly chosen instead of 'master' are 'main', 'trunk' and
+2026-05-18T07:38:31.2610877Z hint: 'development'. The just-created branch can be renamed via this command:
+2026-05-18T07:38:31.2612208Z hint:
+2026-05-18T07:38:31.2613118Z hint: 	git branch -m <name>
+2026-05-18T07:38:31.2613962Z hint:
+2026-05-18T07:38:31.2615001Z hint: Disable this message with "git config set advice.defaultBranchName false"
+2026-05-18T07:38:31.2617184Z Initialized empty Git repository in /home/runner/work/oidc-jwks-converter/oidc-jwks-converter/.git/
+2026-05-18T07:38:31.2620367Z [command]/usr/bin/git remote add origin https://github.com/sinofseven/oidc-jwks-converter
+2026-05-18T07:38:31.2656571Z ##[endgroup]
+2026-05-18T07:38:31.2657987Z ##[group]Disabling automatic garbage collection
+2026-05-18T07:38:31.2661104Z [command]/usr/bin/git config --local gc.auto 0
+2026-05-18T07:38:31.2691067Z ##[endgroup]
+2026-05-18T07:38:31.2692544Z ##[group]Setting up auth
+2026-05-18T07:38:31.2693464Z Removing SSH command configuration
+2026-05-18T07:38:31.2699050Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+2026-05-18T07:38:31.2733648Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+2026-05-18T07:38:31.3035983Z Removing HTTP extra header
+2026-05-18T07:38:31.3042100Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+2026-05-18T07:38:31.3076418Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+2026-05-18T07:38:31.3303583Z Removing includeIf entries pointing to credentials config files
+2026-05-18T07:38:31.3310789Z [command]/usr/bin/git config --local --name-only --get-regexp ^includeIf\.gitdir:
+2026-05-18T07:38:31.3344642Z [command]/usr/bin/git submodule foreach --recursive git config --local --show-origin --name-only --get-regexp remote.origin.url
+2026-05-18T07:38:31.3580310Z [command]/usr/bin/git config --file /home/runner/work/_temp/git-credentials-04d66719-26f5-44d0-bb09-76ac741db633.config http.https://github.com/.extraheader AUTHORIZATION: basic ***
+2026-05-18T07:38:31.3619508Z [command]/usr/bin/git config --local includeIf.gitdir:/home/runner/work/oidc-jwks-converter/oidc-jwks-converter/.git.path /home/runner/work/_temp/git-credentials-04d66719-26f5-44d0-bb09-76ac741db633.config
+2026-05-18T07:38:31.3651674Z [command]/usr/bin/git config --local includeIf.gitdir:/home/runner/work/oidc-jwks-converter/oidc-jwks-converter/.git/worktrees/*.path /home/runner/work/_temp/git-credentials-04d66719-26f5-44d0-bb09-76ac741db633.config
+2026-05-18T07:38:31.3685494Z [command]/usr/bin/git config --local includeIf.gitdir:/github/workspace/.git.path /github/runner_temp/git-credentials-04d66719-26f5-44d0-bb09-76ac741db633.config
+2026-05-18T07:38:31.3718009Z [command]/usr/bin/git config --local includeIf.gitdir:/github/workspace/.git/worktrees/*.path /github/runner_temp/git-credentials-04d66719-26f5-44d0-bb09-76ac741db633.config
+2026-05-18T07:38:31.3753576Z ##[endgroup]
+2026-05-18T07:38:31.3754752Z ##[group]Fetching the repository
+2026-05-18T07:38:31.3763555Z [command]/usr/bin/git -c protocol.version=2 fetch --no-tags --prune --no-recurse-submodules --depth=1 origin +7fcebd6d7b954b2aa47a147098dab7506c43270e:refs/remotes/pull/13/merge
+2026-05-18T07:38:31.6205093Z From https://github.com/sinofseven/oidc-jwks-converter
+2026-05-18T07:38:31.6206455Z  * [new ref]         7fcebd6d7b954b2aa47a147098dab7506c43270e -> pull/13/merge
+2026-05-18T07:38:31.6239196Z ##[endgroup]
+2026-05-18T07:38:31.6240636Z ##[group]Determining the checkout info
+2026-05-18T07:38:31.6241801Z ##[endgroup]
+2026-05-18T07:38:31.6246208Z [command]/usr/bin/git sparse-checkout disable
+2026-05-18T07:38:31.6290686Z [command]/usr/bin/git config --local --unset-all extensions.worktreeConfig
+2026-05-18T07:38:31.6324191Z ##[group]Checking out the ref
+2026-05-18T07:38:31.6326761Z [command]/usr/bin/git checkout --progress --force refs/remotes/pull/13/merge
+2026-05-18T07:38:31.6432607Z Note: switching to 'refs/remotes/pull/13/merge'.
+2026-05-18T07:38:31.6433916Z 
+2026-05-18T07:38:31.6434857Z You are in 'detached HEAD' state. You can look around, make experimental
+2026-05-18T07:38:31.6436721Z changes and commit them, and you can discard any commits you make in this
+2026-05-18T07:38:31.6438474Z state without impacting any branches by switching back to a branch.
+2026-05-18T07:38:31.6439754Z 
+2026-05-18T07:38:31.6440392Z If you want to create a new branch to retain commits you create, you may
+2026-05-18T07:38:31.6441840Z do so (now or later) by using -c with the switch command. Example:
+2026-05-18T07:38:31.6442898Z 
+2026-05-18T07:38:31.6443245Z   git switch -c <new-branch-name>
+2026-05-18T07:38:31.6443864Z 
+2026-05-18T07:38:31.6444308Z Or undo this operation with:
+2026-05-18T07:38:31.6444893Z 
+2026-05-18T07:38:31.6445178Z   git switch -
+2026-05-18T07:38:31.6445626Z 
+2026-05-18T07:38:31.6446344Z Turn off this advice by setting config variable advice.detachedHead to false
+2026-05-18T07:38:31.6447462Z 
+2026-05-18T07:38:31.6448707Z HEAD is now at 7fcebd6 Merge 4a744cb7ff45363e8c23c5373018b3b49bf0794e into 3bfc70c5aa25d1d37197b473486857327bbc2485
+2026-05-18T07:38:31.6453657Z ##[endgroup]
+2026-05-18T07:38:31.6484909Z [command]/usr/bin/git log -1 --format=%H
+2026-05-18T07:38:31.6512766Z 7fcebd6d7b954b2aa47a147098dab7506c43270e
+2026-05-18T07:38:31.7693092Z ##[group]Run actions/cache@27d5ce7f107fe9357f9df03efb73ab90386fccae
+2026-05-18T07:38:31.7694813Z with:
+2026-05-18T07:38:31.7695710Z   path: ~/.cargo/registry
+~/.cargo/git
+
+2026-05-18T07:38:31.7698799Z   key: Linux-cargo-registry-arm-unknown-linux-musleabihf-0f948577a233cea7995104e8a5a4bdc17836db31229acbca6e1e7ded66028fae
+2026-05-18T07:38:31.7702120Z   restore-keys: Linux-cargo-registry-arm-unknown-linux-musleabihf-
+
+2026-05-18T07:38:31.7704064Z   enableCrossOsArchive: false
+2026-05-18T07:38:31.7705189Z   fail-on-cache-miss: false
+2026-05-18T07:38:31.7706239Z   lookup-only: false
+2026-05-18T07:38:31.7707187Z   save-always: false
+2026-05-18T07:38:31.7708079Z env:
+2026-05-18T07:38:31.7708969Z   BINARY_NAME: oidc-jwks-converter
+2026-05-18T07:38:31.7710333Z   THIRD_PARTY_LICENSE_OUTPUT: THIRD_PARTY_LICENSES.html
+2026-05-18T07:38:31.7711812Z   TARGET: arm-unknown-linux-musleabihf
+2026-05-18T07:38:31.7713123Z ##[endgroup]
+2026-05-18T07:38:31.9684995Z Cache not found for input keys: Linux-cargo-registry-arm-unknown-linux-musleabihf-0f948577a233cea7995104e8a5a4bdc17836db31229acbca6e1e7ded66028fae, Linux-cargo-registry-arm-unknown-linux-musleabihf-
+2026-05-18T07:38:32.1833714Z ##[group]Run actions/cache@27d5ce7f107fe9357f9df03efb73ab90386fccae
+2026-05-18T07:38:32.1835092Z with:
+2026-05-18T07:38:32.1835890Z   path: target/arm-unknown-linux-musleabihf
+2026-05-18T07:38:32.1838095Z   key: Linux-musl-arm-unknown-linux-musleabihf-0f948577a233cea7995104e8a5a4bdc17836db31229acbca6e1e7ded66028fae
+2026-05-18T07:38:32.1842166Z   restore-keys: Linux-musl-arm-unknown-linux-musleabihf-0f948577a233cea7995104e8a5a4bdc17836db31229acbca6e1e7ded66028fae-
+Linux-musl-arm-unknown-linux-musleabihf-
+
+2026-05-18T07:38:32.1846102Z   enableCrossOsArchive: false
+2026-05-18T07:38:32.1847057Z   fail-on-cache-miss: false
+2026-05-18T07:38:32.1847945Z   lookup-only: false
+2026-05-18T07:38:32.1848750Z   save-always: false
+2026-05-18T07:38:32.1849512Z env:
+2026-05-18T07:38:32.1850221Z   BINARY_NAME: oidc-jwks-converter
+2026-05-18T07:38:32.1851359Z   THIRD_PARTY_LICENSE_OUTPUT: THIRD_PARTY_LICENSES.html
+2026-05-18T07:38:32.1852974Z   TARGET: arm-unknown-linux-musleabihf
+2026-05-18T07:38:32.1854032Z ##[endgroup]
+2026-05-18T07:38:32.3835394Z Cache not found for input keys: Linux-musl-arm-unknown-linux-musleabihf-0f948577a233cea7995104e8a5a4bdc17836db31229acbca6e1e7ded66028fae, Linux-musl-arm-unknown-linux-musleabihf-0f948577a233cea7995104e8a5a4bdc17836db31229acbca6e1e7ded66028fae-, Linux-musl-arm-unknown-linux-musleabihf-
+2026-05-18T07:38:32.3989899Z ##[group]Run docker run --rm \
+2026-05-18T07:38:32.3991061Z [36;1mdocker run --rm \[0m
+2026-05-18T07:38:32.3991954Z [36;1m  --user 1001:1001 \[0m
+2026-05-18T07:38:32.3993689Z [36;1m  -v /home/runner/work/oidc-jwks-converter/oidc-jwks-converter:/workspace \[0m
+2026-05-18T07:38:32.3995421Z [36;1m  -v $HOME/.cargo/registry:/root/.cargo/registry \[0m
+2026-05-18T07:38:32.3996713Z [36;1m  -v $HOME/.cargo/git:/root/.cargo/git \[0m
+2026-05-18T07:38:32.3997804Z [36;1m  -w /workspace \[0m
+2026-05-18T07:38:32.3999102Z [36;1m  ghcr.io/rust-cross/rust-musl-cross:arm-unknown-linux-musleabihf \[0m
+2026-05-18T07:38:32.4000886Z [36;1m  cargo build --release --target arm-unknown-linux-musleabihf[0m
+2026-05-18T07:38:32.4044916Z shell: /usr/bin/bash -e {0}
+2026-05-18T07:38:32.4045826Z env:
+2026-05-18T07:38:32.4046556Z   BINARY_NAME: oidc-jwks-converter
+2026-05-18T07:38:32.4047693Z   THIRD_PARTY_LICENSE_OUTPUT: THIRD_PARTY_LICENSES.html
+2026-05-18T07:38:32.4048976Z   TARGET: arm-unknown-linux-musleabihf
+2026-05-18T07:38:32.4049969Z ##[endgroup]
+2026-05-18T07:38:32.4715172Z Unable to find image 'ghcr.io/rust-cross/rust-musl-cross:arm-unknown-linux-musleabihf' locally
+2026-05-18T07:38:32.7222204Z arm-unknown-linux-musleabihf: Pulling from rust-cross/rust-musl-cross
+2026-05-18T07:38:32.7924415Z 42041b00303d: Pulling fs layer
+2026-05-18T07:38:32.7925928Z 3995a6649905: Pulling fs layer
+2026-05-18T07:38:32.7927260Z bc27975738a7: Pulling fs layer
+2026-05-18T07:38:32.7928614Z a2f98f2e0258: Pulling fs layer
+2026-05-18T07:38:32.7929954Z f9719bb1465d: Pulling fs layer
+2026-05-18T07:38:32.7931335Z 710588233211: Pulling fs layer
+2026-05-18T07:38:32.7932979Z de7858605b4b: Pulling fs layer
+2026-05-18T07:38:32.7934354Z 4f4fb700ef54: Pulling fs layer
+2026-05-18T07:38:32.7935744Z 75497ff80c86: Pulling fs layer
+2026-05-18T07:38:32.7937108Z 627f26874f64: Pulling fs layer
+2026-05-18T07:38:32.7938436Z 685675a2105f: Pulling fs layer
+2026-05-18T07:38:32.7939780Z 3a0941597971: Pulling fs layer
+2026-05-18T07:38:32.7941246Z 12b5de5d000c: Pulling fs layer
+2026-05-18T07:38:32.7942836Z 053727d1494b: Pulling fs layer
+2026-05-18T07:38:32.7944238Z a2f98f2e0258: Waiting
+2026-05-18T07:38:32.7945385Z f9719bb1465d: Waiting
+2026-05-18T07:38:32.7946515Z 710588233211: Waiting
+2026-05-18T07:38:32.7947622Z de7858605b4b: Waiting
+2026-05-18T07:38:32.7948798Z 4f4fb700ef54: Waiting
+2026-05-18T07:38:32.7949984Z 75497ff80c86: Waiting
+2026-05-18T07:38:32.7951097Z 627f26874f64: Waiting
+2026-05-18T07:38:32.7952498Z 685675a2105f: Waiting
+2026-05-18T07:38:32.7953657Z 3a0941597971: Waiting
+2026-05-18T07:38:32.7954822Z 12b5de5d000c: Waiting
+2026-05-18T07:38:32.7955918Z 053727d1494b: Waiting
+2026-05-18T07:38:32.9313868Z bc27975738a7: Verifying Checksum
+2026-05-18T07:38:32.9315418Z bc27975738a7: Download complete
+2026-05-18T07:38:33.0188068Z 42041b00303d: Verifying Checksum
+2026-05-18T07:38:33.0190608Z 42041b00303d: Download complete
+2026-05-18T07:38:33.0506737Z a2f98f2e0258: Verifying Checksum
+2026-05-18T07:38:33.0511750Z a2f98f2e0258: Download complete
+2026-05-18T07:38:33.1859514Z f9719bb1465d: Verifying Checksum
+2026-05-18T07:38:33.1861485Z f9719bb1465d: Download complete
+2026-05-18T07:38:33.3302922Z de7858605b4b: Verifying Checksum
+2026-05-18T07:38:33.3305781Z de7858605b4b: Download complete
+2026-05-18T07:38:33.4449518Z 4f4fb700ef54: Verifying Checksum
+2026-05-18T07:38:33.4455204Z 4f4fb700ef54: Download complete
+2026-05-18T07:38:33.5498813Z 75497ff80c86: Verifying Checksum
+2026-05-18T07:38:33.5500422Z 75497ff80c86: Download complete
+2026-05-18T07:38:33.5866743Z 710588233211: Verifying Checksum
+2026-05-18T07:38:33.5868171Z 710588233211: Download complete
+2026-05-18T07:38:33.6825205Z 685675a2105f: Verifying Checksum
+2026-05-18T07:38:33.6829828Z 685675a2105f: Download complete
+2026-05-18T07:38:33.7690838Z 3a0941597971: Download complete
+2026-05-18T07:38:33.8779651Z 12b5de5d000c: Verifying Checksum
+2026-05-18T07:38:33.8780216Z 12b5de5d000c: Download complete
+2026-05-18T07:38:33.9780907Z 053727d1494b: Verifying Checksum
+2026-05-18T07:38:33.9781979Z 053727d1494b: Download complete
+2026-05-18T07:38:34.3720846Z 42041b00303d: Pull complete
+2026-05-18T07:38:35.2836131Z 3995a6649905: Verifying Checksum
+2026-05-18T07:38:35.2836605Z 3995a6649905: Download complete
+2026-05-18T07:38:35.5489268Z 627f26874f64: Download complete
+2026-05-18T07:38:48.4566420Z 3995a6649905: Pull complete
+2026-05-18T07:38:48.4677116Z bc27975738a7: Pull complete
+2026-05-18T07:38:48.4786018Z a2f98f2e0258: Pull complete
+2026-05-18T07:38:48.4920339Z f9719bb1465d: Pull complete
+2026-05-18T07:38:50.3997581Z 710588233211: Pull complete
+2026-05-18T07:38:50.4092968Z de7858605b4b: Pull complete
+2026-05-18T07:38:50.4171965Z 4f4fb700ef54: Pull complete
+2026-05-18T07:38:50.4303741Z 75497ff80c86: Pull complete
+2026-05-18T07:38:55.5107716Z 627f26874f64: Pull complete
+2026-05-18T07:38:55.5213048Z 685675a2105f: Pull complete
+2026-05-18T07:38:55.5308569Z 3a0941597971: Pull complete
+2026-05-18T07:38:55.5400073Z 12b5de5d000c: Pull complete
+2026-05-18T07:38:55.5499827Z 053727d1494b: Pull complete
+2026-05-18T07:38:55.5663696Z Digest: sha256:1fdc7d3f8bef533a7a470b14ac048aed2ede649ce758c07e14de242db748132c
+2026-05-18T07:38:55.5674926Z Status: Downloaded newer image for ghcr.io/rust-cross/rust-musl-cross:arm-unknown-linux-musleabihf
+2026-05-18T07:38:56.0043883Z     Updating crates.io index
+2026-05-18T07:38:56.1310732Z warning: failed to write cache, path: /root/.cargo/registry/index/index.crates.io-1949cf8c6b5b557f/.cache/an/yh/anyhow, error: Permission denied (os error 13)
+2026-05-18T07:38:56.5734524Z  Downloading crates ...
+2026-05-18T07:38:56.6556348Z   Downloaded atomic-waker v1.1.2
+2026-05-18T07:38:56.7073355Z error: failed to create directory `/root/.cargo/registry/cache/index.crates.io-1949cf8c6b5b557f`
+2026-05-18T07:38:56.7074027Z 
+2026-05-18T07:38:56.7074213Z Caused by:
+2026-05-18T07:38:56.7074503Z   Permission denied (os error 13)
+2026-05-18T07:38:56.7890363Z ##[error]Process completed with exit code 101.
+2026-05-18T07:38:56.8044446Z Post job cleanup.
+2026-05-18T07:38:56.8916825Z [command]/usr/bin/git version
+2026-05-18T07:38:56.8954256Z git version 2.54.0
+2026-05-18T07:38:56.8994487Z Temporarily overriding HOME='/home/runner/work/_temp/e4e911a6-ef77-4b75-987d-7a8da67d3afa' before making global git config changes
+2026-05-18T07:38:56.8995824Z Adding repository directory to the temporary git global config as a safe directory
+2026-05-18T07:38:56.9000978Z [command]/usr/bin/git config --global --add safe.directory /home/runner/work/oidc-jwks-converter/oidc-jwks-converter
+2026-05-18T07:38:56.9034154Z Removing SSH command configuration
+2026-05-18T07:38:56.9040677Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+2026-05-18T07:38:56.9075982Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+2026-05-18T07:38:56.9313598Z Removing HTTP extra header
+2026-05-18T07:38:56.9319102Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+2026-05-18T07:38:56.9354153Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+2026-05-18T07:38:56.9589209Z Removing includeIf entries pointing to credentials config files
+2026-05-18T07:38:56.9596246Z [command]/usr/bin/git config --local --name-only --get-regexp ^includeIf\.gitdir:
+2026-05-18T07:38:56.9624513Z includeif.gitdir:/home/runner/work/oidc-jwks-converter/oidc-jwks-converter/.git.path
+2026-05-18T07:38:56.9625594Z includeif.gitdir:/home/runner/work/oidc-jwks-converter/oidc-jwks-converter/.git/worktrees/*.path
+2026-05-18T07:38:56.9626435Z includeif.gitdir:/github/workspace/.git.path
+2026-05-18T07:38:56.9626979Z includeif.gitdir:/github/workspace/.git/worktrees/*.path
+2026-05-18T07:38:56.9635134Z [command]/usr/bin/git config --local --get-all includeif.gitdir:/home/runner/work/oidc-jwks-converter/oidc-jwks-converter/.git.path
+2026-05-18T07:38:56.9692143Z /home/runner/work/_temp/git-credentials-04d66719-26f5-44d0-bb09-76ac741db633.config
+2026-05-18T07:38:56.9704049Z [command]/usr/bin/git config --local --unset includeif.gitdir:/home/runner/work/oidc-jwks-converter/oidc-jwks-converter/.git.path /home/runner/work/_temp/git-credentials-04d66719-26f5-44d0-bb09-76ac741db633.config
+2026-05-18T07:38:56.9740862Z [command]/usr/bin/git config --local --get-all includeif.gitdir:/home/runner/work/oidc-jwks-converter/oidc-jwks-converter/.git/worktrees/*.path
+2026-05-18T07:38:56.9764300Z /home/runner/work/_temp/git-credentials-04d66719-26f5-44d0-bb09-76ac741db633.config
+2026-05-18T07:38:56.9773669Z [command]/usr/bin/git config --local --unset includeif.gitdir:/home/runner/work/oidc-jwks-converter/oidc-jwks-converter/.git/worktrees/*.path /home/runner/work/_temp/git-credentials-04d66719-26f5-44d0-bb09-76ac741db633.config
+2026-05-18T07:38:56.9807216Z [command]/usr/bin/git config --local --get-all includeif.gitdir:/github/workspace/.git.path
+2026-05-18T07:38:56.9830845Z /github/runner_temp/git-credentials-04d66719-26f5-44d0-bb09-76ac741db633.config
+2026-05-18T07:38:56.9838986Z [command]/usr/bin/git config --local --unset includeif.gitdir:/github/workspace/.git.path /github/runner_temp/git-credentials-04d66719-26f5-44d0-bb09-76ac741db633.config
+2026-05-18T07:38:56.9871447Z [command]/usr/bin/git config --local --get-all includeif.gitdir:/github/workspace/.git/worktrees/*.path
+2026-05-18T07:38:56.9896386Z /github/runner_temp/git-credentials-04d66719-26f5-44d0-bb09-76ac741db633.config
+2026-05-18T07:38:56.9911876Z [command]/usr/bin/git config --local --unset includeif.gitdir:/github/workspace/.git/worktrees/*.path /github/runner_temp/git-credentials-04d66719-26f5-44d0-bb09-76ac741db633.config
+2026-05-18T07:38:56.9944220Z [command]/usr/bin/git submodule foreach --recursive git config --local --show-origin --name-only --get-regexp remote.origin.url
+2026-05-18T07:38:57.0199175Z Removing credentials config '/home/runner/work/_temp/git-credentials-04d66719-26f5-44d0-bb09-76ac741db633.config'
+2026-05-18T07:38:57.0366275Z Cleaning up orphan processes
