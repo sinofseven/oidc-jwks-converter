@@ -17,13 +17,42 @@ Retrieves public key information from an OpenID Connect provider's JWKS endpoint
 
 ## Installation
 
-### Prerequisites
+### Using Homebrew (Recommended)
 
-- Rust 1.56 or later
-
-### Build
+The easiest way to install `oidc-jwks-converter` is via Homebrew using the custom tap:
 
 ```bash
+brew tap sinofseven/luciferous-tap
+brew install oidc-jwks-converter
+```
+
+### Pre-built Binaries from Release
+
+Download pre-built binaries for your platform from the [Releases page](https://github.com/sinofseven/oidc-jwks-converter/releases). We provide binaries for:
+
+- **Linux x86_64** (GNU and musl)
+- **Linux ARM64**
+- **Linux ARM**
+- **macOS** (aarch64-apple-darwin)
+- **Windows** (x86_64)
+
+Extract the archive and place the executable in your PATH.
+
+### Using crates.io
+
+If you have Rust installed, you can install via `cargo`:
+
+```bash
+cargo install oidc-jwks-converter
+```
+
+### Building from Source
+
+To build from source, you need Rust 1.56 or later. Clone the repository and build:
+
+```bash
+git clone https://github.com/sinofseven/oidc-jwks-converter.git
+cd oidc-jwks-converter
 cargo build --release
 ```
 
