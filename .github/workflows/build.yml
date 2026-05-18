@@ -78,14 +78,14 @@ jobs:
   build-linux-arm:
     runs-on: ubuntu-22.04
     env:
-      TARGET: armv7-unknown-linux-musleabi
+      TARGET: arm-unknown-linux-musleabihf
     steps:
       - uses: actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd # v6
       - run: |
           docker run --rm \
             -v ${{ github.workspace }}:/workspace \
             -w /workspace \
-            ghcr.io/rust-cross/rust-musl-cross:arm-unknown-linux-musleabihf \
+            ghcr.io/rust-cross/rust-musl-cross:${{ env.TARGET }} \
             cargo build --release --target ${{ env.TARGET }}
       - run: |
           mkdir -p "${{ env.TMP_DIR }}"
