@@ -5,6 +5,30 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [0.2.0] - 2026-05-18
+
+### Added
+- **Homebrew Installation**: Official Homebrew formula for macOS and Linux installations
+- **crates.io Publishing**: Package published to crates.io for easy installation via `cargo install`
+- **Multiple Installation Methods**: Support for 4 installation methods: Homebrew, binary releases, crates.io, and source build
+- **Comprehensive Documentation**: Module-level documentation comments in source code (Japanese)
+- **GitHub About Guide**: Community guide for contributing and understanding the project
+
+### Changed
+- **reqwest Dependency**: Updated from 0.11 to 0.13 with rustls support (improved security)
+- **thiserror Dependency**: Updated from 1.0 to 2.0 for better error handling
+- **Build Configuration**: Updated GitHub Actions and dependencies to latest versions
+- **.gitignore**: Added `.DS_Store` to exclude macOS system files
+
+### Improved
+- **Build Pipeline**: Enhanced Linux ARM64/ARM32 build stability with docker rust-musl-cross
+- **CI/CD Optimization**: Improved Cargo registry and GitHub Actions caching for faster builds
+- **Platform Support**: Added Ubuntu 24 compatibility
+- **Build Artifacts**: Separated architecture-specific cache for better performance
+
+### Known Issues
+None at this time. Please report any issues on the GitHub repository.
+
 ## [0.1.0] - 2026-05-14
 
 ### Added
