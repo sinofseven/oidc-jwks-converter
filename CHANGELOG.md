@@ -5,6 +5,17 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [0.2.1] - 2026-09-04
+
+### Changed
+- **Dependency Updates**: Updated `p256` from 0.13 to 0.14, and `base64` from 0.22 to 0.23
+- **Patch Updates**: Applied patch-level updates to `anyhow`, `serde`, `serde_json`, `clap`, and `thiserror`
+- **Build Fix**: Fixed a build error in RSA key PEM conversion caused by the `p256` 0.14 API changes
+- **CI Configuration**: Updated `actions/checkout` to v7 and refreshed pinned digests for `dtolnay/rust-toolchain`, `softprops/action-gh-release`, and `Swatinem/rust-cache`
+
+### Known Issues
+None at this time. Please report any issues on the GitHub repository.
+
 ## [0.2.0] - 2026-05-18
 
 ### Added
