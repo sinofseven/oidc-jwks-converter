@@ -8,7 +8,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ## [0.2.1] - 2026-09-04
 
 ### Changed
-- **Dependency Updates**: Updated `p256` from 0.13 to 0.14, and `base64` from 0.22 to 0.23
+- **Dependency Updates**: Updated `p256` from 0.13 to 0.14, `base64` from 0.22 to 0.23, and `tokio` to v1.53.1
 - **Patch Updates**: Applied patch-level updates to `anyhow`, `serde`, `serde_json`, `clap`, and `thiserror`
 - **Build Fix**: Fixed a build error in RSA key PEM conversion caused by the `p256` 0.14 API changes
 - **CI Configuration**: Updated `actions/checkout` to v7 and refreshed pinned digests for `dtolnay/rust-toolchain`, `softprops/action-gh-release`, and `Swatinem/rust-cache`
