@@ -6,7 +6,7 @@
 
 use base64::{engine::general_purpose::URL_SAFE_NO_PAD, Engine};
 use p256::{pkcs8::EncodePublicKey as P256EncodePublicKey, PublicKey as P256PublicKey};
-use rsa::{BigUint, RsaPublicKey};
+use rsa::{pkcs8::EncodePublicKey as RsaEncodePublicKey, BigUint, RsaPublicKey};
 use thiserror::Error;
 
 use crate::jwks::Jwk;
