@@ -4,9 +4,9 @@
 //! PEM 形式に変換します。各鍵タイプに応じた変換ロジックを提供し、
 //! エラーハンドリングも包含しています。
 
-use base64::{engine::general_purpose::URL_SAFE_NO_PAD, Engine};
-use p256::{pkcs8::EncodePublicKey as P256EncodePublicKey, PublicKey as P256PublicKey};
-use rsa::{pkcs8::EncodePublicKey as RsaEncodePublicKey, BigUint, RsaPublicKey};
+use base64::{Engine, engine::general_purpose::URL_SAFE_NO_PAD};
+use p256::{PublicKey as P256PublicKey, pkcs8::EncodePublicKey as P256EncodePublicKey};
+use rsa::{BigUint, RsaPublicKey, pkcs8::EncodePublicKey as RsaEncodePublicKey};
 use thiserror::Error;
 
 use crate::jwks::Jwk;
@@ -122,7 +122,7 @@ mod tests {
         let result = convert_rsa(&jwk);
         assert!(result.is_err());
         match result {
-            Err(ConversionError::MissingField("n")) => {},
+            Err(ConversionError::MissingField("n")) => {}
             _ => panic!("Expected MissingField('n')"),
         }
     }
@@ -134,7 +134,7 @@ mod tests {
         let result = convert_rsa(&jwk);
         assert!(result.is_err());
         match result {
-            Err(ConversionError::MissingField("e")) => {},
+            Err(ConversionError::MissingField("e")) => {}
             _ => panic!("Expected MissingField('e')"),
         }
     }
@@ -146,7 +146,7 @@ mod tests {
         let result = convert_rsa(&jwk);
         assert!(result.is_err());
         match result {
-            Err(ConversionError::Base64DecodeError(_)) => {},
+            Err(ConversionError::Base64DecodeError(_)) => {}
             _ => panic!("Expected Base64DecodeError"),
         }
     }
@@ -168,7 +168,7 @@ mod tests {
         let result = convert_ec(&jwk);
         assert!(result.is_err());
         match result {
-            Err(ConversionError::MissingField("x")) => {},
+            Err(ConversionError::MissingField("x")) => {}
             _ => panic!("Expected MissingField('x')"),
         }
     }
@@ -180,7 +180,7 @@ mod tests {
         let result = convert_ec(&jwk);
         assert!(result.is_err());
         match result {
-            Err(ConversionError::MissingField("y")) => {},
+            Err(ConversionError::MissingField("y")) => {}
             _ => panic!("Expected MissingField('y')"),
         }
     }
@@ -208,7 +208,7 @@ mod tests {
         match result {
             Err(ConversionError::UnsupportedKeyType(kty)) => {
                 assert_eq!(kty, "UNSUPPORTED");
-            },
+            }
             _ => panic!("Expected UnsupportedKeyType"),
         }
     }

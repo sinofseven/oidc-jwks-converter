@@ -64,7 +64,10 @@ mod tests {
         assert_eq!(response.keys.len(), 1);
         assert_eq!(response.keys[0].kty, "RSA");
         assert_eq!(response.keys[0].kid, Some("test-key-1".to_string()));
-        assert_eq!(response.keys[0].n, Some("0vx7agoebGcQSuuPiLJXZptN".to_string()));
+        assert_eq!(
+            response.keys[0].n,
+            Some("0vx7agoebGcQSuuPiLJXZptN".to_string())
+        );
         assert_eq!(response.keys[0].e, Some("AQAB".to_string()));
     }
 
