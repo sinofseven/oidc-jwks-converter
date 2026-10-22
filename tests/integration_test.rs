@@ -21,7 +21,7 @@ fn test_version_option() {
 
     assert!(output.status.success());
     let stdout = String::from_utf8_lossy(&output.stdout);
-    assert!(stdout.contains("0.2.1"));
+    assert!(stdout.contains("0.2.2"));
 }
 
 #[test]
