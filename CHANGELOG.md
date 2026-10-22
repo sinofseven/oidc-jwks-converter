@@ -5,6 +5,18 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [0.2.2] - 2026-10-22
+
+### Security
+- **TLS Certificate Verification**: Updated `rustls-webpki` to 0.103.16 and `webpki-root-certs` to 1.0.10 in response to the eMudhra Intermediate CA compromise
+
+### Changed
+- **Dependency Updates**: Updated `reqwest` to 0.13.5, `tokio` to 1.54.1, `serde_json` to 1.0.154, `clap` to 4.6.7, and `thiserror` to 2.0.21, along with `aws-lc-rs` and `aws-lc-sys` via dependency resolution
+- **CI Configuration**: Moved build runners to `ubuntu-26.04` and `ubuntu-26.04-arm`, and refreshed pinned digests for `Swatinem/rust-cache`, `dtolnay/rust-toolchain`, and `actions/upload-artifact`
+
+### Known Issues
+None at this time. Please report any issues on the GitHub repository.
+
 ## [0.2.1] - 2026-09-04
 
 ### Changed
