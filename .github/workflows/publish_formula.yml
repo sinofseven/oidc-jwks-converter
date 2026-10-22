@@ -27,7 +27,7 @@ jobs:
           repositories: homebrew-luciferous-tap
 
       - name: Dispatch workflow
-        uses: sinofseven/action-workflow-dispatch@d14f3b51612cd9200658a52b8576981c4f96d6f6 # v1.0.0
+        uses: sinofseven/action-workflow-dispatch@1ff463ef0520d9de6dd8a5b60e1789fc112f6658 # v1.0.1
         with:
           target_repo: "sinofseven/homebrew-luciferous-tap"
           ref: master
@@ -40,7 +40,7 @@ jobs:
               "file_name": "oidc-jwks-converter.rb",
               "class_name": "OidcJwksConverter",
               "description": "CLI tool to extract and convert OIDC public keys to PEM certificate format",
-              "license_name": "MIT",
+              "license": "MIT",
               "bin_name": "oidc-jwks-converter",
               "command_test": "--version",
               "jwt_token": "${{ steps.get-jwt-token.outputs.jwt-token }}"
