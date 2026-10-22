@@ -36,8 +36,12 @@ jobs:
           inputs: |
             {
               "name": "oidc-jwks-converter",
+              "display_name": "oidc-jwks-converter",
+              "file_name": "oidc-jwks-converter.rb",
+              "class_name": "OidcJwksConverter",
               "description": "CLI tool to extract and convert OIDC public keys to PEM certificate format",
               "license_name": "MIT",
+              "bin_name": "oidc-jwks-converter",
               "command_test": "--version",
               "jwt_token": "${{ steps.get-jwt-token.outputs.jwt-token }}"
             }
